@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevNet Associate DEVASC 200-901 | Simulador de Examen</title>
+  <title>DevNet Associate DEVASC 200-901 | Exam Simulator</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="flex items-center gap-4">
-          <button id="themeToggle" class="p-2 rounded-lg hover:bg-devnet-700/50 transition-colors" title="Cambiar tema">
+          <button id="themeToggle" class="p-2 rounded-lg hover:bg-devnet-700/50 transition-colors" title="Toggle theme">
             <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
             </svg>
@@ -70,12 +70,12 @@
       <div class="text-center space-y-4">
         <h2 class="text-4xl sm:text-5xl font-bold">
           <span class="bg-gradient-to-r from-devnet-300 via-devnet-400 to-devnet-500 bg-clip-text text-transparent">
-            Simulador de Examen
+            Exam Simulator
           </span>
         </h2>
         <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-          Prepara tu certificación Cisco DevNet Associate (DEVASC 200-901) con preguntas prácticas, 
-          feedback detallado y un dashboard de rendimiento por dominio.
+          Prepare for your Cisco DevNet Associate (DEVASC 200-901) certification with practice questions,
+          detailed feedback, and a performance dashboard by domain.
         </p>
       </div>
 
@@ -89,18 +89,18 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white">Modo Examen</h3>
+            <h3 class="text-2xl font-bold text-white">Exam Mode</h3>
             <p class="text-gray-400">
-              Simula el examen real con temporizador, navegación entre preguntas y revisión final. 
-              Sin feedback hasta terminar.
+              Simulate the real exam with a timer, question navigation, and final review.
+              No feedback until you finish.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">60 min</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">95 preguntas</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Sin pistas</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">95 questions</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">No hints</span>
             </div>
             <button onclick="app.startExam()" class="w-full mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">
-              Comenzar Examen
+              Start Exam
             </button>
           </div>
         </div>
@@ -114,18 +114,18 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold text-white">Modo Estudio</h3>
+            <h3 class="text-2xl font-bold text-white">Study Mode</h3>
             <p class="text-gray-400">
-              Aprende a tu ritmo con feedback instantáneo. Cada respuesta incluye explicación 
-              técnica detallada y referencias a la documentación.
+              Learn at your own pace with instant feedback. Each answer includes detailed technical
+              explanations and references.
             </p>
             <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Sin límite</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Feedback inmediato</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Explicaciones</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Unlimited</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Instant feedback</span>
+              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Explanations</span>
             </div>
             <button onclick="app.startStudy()" class="w-full mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">
-              Comenzar Estudio
+              Start Study
             </button>
           </div>
         </div>
@@ -135,15 +135,15 @@
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
           <p class="text-3xl font-bold text-devnet-300" id="totalQuestions">0</p>
-          <p class="text-sm text-gray-400">Preguntas</p>
+          <p class="text-sm text-gray-400">Questions</p>
         </div>
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
           <p class="text-3xl font-bold text-devnet-300" id="totalDomains">6</p>
-          <p class="text-sm text-gray-400">Dominios</p>
+          <p class="text-sm text-gray-400">Domains</p>
         </div>
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
           <p class="text-3xl font-bold text-devnet-300">6</p>
-          <p class="text-sm text-gray-400">Formatos código</p>
+          <p class="text-sm text-gray-400">Code formats</p>
         </div>
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
           <p class="text-3xl font-bold text-devnet-300">DEVASC</p>
@@ -157,7 +157,7 @@
       <!-- Progress Bar -->
       <div class="space-y-2">
         <div class="flex items-center justify-between text-sm">
-          <span class="text-gray-400">Pregunta <span id="currentQuestionNum">1</span> de <span id="totalQuestionsInQuiz">0</span></span>
+          <span class="text-gray-400">Question <span id="currentQuestionNum">1</span> of <span id="totalQuestionsInQuiz">0</span></span>
           <div class="flex items-center gap-4">
             <span id="timerDisplay" class="font-mono text-devnet-300 hidden">60:00</span>
             <span id="domainBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-devnet-600/30 text-devnet-200"></span>
@@ -189,13 +189,13 @@
         <!-- Navigation -->
         <div class="flex items-center justify-between mt-8 pt-6 border-t border-devnet-700/30">
           <button id="prevBtn" onclick="app.prevQuestion()" class="px-4 py-2 rounded-lg border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-            ← Anterior
+            ← Previous
           </button>
           <button id="nextBtn" onclick="app.nextQuestion()" class="px-4 py-2 rounded-lg bg-devnet-600 text-white hover:bg-devnet-500 transition-colors">
-            Siguiente →
+            Next →
           </button>
           <button id="finishBtn" onclick="app.finishExam()" class="hidden px-6 py-2 rounded-lg bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-400 hover:to-red-500 transition-all">
-            Finalizar Examen
+            Finish Exam
           </button>
         </div>
       </div>
@@ -205,7 +205,7 @@
     <div id="resultsScreen" class="hidden space-y-8">
       <div class="text-center space-y-4">
         <h2 class="text-4xl font-bold bg-gradient-to-r from-devnet-300 to-devnet-400 bg-clip-text text-transparent">
-          Resultados del Examen
+          Exam Results
         </h2>
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-devnet-700/30 border border-devnet-600/30">
           <svg class="w-5 h-5 text-devnet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,7 +225,7 @@
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="text-center">
               <p id="scorePercentage" class="text-4xl font-bold text-devnet-300">0%</p>
-              <p class="text-sm text-gray-400">Puntuación</p>
+              <p class="text-sm text-gray-400">Score</p>
             </div>
           </div>
         </div>
@@ -233,7 +233,7 @@
 
       <!-- Domain Breakdown -->
       <div class="space-y-4">
-        <h3 class="text-xl font-semibold text-white">Desglose por Dominio</h3>
+        <h3 class="text-xl font-semibold text-white">Performance by Domain</h3>
         <div id="domainBreakdown" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <!-- Domain cards injected here -->
         </div>
@@ -242,10 +242,10 @@
       <!-- Actions -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
         <button onclick="app.restart()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">
-          Intentar de Nuevo
+          Try Again
         </button>
         <button onclick="app.goHome()" class="px-6 py-3 rounded-xl border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors">
-          Volver al Inicio
+          Back to Home
         </button>
       </div>
     </div>
@@ -256,7 +256,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sm text-gray-400">
-          Simulador no oficial para fines educativos. Cisco y DevNet son marcas registradas de Cisco Systems.
+          Unofficial simulator for educational purposes. Cisco and DevNet are registered trademarks of Cisco Systems.
         </p>
         <div class="flex items-center gap-4">
           <a href="https://github.com/sxbvs14/devnet-associate-simulator" target="_blank" class="text-devnet-300 hover:text-devnet-200 transition-colors">

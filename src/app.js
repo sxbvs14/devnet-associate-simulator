@@ -220,7 +220,7 @@ class DevNetSimulator {
       document.getElementById('nextBtn').classList.add('hidden');
       document.getElementById('finishBtn').classList.remove('hidden');
       if (!this.isExamMode) {
-        document.getElementById('finishBtn').textContent = 'Ver Resultados';
+        document.getElementById('finishBtn').textContent = 'View Results';
       }
     } else {
       document.getElementById('nextBtn').classList.remove('hidden');
@@ -275,13 +275,13 @@ class DevNetSimulator {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
           <span class="font-semibold ${userAnswer === question.correct ? 'text-green-300' : 'text-red-300'}">
-            ${userAnswer === question.correct ? 'Correcto' : `Incorrecto - Respuesta correcta: ${String.fromCharCode(65 + question.correct)}`}
+            ${userAnswer === question.correct ? 'Correct' : `Incorrect - Correct answer: ${String.fromCharCode(65 + question.correct)}`}
           </span>
         </div>
         <p class="text-gray-300 text-sm leading-relaxed">${question.explanation}</p>
         ${question.codeSnippets.length > 0 ? `
           <details class="mt-3">
-            <summary class="text-sm text-devnet-300 cursor-pointer hover:text-devnet-200">Ver código de referencia</summary>
+            <summary class="text-sm text-devnet-300 cursor-pointer hover:text-devnet-200">View reference code</summary>
             <div class="mt-2 space-y-2">
               ${question.codeSnippets.map(lang => {
                 const snippet = this.getCodeSnippet(lang, question.tags);
@@ -331,7 +331,7 @@ class DevNetSimulator {
     document.getElementById('resultsScreen').classList.remove('hidden');
 
     // Score text
-    document.getElementById('scoreText').textContent = `${this.score} de ${totalQuestions} (${percentage}%)`;
+    document.getElementById('scoreText').textContent = `${this.score} out of ${totalQuestions} (${percentage}%)`;
 
     // Animated score circle
     const scoreCircle = document.getElementById('scoreCircle');

@@ -3,7 +3,6 @@
 (function() {
   'use strict';
 
-  // Global error handler to surface runtime issues in the UI
   window.addEventListener('error', function(e) {
     console.error('Runtime error:', e.error);
     const el = document.getElementById('errorBanner');
@@ -52,7 +51,9 @@
 
         init() {
           const totalQuestionsEl = document.getElementById('totalQuestions');
+          const examQuestionCount = document.getElementById('examQuestionCount');
           if (totalQuestionsEl) totalQuestionsEl.textContent = this.questions.length;
+          if (examQuestionCount) examQuestionCount.textContent = this.questions.length + ' questions';
 
           const themeToggle = document.getElementById('themeToggle');
           const sunIcon = document.getElementById('sunIcon');
@@ -209,6 +210,10 @@
                 }
               });
               questionContent.appendChild(codeContainer);
+            }
+
+            if (typeof Prism !== 'undefined') {
+              Prism.highlightAllUnder(questionContent);
             }
           }
 
@@ -430,27 +435,27 @@
         getCodeSnippet(language, tags) {
           const snippets = {
             'python': {
-              language: 'Python',
+              language: 'python',
               code: `import requests\n\n# Example: DNA Center authentication\nurl = "https://dna-center.example.com/dna/system/api/v1/auth/token"\npayload = {"username": "admin", "password": "password"}\nresponse = requests.post(url, json=payload, verify=False)\ntoken = response.json()["Token"]\n\n# Use token for subsequent requests\nheaders = {"X-Auth-Token": token}\n`
             },
             'json': {
-              language: 'JSON',
+              language: 'json',
               code: `{\n  "name": "webhook-subscription",\n  "eventURL": "https://automation.example.com/webhook",\n  "resourceType": "Network-Wireless-SSID",\n  "filter": {\n    "wirelessSSID": "Corp-WiFi"\n  }\n}`
             },
             'yaml': {
-              language: 'YAML',
+              language: 'yaml',
               code: `---\n- name: Configure interface on IOS XE\n  hosts: routers\n  gather_facts: no\n  tasks:\n    - name: Configure GigabitEthernet0/1\n      ios_config:\n        lines:\n          - description Uplink to Core\n          - ip address 10.0.0.1 255.255.255.0\n          - no shutdown\n        parents: interface GigabitEthernet0/1`
             },
             'dockerfile': {
-              language: 'Dockerfile',
+              language: 'dockerfile',
               code: `FROM python:3.9-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nCMD ["python", "app.py"]`
             },
             'restconf': {
-              language: 'RESTCONF',
+              language: 'http',
               code: `# Retrieve interface operational data\nGET /restconf/data/ietf-interfaces:interfaces-state\n\nHeaders:\n  Accept: application/yang-data+json\n  Authorization: Basic <base64-credentials>`
             },
             'netconf': {
-              language: 'NETCONF',
+              language: 'xml',
               code: `<?xml version="1.0" encoding="UTF-8"?>\n<rpc message-id="101"\n     xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">\n  <get>\n    <filter>\n      <interfaces-state xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces"/>\n    </filter>\n  </get>\n</rpc>`
             }
           };

@@ -1381,6 +1381,943 @@ const DEVNET_QUESTIONS = [
     explanation: "DHCP dynamically assigns IP addresses, subnet masks, default gateways, and DNS servers to devices on a network, eliminating manual IP configuration.",
     codeSnippets: [],
     tags: ["dhcp", "ip", "networking"]
+  },
+
+  // ==================== CCNA AUTOMATION / NETWORK PROGRAMMABILITY ====================
+  {
+    id: 81,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco IOS XE feature enables model-driven telemetry by streaming structured operational data to a collector without polling?",
+    options: [
+      "CDP",
+      "EEM applet",
+      "Telemetry subscription",
+      "SNMP traps"
+    ],
+    correct: 2,
+    explanation: "Telemetry subscriptions in IOS XE push model-driven telemetry data to a collector, replacing polling models like SNMP. CDP discovers neighbors, EEM reacts to events, and SNMP traps are event-driven but not model-driven streaming.",
+    codeSnippets: ["yaml"],
+    tags: ["telemetry", "ios-xe", "model-driven", "automation"]
+  },
+  {
+    id: 82,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which automation tool uses agentless push-based execution over SSH to configure network devices?",
+    options: [
+      "Puppet",
+      "Chef",
+      "Ansible",
+      "SaltStack"
+    ],
+    correct: 2,
+    explanation: "Ansible is agentless and push-based, typically using SSH to execute playbooks on network devices. Puppet and Chef use agent-pull models, and SaltStack can use both but is more commonly agent-based.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "automation", "configuration-management", "ssh"]
+  },
+  {
+    id: 83,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "In IOS XE, which command enables the NETCONF-YANG agent for standardized model-driven management?",
+    options: [
+      "netconf-yang",
+      "restconf",
+      "yang-module",
+      "netconf enable"
+    ],
+    correct: 0,
+    explanation: "netconf-yang enables the NETCONF-YANG subsystem on IOS XE, allowing model-driven configuration and operational data access. restconf enables RESTCONF over HTTP. The other options are not valid IOS XE configuration commands for NETCONF.",
+    codeSnippets: ["yaml"],
+    tags: ["netconf", "yang", "ios-xe", "automation"]
+  },
+  {
+    id: 84,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco Embedded Event Manager (EEM) action is used to execute an IOS-XE CLI command and save the output to a variable for further automation logic?",
+    options: [
+      "action 1.0 cli",
+      "action 1.0 syslog",
+      "action 1.0 netconf",
+      "action 1.0 snmp"
+    ],
+    correct: 0,
+    explanation: "action 1.0 cli executes CLI commands within an EEM applet and can capture output into a variable using the 'output' keyword, enabling reactive automation without external controllers.",
+    codeSnippets: ["yaml"],
+    tags: ["eem", "ios-xe", "automation", "event-driven"]
+  },
+  {
+    id: 85,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which Python library is most commonly used to connect to network devices over SSH and execute CLI commands?",
+    options: [
+      "requests",
+      "paramiko",
+      "netmiko",
+      "beautifulsoup4"
+    ],
+    correct: 2,
+    explanation: "Netmiko is built on Paramiko but provides network-specific abstractions for SSH connections to routers, switches, and firewalls, handling prompt parsing and command execution.",
+    codeSnippets: ["python"],
+    tags: ["python", "netmiko", "ssh", "networking"]
+  },
+  {
+    id: 86,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the primary benefit of using YANG data models for network device configuration?",
+    options: [
+      "They compress CLI output",
+      "They provide a standardized, machine-readable schema for configuration and operational data",
+      "They replace DNS with IP addresses",
+      "They encrypt configuration backups"
+    ],
+    correct: 1,
+    explanation: "YANG models define the structure, constraints, and semantics of network configuration and operational data, enabling model-driven programmability via NETCONF/RESTCONF.",
+    codeSnippets: ["yaml"],
+    tags: ["yang", "model-driven", "netconf", "restconf"]
+  },
+  {
+    id: 87,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which IOS XE API provides a REST interface to retrieve interface status and counters in JSON format?",
+    options: [
+      "SNMP OID",
+      "RESTCONF /restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces",
+      "CDP neighbor table",
+      "Syslog stream"
+    ],
+    correct: 1,
+    explanation: "RESTCONF in IOS XE exposes YANG-modeled operational data such as interfaces. SNMP uses OIDs, CDP discovers neighbors, and syslog is text-based logging—not a structured REST API.",
+    codeSnippets: ["yaml"],
+    tags: ["restconf", "ios-xe", "interfaces", "json"]
+  },
+  {
+    id: 88,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "In a Git workflow for network automation, which file should be encrypted or excluded from version control to prevent credential exposure?",
+    options: [
+      "README.md",
+      "inventory.yaml",
+      "requirements.txt",
+      "playbook.yml"
+    ],
+    correct: 1,
+    explanation: "An inventory file typically contains device IPs, usernames, passwords, and API keys. It must be encrypted with ansible-vault or excluded with .gitignore. README, requirements, and playbooks usually contain no secrets.",
+    codeSnippets: ["yaml"],
+    tags: ["git", "security", "ansible", "secrets"]
+  },
+  {
+    id: 89,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "Which Cisco platform natively supports model-driven telemetry for Cisco DNA Center Assurance and uses Kafka as a transport mechanism?",
+    options: [
+      "Cisco Meraki",
+      "Cisco DNA Center",
+      "Cisco Prime Infrastructure",
+      "Cisco FMC"
+    ],
+    correct: 1,
+    explanation: "Cisco DNA Center uses model-driven telemetry with Kafka as the message bus between Assurance collectors and analytics engines. Meraki uses its own dashboard polling/streaming, and Prime/FMC are legacy monitoring platforms.",
+    codeSnippets: ["yaml"],
+    tags: ["dna-center", "telemetry", "kafka", "assurance"]
+  },
+  {
+    id: 90,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which configuration management approach treats infrastructure state as code, enabling version control and repeatable deployments?",
+    options: [
+      "Manual CLI scripting",
+      "Infrastructure as Code",
+      "Direct database updates",
+      "Paper-based change management"
+    ],
+    correct: 1,
+    explanation: "Infrastructure as Code (IaC) stores network and infrastructure configuration in version control, applying it consistently through automation tools like Ansible, Terraform, or Nornir.",
+    codeSnippets: ["yaml"],
+    tags: ["iac", "automation", "devops"]
+  },
+  {
+    id: 91,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "When automating Cisco switches with Python, which library provides higher-level network automation primitives like tasks, results, and parsers built on top of Netmiko/Paramiko?",
+    options: [
+      "pandas",
+      "nornir",
+      "flask",
+      "pyyaml"
+    ],
+    correct: 1,
+    explanation: "Nornir is a Python automation framework designed for network automation, providing inventory management, task execution, result handling, and integration with Netmiko/Napalm for parsing and configuration.",
+    codeSnippets: ["python"],
+    tags: ["python", "nornir", "netmiko", "automation"]
+  },
+  {
+    id: 92,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which RESTCONF operation retrieves a specific YANG-defined resource by its identifier?",
+    options: [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    correct: 0,
+    explanation: "GET retrieves the resource identified by the request URI in RESTCONF. POST creates resources, PUT replaces resources, and DELETE removes resources.",
+    codeSnippets: ["yaml"],
+    tags: ["restconf", "yang", "http", "automation"]
+  },
+  {
+    id: 93,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What does the 'idempotent' property mean in the context of network automation tools?",
+    options: [
+      "The operation changes the system state every time it runs",
+      "The operation can be applied multiple times without changing the result beyond the initial application",
+      "The operation requires interactive user input",
+      "The operation only runs during business hours"
+    ],
+    correct: 1,
+    explanation: "Idempotency means running the same automation task repeatedly produces the same end state without unintended side effects. Ansible, for example, is designed to be idempotent.",
+    codeSnippets: [],
+    tags: ["ansible", "automation", "concepts", "idempotent"]
+  },
+  {
+    id: 94,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "In Jinja2 network templating, which control structure iterates over a list of VLANs to generate interface configuration snippets?",
+    options: [
+      "{% if %}/{% endif %}",
+      "{% for %}/{% endfor %}",
+      "{{ variable }}",
+      "{% include %}"
+    ],
+    correct: 1,
+    explanation: "{% for %} loops iterate over lists or dictionaries in Jinja2 templates, making them ideal for generating repetitive network configurations like multiple VLAN interfaces or ACL entries.",
+    codeSnippets: ["yaml"],
+    tags: ["jinja2", "templating", "automation"]
+  },
+  {
+    id: 95,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco DNA Center API capability allows an engineer to provision site profiles, network settings, and device configurations declaratively?",
+    options: [
+      "Assurance only",
+      "Intent-based networking / Templates API",
+      "SNMP community strings",
+      "CLI scripting via console"
+    ],
+    correct: 1,
+    explanation: "DNA Center's intent-based APIs translate business intent into network policies, while Templates API enables reusable, version-controlled configuration templates for devices and sites.",
+    codeSnippets: ["yaml"],
+    tags: ["dna-center", "intent", "templates", "api"]
+  },
+  {
+    id: 96,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which data serialization format is commonly used for structured network telemetry and REST API payloads due to its readability and strict typing?",
+    options: [
+      "CSV",
+      "XML",
+      "JSON",
+      "Binary blob"
+    ],
+    correct: 2,
+    explanation: "JSON is widely used in network APIs and telemetry because it is human-readable, maps directly to YANG JSON encoding, and is natively supported by Python dictionaries and REST frameworks.",
+    codeSnippets: ["yaml"],
+    tags: ["json", "data-formats", "rest", "telemetry"]
+  },
+  {
+    id: 97,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "A network engineer needs to audit the running configuration of 500 switches nightly and alert on unauthorized changes. Which workflow is MOST appropriate?",
+    options: [
+      "Manually log into each switch daily",
+      "Use an automation tool to fetch running-config via RESTCONF/NETCONF, diff against Git-tracked baseline, and trigger an alert on change",
+      "Enable CDP and watch for new neighbors",
+      "Increase SNMP polling frequency"
+    ],
+    correct: 1,
+    explanation: "Automated nightly config collection with model-driven APIs, Git diff, and alerting provides scalable, auditable change detection. Manual CLI does not scale. CDP and SNMP do not provide full config change history.",
+    codeSnippets: ["yaml"],
+    tags: ["automation", "config-management", "git", "restconf"]
+  },
+  {
+    id: 98,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which protocol or API is used by Cisco IOS XE devices to expose YANG-modeled operational data for telemetry and troubleshooting over HTTP?",
+    options: [
+      "NETCONF",
+      "RESTCONF",
+      "SNMP",
+      "SSH"
+    ],
+    correct: 1,
+    explanation: "RESTCONF exposes YANG-modeled data over HTTP/HTTPS. NETCONF uses SSH/TLS and XML. SNMP uses MIBs/OIDs. SSH is remote CLI access, not a structured data API.",
+    codeSnippets: ["yaml"],
+    tags: ["restconf", "yang", "ios-xe", "telemetry"]
+  },
+  {
+    id: 99,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "In Ansible for network automation, which inventory plugin allows dynamic population of device hosts from a CSV or external source?",
+    options: [
+      "static inventory",
+      "host_vars",
+      "constructed inventory / inventory plugins",
+      "ansible.cfg"
+    ],
+    correct: 2,
+    explanation: "Ansible inventory plugins, including constructed and yaml/ini/csv-based sources, enable dynamic host population. Static inventory is hardcoded. host_vars stores per-host variables. ansible.cfg configures behavior.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "inventory", "automation"]
+  },
+  {
+    id: 100,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the standard port for NETCONF over SSH?",
+    options: [
+      "22",
+      "830",
+      "443",
+      "161"
+    ],
+    correct: 1,
+    explanation: "NETCONF over SSH uses TCP port 830 by default. 22 is SSH, 443 is HTTPS/RESTCONF, and 161 is SNMP.",
+    codeSnippets: [],
+    tags: ["netconf", "ports", "automation"]
+  },
+  {
+    id: 101,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco feature on Catalyst 9000 switches enables on-box Python scripting and REST API endpoints for automation without external servers?",
+    options: [
+      "App Hosting",
+      "EEM",
+      "SNMP",
+      "LLDP"
+    ],
+    correct: 0,
+    explanation: "App Hosting on IOS XE allows running Python scripts and applications directly on the switch, exposing local REST endpoints. EEM is event-driven CLI actions. SNMP and LLDP are management/discovery protocols.",
+    codeSnippets: ["python"],
+    tags: ["ios-xe", "app-hosting", "python", "automation"]
+  },
+  {
+    id: 102,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "In REST API design, which HTTP method is typically used to create a new resource?",
+    options: [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    correct: 1,
+    explanation: "POST creates new resources. GET retrieves, PUT replaces, and DELETE removes.",
+    codeSnippets: [],
+    tags: ["rest", "http", "api-design"]
+  },
+  {
+    id: 103,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "A network automation engineer must standardize VLAN configurations across 200 switches. Which approach best ensures consistent, repeatable results?",
+    options: [
+      "Manual CLI on each switch",
+      "Use a Jinja2 template rendered with device inventory data and deployed via Ansible",
+      "Send email instructions to local staff",
+      "Use SNMP set with hardcoded values"
+    ],
+    correct: 1,
+    explanation: "Templated configuration with inventory data and Ansible deployment ensures consistency, auditability, and repeatability. Manual CLI does not scale. Email instructions are error-prone. SNMP set lacks validation and template abstraction.",
+    codeSnippets: ["yaml"],
+    tags: ["jinja2", "ansible", "templating", "automation"]
+  },
+  {
+    id: 104,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco Meraki Dashboard API endpoint retrieves the organizations accessible to the API key?",
+    options: [
+      "GET /api/v1/organizations",
+      "GET /api/v1/networks",
+      "POST /api/v1/devices",
+      "GET /api/v1/ssids"
+    ],
+    correct: 0,
+    explanation: "/api/v1/organizations lists organizations. /networks lists networks within an organization. /devices lists hardware, and /ssids lists wireless networks.",
+    codeSnippets: ["python"],
+    tags: ["meraki", "api", "rest", "dashboard"]
+  },
+  {
+    id: 105,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which standard data modeling language is used by NETCONF and RESTCONF to represent configuration and operational state?",
+    options: [
+      "XML only",
+      "JSON only",
+      "YANG",
+      "YAML"
+    ],
+    correct: 2,
+    explanation: "YANG is the standard data modeling language for NETCONF and RESTCONF. XML and JSON are encoding formats carried by those protocols. YAML is used for automation tool configuration, not device modeling.",
+    codeSnippets: ["yaml"],
+    tags: ["yang", "netconf", "restconf", "model-driven"]
+  },
+  {
+    id: 106,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "When troubleshooting a network automation failure, which diagnostic step should come FIRST?",
+    options: [
+      "Blame the vendor",
+      "Reproduce the failure and gather structured logs, API responses, and device state",
+      "Redeploy the entire automation framework",
+      "Disable version control"
+    ],
+    correct: 1,
+    explanation: "Root-cause troubleshooting starts with reproducing the failure and collecting evidence: API responses, configs, and device state. Automation problems are usually data, auth, or model-related before vendor fault.",
+    codeSnippets: [],
+    tags: ["troubleshooting", "automation", "debugging"]
+  },
+  {
+    id: 107,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which protocol is used by network devices to advertise their capabilities and discover directly connected Cisco neighbors?",
+    options: [
+      "LLDP",
+      "CDP",
+      "STP",
+      "OSPF"
+    ],
+    correct: 1,
+    explanation: "CDP is Cisco-proprietary and advertises device ID, capabilities, and interface details to directly connected Cisco neighbors. LLDP is standards-based and vendor-neutral. STP prevents loops. OSPF is a routing protocol.",
+    codeSnippets: [],
+    tags: ["cdp", "lldp", "discovery", "networking"]
+  },
+  {
+    id: 108,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "In model-driven programmability, what is the primary role of a YANG 'container'?",
+    options: [
+      "To run Docker containers on switches",
+      "To group related configuration and state nodes into a hierarchy without implying presence",
+      "To store backup configurations",
+      "To encrypt telemetry streams"
+    ],
+    correct: 1,
+    explanation: "A YANG container organizes related data nodes hierarchically but does not represent a top-level managed object with independent existence, unlike a 'list'.",
+    codeSnippets: ["yaml"],
+    tags: ["yang", "model-driven", "data-model"]
+  },
+  {
+    id: 109,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which git command creates a new branch for developing a network automation feature isolated from main?",
+    options: [
+      "git checkout main",
+      "git switch -c feature-x",
+      "git merge feature-x",
+      "git push --force"
+    ],
+    correct: 1,
+    explanation: "git switch -c feature-x creates and switches to a new branch. git checkout main switches branches. git merge integrates branches. git push --force overwrites remote history.",
+    codeSnippets: [],
+    tags: ["git", "workflow", "automation"]
+  },
+  {
+    id: 110,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the main advantage of using APIs for network management over manual CLI access?",
+    options: [
+      "CLI access is slower",
+      "APIs enable scalable, repeatable automation and integration with external systems",
+      "APIs require less initial setup",
+      "APIs work only on wireless networks"
+    ],
+    correct: 1,
+    explanation: "APIs provide structured, programmatic access that scales across many devices and integrates with automation pipelines, CI/CD, and monitoring systems.",
+    codeSnippets: [],
+    tags: ["api", "automation", "networking"]
+  },
+  {
+    id: 111,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Python exception handling construct ensures an API session or SSH connection is closed even when an error occurs?",
+    options: [
+      "try/except/else",
+      "try/finally",
+      "if/else",
+      "raise/catch"
+    ],
+    correct: 1,
+    explanation: "try/finally guarantees cleanup code runs regardless of exceptions, making it essential for closing API sessions, SSH connections, or file handles in network automation scripts.",
+    codeSnippets: ["python"],
+    tags: ["python", "error-handling", "automation"]
+  },
+  {
+    id: 112,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "Which Cisco DNA Center Assurance capability correlates client health, network performance, and application experience across wired, wireless, and SD-WAN?",
+    options: [
+      "Software Image Management",
+      "Path Trace",
+      "Multidimensional analytics",
+      "Plug and Play"
+    ],
+    correct: 2,
+    explanation: "Multidimensional analytics in DNA Center Assurance correlates client, network, and application telemetry across domains for proactive issue detection and root-cause analysis.",
+    codeSnippets: ["yaml"],
+    tags: ["dna-center", "assurance", "analytics", "automation"]
+  },
+  {
+    id: 113,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which protocol is commonly used to secure REST API traffic between automation tools and Cisco controllers?",
+    options: [
+      "HTTP",
+      "HTTPS/TLS",
+      "FTP",
+      "Telnet"
+    ],
+    correct: 1,
+    explanation: "HTTPS/TLS encrypts REST API traffic in transit. HTTP sends data in plaintext. FTP is file transfer. Telnet is unencrypted remote access.",
+    codeSnippets: [],
+    tags: ["security", "rest", "tls", "automation"]
+  },
+  {
+    id: 114,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "When using Ansible to configure Cisco IOS XE devices, which connection plugin enables persistent CLI sessions via SSH?",
+    options: [
+      "local",
+      "network_cli",
+      "docker",
+      "winrm"
+    ],
+    correct: 1,
+    explanation: "network_cli uses persistent SSH CLI sessions to network devices. local runs tasks on the control node. docker and winrm are for container and Windows targets.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "ios-xe", "connection", "ssh"]
+  },
+  {
+    id: 115,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Python type annotation best represents a list of VLAN IDs in a network automation script?",
+    options: [
+      "Dict[str, int]",
+      "List[int]",
+      "Tuple[str, str]",
+      "Set[bool]"
+    ],
+    correct: 1,
+    explanation: "List[int] correctly represents a list of integers. Dict maps keys to values. Tuple is fixed-size and typically heterogeneous. Set is unordered and unique, less common for ordered VLAN lists.",
+    codeSnippets: ["python"],
+    tags: ["python", "typing", "automation"]
+  },
+  {
+    id: 116,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which Git workflow pattern uses a long-lived main branch and short-lived feature branches merged via pull requests?",
+    options: [
+      "Trunk-based development",
+      "GitFlow",
+      "GitHub Flow",
+      "Forking workflow"
+    ],
+    correct: 2,
+    explanation: "GitHub Flow uses a single main branch with feature branches merged via pull requests, suitable for continuous delivery. GitFlow has multiple long-lived branches. Trunk-based uses short-lived branches directly off main.",
+    codeSnippets: [],
+    tags: ["git", "workflow", "automation"]
+  },
+  {
+    id: 117,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "Which JSON encoding of a YANG operational state node indicates that an interface is administratively up but operationally down?",
+    options: [
+      "\"admin-status\": \"up\", \"oper-status\": \"down\"",
+      "\"admin-status\": \"down\", \"oper-status\": \"up\"",
+      "\"enabled\": true, \"link-up\": true",
+      "\"state\": \"error\""
+    ],
+    correct: 0,
+    explanation: "In Cisco IOS XE YANG models, admin-status reflects the configured 'no shutdown' state, while oper-status reflects the current line protocol/interface status. A mismatch means administratively up but operationally down.",
+    codeSnippets: ["yaml"],
+    tags: ["yang", "json", "ios-xe", "interfaces"]
+  },
+  {
+    id: 118,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which file format is most appropriate for storing device inventory variables like IP addresses, credentials placeholders, and vendor types in Ansible?",
+    options: [
+      "inventory.yaml",
+      "Dockerfile",
+      "README.md",
+      ".gitignore"
+    ],
+    correct: 0,
+    explanation: "inventory.yaml stores host variables and groups for Ansible. Dockerfile defines container images. README documents projects. .gitignore excludes files from Git.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "inventory", "yaml"]
+  },
+  {
+    id: 119,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which of the following is a PRIMARY benefit of using version control for network automation code?",
+    options: [
+      "It automatically fixes syntax errors",
+      "It enables rollback, collaboration, and change history",
+      "It compresses configuration files",
+      "It replaces the need for testing"
+    ],
+    correct: 1,
+    explanation: "Version control tracks changes, enables collaboration via branching, allows rollback to known-good states, and supports code review—all critical for production network automation.",
+    codeSnippets: [],
+    tags: ["git", "version-control", "automation"]
+  },
+  {
+    id: 120,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the function of an API key in REST API authentication?",
+    options: [
+      "To encrypt all HTTP traffic",
+      "To identify and authorize the calling application or user",
+      "To compress API responses",
+      "To configure DNS resolution"
+    ],
+    correct: 1,
+    explanation: "An API key identifies and authorizes the client application making the request. It is typically passed in a header like X-Auth-Token or Authorization.",
+    codeSnippets: ["python"],
+    tags: ["api", "authentication", "rest", "security"]
+  },
+  {
+    id: 121,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco Meraki API call retrieves the SSID configuration for a specific wireless network?",
+    options: [
+      "GET /api/v1/organizations/{organizationId}/wireless/ssids",
+      "GET /api/v1/networks/{networkId}/wireless/ssids/{number}",
+      "POST /api/v1/devices/{serial}/wireless",
+      "GET /api/v1/ssids"
+    ],
+    correct: 1,
+    explanation: "GET /api/v1/networks/{networkId}/wireless/ssids/{number} retrieves a specific SSID. Organizations own networks, and SSIDs are nested under networks.",
+    codeSnippets: ["python"],
+    tags: ["meraki", "wireless", "api", "rest"]
+  },
+  {
+    id: 122,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "When troubleshooting a NETCONF session failure between an automation controller and IOS XE, which log or command is MOST useful to identify YANG schema or capability mismatches?",
+    options: [
+      "show version",
+      "show netconf-yang sessions",
+      "show ip route",
+      "show running-config"
+    ],
+    correct: 1,
+    explanation: "show netconf-yang sessions displays active NETCONF sessions, capabilities, and errors. It is the primary diagnostic for YANG/RPC issues. show version shows software. show ip route shows routing. show running-config shows CLI config.",
+    codeSnippets: ["yaml"],
+    tags: ["netconf", "yang", "ios-xe", "troubleshooting"]
+  },
+  {
+    id: 123,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "In a CI/CD pipeline for network automation, which step validates that a Jinja2-rendered configuration passes syntax checks before deployment?",
+    options: [
+      "Commit stage",
+      "Lint/test stage",
+      "Production rollout",
+      "Documentation generation"
+    ],
+    correct: 1,
+    explanation: "A lint/test stage validates rendered configuration syntax, runs unit tests, and checks YANG/model compliance before any device deployment.",
+    codeSnippets: ["yaml"],
+    tags: ["cicd", "jinja2", "testing", "automation"]
+  },
+  {
+    id: 124,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco NX-OS feature allows programmatic access to switch configuration using a REST API with JSON payloads?",
+    options: [
+      "NX-API",
+      "CDP",
+      "LLDP",
+      "STP"
+    ],
+    correct: 0,
+    explanation: "NX-API exposes a REST interface on NX-OS switches, accepting JSON or XML payloads for configuration and operational data. CDP and LLDP are discovery protocols. STP is loop prevention.",
+    codeSnippets: ["python"],
+    tags: ["nx-os", "nx-api", "rest", "automation"]
+  },
+  {
+    id: 125,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the primary purpose of using source control for network automation scripts?",
+    options: [
+      "To hide code from other teams",
+      "To track changes, collaborate, and revert mistakes",
+      "To run scripts directly on network devices",
+      "To compress scripts for faster deployment"
+    ],
+    correct: 1,
+    explanation: "Source control tracks every change, enables team collaboration, supports branching/merging, and allows reverting to stable versions—critical for operational network automation.",
+    codeSnippets: [],
+    tags: ["git", "version-control", "collaboration"]
+  },
+  {
+    id: 126,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which RESTCONF operation is used to create a new resource under a collection?",
+    options: [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    correct: 1,
+    explanation: "POST creates a new subordinate resource under a collection in RESTCONF. PUT can also create but requires the client to specify the target URI. GET retrieves and DELETE removes.",
+    codeSnippets: ["yaml"],
+    tags: ["restconf", "http", "yang"]
+  },
+  {
+    id: 127,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Cisco DNA Center REST API call retrieves device compliance information across the fabric?",
+    options: [
+      "GET /dna/intent/api/v1/compliance",
+      "GET /dna/intent/api/v1/network-device",
+      "POST /dna/intent/api/v1/configuration",
+      "GET /dna/intent/api/v1/clients"
+    ],
+    correct: 0,
+    explanation: "The /dna/intent/api/v1/compliance endpoint returns compliance details. /network-device returns inventory. /configuration manages config templates. /clients returns client data.",
+    codeSnippets: ["python"],
+    tags: ["dna-center", "api", "compliance", "rest"]
+  },
+  {
+    id: 128,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What does YAML stand for?",
+    options: [
+      "Yet Another Markup Language",
+      "YAML Ain't Markup Language",
+      "Yet Another Module Language",
+      "YAML Automation Markup Language"
+    ],
+    correct: 1,
+    explanation: "YAML stands for 'YAML Ain't Markup Language'—a recursive acronym. It is a human-readable data serialization language commonly used for configuration and automation tooling.",
+    codeSnippets: [],
+    tags: ["yaml", "data-formats", "basics"]
+  },
+  {
+    id: 129,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Python module provides a context manager for safely opening files during log collection from network devices?",
+    options: [
+      "os",
+      "json",
+      "with open()",
+      "sys"
+    ],
+    correct: 2,
+    explanation: "'with open()' is a context manager that safely opens and closes files, even if exceptions occur during writing. os, json, and sys are unrelated to safe file handling.",
+    codeSnippets: ["python"],
+    tags: ["python", "file-handling", "automation"]
+  },
+  {
+    id: 130,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "An Ansible playbook against 100 routers intermittently fails with 'connection timed out'. Which change MOST likely improves reliability?",
+    options: [
+      "Remove become from tasks",
+      "Increase persistent connection timeout and enable pipelining",
+      "Switch from network_cli to local",
+      "Disable host key checking"
+    ],
+    correct: 1,
+    explanation: "Increasing persistent_connection_timeout and enabling pipelining reduces SSH overhead and improves performance over unreliable links. become changes privilege, local bypasses SSH, and disabling host key checking only affects auth prompts.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "ssh", "troubleshooting", "automation"]
+  },
+  {
+    id: 131,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which Cisco IOS XE command enables the RESTCONF agent on a device?",
+    options: [
+      "restconf",
+      "netconf-yang",
+      "ip http secure-server",
+      "aaa new-model"
+    ],
+    correct: 0,
+    explanation: "The 'restconf' global configuration command enables the RESTCONF agent in IOS XE. 'netconf-yang' enables NETCONF. 'ip http secure-server' enables HTTPS. 'aaa new-model' enables AAA.",
+    codeSnippets: ["yaml"],
+    tags: ["restconf", "ios-xe", "automation"]
+  },
+  {
+    id: 132,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Nornir plugin integrates with Netmiko to send CLI commands to network devices?",
+    options: [
+      "nornir-netmiko",
+      "nornir-napalm",
+      "nornir-jinja2",
+      "nornir-utils"
+    ],
+    correct: 0,
+    explanation: "nornir-netmiko provides Netmiko-based task execution within Nornir. nornir-napalm uses NAPALM. nornir-jinja2 handles templating. nornir-utils is a generic utilities package.",
+    codeSnippets: ["python"],
+    tags: ["nornir", "netmiko", "python", "automation"]
+  },
+  {
+    id: 133,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "In DNA Center, which template type allows reusable configuration across device families with variable substitution?",
+    options: [
+      "CLI Template",
+      "Sensor Template",
+      "SD-AVC Template",
+      "Software Image Management Template"
+    ],
+    correct: 0,
+    explanation: "CLI Templates in DNA Center allow reusable device configuration with variables and conditional logic. Sensor templates collect telemetry. SD-AVC manages application visibility. Software Image Management handles firmware.",
+    codeSnippets: ["yaml"],
+    tags: ["dna-center", "templates", "automation"]
+  },
+  {
+    id: 134,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which Python data structure is ideal for representing a dictionary of device names to IP addresses?",
+    options: [
+      "list",
+      "tuple",
+      "dict",
+      "set"
+    ],
+    correct: 2,
+    explanation: "dict maps keys to values, making it ideal for device-name-to-IP mappings. list and tuple are ordered sequences. set is unordered and unique.",
+    codeSnippets: ["python"],
+    tags: ["python", "data-structures", "automation"]
+  },
+  {
+    id: 135,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "When deploying network automation, which practice reduces risk of outage during configuration push?",
+    options: [
+      "Push directly to production with no validation",
+      "Use a rollback plan, schedule changes, and validate with dry-run / diff before applying",
+      "Disable logging during changes",
+      "Use Telnet instead of SSH"
+    ],
+    correct: 1,
+    explanation: "Rollback plans, scheduling, and pre-deployment validation minimize outage impact. Direct push risks breaking production. Disabling logging removes auditability. Telnet is insecure.",
+    codeSnippets: [],
+    tags: ["automation", "change-management", "risk"]
   }
 ];
 

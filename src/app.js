@@ -43,7 +43,8 @@
             'Cisco Platforms and Development': { key: 'platforms', color: 'domain-platforms', questions: 0, correct: 0 },
             'Application Deployment and Security': { key: 'deployment', color: 'domain-deployment', questions: 0, correct: 0 },
             'Infrastructure and Automation': { key: 'infrastructure', color: 'domain-infrastructure', questions: 0, correct: 0 },
-            'Network Fundamentals': { key: 'network', color: 'domain-network', questions: 0, correct: 0 }
+            'Network Fundamentals': { key: 'network', color: 'domain-network', questions: 0, correct: 0 },
+            'Network Automation and Programmability': { key: 'automation', color: 'domain-automation', questions: 0, correct: 0 }
           };
 
           this.init();

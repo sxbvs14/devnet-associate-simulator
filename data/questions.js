@@ -2318,6 +2318,856 @@ const DEVNET_QUESTIONS = [
     explanation: "Rollback plans, scheduling, and pre-deployment validation minimize outage impact. Direct push risks breaking production. Disabling logging removes auditability. Telnet is insecure.",
     codeSnippets: [],
     tags: ["automation", "change-management", "risk"]
+  },
+  {
+    id: 136,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "In Python, which data type is used to store an ordered, mutable collection of items?",
+    options: [
+      "tuple",
+      "list",
+      "dict",
+      "set"
+    ],
+    correct: 1,
+    explanation: "A list is an ordered, mutable collection. Tuples are immutable. Dicts are key-value mappings. Sets are unordered and unique.",
+    codeSnippets: ["python"],
+    tags: ["python", "data-structures", "basics"]
+  },
+  {
+    id: 137,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which Python construct is best for ensuring a file handle or API session is closed even if an exception occurs?",
+    options: [
+      "try/except",
+      "try/finally",
+      "if/else",
+      "raise/catch"
+    ],
+    correct: 1,
+    explanation: "try/finally guarantees cleanup code runs regardless of whether an exception occurred, making it ideal for closing files, SSH sessions, or API connections.",
+    codeSnippets: ["python"],
+    tags: ["python", "exception-handling", "resource-management"]
+  },
+  {
+    id: 138,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "hard",
+    question: "A script managing DNA Center connections uses Singleton pattern incorrectly, creating multiple instances. What is the PRIMARY risk?",
+    options: [
+      "Memory leak from unreleased objects",
+      "Exhaustion of API connection pool and rate-limit violations",
+      "Garbage collection failure",
+      "Thread deadlock"
+    ],
+    correct: 1,
+    explanation: "Multiple Singleton instances can open redundant API connections, exhausting connection pools and triggering rate limits or account lockouts in DNA Center.",
+    codeSnippets: [],
+    tags: ["python", "design-patterns", "dna-center", "api"]
+  },
+  {
+    id: 139,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "Which HTTP method is typically used to UPDATE an existing resource via a REST API?",
+    options: [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ],
+    correct: 2,
+    explanation: "PUT is used to update/replace an existing resource. POST creates new resources. GET retrieves. DELETE removes.",
+    codeSnippets: [],
+    tags: ["http", "rest", "api-methods"]
+  },
+  {
+    id: 140,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "In Python, what does the 'with' statement provide when working with files or network connections?",
+    options: [
+      "Faster execution speed",
+      "Automatic resource cleanup via context manager",
+      "Thread safety",
+      "Encryption"
+    ],
+    correct: 1,
+    explanation: "The 'with' statement creates a context manager that automatically closes resources (files, sockets, sessions) when the block exits, even on exceptions.",
+    codeSnippets: ["python"],
+    tags: ["python", "context-managers", "best-practices"]
+  },
+  {
+    id: 141,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "What is the time complexity of checking membership in a Python set containing 100,000 IP addresses?",
+    options: [
+      "O(n)",
+      "O(log n)",
+      "O(1) average",
+      "O(n^2)"
+    ],
+    correct: 2,
+    explanation: "Sets use hash tables, providing O(1) average-case lookup for membership checks, versus O(n) for lists.",
+    codeSnippets: ["python"],
+    tags: ["python", "performance", "data-structures"]
+  },
+  {
+    id: 142,
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which Python library is most commonly used for parsing YAML configuration files in network automation?",
+    options: [
+      "json",
+      "xml.etree.ElementTree",
+      "PyYAML",
+      "csv"
+    ],
+    correct: 2,
+    explanation: "PyYAML is the standard library for YAML parsing in Python, widely used in Ansible playbooks and network device configuration templates.",
+    codeSnippets: ["python", "yaml"],
+    tags: ["python", "yaml", "configuration"]
+  },
+  {
+    id: 143,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "easy",
+    question: "What does the 'A' in API stand for?",
+    options: [
+      "Application",
+      "Automation",
+      "Architecture",
+      "Authentication"
+    ],
+    correct: 0,
+    explanation: "API stands for Application Programming Interface. It defines how software components should interact.",
+    codeSnippets: [],
+    tags: ["api", "basics", "terminology"]
+  },
+  {
+    id: 144,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "When a REST API returns HTTP 429, what should the client do?",
+    options: [
+      "Retry immediately with the same request",
+      "Implement exponential backoff and respect Retry-After header",
+      "Abort the entire automation workflow",
+      "Switch to SOAP API"
+    ],
+    correct: 1,
+    explanation: "HTTP 429 means Too Many Requests. Clients should implement backoff and respect the Retry-After header to avoid being blocked.",
+    codeSnippets: [],
+    tags: ["http", "rate-limiting", "rest", "best-practices"]
+  },
+  {
+    id: 145,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "hard",
+    question: "A Meraki automation script needs to make 10,000 API calls in 5 minutes. Which approach BEST handles rate limits?",
+    options: [
+      "Use synchronous requests with no delay",
+      "Implement async requests with per-organization rate limit tracking and retry queues",
+      "Use SOAP instead of REST",
+      "Cache all responses locally without API calls"
+    ],
+    correct: 1,
+    explanation: "Async requests with rate limit tracking maximize throughput while respecting Meraki's limits. Synchronous requests are too slow. SOAP is not supported by Meraki.",
+    codeSnippets: ["python"],
+    tags: ["meraki", "rate-limiting", "async", "automation"]
+  },
+  {
+    id: 146,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "easy",
+    question: "Which HTTP status code indicates a successful resource creation?",
+    options: [
+      "200 OK",
+      "201 Created",
+      "204 No Content",
+      "301 Moved Permanently"
+    ],
+    correct: 1,
+    explanation: "201 Created is returned when a new resource is successfully created via POST. 200 OK is for successful retrieval or update.",
+    codeSnippets: [],
+    tags: ["http", "status-codes", "rest"]
+  },
+  {
+    id: 147,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "In a REST API, what is the purpose of idempotency?",
+    options: [
+      "To encrypt the request body",
+      "To ensure multiple identical requests have the same effect as a single request",
+      "To cache responses",
+      "To authenticate users"
+    ],
+    correct: 1,
+    explanation: "Idempotency means making the same request multiple times produces the same result. GET, PUT, and DELETE are idempotent. POST is not.",
+    codeSnippets: [],
+    tags: ["rest", "idempotency", "http-methods"]
+  },
+  {
+    id: 148,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "easy",
+    question: "Which data format is most commonly used for modern REST API request/response bodies?",
+    options: [
+      "XML",
+      "JSON",
+      "YAML",
+      "CSV"
+    ],
+    correct: 1,
+    explanation: "JSON is the de facto standard for REST APIs due to its lightweight nature, easy parsing, and broad language support.",
+    codeSnippets: [],
+    tags: ["json", "rest", "data-formats"]
+  },
+  {
+    id: 149,
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "When using Cisco DNA Center APIs, which authentication method is recommended for automation scripts?",
+    options: [
+      "Hardcoded username/password in every request",
+      "OAuth 2.0 with refresh tokens",
+      "Basic auth without HTTPS",
+      "API key in URL query parameter"
+    ],
+    correct: 1,
+    explanation: "OAuth 2.0 with refresh tokens provides secure, scalable authentication without exposing credentials in code or URLs.",
+    codeSnippets: [],
+    tags: ["dna-center", "authentication", "oauth", "api"]
+  },
+  {
+    id: 150,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "easy",
+    question: "Which Cisco platform provides cloud-managed network device management with a web dashboard and API?",
+    options: [
+      "Cisco DNA Center",
+      "Cisco Meraki",
+      "Cisco ACI",
+      "Cisco ISE"
+    ],
+    correct: 1,
+    explanation: "Cisco Meraki is a cloud-managed platform with a dashboard and REST API for managing switches, routers, and security appliances.",
+    codeSnippets: [],
+    tags: ["meraki", "platforms", "cloud-management"]
+  },
+  {
+    id: 151,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What is the primary benefit of using Cisco DNA Center's assurance features?",
+    options: [
+      "Reduces license costs",
+      "Provides real-time visibility into network behavior and issues",
+      "Replaces all CLI configuration",
+      "Encrypts all traffic"
+    ],
+    correct: 1,
+    explanation: "DNA Center Assurance provides telemetry, analytics, and insights into network performance, client experience, and issues.",
+    codeSnippets: [],
+    tags: ["dna-center", "assurance", "telemetry", "monitoring"]
+  },
+  {
+    id: 152,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "hard",
+    question: "A network engineer needs to automate configuration of 500 Cisco Catalyst 9000 switches. Which combination is MOST scalable?",
+    options: [
+      "SSH to each switch individually and configure manually",
+      "Use DNA Center with templates and PnP",
+      "Use Telnet scripts with hardcoded IPs",
+      "Configure each switch locally via console"
+    ],
+    correct: 1,
+    explanation: "DNA Center with templates and Plug and Play (PnP) automates mass provisioning, ensuring consistent configuration across hundreds of devices.",
+    codeSnippets: [],
+    tags: ["dna-center", "automation", "catalyst", "pnp"]
+  },
+  {
+    id: 153,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "easy",
+    question: "Which Cisco SD-WAN component is responsible for centralized policy management and orchestration?",
+    options: [
+      "vEdge",
+      "vManage",
+      "vSmart",
+      "vBond"
+    ],
+    correct: 1,
+    explanation: "vManage is the SD-WAN orchestrator for policy, configuration, and monitoring. vSmart handles control plane. vBond does authentication. vEdge is the data plane.",
+    codeSnippets: [],
+    tags: ["sd-wan", "vmanage", "orchestration", "components"]
+  },
+  {
+    id: 154,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What is the purpose of Cisco Webex APIs in a collaboration automation workflow?",
+    options: [
+      "Routing network traffic",
+      "Managing meetings, messages, and devices programmatically",
+      "Configuring switch VLANs",
+      "Scanning network vulnerabilities"
+    ],
+    correct: 1,
+    explanation: "Webex APIs enable automation of collaboration tasks: creating meetings, sending messages, managing devices, and integrating with workflows.",
+    codeSnippets: [],
+    tags: ["webex", "api", "collaboration", "automation"]
+  },
+  {
+    id: 155,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "easy",
+    question: "Which protocol is used by Cisco ACI to communicate between APIC controllers and fabric nodes?",
+    options: [
+      "HTTP",
+      "OpFlex",
+      "SNMP",
+      "Telnet"
+    ],
+    correct: 1,
+    explanation: "OpFlex is the policy protocol used in ACI between APIC and fabric nodes for distributed policy enforcement.",
+    codeSnippets: [],
+    tags: ["aci", "apic", "opflex", "protocols"]
+  },
+  {
+    id: 156,
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "In Cisco DNA Center, what is the purpose of a template project?",
+    options: [
+      "To store user credentials",
+      "To group configuration templates for deployment to devices",
+      "To monitor network traffic",
+      "To generate billing reports"
+    ],
+    correct: 1,
+    explanation: "Template projects in DNA Center organize configuration templates and allow deployment to device profiles and sites.",
+    codeSnippets: [],
+    tags: ["dna-center", "templates", "configuration"]
+  },
+  {
+    id: 157,
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "easy",
+    question: "What is the purpose of a .gitignore file in a repository?",
+    options: [
+      "To specify Git credentials",
+      "To exclude files from being tracked by Git",
+      "To enforce commit message format",
+      "To configure Git hooks"
+    ],
+    correct: 1,
+    explanation: ".gitignore tells Git which files or directories to ignore, preventing sensitive files, build artifacts, and dependencies from being committed.",
+    codeSnippets: [],
+    tags: ["git", "version-control", "best-practices"]
+  },
+  {
+    id: 158,
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "In a CI/CD pipeline, which stage runs automated tests before code is merged?",
+    options: [
+      "Deploy",
+      "Build",
+      "Test",
+      "Monitor"
+    ],
+    correct: 2,
+    explanation: "The Test stage runs unit tests, integration tests, and linting to verify code quality before merging or deployment.",
+    codeSnippets: [],
+    tags: ["cicd", "testing", "pipeline", "devops"]
+  },
+  {
+    id: 159,
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "hard",
+    question: "An automation script stores Cisco device credentials in plain text in the repository. Which is the MOST secure remediation?",
+    options: [
+      "Commit to a private repo instead of public",
+      "Use environment variables or a secrets manager with RBAC",
+      "Rename the file to .env",
+      "Add the file to .gitignore without rotating credentials"
+    ],
+    correct: 1,
+    explanation: "Environment variables or a secrets manager with RBAC keeps credentials out of code entirely. Private repos or .gitignore alone don't fix existing exposed secrets.",
+    codeSnippets: [],
+    tags: ["security", "secrets", "devops", "best-practices"]
+  },
+  {
+    id: 160,
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "easy",
+    question: "What is the primary purpose of Docker in a network automation workflow?",
+    options: [
+      "To replace virtual machines entirely",
+      "To package applications and dependencies into portable containers",
+      "To encrypt network traffic",
+      "To manage Git repositories"
+    ],
+    correct: 1,
+    explanation: "Docker containers package applications with their dependencies, ensuring consistent execution across development, testing, and production environments.",
+    codeSnippets: [],
+    tags: ["docker", "containers", "devops", "automation"]
+  },
+  {
+    id: 161,
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which Git command is used to create a new branch for feature development?",
+    options: [
+      "git branch feature-x",
+      "git checkout -b feature-x",
+      "git merge feature-x",
+      "git pull feature-x"
+    ],
+    correct: 1,
+    explanation: "git checkout -b feature-x creates and switches to a new branch. git branch alone only creates it without switching.",
+    codeSnippets: [],
+    tags: ["git", "version-control", "branching"]
+  },
+  {
+    id: 162,
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "easy",
+    question: "What is the purpose of unit testing in a CI/CD pipeline?",
+    options: [
+      "To test the production environment",
+      "To verify individual code components function correctly",
+      "To measure network latency",
+      "To encrypt database connections"
+    ],
+    correct: 1,
+    explanation: "Unit tests verify that individual functions or components work as expected, catching bugs early in the development cycle.",
+    codeSnippets: [],
+    tags: ["testing", "cicd", "unit-testing", "best-practices"]
+  },
+  {
+    id: 163,
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "easy",
+    question: "Which configuration management tool uses agentless push-based execution over SSH?",
+    options: [
+      "Puppet",
+      "Chef",
+      "Ansible",
+      "SaltStack"
+    ],
+    correct: 2,
+    explanation: "Ansible is agentless, using SSH to push configurations. Puppet and Chef use agents. SaltStack can use both but defaults to agent-based.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "configuration-management", "automation"]
+  },
+  {
+    id: 164,
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "In Ansible, what is the purpose of an inventory file?",
+    options: [
+      "To store task definitions",
+      "To define the target hosts and groups for playbook execution",
+      "To encrypt sensitive variables",
+      "To install Python on managed nodes"
+    ],
+    correct: 1,
+    explanation: "The inventory file lists managed hosts and groups, allowing playbooks to target specific devices or environments.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "inventory", "configuration-management"]
+  },
+  {
+    id: 165,
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "hard",
+    question: "An Ansible playbook configures 200 network devices. Which task property ensures idempotent behavior when a configuration is already present?",
+    options: [
+      "always_run",
+      "idempotent: true",
+      "The module itself enforces idempotency (e.g., ios_config)",
+      "run_once"
+    ],
+    correct: 2,
+    explanation: "Most Ansible modules, including ios_config, are idempotent by design—they only apply changes when the desired state differs from the current state.",
+    codeSnippets: ["yaml"],
+    tags: ["ansible", "idempotency", "network-automation"]
+  },
+  {
+    id: 166,
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "easy",
+    question: "Which Linux command is used to view real-time system processes?",
+    options: [
+      "ls",
+      "ps",
+      "top",
+      "cd"
+    ],
+    correct: 2,
+    explanation: "top displays real-time system processes, CPU, and memory usage. ps shows a snapshot. ls lists files. cd changes directories.",
+    codeSnippets: ["bash"],
+    tags: ["linux", "commands", "monitoring"]
+  },
+  {
+    id: 167,
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What is the purpose of Infrastructure as Code (IaC)?",
+    options: [
+      "To manually configure servers",
+      "To manage infrastructure using version-controlled, declarative configuration files",
+      "To increase manual deployment speed",
+      "To replace all network devices with software"
+    ],
+    correct: 1,
+    explanation: "IaC uses declarative configuration files (Terraform, Ansible) to provision and manage infrastructure consistently and reproducibly.",
+    codeSnippets: [],
+    tags: ["iac", "terraform", "devops", "automation"]
+  },
+  {
+    id: 168,
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "easy",
+    question: "Which Linux command searches for a pattern inside files?",
+    options: [
+      "find",
+      "grep",
+      "ls",
+      "cat"
+    ],
+    correct: 1,
+    explanation: "grep searches for patterns within files. find locates files by name/attributes. ls lists files. cat displays file contents.",
+    codeSnippets: ["bash"],
+    tags: ["linux", "commands", "grep"]
+  },
+  {
+    id: 169,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Which OSI layer is responsible for logical addressing and routing?",
+    options: [
+      "Data Link",
+      "Network",
+      "Transport",
+      "Application"
+    ],
+    correct: 1,
+    explanation: "The Network layer (Layer 3) handles logical addressing (IP) and routing. Data Link is Layer 2 (MAC). Transport is Layer 4.",
+    codeSnippets: [],
+    tags: ["osi-model", "layer3", "routing", "fundamentals"]
+  },
+  {
+    id: 170,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "What is the usable host range in the subnet 192.168.10.0/26?",
+    options: [
+      "192.168.10.1 - 192.168.10.62",
+      "192.168.10.1 - 192.168.10.126",
+      "192.168.10.0 - 192.168.10.255",
+      "192.168.10.1 - 192.168.10.30"
+    ],
+    correct: 1,
+    explanation: "/26 gives 64 IPs (2^6). Usable hosts: 62 (64-2). Range: .1 to .126. Network: .0, Broadcast: .127.",
+    codeSnippets: [],
+    tags: ["subnetting", "ip-addressing", "cidr"]
+  },
+  {
+    id: 171,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Which protocol is used by SSH for secure remote access?",
+    options: [
+      "TCP",
+      "UDP",
+      "ICMP",
+      "ARP"
+    ],
+    correct: 0,
+    explanation: "SSH uses TCP port 22 for reliable, connection-oriented secure remote access. UDP is for DNS/DHCP. ICMP is for ping/traceroute.",
+    codeSnippets: [],
+    tags: ["ssh", "protocols", "tcp", "security"]
+  },
+  {
+    id: 172,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "What is the difference between TCP and UDP?",
+    options: [
+      "TCP is faster than UDP",
+      "TCP is connection-oriented and reliable; UDP is connectionless and faster",
+      "UDP guarantees delivery; TCP does not",
+      "TCP uses ports; UDP does not"
+    ],
+    correct: 1,
+    explanation: "TCP establishes connections (3-way handshake), guarantees delivery via acknowledgments, and retransmits lost packets. UDP is faster but unreliable.",
+    codeSnippets: [],
+    tags: ["tcp", "udp", "transport-layer", "protocols"]
+  },
+  {
+    id: 173,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "hard",
+    question: "Given the IP address 172.16.50.25 with wildcard mask 0.0.0.255, what subnet does this represent in Cisco OSPF/ACL notation?",
+    options: [
+      "/24",
+      "/16",
+      "/32",
+      "/25"
+    ],
+    correct: 0,
+    explanation: "Wildcard 0.0.0.255 corresponds to mask 255.255.255.0, which is /24. In OSPF network statements and ACLs, wildcard masks are inverted subnet masks.",
+    codeSnippets: [],
+    tags: ["wildcard-mask", "subnetting", "ospf", "acl"]
+  },
+  {
+    id: 174,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "What does the acronym VLAN stand for?",
+    options: [
+      "Virtual Local Area Network",
+      "Very Large Area Network",
+      "Virtual LAN Access",
+      "Variable LAN"
+    ],
+    correct: 0,
+    explanation: "VLAN stands for Virtual Local Area Network. It is a logical segmentation of a physical network at Layer 2.",
+    codeSnippets: [],
+    tags: ["vlan", "layer2", "fundamentals", "terminology"]
+  },
+  {
+    id: 175,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which IPv6 address type is used for one-to-many communication and replaces broadcast?",
+    options: [
+      "Unicast",
+      "Multicast",
+      "Anycast",
+      "Broadcast"
+    ],
+    correct: 1,
+    explanation: "IPv6 multicast replaces broadcast. FF02::1 is the all-nodes multicast address. IPv6 has no broadcast address.",
+    codeSnippets: [],
+    tags: ["ipv6", "multicast", "addressing"]
+  },
+  {
+    id: 176,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "What is the default administrative distance of OSPF in Cisco routers?",
+    options: [
+      "90",
+      "110",
+      "120",
+      "170"
+    ],
+    correct: 1,
+    explanation: "OSPF has an AD of 110. Connected: 0, Static: 1, EIGRP internal: 90, RIP: 120, EIGRP external: 170.",
+    codeSnippets: [],
+    tags: ["ospf", "administrative-distance", "routing"]
+  },
+  {
+    id: 177,
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which command verifies the IP address and status of all Cisco router interfaces in a concise table?",
+    options: [
+      "show interfaces",
+      "show ip interface brief",
+      "show running-config",
+      "show ip route"
+    ],
+    correct: 1,
+    explanation: "show ip interface brief displays IP addresses, status, and protocol state for all interfaces in a concise table format.",
+    codeSnippets: [],
+    tags: ["cisco-ios", "cli", "troubleshooting", "interfaces"]
+  },
+  {
+    id: 178,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "Which protocol is commonly used for CLI-based automation of Cisco IOS devices?",
+    options: [
+      "NETCONF",
+      "RESTCONF",
+      "SSH",
+      "SNMP"
+    ],
+    correct: 2,
+    explanation: "SSH provides secure CLI access for automation scripts. NETCONF and RESTCONF are model-driven protocols. SNMP is for monitoring.",
+    codeSnippets: [],
+    tags: ["ssh", "cli", "automation", "cisco-ios"]
+  },
+  {
+    id: 179,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "What is the PRIMARY benefit of model-driven programmability (YANG + NETCONF/RESTCONF) over CLI scraping?",
+    options: [
+      "Faster CLI output",
+      "Structured, vendor-agnostic data with transactional guarantees",
+      "Requires no network connectivity",
+      "Encrypts all traffic"
+    ],
+    correct: 1,
+    explanation: "Model-driven programmability provides structured data, reduces parsing errors, and offers transactional configuration via NETCONF.",
+    codeSnippets: [],
+    tags: ["yang", "netconf", "restconf", "model-driven"]
+  },
+  {
+    id: 180,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "A network automation pipeline needs to validate configuration changes before pushing to production. Which approach is MOST aligned with DevOps practices?",
+    options: [
+      "Push directly and monitor for failures",
+      "Use GitOps: review PR, run tests in staging, promote to production",
+      "Disable change windows",
+      "Use manual CLI on production"
+    ],
+    correct: 1,
+    explanation: "GitOps uses pull requests, automated testing, and staged promotion, ensuring changes are validated before reaching production.",
+    codeSnippets: [],
+    tags: ["gitops", "devops", "change-management", "ci-cd"]
+  },
+  {
+    id: 181,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the purpose of a YANG model in network automation?",
+    options: [
+      "To replace all network devices",
+      "To define the structure and semantics of configuration and state data",
+      "To encrypt API traffic",
+      "To compress configuration files"
+    ],
+    correct: 1,
+    explanation: "YANG models define the schema for configuration and operational state data, enabling model-driven management via NETCONF/RESTCONF.",
+    codeSnippets: ["yaml"],
+    tags: ["yang", "model-driven", "netconf", "schemas"]
+  },
+  {
+    id: 182,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "Which Python library is commonly used to automate Cisco IOS XE devices via RESTCONF?",
+    options: [
+      "netmiko",
+      "requests",
+      "scapy",
+      "nmap"
+    ],
+    correct: 1,
+    explanation: "requests is commonly used for RESTCONF calls. netmiko uses SSH/CLI. scapy is for packet crafting. nmap is for scanning.",
+    codeSnippets: ["python"],
+    tags: ["python", "restconf", "ios-xe", "automation"]
+  },
+  {
+    id: 183,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "easy",
+    question: "What is the default port for NETCONF over SSH?",
+    options: [
+      "22",
+      "830",
+      "443",
+      "161"
+    ],
+    correct: 1,
+    explanation: "NETCONF over SSH uses port 830 by default. SSH is 22. HTTPS/RESTCONF is 443. SNMP is 161.",
+    codeSnippets: [],
+    tags: ["netconf", "ports", "protocols", "automation"]
+  },
+  {
+    id: 184,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "medium",
+    question: "What is the purpose of JSONPath in network automation?",
+    options: [
+      "To define YANG models",
+      "To query and extract specific data from JSON responses",
+      "To encrypt REST API traffic",
+      "To replace XML in NETCONF"
+    ],
+    correct: 1,
+    explanation: "JSONPath provides a query language for extracting specific elements from JSON, similar to XPath for XML. Useful for parsing API responses.",
+    codeSnippets: ["json"],
+    tags: ["json", "jsonpath", "data-parsing", "rest-api"]
+  },
+  {
+    id: 185,
+    domain: "Network Automation and Programmability",
+    domainKey: "automation",
+    difficulty: "hard",
+    question: "A network automation script uses git push directly to the production branch. Which practice BEST mitigates risk?",
+    options: [
+      "Use force-push for faster deployments",
+      "Implement pull requests with CI validation and branch protection",
+      "Commit directly to main with no review",
+      "Disable Git entirely"
+    ],
+    correct: 1,
+    explanation: "Pull requests with CI validation and branch protection ensure code review, automated testing, and controlled deployments to production.",
+    codeSnippets: [],
+    tags: ["git", "cicd", "devops", "best-practices"]
   }
 ];
 

@@ -199,7 +199,11 @@
             `;
             questionContent.appendChild(questionText);
 
-            if (question.codeSnippets && question.codeSnippets.length > 0) {
+            if (
+              question.codeSnippets &&
+              question.codeSnippets.length > 0 &&
+              /```/.test(question.question)
+            ) {
               const codeContainer = document.createElement('div');
               codeContainer.className = 'space-y-3';
               question.codeSnippets.forEach(lang => {

@@ -14,7 +14,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The Singleton Pattern ensures a class has only one instance and provides a global point of access to it. For connection pool management, Singleton prevents multiple redundant connections and ensures resource efficiency.",
-    codeSnippets: [],
     tags: ["design-patterns", "oop", "dna-center"]
   },
   {
@@ -48,7 +47,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "json handles Meraki JSON, xml.etree.ElementTree parses NETCONF XML, and PyYAML handles YAML configs. requests fetches APIs but doesn't parse formats. BeautifulSoup is for HTML/XML scraping, not programmatic API parsing.",
-    codeSnippets: ["python", "json", "yaml"],
     tags: ["python", "data-formats", "parsing"]
   },
   {
@@ -65,7 +63,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "Single Responsibility Principle (SRP) states that a class or module should have only one reason to change. In network automation, this means separating configuration parsing, API communication, and data storage into distinct modules.",
-    codeSnippets: [],
     tags: ["solid", "design-principles", "architecture"]
   },
   {
@@ -82,7 +79,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Sets use hash tables, providing O(1) average-case lookup time versus O(n) for lists/tuples. For 100,000 IPs with repeated membership checks, a set is dramatically faster.",
-    codeSnippets: ["python"],
     tags: ["python", "data-structures", "performance"]
   },
   {
@@ -99,7 +95,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "200 OK is the standard response for successful HTTP requests. 201 Created is for successful creation requests. 204 No Content is for successful requests with no response body. 301 is for redirection.",
-    codeSnippets: [],
     tags: ["http", "status-codes", "rest"]
   },
   {
@@ -116,7 +111,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The requests library is the de facto standard for making HTTP requests in Python. It provides a simple API for HTTP/1.1 and is widely used for REST API interactions, including Cisco platform APIs.",
-    codeSnippets: ["python"],
     tags: ["python", "http", "requests"]
   },
 
@@ -135,7 +129,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "PUT is idempotent—making the same request multiple times produces the same result. It replaces the entire resource at a known URI. PATCH is also used for updates but is not strictly idempotent.",
-    codeSnippets: [],
     tags: ["rest", "http", "api-design"]
   },
   {
@@ -152,7 +145,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "RESTCONF is an IETF standard (RFC 8040) that uses HTTP/HTTPS with standard REST methods, making it firewall-friendly. NETCONF uses SSH or TLS as a transport layer with its own RPC model.",
-    codeSnippets: ["restconf", "yaml"],
     tags: ["restconf", "netconf", "ios-xe", "ietf"]
   },
   {
@@ -169,7 +161,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "HTTP 429 indicates rate limiting. The Retry-After header tells the client when to retry. Immediate retry worsens the problem. WWW-Authenticate is for 401/403 auth challenges.",
-    codeSnippets: ["python"],
     tags: ["meraki", "rate-limiting", "http", "error-handling"]
   },
   {
@@ -186,7 +177,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "X-Auth-Token carries the bearer token obtained from the DNA Center authentication endpoint. It's analogous to Authorization: Bearer <token>. The Content-Type header specifies the data format.",
-    codeSnippets: ["python"],
     tags: ["dna-center", "authentication", "headers"]
   },
   {
@@ -203,7 +193,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 3,
     explanation: "4xx status codes (400-499) indicate client errors: 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests.",
-    codeSnippets: [],
     tags: ["http", "status-codes", "rest"]
   },
   {
@@ -220,7 +209,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "requests.post(url, json=payload) automatically serializes the payload to JSON and sets Content-Type: application/json. Option A requires manual JSON serialization and doesn't set the header automatically.",
-    codeSnippets: ["python"],
     tags: ["python", "requests", "http", "json"]
   },
   {
@@ -237,7 +225,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Asynchronous programming allows multiple API calls to run concurrently without blocking the main thread. This is especially useful when interacting with multiple Cisco devices or platforms simultaneously, reducing total execution time.",
-    codeSnippets: ["python"],
     tags: ["python", "asyncio", "async", "performance"]
   },
 
@@ -256,7 +243,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The Meraki Dashboard (dashboard.meraki.com) is the cloud-based management platform for all Meraki products (MR access points, MS switches, MX security appliances, MV cameras).",
-    codeSnippets: [],
     tags: ["meraki", "dashboard", "platforms"]
   },
   {
@@ -273,7 +259,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "Intent-based networking (IBN) in DNA Center allows administrators to define high-level business policies which the system translates into device configurations. Traditional management requires manual per-device CLI, SNMP, or static ACLs.",
-    codeSnippets: [],
     tags: ["dna-center", "intent-based", "policy"]
   },
   {
@@ -290,7 +275,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "GET /v1/memberships retrieves memberships, which link people to rooms. To find all rooms a user is in, you filter memberships by personId.",
-    codeSnippets: ["python"],
     tags: ["webex", "api", "rest"]
   },
   {
@@ -307,7 +291,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "ucsmsdk is Cisco's official Python SDK for UCS Manager, wrapping the UCS XML API for managing service profiles, policies, chassis, and fabric interconnects.",
-    codeSnippets: ["python"],
     tags: ["ucs", "ucsm", "xml-api", "python"]
   },
   {
@@ -324,7 +307,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Cisco IOS XE (Catalyst 9000 series) supports App Hosting, allowing Docker containers to run on the switch itself via the Application Hosting API or CLI.",
-    codeSnippets: ["dockerfile", "yaml"],
     tags: ["ios-xe", "app-hosting", "docker", "containers"]
   },
   {
@@ -341,7 +323,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Cisco Wireless LAN Controllers (WLC) manage access points and wireless networks. They provide APIs for automation, though DNA Center and Meraki also offer wireless management capabilities.",
-    codeSnippets: [],
     tags: ["wireless", "wlc", "platforms"]
   },
   {
@@ -358,7 +339,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "DNA Center Assurance provides real-time analytics, client health monitoring, and network health insights. It uses telemetry data to detect issues and provide actionable intelligence for network operations.",
-    codeSnippets: [],
     tags: ["dna-center", "assurance", "monitoring"]
   },
 
@@ -377,7 +357,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "COPY requirements.txt . followed by RUN pip install -r requirements.txt is the standard Docker layer caching optimization. ADD has additional features but COPY is preferred for simple file copying.",
-    codeSnippets: ["dockerfile"],
     tags: ["docker", "deployment", "optimization"]
   },
   {
@@ -394,7 +373,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Client Credentials grant is designed for machine-to-machine authentication where the client authenticates directly with the authorization server using its client_id and client_secret.",
-    codeSnippets: ["python"],
     tags: ["oauth", "webex", "authentication", "security"]
   },
   {
@@ -411,7 +389,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "Environment variables store configuration that changes between deployments (staging, production, development) without modifying code—API keys, database URLs, service endpoints.",
-    codeSnippets: [],
     tags: ["12-factor", "configuration", "deployment"]
   },
   {
@@ -428,7 +405,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Any exposed API key must be treated as compromised. Immediate action: rotate the key, revoke the old one, and store the new key in environment variables, a secrets manager, or CI/CD secret store.",
-    codeSnippets: [],
     tags: ["security", "secrets", "api-keys", "git"]
   },
   {
@@ -445,7 +421,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "on: push with branches: [main] triggers on pushes to main. pull_request triggers on PR creation/update. release triggers on GitHub release creation. schedule uses cron syntax.",
-    codeSnippets: ["yaml"],
     tags: ["github-actions", "cicd", "automation"]
   },
   {
@@ -462,7 +437,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Firewalls monitor and control network traffic based on predetermined security rules. They act as a barrier between trusted and untrusted networks, filtering traffic based on IP addresses, ports, and protocols.",
-    codeSnippets: [],
     tags: ["security", "firewall", "networking"]
   },
   {
@@ -479,7 +453,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "SSH (Secure Shell) provides encrypted remote administration of network devices. Unlike Telnet, which transmits data in plaintext, SSH encrypts all communications, including passwords and commands.",
-    codeSnippets: [],
     tags: ["ssh", "security", "remote-access"]
   },
 
@@ -498,7 +471,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "DNA Center provides intent-based networking with centralized policy management across the entire network fabric (wired, wireless, SD-WAN). ISE is identity and access control. Prime is legacy device management. FMC manages Firepower threat defense.",
-    codeSnippets: [],
     tags: ["dna-center", "sdn", "policy"]
   },
   {
@@ -515,7 +487,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "YANG (RFC 7950) is a data modeling language used to model configuration and state data for network protocols like NETCONF and RESTCONF. It defines the structure, constraints, and semantics of data.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "netconf", "data-modeling"]
   },
   {
@@ -532,7 +503,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "ios_config requires network_cli (SSH) connection for IOS XE devices. Ansible's network_cli plugin establishes an SSH session and uses the device CLI. HTTP/HTTPS is for RESTCONF.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "ios-xe", "network-cli", "automation"]
   },
   {
@@ -549,7 +519,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "/dna/intent/api/v1/client-health is the DNA Center Assurance API for retrieving client health data (success rate, RSSI, data rate, roaming). It accepts timeWindow parameters.",
-    codeSnippets: ["python"],
     tags: ["dna-center", "assurance", "api", "client-health"]
   },
   {
@@ -566,7 +535,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Ansible is agentless (uses SSH), declarative (YAML playbooks define desired state), and has extensive network modules (ios_config, iosxr_config, etc.).",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "configuration-management", "network-automation"]
   },
   {
@@ -583,7 +551,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "Idempotency means applying the same configuration multiple times yields the same end state without unintended side effects. Ansible checks the current state before making changes.",
-    codeSnippets: [],
     tags: ["ansible", "idempotency", "concepts"]
   },
   {
@@ -600,7 +567,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "In intent-based networking, policies define the desired network behavior and outcomes (e.g., 'guest users get internet only'). DNA Center translates these high-level policies into device-specific configurations.",
-    codeSnippets: [],
     tags: ["dna-center", "policy", "intent-based"]
   },
   {
@@ -617,7 +583,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "/dna/intent/api/v1/site is used for site management in DNA Center, including creating sites, buildings, floors, and assigning devices to locations.",
-    codeSnippets: ["python"],
     tags: ["dna-center", "api", "site-provisioning"]
   },
 
@@ -636,7 +601,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Layer 3 (Network) handles logical addressing (IP) and routing between networks using routers. Layer 2 handles switching within a network (MAC addresses).",
-    codeSnippets: [],
     tags: ["osi", "networking", "fundamentals"]
   },
   {
@@ -653,7 +617,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "RESTCONF uses 'application/yang-data+json' for JSON-encoded YANG data. XML uses 'application/yang-data+xml'. Both can retrieve operational data via the /restconf/data/ endpoint.",
-    codeSnippets: ["restconf", "json"],
     tags: ["restconf", "yang", "ios-xe", "media-types"]
   },
   {
@@ -670,7 +633,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "VLANs segment broadcast domains at Layer 2, improving security and reducing broadcast traffic. Devices in different VLANs cannot communicate without a router (Layer 3).",
-    codeSnippets: [],
     tags: ["vlan", "switching", "layer-2"]
   },
   {
@@ -687,7 +649,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "RFC 1918 private ranges: 10.0.0.0/8 (10.x.x.x), 172.16.0.0/12 (172.16.x.x - 172.31.x.x), 192.168.0.0/16 (192.168.x.x).",
-    codeSnippets: [],
     tags: ["ipv4", "addressing", "rfc1918"]
   },
   {
@@ -704,7 +665,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "show version displays IOS version, system uptime, device model, memory, configuration register, and boot image. show running-config shows active config.",
-    codeSnippets: [],
     tags: ["ios-xe", "cli", "troubleshooting"]
   },
   {
@@ -721,7 +681,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "CDP (Cisco Discovery Protocol) operates at Layer 2 and discovers Cisco device topology. IP is Layer 3, TCP is Layer 4, OSPF is Layer 3 routing protocol.",
-    codeSnippets: [],
     tags: ["cdp", "layer-2", "discovery"]
   },
   {
@@ -738,7 +697,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Class C addresses (192.0.0.0 to 223.255.255.255) use a default subnet mask of 255.255.255.0 (/24), providing 254 usable host addresses per network.",
-    codeSnippets: [],
     tags: ["ipv4", "subnetting", "addressing"]
   },
   {
@@ -755,7 +713,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "show ip route displays the routing table, including all known networks, next hops, and routing protocols. show interfaces shows interface status, show running-config shows the active configuration.",
-    codeSnippets: [],
     tags: ["ios-xe", "cli", "routing"]
   },
   {
@@ -772,7 +729,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 3,
     explanation: "VXLAN (Virtual Extensible LAN) enables network virtualization by creating logical Layer 2 networks over Layer 3 infrastructure, overcoming VLAN's 4094 limit and enabling multi-tenancy.",
-    codeSnippets: [],
     tags: ["vxlan", "virtualization", "overlay"]
   },
 
@@ -791,7 +747,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "@lru_cache from functools caches function results, reducing redundant API calls. This is useful for frequently accessed Cisco API data that doesn't change often.",
-    codeSnippets: ["python"],
     tags: ["python", "decorators", "caching"]
   },
   {
@@ -808,7 +763,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Git tracks changes to code over time, enables collaboration through branching/merging, and provides history and rollback capabilities. It's essential for managing automation scripts and infrastructure code.",
-    codeSnippets: [],
     tags: ["git", "version-control", "collaboration"]
   },
   {
@@ -825,7 +779,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "The Client/Service Layer Pattern centralizes API interactions, credential management, and request/response handling. It provides a single point of configuration for endpoints, authentication, and error handling across multiple Cisco APIs.",
-    codeSnippets: ["python"],
     tags: ["architecture", "api-design", "python"]
   },
   {
@@ -842,7 +795,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Virtual environments isolate project dependencies, preventing conflicts between different projects requiring different versions of libraries (e.g., requests, ncclient, urllib3).",
-    codeSnippets: [],
     tags: ["python", "virtualenv", "dependencies"]
   },
   {
@@ -859,7 +811,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "PyYAML is the standard Python library for YAML parsing and generation. It's essential for working with Ansible playbooks, Docker Compose files, and network configuration templates.",
-    codeSnippets: ["python", "yaml"],
     tags: ["python", "yaml", "parsing"]
   },
 
@@ -878,7 +829,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "HATEOAS is a REST constraint where the server provides links to related actions in the response, enabling clients to discover available actions dynamically. This makes APIs self-documenting.",
-    codeSnippets: [],
     tags: ["rest", "hateoas", "api-design"]
   },
   {
@@ -895,7 +845,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The Authorization header provides authentication credentials for the request. Common formats include 'Bearer <token>', 'Basic <base64-credentials>', and API key schemes.",
-    codeSnippets: [],
     tags: ["http", "headers", "authentication"]
   },
   {
@@ -912,7 +861,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "DNA Center uses token-based authentication. The recommended approach is to obtain a token via /dna/system/api/v1/auth/token and reuse it for subsequent requests. Tokens expire and should be refreshed periodically.",
-    codeSnippets: ["python"],
     tags: ["dna-center", "authentication", "tokens"]
   },
   {
@@ -929,7 +877,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The Accept header tells the server what media types the client can process in the response. For Cisco APIs, this often includes 'application/json' or 'application/yang-data+json' for RESTCONF.",
-    codeSnippets: [],
     tags: ["http", "headers", "rest"]
   },
   {
@@ -946,7 +893,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "POST is used to create new resources. GET retrieves resources, PUT updates/replaces resources, DELETE removes resources.",
-    codeSnippets: [],
     tags: ["rest", "http", "api-design"]
   },
 
@@ -965,7 +911,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Cisco Webex provides a comprehensive suite of collaboration APIs for messaging, video meetings, calling, and team collaboration.",
-    codeSnippets: [],
     tags: ["webex", "collaboration", "platforms"]
   },
   {
@@ -982,7 +927,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Cisco ISE provides identity-based access control, authenticating users and devices before allowing network access. It enforces policies based on identity, not just IP addresses.",
-    codeSnippets: [],
     tags: ["ise", "identity", "security"]
   },
   {
@@ -999,7 +943,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "GET /api/v1/organizations/{orgId}/networks retrieves all networks in a specific Meraki organization. The organization ID is required in the path.",
-    codeSnippets: ["python"],
     tags: ["meraki", "api", "rest"]
   },
   {
@@ -1016,7 +959,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Cisco FMC manages Firepower threat defense, providing centralized security policy management, intrusion prevention, and malware protection across the network.",
-    codeSnippets: [],
     tags: ["fmc", "security", "firepower"]
   },
   {
@@ -1033,7 +975,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Cisco DNA Center is the centralized management platform for SD-Access, providing policy-based automation, assurance, and network analytics for software-defined enterprise networks.",
-    codeSnippets: [],
     tags: ["dna-center", "sd-access", "sdn"]
   },
 
@@ -1052,7 +993,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "docker build constructs a Docker image from a Dockerfile. docker run creates and starts a container from an image. docker create creates a container without starting it.",
-    codeSnippets: [],
     tags: ["docker", "commands", "containers"]
   },
   {
@@ -1069,7 +1009,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "HTTPS encrypts data in transit using TLS/SSL, protecting sensitive information like API keys, credentials, and configuration data from interception and tampering.",
-    codeSnippets: [],
     tags: ["https", "security", "encryption"]
   },
   {
@@ -1086,7 +1025,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The build stage compiles source code, runs tests, lints code, and creates deployable artifacts (binaries, containers, packages). It catches issues before deployment.",
-    codeSnippets: [],
     tags: ["cicd", "build", "devops"]
   },
   {
@@ -1103,7 +1041,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Penetration testing (ethical hacking) simulates real-world attacks to identify security vulnerabilities. It's a critical practice for network automation tools that interact with production network devices.",
-    codeSnippets: [],
     tags: ["security", "penetration-testing", "devsecops"]
   },
   {
@@ -1120,7 +1057,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "README.md provides project documentation, setup instructions, usage examples, and contribution guidelines. It's the first file users see when visiting a repository.",
-    codeSnippets: [],
     tags: ["documentation", "repository", "best-practices"]
   },
 
@@ -1139,7 +1075,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "DNS translates human-readable domain names (e.g., cisco.com) to IP addresses (e.g., 23.1.75.84). It's essential for network services, including Cisco API endpoints.",
-    codeSnippets: [],
     tags: ["dns", "networking", "fundamentals"]
   },
   {
@@ -1156,7 +1091,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Ansible uses a push model and is agentless, using SSH to connect to network devices. This makes it lightweight and easy to deploy for network automation.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "automation", "network"]
   },
   {
@@ -1173,7 +1107,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "The vSmart Controller provides centralized control plane functions in Cisco SD-WAN, distributing routing policies, encryption keys, and control information to vEdge routers.",
-    codeSnippets: [],
     tags: ["sd-wan", "vsmart", "control-plane"]
   },
   {
@@ -1190,7 +1123,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "IaC treats infrastructure configuration as code, enabling version control, repeatability, automated provisioning, and reduced configuration drift across network devices.",
-    codeSnippets: [],
     tags: ["iac", "automation", "devops"]
   },
   {
@@ -1207,7 +1139,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "SFTP (SSH File Transfer Protocol) provides secure file transfers over SSH. Unlike FTP and TFTP, which transmit data in plaintext, SFTP encrypts all communications.",
-    codeSnippets: [],
     tags: ["sftp", "file-transfer", "security"]
   },
 
@@ -1226,7 +1157,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Routers forward packets between different networks based on IP addresses and routing tables. They operate at Layer 3 of the OSI model.",
-    codeSnippets: [],
     tags: ["routers", "networking", "layer-3"]
   },
   {
@@ -1243,7 +1173,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 3,
     explanation: "The TCP/IP Application Layer combines the OSI's Application, Presentation, and Session layers. It's responsible for network applications and data formatting.",
-    codeSnippets: [],
     tags: ["tcp-ip", "osi", "models"]
   },
   {
@@ -1260,7 +1189,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Standard Ethernet MTU is 1500 bytes. 9000 bytes is for jumbo frames. MTU affects packet fragmentation and network performance.",
-    codeSnippets: [],
     tags: ["ethernet", "mtu", "networking"]
   },
   {
@@ -1277,7 +1205,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "TCP (Transmission Control Protocol) operates at Layer 4 and provides reliable, connection-oriented data transfer with error checking and retransmission. UDP is connectionless.",
-    codeSnippets: [],
     tags: ["tcp", "osi", "layer-4"]
   },
   {
@@ -1294,7 +1221,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "ARP maps IP addresses to MAC addresses, allowing devices on the same network to communicate. When a device knows an IP but needs the corresponding MAC address, it sends an ARP request.",
-    codeSnippets: [],
     tags: ["arp", "mac", "layer-2"]
   },
   {
@@ -1311,7 +1237,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "OSPF (Open Shortest Path First) is a link-state routing protocol that uses Dijkstra's algorithm to calculate the shortest path. It's suitable for large, complex networks.",
-    codeSnippets: [],
     tags: ["ospf", "routing", "protocols"]
   },
   {
@@ -1328,7 +1253,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "A switch operates at Layer 2 and forwards frames based on MAC addresses using a MAC address table. Hubs operate at Layer 1 and broadcast all traffic.",
-    codeSnippets: [],
     tags: ["switches", "layer-2", "networking"]
   },
   {
@@ -1345,7 +1269,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "A DMZ is a physical or logical subnetwork that exposes external-facing services to untrusted networks (usually the internet) while keeping internal networks secure.",
-    codeSnippets: [],
     tags: ["dmz", "security", "architecture"]
   },
   {
@@ -1362,7 +1285,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "127.0.0.1 is the loopback address used for local network testing and self-referencing. Data sent to this address never leaves the host.",
-    codeSnippets: [],
     tags: ["ip", "loopback", "testing"]
   },
   {
@@ -1379,7 +1301,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "DHCP dynamically assigns IP addresses, subnet masks, default gateways, and DNS servers to devices on a network, eliminating manual IP configuration.",
-    codeSnippets: [],
     tags: ["dhcp", "ip", "networking"]
   },
 
@@ -1398,7 +1319,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Telemetry subscriptions in IOS XE push model-driven telemetry data to a collector, replacing polling models like SNMP. CDP discovers neighbors, EEM reacts to events, and SNMP traps are event-driven but not model-driven streaming.",
-    codeSnippets: ["yaml"],
     tags: ["telemetry", "ios-xe", "model-driven", "automation"]
   },
   {
@@ -1415,7 +1335,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Ansible is agentless and push-based, typically using SSH to execute playbooks on network devices. Puppet and Chef use agent-pull models, and SaltStack can use both but is more commonly agent-based.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "automation", "configuration-management", "ssh"]
   },
   {
@@ -1432,7 +1351,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "netconf-yang enables the NETCONF-YANG subsystem on IOS XE, allowing model-driven configuration and operational data access. restconf enables RESTCONF over HTTP. The other options are not valid IOS XE configuration commands for NETCONF.",
-    codeSnippets: ["yaml"],
     tags: ["netconf", "yang", "ios-xe", "automation"]
   },
   {
@@ -1449,7 +1367,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "action 1.0 cli executes CLI commands within an EEM applet and can capture output into a variable using the 'output' keyword, enabling reactive automation without external controllers.",
-    codeSnippets: ["yaml"],
     tags: ["eem", "ios-xe", "automation", "event-driven"]
   },
   {
@@ -1466,7 +1383,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Netmiko is built on Paramiko but provides network-specific abstractions for SSH connections to routers, switches, and firewalls, handling prompt parsing and command execution.",
-    codeSnippets: ["python"],
     tags: ["python", "netmiko", "ssh", "networking"]
   },
   {
@@ -1483,7 +1399,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "YANG models define the structure, constraints, and semantics of network configuration and operational data, enabling model-driven programmability via NETCONF/RESTCONF.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "model-driven", "netconf", "restconf"]
   },
   {
@@ -1500,7 +1415,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "RESTCONF in IOS XE exposes YANG-modeled operational data such as interfaces. SNMP uses OIDs, CDP discovers neighbors, and syslog is text-based logging—not a structured REST API.",
-    codeSnippets: ["yaml"],
     tags: ["restconf", "ios-xe", "interfaces", "json"]
   },
   {
@@ -1517,7 +1431,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "An inventory file typically contains device IPs, usernames, passwords, and API keys. It must be encrypted with ansible-vault or excluded with .gitignore. README, requirements, and playbooks usually contain no secrets.",
-    codeSnippets: ["yaml"],
     tags: ["git", "security", "ansible", "secrets"]
   },
   {
@@ -1534,7 +1447,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Cisco DNA Center uses model-driven telemetry with Kafka as the message bus between Assurance collectors and analytics engines. Meraki uses its own dashboard polling/streaming, and Prime/FMC are legacy monitoring platforms.",
-    codeSnippets: ["yaml"],
     tags: ["dna-center", "telemetry", "kafka", "assurance"]
   },
   {
@@ -1551,7 +1463,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Infrastructure as Code (IaC) stores network and infrastructure configuration in version control, applying it consistently through automation tools like Ansible, Terraform, or Nornir.",
-    codeSnippets: ["yaml"],
     tags: ["iac", "automation", "devops"]
   },
   {
@@ -1568,7 +1479,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Nornir is a Python automation framework designed for network automation, providing inventory management, task execution, result handling, and integration with Netmiko/Napalm for parsing and configuration.",
-    codeSnippets: ["python"],
     tags: ["python", "nornir", "netmiko", "automation"]
   },
   {
@@ -1585,7 +1495,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "GET retrieves the resource identified by the request URI in RESTCONF. POST creates resources, PUT replaces resources, and DELETE removes resources.",
-    codeSnippets: ["yaml"],
     tags: ["restconf", "yang", "http", "automation"]
   },
   {
@@ -1602,7 +1511,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Idempotency means running the same automation task repeatedly produces the same end state without unintended side effects. Ansible, for example, is designed to be idempotent.",
-    codeSnippets: [],
     tags: ["ansible", "automation", "concepts", "idempotent"]
   },
   {
@@ -1619,7 +1527,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "{% for %} loops iterate over lists or dictionaries in Jinja2 templates, making them ideal for generating repetitive network configurations like multiple VLAN interfaces or ACL entries.",
-    codeSnippets: ["yaml"],
     tags: ["jinja2", "templating", "automation"]
   },
   {
@@ -1636,7 +1543,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "DNA Center's intent-based APIs translate business intent into network policies, while Templates API enables reusable, version-controlled configuration templates for devices and sites.",
-    codeSnippets: ["yaml"],
     tags: ["dna-center", "intent", "templates", "api"]
   },
   {
@@ -1653,7 +1559,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "JSON is widely used in network APIs and telemetry because it is human-readable, maps directly to YANG JSON encoding, and is natively supported by Python dictionaries and REST frameworks.",
-    codeSnippets: ["yaml"],
     tags: ["json", "data-formats", "rest", "telemetry"]
   },
   {
@@ -1670,7 +1575,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Automated nightly config collection with model-driven APIs, Git diff, and alerting provides scalable, auditable change detection. Manual CLI does not scale. CDP and SNMP do not provide full config change history.",
-    codeSnippets: ["yaml"],
     tags: ["automation", "config-management", "git", "restconf"]
   },
   {
@@ -1687,7 +1591,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "RESTCONF exposes YANG-modeled data over HTTP/HTTPS. NETCONF uses SSH/TLS and XML. SNMP uses MIBs/OIDs. SSH is remote CLI access, not a structured data API.",
-    codeSnippets: ["yaml"],
     tags: ["restconf", "yang", "ios-xe", "telemetry"]
   },
   {
@@ -1704,7 +1607,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Ansible inventory plugins, including constructed and yaml/ini/csv-based sources, enable dynamic host population. Static inventory is hardcoded. host_vars stores per-host variables. ansible.cfg configures behavior.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "inventory", "automation"]
   },
   {
@@ -1721,7 +1623,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "NETCONF over SSH uses TCP port 830 by default. 22 is SSH, 443 is HTTPS/RESTCONF, and 161 is SNMP.",
-    codeSnippets: [],
     tags: ["netconf", "ports", "automation"]
   },
   {
@@ -1738,7 +1639,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "App Hosting on IOS XE allows running Python scripts and applications directly on the switch, exposing local REST endpoints. EEM is event-driven CLI actions. SNMP and LLDP are management/discovery protocols.",
-    codeSnippets: ["python"],
     tags: ["ios-xe", "app-hosting", "python", "automation"]
   },
   {
@@ -1755,7 +1655,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "POST creates new resources. GET retrieves, PUT replaces, and DELETE removes.",
-    codeSnippets: [],
     tags: ["rest", "http", "api-design"]
   },
   {
@@ -1772,7 +1671,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Templated configuration with inventory data and Ansible deployment ensures consistency, auditability, and repeatability. Manual CLI does not scale. Email instructions are error-prone. SNMP set lacks validation and template abstraction.",
-    codeSnippets: ["yaml"],
     tags: ["jinja2", "ansible", "templating", "automation"]
   },
   {
@@ -1789,7 +1687,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "/api/v1/organizations lists organizations. /networks lists networks within an organization. /devices lists hardware, and /ssids lists wireless networks.",
-    codeSnippets: ["python"],
     tags: ["meraki", "api", "rest", "dashboard"]
   },
   {
@@ -1806,7 +1703,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "YANG is the standard data modeling language for NETCONF and RESTCONF. XML and JSON are encoding formats carried by those protocols. YAML is used for automation tool configuration, not device modeling.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "netconf", "restconf", "model-driven"]
   },
   {
@@ -1823,7 +1719,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Root-cause troubleshooting starts with reproducing the failure and collecting evidence: API responses, configs, and device state. Automation problems are usually data, auth, or model-related before vendor fault.",
-    codeSnippets: [],
     tags: ["troubleshooting", "automation", "debugging"]
   },
   {
@@ -1840,7 +1735,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "CDP is Cisco-proprietary and advertises device ID, capabilities, and interface details to directly connected Cisco neighbors. LLDP is standards-based and vendor-neutral. STP prevents loops. OSPF is a routing protocol.",
-    codeSnippets: [],
     tags: ["cdp", "lldp", "discovery", "networking"]
   },
   {
@@ -1857,7 +1751,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "A YANG container organizes related data nodes hierarchically but does not represent a top-level managed object with independent existence, unlike a 'list'.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "model-driven", "data-model"]
   },
   {
@@ -1874,7 +1767,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "git switch -c feature-x creates and switches to a new branch. git checkout main switches branches. git merge integrates branches. git push --force overwrites remote history.",
-    codeSnippets: [],
     tags: ["git", "workflow", "automation"]
   },
   {
@@ -1891,7 +1783,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "APIs provide structured, programmatic access that scales across many devices and integrates with automation pipelines, CI/CD, and monitoring systems.",
-    codeSnippets: [],
     tags: ["api", "automation", "networking"]
   },
   {
@@ -1908,7 +1799,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "try/finally guarantees cleanup code runs regardless of exceptions, making it essential for closing API sessions, SSH connections, or file handles in network automation scripts.",
-    codeSnippets: ["python"],
     tags: ["python", "error-handling", "automation"]
   },
   {
@@ -1925,7 +1815,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Multidimensional analytics in DNA Center Assurance correlates client, network, and application telemetry across domains for proactive issue detection and root-cause analysis.",
-    codeSnippets: ["yaml"],
     tags: ["dna-center", "assurance", "analytics", "automation"]
   },
   {
@@ -1942,7 +1831,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "HTTPS/TLS encrypts REST API traffic in transit. HTTP sends data in plaintext. FTP is file transfer. Telnet is unencrypted remote access.",
-    codeSnippets: [],
     tags: ["security", "rest", "tls", "automation"]
   },
   {
@@ -1959,7 +1847,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "network_cli uses persistent SSH CLI sessions to network devices. local runs tasks on the control node. docker and winrm are for container and Windows targets.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "ios-xe", "connection", "ssh"]
   },
   {
@@ -1976,7 +1863,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "List[int] correctly represents a list of integers. Dict maps keys to values. Tuple is fixed-size and typically heterogeneous. Set is unordered and unique, less common for ordered VLAN lists.",
-    codeSnippets: ["python"],
     tags: ["python", "typing", "automation"]
   },
   {
@@ -1993,7 +1879,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "GitHub Flow uses a single main branch with feature branches merged via pull requests, suitable for continuous delivery. GitFlow has multiple long-lived branches. Trunk-based uses short-lived branches directly off main.",
-    codeSnippets: [],
     tags: ["git", "workflow", "automation"]
   },
   {
@@ -2010,7 +1895,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "In Cisco IOS XE YANG models, admin-status reflects the configured 'no shutdown' state, while oper-status reflects the current line protocol/interface status. A mismatch means administratively up but operationally down.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "json", "ios-xe", "interfaces"]
   },
   {
@@ -2027,7 +1911,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "inventory.yaml stores host variables and groups for Ansible. Dockerfile defines container images. README documents projects. .gitignore excludes files from Git.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "inventory", "yaml"]
   },
   {
@@ -2044,7 +1927,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Version control tracks changes, enables collaboration via branching, allows rollback to known-good states, and supports code review—all critical for production network automation.",
-    codeSnippets: [],
     tags: ["git", "version-control", "automation"]
   },
   {
@@ -2061,7 +1943,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "An API key identifies and authorizes the client application making the request. It is typically passed in a header like X-Auth-Token or Authorization.",
-    codeSnippets: ["python"],
     tags: ["api", "authentication", "rest", "security"]
   },
   {
@@ -2078,7 +1959,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "GET /api/v1/networks/{networkId}/wireless/ssids/{number} retrieves a specific SSID. Organizations own networks, and SSIDs are nested under networks.",
-    codeSnippets: ["python"],
     tags: ["meraki", "wireless", "api", "rest"]
   },
   {
@@ -2095,7 +1975,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "show netconf-yang sessions displays active NETCONF sessions, capabilities, and errors. It is the primary diagnostic for YANG/RPC issues. show version shows software. show ip route shows routing. show running-config shows CLI config.",
-    codeSnippets: ["yaml"],
     tags: ["netconf", "yang", "ios-xe", "troubleshooting"]
   },
   {
@@ -2112,7 +1991,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "A lint/test stage validates rendered configuration syntax, runs unit tests, and checks YANG/model compliance before any device deployment.",
-    codeSnippets: ["yaml"],
     tags: ["cicd", "jinja2", "testing", "automation"]
   },
   {
@@ -2129,7 +2007,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "NX-API exposes a REST interface on NX-OS switches, accepting JSON or XML payloads for configuration and operational data. CDP and LLDP are discovery protocols. STP is loop prevention.",
-    codeSnippets: ["python"],
     tags: ["nx-os", "nx-api", "rest", "automation"]
   },
   {
@@ -2146,7 +2023,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Source control tracks every change, enables team collaboration, supports branching/merging, and allows reverting to stable versions—critical for operational network automation.",
-    codeSnippets: [],
     tags: ["git", "version-control", "collaboration"]
   },
   {
@@ -2163,7 +2039,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "POST creates a new subordinate resource under a collection in RESTCONF. PUT can also create but requires the client to specify the target URI. GET retrieves and DELETE removes.",
-    codeSnippets: ["yaml"],
     tags: ["restconf", "http", "yang"]
   },
   {
@@ -2180,7 +2055,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "The /dna/intent/api/v1/compliance endpoint returns compliance details. /network-device returns inventory. /configuration manages config templates. /clients returns client data.",
-    codeSnippets: ["python"],
     tags: ["dna-center", "api", "compliance", "rest"]
   },
   {
@@ -2197,7 +2071,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "YAML stands for 'YAML Ain't Markup Language'—a recursive acronym. It is a human-readable data serialization language commonly used for configuration and automation tooling.",
-    codeSnippets: [],
     tags: ["yaml", "data-formats", "basics"]
   },
   {
@@ -2214,7 +2087,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "'with open()' is a context manager that safely opens and closes files, even if exceptions occur during writing. os, json, and sys are unrelated to safe file handling.",
-    codeSnippets: ["python"],
     tags: ["python", "file-handling", "automation"]
   },
   {
@@ -2231,7 +2103,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Increasing persistent_connection_timeout and enabling pipelining reduces SSH overhead and improves performance over unreliable links. become changes privilege, local bypasses SSH, and disabling host key checking only affects auth prompts.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "ssh", "troubleshooting", "automation"]
   },
   {
@@ -2248,7 +2119,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "The 'restconf' global configuration command enables the RESTCONF agent in IOS XE. 'netconf-yang' enables NETCONF. 'ip http secure-server' enables HTTPS. 'aaa new-model' enables AAA.",
-    codeSnippets: ["yaml"],
     tags: ["restconf", "ios-xe", "automation"]
   },
   {
@@ -2265,7 +2135,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "nornir-netmiko provides Netmiko-based task execution within Nornir. nornir-napalm uses NAPALM. nornir-jinja2 handles templating. nornir-utils is a generic utilities package.",
-    codeSnippets: ["python"],
     tags: ["nornir", "netmiko", "python", "automation"]
   },
   {
@@ -2282,7 +2151,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "CLI Templates in DNA Center allow reusable device configuration with variables and conditional logic. Sensor templates collect telemetry. SD-AVC manages application visibility. Software Image Management handles firmware.",
-    codeSnippets: ["yaml"],
     tags: ["dna-center", "templates", "automation"]
   },
   {
@@ -2299,7 +2167,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "dict maps keys to values, making it ideal for device-name-to-IP mappings. list and tuple are ordered sequences. set is unordered and unique.",
-    codeSnippets: ["python"],
     tags: ["python", "data-structures", "automation"]
   },
   {
@@ -2316,7 +2183,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Rollback plans, scheduling, and pre-deployment validation minimize outage impact. Direct push risks breaking production. Disabling logging removes auditability. Telnet is insecure.",
-    codeSnippets: [],
     tags: ["automation", "change-management", "risk"]
   },
   {
@@ -2333,7 +2199,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "A list is an ordered, mutable collection. Tuples are immutable. Dicts are key-value mappings. Sets are unordered and unique.",
-    codeSnippets: ["python"],
     tags: ["python", "data-structures", "basics"]
   },
   {
@@ -2350,7 +2215,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "try/finally guarantees cleanup code runs regardless of whether an exception occurred, making it ideal for closing files, SSH sessions, or API connections.",
-    codeSnippets: ["python"],
     tags: ["python", "exception-handling", "resource-management"]
   },
   {
@@ -2367,7 +2231,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Multiple Singleton instances can open redundant API connections, exhausting connection pools and triggering rate limits or account lockouts in DNA Center.",
-    codeSnippets: [],
     tags: ["python", "design-patterns", "dna-center", "api"]
   },
   {
@@ -2384,7 +2247,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "PUT is used to update/replace an existing resource. POST creates new resources. GET retrieves. DELETE removes.",
-    codeSnippets: [],
     tags: ["http", "rest", "api-methods"]
   },
   {
@@ -2401,7 +2263,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The 'with' statement creates a context manager that automatically closes resources (files, sockets, sessions) when the block exits, even on exceptions.",
-    codeSnippets: ["python"],
     tags: ["python", "context-managers", "best-practices"]
   },
   {
@@ -2418,7 +2279,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Sets use hash tables, providing O(1) average-case lookup for membership checks, versus O(n) for lists.",
-    codeSnippets: ["python"],
     tags: ["python", "performance", "data-structures"]
   },
   {
@@ -2435,7 +2295,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "PyYAML is the standard library for YAML parsing in Python, widely used in Ansible playbooks and network device configuration templates.",
-    codeSnippets: ["python", "yaml"],
     tags: ["python", "yaml", "configuration"]
   },
   {
@@ -2452,7 +2311,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "API stands for Application Programming Interface. It defines how software components should interact.",
-    codeSnippets: [],
     tags: ["api", "basics", "terminology"]
   },
   {
@@ -2469,7 +2327,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "HTTP 429 means Too Many Requests. Clients should implement backoff and respect the Retry-After header to avoid being blocked.",
-    codeSnippets: [],
     tags: ["http", "rate-limiting", "rest", "best-practices"]
   },
   {
@@ -2486,7 +2343,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Async requests with rate limit tracking maximize throughput while respecting Meraki's limits. Synchronous requests are too slow. SOAP is not supported by Meraki.",
-    codeSnippets: ["python"],
     tags: ["meraki", "rate-limiting", "async", "automation"]
   },
   {
@@ -2503,7 +2359,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "201 Created is returned when a new resource is successfully created via POST. 200 OK is for successful retrieval or update.",
-    codeSnippets: [],
     tags: ["http", "status-codes", "rest"]
   },
   {
@@ -2520,7 +2375,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Idempotency means making the same request multiple times produces the same result. GET, PUT, and DELETE are idempotent. POST is not.",
-    codeSnippets: [],
     tags: ["rest", "idempotency", "http-methods"]
   },
   {
@@ -2537,7 +2391,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "JSON is the de facto standard for REST APIs due to its lightweight nature, easy parsing, and broad language support.",
-    codeSnippets: [],
     tags: ["json", "rest", "data-formats"]
   },
   {
@@ -2554,7 +2407,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "OAuth 2.0 with refresh tokens provides secure, scalable authentication without exposing credentials in code or URLs.",
-    codeSnippets: [],
     tags: ["dna-center", "authentication", "oauth", "api"]
   },
   {
@@ -2571,7 +2423,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Cisco Meraki is a cloud-managed platform with a dashboard and REST API for managing switches, routers, and security appliances.",
-    codeSnippets: [],
     tags: ["meraki", "platforms", "cloud-management"]
   },
   {
@@ -2588,7 +2439,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "DNA Center Assurance provides telemetry, analytics, and insights into network performance, client experience, and issues.",
-    codeSnippets: [],
     tags: ["dna-center", "assurance", "telemetry", "monitoring"]
   },
   {
@@ -2605,7 +2455,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "DNA Center with templates and Plug and Play (PnP) automates mass provisioning, ensuring consistent configuration across hundreds of devices.",
-    codeSnippets: [],
     tags: ["dna-center", "automation", "catalyst", "pnp"]
   },
   {
@@ -2622,7 +2471,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "vManage is the SD-WAN orchestrator for policy, configuration, and monitoring. vSmart handles control plane. vBond does authentication. vEdge is the data plane.",
-    codeSnippets: [],
     tags: ["sd-wan", "vmanage", "orchestration", "components"]
   },
   {
@@ -2639,7 +2487,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Webex APIs enable automation of collaboration tasks: creating meetings, sending messages, managing devices, and integrating with workflows.",
-    codeSnippets: [],
     tags: ["webex", "api", "collaboration", "automation"]
   },
   {
@@ -2656,7 +2503,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "OpFlex is the policy protocol used in ACI between APIC and fabric nodes for distributed policy enforcement.",
-    codeSnippets: [],
     tags: ["aci", "apic", "opflex", "protocols"]
   },
   {
@@ -2673,7 +2519,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Template projects in DNA Center organize configuration templates and allow deployment to device profiles and sites.",
-    codeSnippets: [],
     tags: ["dna-center", "templates", "configuration"]
   },
   {
@@ -2690,7 +2535,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: ".gitignore tells Git which files or directories to ignore, preventing sensitive files, build artifacts, and dependencies from being committed.",
-    codeSnippets: [],
     tags: ["git", "version-control", "best-practices"]
   },
   {
@@ -2707,7 +2551,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "The Test stage runs unit tests, integration tests, and linting to verify code quality before merging or deployment.",
-    codeSnippets: [],
     tags: ["cicd", "testing", "pipeline", "devops"]
   },
   {
@@ -2724,7 +2567,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Environment variables or a secrets manager with RBAC keeps credentials out of code entirely. Private repos or .gitignore alone don't fix existing exposed secrets.",
-    codeSnippets: [],
     tags: ["security", "secrets", "devops", "best-practices"]
   },
   {
@@ -2741,7 +2583,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Docker containers package applications with their dependencies, ensuring consistent execution across development, testing, and production environments.",
-    codeSnippets: [],
     tags: ["docker", "containers", "devops", "automation"]
   },
   {
@@ -2758,7 +2599,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "git checkout -b feature-x creates and switches to a new branch. git branch alone only creates it without switching.",
-    codeSnippets: [],
     tags: ["git", "version-control", "branching"]
   },
   {
@@ -2775,7 +2615,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Unit tests verify that individual functions or components work as expected, catching bugs early in the development cycle.",
-    codeSnippets: [],
     tags: ["testing", "cicd", "unit-testing", "best-practices"]
   },
   {
@@ -2792,7 +2631,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Ansible is agentless, using SSH to push configurations. Puppet and Chef use agents. SaltStack can use both but defaults to agent-based.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "configuration-management", "automation"]
   },
   {
@@ -2809,7 +2647,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The inventory file lists managed hosts and groups, allowing playbooks to target specific devices or environments.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "inventory", "configuration-management"]
   },
   {
@@ -2826,7 +2663,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "Most Ansible modules, including ios_config, are idempotent by design—they only apply changes when the desired state differs from the current state.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "idempotency", "network-automation"]
   },
   {
@@ -2843,7 +2679,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "top displays real-time system processes, CPU, and memory usage. ps shows a snapshot. ls lists files. cd changes directories.",
-    codeSnippets: ["bash"],
     tags: ["linux", "commands", "monitoring"]
   },
   {
@@ -2860,7 +2695,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "IaC uses declarative configuration files (Terraform, Ansible) to provision and manage infrastructure consistently and reproducibly.",
-    codeSnippets: [],
     tags: ["iac", "terraform", "devops", "automation"]
   },
   {
@@ -2877,7 +2711,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "grep searches for patterns within files. find locates files by name/attributes. ls lists files. cat displays file contents.",
-    codeSnippets: ["bash"],
     tags: ["linux", "commands", "grep"]
   },
   {
@@ -2894,7 +2727,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The Network layer (Layer 3) handles logical addressing (IP) and routing. Data Link is Layer 2 (MAC). Transport is Layer 4.",
-    codeSnippets: [],
     tags: ["osi-model", "layer3", "routing", "fundamentals"]
   },
   {
@@ -2911,7 +2743,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "/26 gives 64 IPs (2^6). Usable hosts: 62 (64-2). Range: .1 to .126. Network: .0, Broadcast: .127.",
-    codeSnippets: [],
     tags: ["subnetting", "ip-addressing", "cidr"]
   },
   {
@@ -2928,7 +2759,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "SSH uses TCP port 22 for reliable, connection-oriented secure remote access. UDP is for DNS/DHCP. ICMP is for ping/traceroute.",
-    codeSnippets: [],
     tags: ["ssh", "protocols", "tcp", "security"]
   },
   {
@@ -2945,7 +2775,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "TCP establishes connections (3-way handshake), guarantees delivery via acknowledgments, and retransmits lost packets. UDP is faster but unreliable.",
-    codeSnippets: [],
     tags: ["tcp", "udp", "transport-layer", "protocols"]
   },
   {
@@ -2962,7 +2791,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "Wildcard 0.0.0.255 corresponds to mask 255.255.255.0, which is /24. In OSPF network statements and ACLs, wildcard masks are inverted subnet masks.",
-    codeSnippets: [],
     tags: ["wildcard-mask", "subnetting", "ospf", "acl"]
   },
   {
@@ -2979,7 +2807,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 0,
     explanation: "VLAN stands for Virtual Local Area Network. It is a logical segmentation of a physical network at Layer 2.",
-    codeSnippets: [],
     tags: ["vlan", "layer2", "fundamentals", "terminology"]
   },
   {
@@ -2996,7 +2823,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "IPv6 multicast replaces broadcast. FF02::1 is the all-nodes multicast address. IPv6 has no broadcast address.",
-    codeSnippets: [],
     tags: ["ipv6", "multicast", "addressing"]
   },
   {
@@ -3013,7 +2839,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "OSPF has an AD of 110. Connected: 0, Static: 1, EIGRP internal: 90, RIP: 120, EIGRP external: 170.",
-    codeSnippets: [],
     tags: ["ospf", "administrative-distance", "routing"]
   },
   {
@@ -3030,7 +2855,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "show ip interface brief displays IP addresses, status, and protocol state for all interfaces in a concise table format.",
-    codeSnippets: [],
     tags: ["cisco-ios", "cli", "troubleshooting", "interfaces"]
   },
   {
@@ -3047,7 +2871,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "SSH provides secure CLI access for automation scripts. NETCONF and RESTCONF are model-driven protocols. SNMP is for monitoring.",
-    codeSnippets: [],
     tags: ["ssh", "cli", "automation", "cisco-ios"]
   },
   {
@@ -3064,7 +2887,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Model-driven programmability provides structured data, reduces parsing errors, and offers transactional configuration via NETCONF.",
-    codeSnippets: [],
     tags: ["yang", "netconf", "restconf", "model-driven"]
   },
   {
@@ -3081,7 +2903,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "GitOps uses pull requests, automated testing, and staged promotion, ensuring changes are validated before reaching production.",
-    codeSnippets: [],
     tags: ["gitops", "devops", "change-management", "ci-cd"]
   },
   {
@@ -3098,7 +2919,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "YANG models define the schema for configuration and operational state data, enabling model-driven management via NETCONF/RESTCONF.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "model-driven", "netconf", "schemas"]
   },
   {
@@ -3115,7 +2935,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "requests is commonly used for RESTCONF calls. netmiko uses SSH/CLI. scapy is for packet crafting. nmap is for scanning.",
-    codeSnippets: ["python"],
     tags: ["python", "restconf", "ios-xe", "automation"]
   },
   {
@@ -3132,7 +2951,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "NETCONF over SSH uses port 830 by default. SSH is 22. HTTPS/RESTCONF is 443. SNMP is 161.",
-    codeSnippets: [],
     tags: ["netconf", "ports", "protocols", "automation"]
   },
   {
@@ -3149,7 +2967,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "JSONPath provides a query language for extracting specific elements from JSON, similar to XPath for XML. Useful for parsing API responses.",
-    codeSnippets: ["json"],
     tags: ["json", "jsonpath", "data-parsing", "rest-api"]
   },
   {
@@ -3166,10 +2983,9 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Pull requests with CI validation and branch protection ensure code review, automated testing, and controlled deployments to production.",
-    codeSnippets: [],
     tags: ["git", "cicd", "devops", "best-practices"]
   },
-{
+  {
     id: 136,
     domain: "Software Development and Design",
     domainKey: "software",
@@ -3178,7 +2994,6 @@ const DEVNET_QUESTIONS = [
     options: ["tuple", "list", "dict", "set"],
     correct: 1,
     explanation: "A list is an ordered, mutable collection. Tuples are immutable. Dicts are key-value mappings. Sets are unordered and unique.",
-    codeSnippets: ["python"],
     tags: ["python", "data-structures", "basics"]
   },
   {
@@ -3190,7 +3005,6 @@ const DEVNET_QUESTIONS = [
     options: ["try/except", "try/finally", "if/else", "raise/catch"],
     correct: 1,
     explanation: "try/finally guarantees cleanup code runs regardless of whether an exception occurred, making it ideal for closing files, SSH sessions, or API connections.",
-    codeSnippets: ["python"],
     tags: ["python", "exception-handling", "resource-management"]
   },
   {
@@ -3202,7 +3016,6 @@ const DEVNET_QUESTIONS = [
     options: ["Memory leak from unreleased objects", "Exhaustion of API connection pool and rate-limit violations", "Garbage collection failure", "Thread deadlock"],
     correct: 1,
     explanation: "Multiple Singleton instances can open redundant API connections, exhausting connection pools and triggering rate limits or account lockouts in DNA Center.",
-    codeSnippets: [],
     tags: ["python", "design-patterns", "dna-center", "api"]
   },
   {
@@ -3214,7 +3027,6 @@ const DEVNET_QUESTIONS = [
     options: ["GET", "POST", "PUT", "DELETE"],
     correct: 2,
     explanation: "PUT is used to update/replace an existing resource. POST creates new resources. GET retrieves. DELETE removes.",
-    codeSnippets: [],
     tags: ["http", "rest", "api-methods"]
   },
   {
@@ -3226,7 +3038,6 @@ const DEVNET_QUESTIONS = [
     options: ["Faster execution speed", "Automatic resource cleanup via context manager", "Thread safety", "Encryption"],
     correct: 1,
     explanation: "The 'with' statement creates a context manager that automatically closes resources (files, sockets, sessions) when the block exits, even on exceptions.",
-    codeSnippets: ["python"],
     tags: ["python", "context-managers", "best-practices"]
   },
   {
@@ -3238,7 +3049,6 @@ const DEVNET_QUESTIONS = [
     options: ["O(n)", "O(log n)", "O(1) average", "O(n^2)"],
     correct: 2,
     explanation: "Sets use hash tables, providing O(1) average-case lookup for membership checks, versus O(n) for lists.",
-    codeSnippets: ["python"],
     tags: ["python", "performance", "data-structures"]
   },
   {
@@ -3250,7 +3060,6 @@ const DEVNET_QUESTIONS = [
     options: ["json", "xml.etree.ElementTree", "PyYAML", "csv"],
     correct: 2,
     explanation: "PyYAML is the standard library for YAML parsing in Python, widely used in Ansible playbooks and network device configuration templates.",
-    codeSnippets: ["python", "yaml"],
     tags: ["python", "yaml", "configuration"]
   },
   {
@@ -3262,7 +3071,6 @@ const DEVNET_QUESTIONS = [
     options: ["Application", "Automation", "Architecture", "Authentication"],
     correct: 0,
     explanation: "API stands for Application Programming Interface. It defines how software components should interact.",
-    codeSnippets: [],
     tags: ["api", "basics", "terminology"]
   },
   {
@@ -3274,7 +3082,6 @@ const DEVNET_QUESTIONS = [
     options: ["Retry immediately with the same request", "Implement exponential backoff and respect Retry-After header", "Abort the entire automation workflow", "Switch to SOAP API"],
     correct: 1,
     explanation: "HTTP 429 means Too Many Requests. Clients should implement backoff and respect the Retry-After header to avoid being blocked.",
-    codeSnippets: [],
     tags: ["http", "rate-limiting", "rest", "best-practices"]
   },
   {
@@ -3286,7 +3093,6 @@ const DEVNET_QUESTIONS = [
     options: ["Use synchronous requests with no delay", "Implement async requests with per-organization rate limit tracking and retry queues", "Use SOAP instead of REST", "Cache all responses locally without API calls"],
     correct: 1,
     explanation: "Async requests with rate limit tracking maximize throughput while respecting Meraki's limits. Synchronous requests are too slow. SOAP is not supported by Meraki.",
-    codeSnippets: ["python"],
     tags: ["meraki", "rate-limiting", "async", "automation"]
   },
   {
@@ -3298,7 +3104,6 @@ const DEVNET_QUESTIONS = [
     options: ["200 OK", "201 Created", "204 No Content", "301 Moved Permanently"],
     correct: 1,
     explanation: "201 Created is returned when a new resource is successfully created via POST. 200 OK is for successful retrieval or update.",
-    codeSnippets: [],
     tags: ["http", "status-codes", "rest"]
   },
   {
@@ -3310,7 +3115,6 @@ const DEVNET_QUESTIONS = [
     options: ["To encrypt the request body", "To ensure multiple identical requests have the same effect as a single request", "To cache responses", "To authenticate users"],
     correct: 1,
     explanation: "Idempotency means making the same request multiple times produces the same result. GET, PUT, and DELETE are idempotent. POST is not.",
-    codeSnippets: [],
     tags: ["rest", "idempotency", "http-methods"]
   },
   {
@@ -3322,7 +3126,6 @@ const DEVNET_QUESTIONS = [
     options: ["XML", "JSON", "YAML", "CSV"],
     correct: 1,
     explanation: "JSON is the de facto standard for REST APIs due to its lightweight nature, easy parsing, and broad language support.",
-    codeSnippets: [],
     tags: ["json", "rest", "data-formats"]
   },
   {
@@ -3334,7 +3137,6 @@ const DEVNET_QUESTIONS = [
     options: ["Hardcoded username/password in every request", "OAuth 2.0 with refresh tokens", "Basic auth without HTTPS", "API key in URL query parameter"],
     correct: 1,
     explanation: "OAuth 2.0 with refresh tokens provides secure, scalable authentication without exposing credentials in code or URLs.",
-    codeSnippets: [],
     tags: ["dna-center", "authentication", "oauth", "api"]
   },
   {
@@ -3346,7 +3148,6 @@ const DEVNET_QUESTIONS = [
     options: ["Cisco DNA Center", "Cisco Meraki", "Cisco ACI", "Cisco ISE"],
     correct: 1,
     explanation: "Cisco Meraki is a cloud-managed platform with a dashboard and REST API for managing switches, routers, and security appliances.",
-    codeSnippets: [],
     tags: ["meraki", "platforms", "cloud-management"]
   },
   {
@@ -3358,7 +3159,6 @@ const DEVNET_QUESTIONS = [
     options: ["Reduces license costs", "Provides real-time visibility into network behavior and issues", "Replaces all CLI configuration", "Encrypts all traffic"],
     correct: 1,
     explanation: "DNA Center Assurance provides telemetry, analytics, and insights into network performance, client experience, and issues.",
-    codeSnippets: [],
     tags: ["dna-center", "assurance", "telemetry", "monitoring"]
   },
   {
@@ -3370,7 +3170,6 @@ const DEVNET_QUESTIONS = [
     options: ["SSH to each switch individually and configure manually", "Use DNA Center with templates and PnP", "Use Telnet scripts with hardcoded IPs", "Configure each switch locally via console"],
     correct: 1,
     explanation: "DNA Center with templates and Plug and Play (PnP) automates mass provisioning, ensuring consistent configuration across hundreds of devices.",
-    codeSnippets: [],
     tags: ["dna-center", "automation", "catalyst", "pnp"]
   },
   {
@@ -3382,7 +3181,6 @@ const DEVNET_QUESTIONS = [
     options: ["vEdge", "vManage", "vSmart", "vBond"],
     correct: 1,
     explanation: "vManage is the SD-WAN orchestrator for policy, configuration, and monitoring. vSmart handles control plane. vBond does authentication. vEdge is the data plane.",
-    codeSnippets: [],
     tags: ["sd-wan", "vmanage", "orchestration", "components"]
   },
   {
@@ -3394,7 +3192,6 @@ const DEVNET_QUESTIONS = [
     options: ["Routing network traffic", "Managing meetings, messages, and devices programmatically", "Configuring switch VLANs", "Scanning network vulnerabilities"],
     correct: 1,
     explanation: "Webex APIs enable automation of collaboration tasks: creating meetings, sending messages, managing devices, and integrating with workflows.",
-    codeSnippets: [],
     tags: ["webex", "api", "collaboration", "automation"]
   },
   {
@@ -3406,7 +3203,6 @@ const DEVNET_QUESTIONS = [
     options: ["HTTP", "OpFlex", "SNMP", "Telnet"],
     correct: 1,
     explanation: "OpFlex is the policy protocol used in ACI between APIC and fabric nodes for distributed policy enforcement.",
-    codeSnippets: [],
     tags: ["aci", "apic", "opflex", "protocols"]
   },
   {
@@ -3418,7 +3214,6 @@ const DEVNET_QUESTIONS = [
     options: ["To store user credentials", "To group configuration templates for deployment to devices", "To monitor network traffic", "To generate billing reports"],
     correct: 1,
     explanation: "Template projects in DNA Center organize configuration templates and allow deployment to device profiles and sites.",
-    codeSnippets: [],
     tags: ["dna-center", "templates", "configuration"]
   },
   {
@@ -3430,7 +3225,6 @@ const DEVNET_QUESTIONS = [
     options: ["To specify Git credentials", "To exclude files from being tracked by Git", "To enforce commit message format", "To configure Git hooks"],
     correct: 1,
     explanation: ".gitignore tells Git which files or directories to ignore, preventing sensitive files, build artifacts, and dependencies from being committed.",
-    codeSnippets: [],
     tags: ["git", "version-control", "best-practices"]
   },
   {
@@ -3442,7 +3236,6 @@ const DEVNET_QUESTIONS = [
     options: ["Deploy", "Build", "Test", "Monitor"],
     correct: 2,
     explanation: "The Test stage runs unit tests, integration tests, and linting to verify code quality before merging or deployment.",
-    codeSnippets: [],
     tags: ["cicd", "testing", "pipeline", "devops"]
   },
   {
@@ -3454,7 +3247,6 @@ const DEVNET_QUESTIONS = [
     options: ["Commit to a private repo instead of public", "Use environment variables or a secrets manager with RBAC", "Rename the file to .env", "Add the file to .gitignore without rotating credentials"],
     correct: 1,
     explanation: "Environment variables or a secrets manager with RBAC keeps credentials out of code entirely. Private repos or .gitignore alone don't fix existing exposed secrets.",
-    codeSnippets: [],
     tags: ["security", "secrets", "devops", "best-practices"]
   },
   {
@@ -3466,7 +3258,6 @@ const DEVNET_QUESTIONS = [
     options: ["To replace virtual machines entirely", "To package applications and dependencies into portable containers", "To encrypt network traffic", "To manage Git repositories"],
     correct: 1,
     explanation: "Docker containers package applications with their dependencies, ensuring consistent execution across development, testing, and production environments.",
-    codeSnippets: [],
     tags: ["docker", "containers", "devops", "automation"]
   },
   {
@@ -3478,7 +3269,6 @@ const DEVNET_QUESTIONS = [
     options: ["git branch feature-x", "git checkout -b feature-x", "git merge feature-x", "git pull feature-x"],
     correct: 1,
     explanation: "git checkout -b feature-x creates and switches to a new branch. git branch alone only creates it without switching.",
-    codeSnippets: [],
     tags: ["git", "version-control", "branching"]
   },
   {
@@ -3490,7 +3280,6 @@ const DEVNET_QUESTIONS = [
     options: ["To test the production environment", "To verify individual code components function correctly", "To measure network latency", "To encrypt database connections"],
     correct: 1,
     explanation: "Unit tests verify that individual functions or components work as expected, catching bugs early in the development cycle.",
-    codeSnippets: [],
     tags: ["testing", "cicd", "unit-testing", "best-practices"]
   },
   {
@@ -3502,7 +3291,6 @@ const DEVNET_QUESTIONS = [
     options: ["Puppet", "Chef", "Ansible", "SaltStack"],
     correct: 2,
     explanation: "Ansible is agentless, using SSH to push configurations. Puppet and Chef use agents. SaltStack can use both but defaults to agent-based.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "configuration-management", "automation"]
   },
   {
@@ -3514,7 +3302,6 @@ const DEVNET_QUESTIONS = [
     options: ["To store task definitions", "To define the target hosts and groups for playbook execution", "To encrypt sensitive variables", "To install Python on managed nodes"],
     correct: 1,
     explanation: "The inventory file lists managed hosts and groups, allowing playbooks to target specific devices or environments.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "inventory", "configuration-management"]
   },
   {
@@ -3526,7 +3313,6 @@ const DEVNET_QUESTIONS = [
     options: ["always_run", "idempotent: true", "The module itself enforces idempotency (e.g., ios_config)", "run_once"],
     correct: 2,
     explanation: "Most Ansible modules, including ios_config, are idempotent by design—they only apply changes when the desired state differs from the current state.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "idempotency", "network-automation"]
   },
   {
@@ -3538,7 +3324,6 @@ const DEVNET_QUESTIONS = [
     options: ["ls", "ps", "top", "cd"],
     correct: 2,
     explanation: "top displays real-time system processes, CPU, and memory usage. ps shows a snapshot. ls lists files. cd changes directories.",
-    codeSnippets: ["bash"],
     tags: ["linux", "commands", "monitoring"]
   },
   {
@@ -3550,7 +3335,6 @@ const DEVNET_QUESTIONS = [
     options: ["To manually configure servers", "To manage infrastructure using version-controlled, declarative configuration files", "To increase manual deployment speed", "To replace all network devices with software"],
     correct: 1,
     explanation: "IaC uses declarative configuration files (Terraform, Ansible) to provision and manage infrastructure consistently and reproducibly.",
-    codeSnippets: [],
     tags: ["iac", "terraform", "devops", "automation"]
   },
   {
@@ -3562,7 +3346,6 @@ const DEVNET_QUESTIONS = [
     options: ["find", "grep", "ls", "cat"],
     correct: 1,
     explanation: "grep searches for patterns within files. find locates files by name/attributes. ls lists files. cat displays file contents.",
-    codeSnippets: ["bash"],
     tags: ["linux", "commands", "grep"]
   },
   {
@@ -3574,7 +3357,6 @@ const DEVNET_QUESTIONS = [
     options: ["Data Link", "Network", "Transport", "Application"],
     correct: 1,
     explanation: "The Network layer (Layer 3) handles logical addressing (IP) and routing. Data Link is Layer 2 (MAC). Transport is Layer 4.",
-    codeSnippets: [],
     tags: ["osi-model", "layer3", "routing", "fundamentals"]
   },
   {
@@ -3586,7 +3368,6 @@ const DEVNET_QUESTIONS = [
     options: ["192.168.10.1 - 192.168.10.62", "192.168.10.1 - 192.168.10.126", "192.168.10.0 - 192.168.10.255", "192.168.10.1 - 192.168.10.30"],
     correct: 1,
     explanation: "/26 gives 64 IPs (2^6). Usable hosts: 62 (64-2). Range: .1 to .126. Network: .0, Broadcast: .127.",
-    codeSnippets: [],
     tags: ["subnetting", "ip-addressing", "cidr"]
   },
   {
@@ -3598,7 +3379,6 @@ const DEVNET_QUESTIONS = [
     options: ["TCP", "UDP", "ICMP", "ARP"],
     correct: 0,
     explanation: "SSH uses TCP port 22 for reliable, connection-oriented secure remote access. UDP is for DNS/DHCP. ICMP is for ping/traceroute.",
-    codeSnippets: [],
     tags: ["ssh", "protocols", "tcp", "security"]
   },
   {
@@ -3610,7 +3390,6 @@ const DEVNET_QUESTIONS = [
     options: ["TCP is faster than UDP", "TCP is connection-oriented and reliable; UDP is connectionless and faster", "UDP guarantees delivery; TCP does not", "TCP uses ports; UDP does not"],
     correct: 1,
     explanation: "TCP establishes connections (3-way handshake), guarantees delivery via acknowledgments, and retransmits lost packets. UDP is faster but unreliable.",
-    codeSnippets: [],
     tags: ["tcp", "udp", "transport-layer", "protocols"]
   },
   {
@@ -3622,7 +3401,6 @@ const DEVNET_QUESTIONS = [
     options: ["/24", "/16", "/32", "/25"],
     correct: 0,
     explanation: "Wildcard 0.0.0.255 corresponds to mask 255.255.255.0, which is /24. In OSPF network statements and ACLs, wildcard masks are inverted subnet masks.",
-    codeSnippets: [],
     tags: ["wildcard-mask", "subnetting", "ospf", "acl"]
   },
   {
@@ -3634,7 +3412,6 @@ const DEVNET_QUESTIONS = [
     options: ["Virtual Local Area Network", "Very Large Area Network", "Virtual LAN Access", "Variable LAN"],
     correct: 0,
     explanation: "VLAN stands for Virtual Local Area Network. It is a logical segmentation of a physical network at Layer 2.",
-    codeSnippets: [],
     tags: ["vlan", "layer2", "fundamentals", "terminology"]
   },
   {
@@ -3646,7 +3423,6 @@ const DEVNET_QUESTIONS = [
     options: ["Unicast", "Multicast", "Anycast", "Broadcast"],
     correct: 1,
     explanation: "IPv6 multicast replaces broadcast. FF02::1 is the all-nodes multicast address. IPv6 has no broadcast address.",
-    codeSnippets: [],
     tags: ["ipv6", "multicast", "addressing"]
   },
   {
@@ -3658,7 +3434,6 @@ const DEVNET_QUESTIONS = [
     options: ["90", "110", "120", "170"],
     correct: 1,
     explanation: "OSPF has an AD of 110. Connected: 0, Static: 1, EIGRP internal: 90, RIP: 120, EIGRP external: 170.",
-    codeSnippets: [],
     tags: ["ospf", "administrative-distance", "routing"]
   },
   {
@@ -3670,7 +3445,6 @@ const DEVNET_QUESTIONS = [
     options: ["show interfaces", "show ip interface brief", "show running-config", "show ip route"],
     correct: 1,
     explanation: "show ip interface brief displays IP addresses, status, and protocol state for all interfaces in a concise table format.",
-    codeSnippets: [],
     tags: ["cisco-ios", "cli", "troubleshooting", "interfaces"]
   },
   {
@@ -3682,7 +3456,6 @@ const DEVNET_QUESTIONS = [
     options: ["NETCONF", "RESTCONF", "SSH", "SNMP"],
     correct: 2,
     explanation: "SSH provides secure CLI access for automation scripts. NETCONF and RESTCONF are model-driven protocols. SNMP is for monitoring.",
-    codeSnippets: [],
     tags: ["ssh", "cli", "automation", "cisco-ios"]
   },
   {
@@ -3694,7 +3467,6 @@ const DEVNET_QUESTIONS = [
     options: ["Faster CLI output", "Structured, vendor-agnostic data with transactional guarantees", "Requires no network connectivity", "Encrypts all traffic"],
     correct: 1,
     explanation: "Model-driven programmability provides structured data, reduces parsing errors, and offers transactional configuration via NETCONF.",
-    codeSnippets: [],
     tags: ["yang", "netconf", "restconf", "model-driven"]
   },
   {
@@ -3706,7 +3478,6 @@ const DEVNET_QUESTIONS = [
     options: ["Push directly and monitor for failures", "Use GitOps: review PR, run tests in staging, promote to production", "Disable change windows", "Use manual CLI on production"],
     correct: 1,
     explanation: "GitOps uses pull requests, automated testing, and staged promotion, ensuring changes are validated before reaching production.",
-    codeSnippets: [],
     tags: ["gitops", "devops", "change-management", "ci-cd"]
   },
   {
@@ -3718,7 +3489,6 @@ const DEVNET_QUESTIONS = [
     options: ["To replace all network devices", "To define the structure and semantics of configuration and state data", "To encrypt API traffic", "To compress configuration files"],
     correct: 1,
     explanation: "YANG models define the schema for configuration and operational state data, enabling model-driven management via NETCONF/RESTCONF.",
-    codeSnippets: ["yaml"],
     tags: ["yang", "model-driven", "netconf", "schemas"]
   },
   {
@@ -3730,7 +3500,6 @@ const DEVNET_QUESTIONS = [
     options: ["netmiko", "requests", "scapy", "nmap"],
     correct: 1,
     explanation: "requests is commonly used for RESTCONF calls. netmiko uses SSH/CLI. scapy is for packet crafting. nmap is for scanning.",
-    codeSnippets: ["python"],
     tags: ["python", "restconf", "ios-xe", "automation"]
   },
   {
@@ -3742,7 +3511,6 @@ const DEVNET_QUESTIONS = [
     options: ["22", "830", "443", "161"],
     correct: 1,
     explanation: "NETCONF over SSH uses port 830 by default. SSH is 22. HTTPS/RESTCONF is 443. SNMP is 161.",
-    codeSnippets: [],
     tags: ["netconf", "ports", "protocols", "automation"]
   },
   {
@@ -3754,7 +3522,6 @@ const DEVNET_QUESTIONS = [
     options: ["To define YANG models", "To query and extract specific data from JSON responses", "To encrypt REST API traffic", "To replace XML in NETCONF"],
     correct: 1,
     explanation: "JSONPath provides a query language for extracting specific elements from JSON, similar to XPath for XML. Useful for parsing API responses.",
-    codeSnippets: ["json"],
     tags: ["json", "jsonpath", "data-parsing", "rest-api"]
   },
   {
@@ -3766,10 +3533,9 @@ const DEVNET_QUESTIONS = [
     options: ["Use force-push for faster deployments", "Implement pull requests with CI validation and branch protection", "Commit directly to main with no review", "Disable Git entirely"],
     correct: 1,
     explanation: "Pull requests with CI validation and branch protection ensure code review, automated testing, and controlled deployments to production.",
-    codeSnippets: [],
     tags: ["git", "cicd", "devops", "best-practices"]
   },
-{
+  {
     id: 186,
     domain: "Software Development and Design",
     domainKey: "software",
@@ -3783,7 +3549,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "The list comprehension filters even numbers (2,4) then doubles them: [4, 8]. The if clause filters, then the expression x*2 is applied.",
-    codeSnippets: ["python"],
     tags: ["python", "list-comprehension", "data-structures"]
   },
   {
@@ -3800,7 +3565,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "git commit creates a snapshot of staged changes in the local repository. git add stages files. git push uploads commits to a remote.",
-    codeSnippets: [],
     tags: ["git", "version-control", "basics"]
   },
   {
@@ -3817,7 +3581,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "503 indicates server overload or maintenance. Respect Retry-After, then implement exponential backoff for subsequent retries to avoid overwhelming the server.",
-    codeSnippets: ["python"],
     tags: ["http", "rest-api", "error-handling", "best-practices"]
   },
   {
@@ -3834,7 +3597,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "json.loads() parses a JSON string into Python objects. json.dumps() serializes Python objects to JSON. stringify/parse are JavaScript methods.",
-    codeSnippets: ["python"],
     tags: ["python", "json", "api"]
   },
   {
@@ -3851,7 +3613,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "API gateways centralize cross-cutting concerns: routing, authentication, rate limiting, and monitoring. They simplify client interaction with multiple services.",
-    codeSnippets: [],
     tags: ["api-gateway", "microservices", "architecture"]
   },
   {
@@ -3868,7 +3629,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 2,
     explanation: "GET is idempotent and used for retrieving data. Multiple identical GET requests return the same resource representation without side effects.",
-    codeSnippets: [],
     tags: ["http", "rest", "idempotency", "api-methods"]
   },
   {
@@ -3885,7 +3645,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "A centralized token bucket rate limiter ensures the aggregate rate across all services stays within limits. Independent calling will exceed the limit.",
-    codeSnippets: ["python"],
     tags: ["rate-limiting", "distributed-systems", "api", "algorithms"]
   },
   {
@@ -3902,7 +3661,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Sensor templates in DNA Center define what telemetry data to collect from devices and how to stream it to assurance/analytics systems.",
-    codeSnippets: [],
     tags: ["dna-center", "sensors", "telemetry", "templates"]
   },
   {
@@ -3919,7 +3677,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Meraki uses REST APIs authenticated via API keys passed in X-Cisco-Meraki-API-Key headers over HTTPS.",
-    codeSnippets: [],
     tags: ["meraki", "api", "rest", "authentication"]
   },
   {
@@ -3936,7 +3693,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Dockerfiles define base images, dependencies, and runtime configuration, ensuring automation tools run consistently across environments.",
-    codeSnippets: ["dockerfile"],
     tags: ["docker", "cicd", "containers", "automation"]
   },
   {
@@ -3953,7 +3709,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "CI runners (GitHub Actions, Jenkins, GitLab CI) are triggered by webhooks on push/PR events to run automated builds and tests.",
-    codeSnippets: [],
     tags: ["cicd", "webhooks", "automation", "devops"]
   },
   {
@@ -3970,7 +3725,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Idempotent Ansible modules compare desired state to current state. If already configured, they report 'ok' and make no changes.",
-    codeSnippets: ["yaml"],
     tags: ["ansible", "idempotency", "network-automation", "cicd"]
   },
   {
@@ -3987,7 +3741,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Trunk-based development uses a main/trunk branch with short-lived feature branches merged via PRs, enabling continuous integration.",
-    codeSnippets: [],
     tags: ["git", "workflow", "cicd", "branching"]
   },
   {
@@ -4004,7 +3757,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "Data Link layer (Layer 2) handles framing, MAC addresses, and error detection (CRC). Physical is Layer 1 (bits). Network is Layer 3 (IP).",
-    codeSnippets: [],
     tags: ["osi-model", "layer2", "ethernet", "fundamentals"]
   },
   {
@@ -4021,13 +3773,6 @@ const DEVNET_QUESTIONS = [
     ],
     correct: 1,
     explanation: "RESTCONF provides a RESTful interface over HTTP/HTTPS for managing network device configuration and operational state data using YANG models.",
-    codeSnippets: [],
     tags: ["restconf", "api", "model-driven", "network-automation"]
   }
 ];
-
-
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { DEVNET_QUESTIONS };
-}

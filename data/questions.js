@@ -1,6 +1,7 @@
 const DEVNET_QUESTIONS = [
   {
     id: 1,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -12,6 +13,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 2,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -23,6 +25,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 3,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "hard",
@@ -34,6 +37,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 4,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -45,6 +49,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 5,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -56,6 +61,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 6,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -67,6 +73,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 7,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -78,6 +85,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 8,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -89,6 +97,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 9,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -100,6 +109,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 10,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "hard",
@@ -111,6 +121,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 11,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -122,6 +133,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 12,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -133,6 +145,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 13,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -144,6 +157,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 14,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -155,6 +169,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 15,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -166,6 +181,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 16,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -177,6 +193,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 17,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -188,6 +205,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 18,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "hard",
@@ -199,6 +217,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 19,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -210,6 +229,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 20,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -221,6 +241,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 21,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -232,6 +253,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 22,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -243,6 +265,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 23,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -254,6 +277,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 24,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -265,6 +289,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 25,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "hard",
@@ -276,6 +301,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 26,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -287,6 +313,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 27,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -298,6 +325,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 28,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -309,6 +337,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 29,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -320,6 +349,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 30,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -331,6 +361,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 31,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -342,6 +373,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 32,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -353,6 +385,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 33,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -364,6 +397,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 34,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -375,6 +409,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 35,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -386,6 +421,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 36,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -397,6 +433,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 37,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -408,6 +445,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 38,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -419,6 +457,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 39,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -430,6 +469,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 40,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -441,6 +481,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 41,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -452,6 +493,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 42,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -463,6 +505,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 43,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -474,6 +517,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 44,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -485,6 +529,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 45,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "hard",
@@ -496,6 +541,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 46,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -507,6 +553,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 47,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -518,6 +565,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 48,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "hard",
@@ -529,6 +577,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 49,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -540,6 +589,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 50,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -551,6 +601,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 51,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -562,6 +613,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 52,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -573,6 +625,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 53,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "hard",
@@ -584,6 +637,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 54,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -595,6 +649,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 55,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -606,6 +661,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 56,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -617,6 +673,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 57,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -628,6 +685,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 58,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "hard",
@@ -639,6 +697,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 59,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -650,6 +709,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 60,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -661,6 +721,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 61,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -672,6 +733,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 62,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -683,6 +745,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 63,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -694,6 +757,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 64,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "hard",
@@ -705,6 +769,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 65,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -716,6 +781,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 66,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -727,6 +793,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 67,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -738,6 +805,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 68,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -749,6 +817,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 69,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -760,6 +829,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 70,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -771,6 +841,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 71,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -782,6 +853,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 72,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -793,6 +865,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 73,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "hard",
@@ -804,6 +877,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 74,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -815,6 +889,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 75,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -826,6 +901,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 76,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -837,6 +913,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 77,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -848,6 +925,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 78,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "hard",
@@ -859,6 +937,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 79,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -870,6 +949,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 80,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -881,6 +961,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 81,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -892,6 +973,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 82,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -903,6 +985,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 83,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -914,6 +997,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 84,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -925,6 +1009,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 85,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -936,6 +1021,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 86,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -947,6 +1033,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 87,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -958,6 +1045,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 88,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -969,6 +1057,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 89,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -980,6 +1069,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 90,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -991,6 +1081,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 91,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1002,6 +1093,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 92,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1013,6 +1105,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 93,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1024,6 +1117,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 94,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1035,6 +1129,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 95,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1046,6 +1141,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 96,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1057,6 +1153,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 97,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1068,6 +1165,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 98,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1079,6 +1177,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 99,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1090,6 +1189,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 100,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1101,6 +1201,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 101,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1112,6 +1213,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 102,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1123,6 +1225,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 103,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1134,6 +1237,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 104,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1145,6 +1249,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 105,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1156,6 +1261,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 106,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1167,6 +1273,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 107,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -1178,6 +1285,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 108,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1189,6 +1297,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 109,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1200,6 +1309,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 110,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1211,6 +1321,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 111,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1222,6 +1333,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 112,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1233,6 +1345,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 113,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1244,6 +1357,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 114,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1255,6 +1369,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 115,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1266,6 +1381,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 116,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1277,6 +1393,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 117,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1288,6 +1405,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 118,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1299,6 +1417,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 119,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1310,6 +1429,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 120,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1321,6 +1441,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 121,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1332,6 +1453,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 122,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1343,6 +1465,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 123,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1354,6 +1477,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 124,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1365,6 +1489,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 125,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1376,6 +1501,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 126,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1387,6 +1513,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 127,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1398,6 +1525,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 128,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1409,6 +1537,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 129,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1420,6 +1549,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 130,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1431,6 +1561,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 131,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1442,6 +1573,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 132,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1453,6 +1585,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 133,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1464,6 +1597,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 134,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1475,6 +1609,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 135,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1486,6 +1621,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 136,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -1497,6 +1633,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 137,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -1508,6 +1645,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 138,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "hard",
@@ -1519,6 +1657,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 139,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -1530,6 +1669,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 140,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -1541,6 +1681,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 141,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -1552,6 +1693,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 142,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -1563,6 +1705,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 143,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -1574,6 +1717,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 144,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -1585,6 +1729,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 145,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "hard",
@@ -1596,6 +1741,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 146,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -1607,6 +1753,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 147,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -1618,6 +1765,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 148,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -1629,6 +1777,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 149,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -1640,6 +1789,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 150,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -1651,6 +1801,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 151,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1662,6 +1813,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 152,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "hard",
@@ -1673,6 +1825,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 153,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -1684,6 +1837,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 154,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1695,6 +1849,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 155,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -1706,6 +1861,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 156,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -1717,6 +1873,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 157,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -1728,6 +1885,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 158,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -1739,6 +1897,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 159,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "hard",
@@ -1750,6 +1909,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 160,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -1761,6 +1921,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 161,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -1772,6 +1933,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 162,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -1783,6 +1945,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 163,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1794,6 +1957,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 164,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1805,6 +1969,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 165,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1816,6 +1981,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 166,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1827,6 +1993,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 167,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1838,6 +2005,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 168,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1849,6 +2017,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 169,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -1860,6 +2029,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 170,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -1871,6 +2041,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 171,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -1882,6 +2053,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 172,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -1893,6 +2065,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 173,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "hard",
@@ -1904,6 +2077,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 174,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -1915,6 +2089,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 175,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -1926,6 +2101,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 176,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "easy",
@@ -1937,6 +2113,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 177,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -1948,6 +2125,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 178,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1959,6 +2137,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 179,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -1970,6 +2149,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 180,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -1981,6 +2161,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 181,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -1992,6 +2173,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 182,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2003,6 +2185,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 183,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -2014,6 +2197,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 184,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2025,6 +2209,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 185,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -2036,6 +2221,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 186,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -2047,6 +2233,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 187,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -2058,6 +2245,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 188,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "hard",
@@ -2069,6 +2257,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 189,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -2080,6 +2269,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 190,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2091,6 +2281,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 191,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -2102,6 +2293,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 192,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "hard",
@@ -2113,6 +2305,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 193,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2124,6 +2317,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 194,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -2135,6 +2329,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 195,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2146,6 +2341,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 196,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -2157,6 +2353,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 197,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "hard",
@@ -2168,6 +2365,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 198,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2179,6 +2377,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 199,
+    type: "multiple-choice",
     domain: "Network Fundamentals",
     domainKey: "network",
     difficulty: "medium",
@@ -2190,6 +2389,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 200,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -2201,6 +2401,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 201,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -2212,6 +2413,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 202,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -2223,6 +2425,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 203,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2234,6 +2437,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 204,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2245,6 +2449,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 205,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -2256,6 +2461,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 206,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -2267,6 +2473,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 207,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2278,6 +2485,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 208,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2289,6 +2497,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 209,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2300,6 +2509,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 210,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2311,6 +2521,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 211,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2322,6 +2533,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 212,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -2333,6 +2545,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 213,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -2344,6 +2557,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 214,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2355,6 +2569,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 215,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2366,6 +2581,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 216,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -2377,6 +2593,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 217,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2388,6 +2605,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 218,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "easy",
@@ -2399,6 +2617,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 219,
+    type: "multiple-choice",
     domain: "Application Deployment and Security",
     domainKey: "deployment",
     difficulty: "medium",
@@ -2410,6 +2629,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 220,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2421,6 +2641,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 221,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2432,6 +2653,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 222,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2443,6 +2665,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 223,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2454,6 +2677,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 224,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2465,6 +2689,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 225,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2476,6 +2701,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 226,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "easy",
@@ -2487,6 +2713,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 227,
+    type: "multiple-choice",
     domain: "Cisco Platforms and Development",
     domainKey: "platforms",
     difficulty: "medium",
@@ -2498,6 +2725,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 228,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2509,6 +2737,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 229,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2520,6 +2749,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 230,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "easy",
@@ -2531,6 +2761,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 231,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2542,6 +2773,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 232,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2555,6 +2787,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 233,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2566,6 +2799,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 234,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2577,6 +2811,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 235,
+    type: "multiple-choice",
     domain: "Understanding and Using APIs",
     domainKey: "apis",
     difficulty: "medium",
@@ -2588,6 +2823,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 236,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2599,6 +2835,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 237,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2610,6 +2847,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 238,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2621,6 +2859,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 239,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2632,6 +2871,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 240,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -2643,6 +2883,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 241,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2654,6 +2895,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 242,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "easy",
@@ -2665,6 +2907,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 243,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2676,6 +2919,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 244,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2687,6 +2931,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 245,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2698,6 +2943,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 246,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2709,6 +2955,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 247,
+    type: "multiple-choice",
     domain: "Infrastructure and Automation",
     domainKey: "infrastructure",
     difficulty: "medium",
@@ -2720,6 +2967,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 248,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "easy",
@@ -2731,6 +2979,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 249,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -2742,6 +2991,7 @@ const DEVNET_QUESTIONS = [
   },
   {
     id: 250,
+    type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "medium",
@@ -2749,6 +2999,1914 @@ const DEVNET_QUESTIONS = [
     options: ["git merge", "git clone", "git fetch --all --prune", "git stash"],
     correct: 0,
     explanation: "git merge integrates branch histories; when conflicts arise, they are resolved in the working tree and the merge is committed.",
+    tags: []
+  },
+  {
+    id: 251,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does this script print?",
+    options: ["Device A, Device B", "[]", "None", "Raises an exception"],
+    correct: 0,
+    explanation: "The list of device names is extracted with a list comprehension over the response JSON, so it prints the two device names joined by a comma.",
+    code: "import requests\n\nresp = requests.get('https://api.example.com/v1/devices',\n                    headers={'Accept': 'application/json'})\ndevices = resp.json()['items']\nnames = [d['name'] for d in devices]\nprint(', '.join(names))\n\n# resp.json() returns:\n# {\"items\": [{\"name\": \"Device A\"}, {\"name\": \"Device B\"}]}",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 252,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which line correctly extracts the token from this JSON response?",
+    options: ["data['token']", "data->token", "data.token", "data{token}"],
+    correct: 0,
+    explanation: "JSON parsed with json.loads() or resp.json() becomes a Python dict; keys are accessed with square brackets.",
+    code: "import requests\n\nresp = requests.post('https://api.example.com/auth',\n                     json={'username': 'admin', 'password': 'cisco'})\ndata = resp.json()\n# Response body: {\"token\": \"eyJhb...\", \"expires\": 3600}\ntoken = ___",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 253,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "What does this Python function return when called with f(4)?",
+    options: ["24", "10", "16", "64"],
+    correct: 0,
+    explanation: "This is a recursive factorial: 4 * 3 * 2 * 1 = 24. The base case returns 1 when n <= 1.",
+    code: "def f(n):\n    if n <= 1:\n        return 1\n    return n * f(n - 1)\n\nprint(f(4))",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 254,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which output does this list comprehension produce?",
+    options: ["[0, 2, 4, 6, 8]", "[0, 1, 2, 3, 4]", "[2, 4, 6, 8, 10]", "[1, 3, 5, 7, 9]"],
+    correct: 0,
+    explanation: "range(5) yields 0-4; each value is multiplied by 2, giving [0, 2, 4, 6, 8].",
+    code: "result = [x * 2 for x in range(5)]\nprint(result)",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 255,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Why does this class raise an error when get_ip() is called?",
+    options: ["The constructor assigns to the local parameter instead of self.ip, so the attribute never exists on the instance", "Nothing, it works as intended", "Classes cannot have methods", "__init__ cannot take parameters"],
+    correct: 0,
+    explanation: "'name = name' only rebinds the local parameter. Attributes must be assigned to the instance: self.ip = ip.",
+    code: "class Device:\n    def __init__(self, name, ip):\n        name = name\n        # BUG: ip never stored on self\n\n    def get_ip(self):\n        return self.ip  # raises AttributeError\n\nd = Device('r1', '10.0.0.1')\nprint(d.get_ip())",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 256,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which requests call correctly sends this JSON body?",
+    options: ["requests.post(url, json={'name': 'vlan10'})", "requests.post(url, body='vlan10')", "requests.post(url, data='vlan10')", "requests.send(url, json={'name': 'vlan10'})"],
+    correct: 0,
+    explanation: "The json= parameter serializes a Python dict to a JSON body and sets Content-Type: application/json automatically.",
+    code: "import requests\n\nurl = 'https://api.example.com/v1/vlans'\n# Goal: POST {\"name\": \"vlan10\"} as JSON\nresp = ___",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 257,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What HTTP status code does this server response represent?",
+    options: ["404 Not Found", "200 OK", "500 Server Error", "301 Redirect"],
+    correct: 0,
+    explanation: "404 means the requested resource (the device with that ID) does not exist on the server.",
+    code: "HTTP/1.1 404 NOT FOUND\nContent-Type: application/json\n\n{\n  \"error\": \"device id-99 not found\",\n  \"code\": \"RESOURCE_MISSING\"\n}",
+    codeLanguage: "http",
+    tags: []
+  },
+  {
+    id: 258,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "hard",
+    question: "A script gets HTTP 401 on every call. Which header fix is most likely correct?",
+    options: ["Replace the malformed Authorization header with 'Authorization: Bearer <valid-token>'", "Add Content-Length: 0", "Change Accept to text/plain", "Switch the URL to HTTP port 80"],
+    correct: 0,
+    explanation: "401 Unauthorized indicates missing or invalid credentials. A correctly formed Authorization header with a valid bearer token resolves it.",
+    code: "import requests\n\n# Current (broken) request:\nresp = requests.get('https://api.example.com/v1/interfaces',\n                    headers={'Authorization': 'token'})\nprint(resp.status_code)  # 401\n\n# Fix the headers:",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 259,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does this NETCONF RPC retrieve?",
+    options: ["All interface configuration and state data", "Only interface counters", "The running-config as plain text", "The list of YANG models"],
+    correct: 0,
+    explanation: "The <get> operation with an empty interfaces filter returns both configuration and operational state for all interfaces.",
+    code: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rpc message-id=\"101\"\n     xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\n  <get>\n    <filter>\n      <interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\"/>\n    </filter>\n  </get>\n</rpc>",
+    codeLanguage: "xml",
+    tags: []
+  },
+  {
+    id: 260,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Which curl command matches this RESTCONF query?",
+    options: ["curl -u admin:cisco -H 'Accept: application/yang-data+json' https://10.0.0.1/restconf/data/ietf-interfaces:interfaces", "curl -X POST https://10.0.0.1/restconf/data", "curl https://10.0.0.1/restconf (no headers)", "curl -d '{\"interfaces\":{}}' https://10.0.0.1/restconf"],
+    correct: 0,
+    explanation: "A GET on the data resource with YANG+JSON Accept header and basic auth replicates the shown request exactly.",
+    code: "GET /restconf/data/ietf-interfaces:interfaces HTTP/1.1\nHost: 10.0.0.1\nAuthorization: Basic YWRtaW46Y2lzY28=\nAccept: application/yang-data+json",
+    codeLanguage: "http",
+    tags: []
+  },
+  {
+    id: 261,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which line in this Dockerfile copies only the dependency manifest first to leverage layer caching?",
+    options: ["COPY requirements.txt .", "COPY . .", "WORKDIR /app", "CMD [\"python\", \"app.py\"]"],
+    correct: 0,
+    explanation: "Copying requirements.txt before the rest of the code means dependency installs are cached unless the manifest changes — a core Docker best practice.",
+    code: "FROM python:3.9-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nEXPOSE 8000\nCMD [\"python\", \"app.py\"]",
+    codeLanguage: "docker",
+    tags: []
+  },
+  {
+    id: 262,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "What does the CMD instruction in this Dockerfile do?",
+    options: ["Defines the default command executed when a container starts from the image", "Runs during image build", "Copies files into the image", "Opens port 8000 on the host"],
+    correct: 0,
+    explanation: "CMD sets the default runtime command; RUN executes at build time. EXPOSE documents the port but does not publish it to the host.",
+    code: "FROM python:3.9-slim\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nEXPOSE 8000\nCMD [\"python\", \"app.py\"]",
+    codeLanguage: "docker",
+    tags: []
+  },
+  {
+    id: 263,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does this Ansible task do?",
+    options: ["Ensures GigabitEthernet0/1 has the given description and IP, and is enabled, only changing what differs", "Restarts the router", "Creates a new user on routers", "Deletes interface configuration"],
+    correct: 0,
+    explanation: "ios_config with parents converges the interface to the declared lines; Ansible modules are idempotent — no change if the config already matches.",
+    code: "---\n- name: Configure uplink\n  hosts: routers\n  gather_facts: no\n  tasks:\n    - name: Configure GigabitEthernet0/1\n      cisco.ios.ios_config:\n        lines:\n          - description Uplink to Core\n          - ip address 10.0.0.1 255.255.255.0\n          - no shutdown\n        parents: interface GigabitEthernet0/1",
+    codeLanguage: "yaml",
+    tags: []
+  },
+  {
+    id: 264,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "In this playbook, what does 'hosts: routers' reference?",
+    options: ["A group defined in the Ansible inventory", "A YAML list of tasks", "The Ansible control node", "A Docker network"],
+    correct: 0,
+    explanation: "The play targets the 'routers' group from the inventory file, running the tasks on every host in that group.",
+    code: "---\n- name: Gather version\n  hosts: routers\n  gather_facts: no\n  tasks:\n    - name: Show version\n      cisco.ios.ios_command:\n        commands:\n          - show version\n      register: output\n\n    - name: Save output\n      copy:\n        content: \"{{ output.stdout[0] }}\"\n        dest: \"./backups/{{ inventory_hostname }}.txt\"",
+    codeLanguage: "yaml",
+    tags: []
+  },
+  {
+    id: 265,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which value does this JSON parse to?",
+    options: ["core-sw01", "[\"core-sw01\"]", "sw01", "KeyError"],
+    correct: 0,
+    explanation: "devices is a list with one object; devices[0] gets that object, ['hostname'] its hostname value — a plain string.",
+    code: "import json\n\npayload = '''\n{\n  \"devices\": [\n    {\"hostname\": \"core-sw01\", \"ip\": \"10.0.0.2\", \"role\": \"core\"}\n  ]\n}\n'''\ndata = json.loads(payload)\nprint(data['devices'][0]['hostname'])",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 266,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which YAML snippet is equivalent to this JSON?",
+    options: ["devices:\\n  - name: r1\\n    ip: 10.0.0.1\\n  - name: r2\\n    ip: 10.0.0.2", "devices: [r1, r2] only", "devices: r1 r2", "name: r1; ip: 10.0.0.1;"],
+    correct: 0,
+    explanation: "A JSON array of objects maps to a YAML list of mappings: '- ' entries with indented fields.",
+    code: "{\n  \"devices\": [\n    {\"name\": \"r1\", \"ip\": \"10.0.0.1\"},\n    {\"name\": \"r2\", \"ip\": \"10.0.0.2\"}\n  ]\n}",
+    codeLanguage: "json",
+    tags: []
+  },
+  {
+    id: 267,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "hard",
+    question: "What does this Python script output?",
+    options: ["[('r1', 22), ('r2', 22)]", "['r1', 'r2']", "22", "TypeError"],
+    correct: 0,
+    explanation: "zip pairs iterables element-wise: (r1, 22) and (r2, 22). list() materializes the pairs as tuples.",
+    code: "hosts = ['r1', 'r2']\nports = [22, 22]\nprint(list(zip(hosts, ports)))",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 268,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "hard",
+    question: "What is the result of running this Git sequence?",
+    options: ["The feature branch is merged into main; if the same lines changed on both, merge conflicts must be resolved first", "main is deleted", "feature is rebased onto origin automatically", "Nothing happens without a remote"],
+    correct: 0,
+    explanation: "git merge feature integrates the branch into main. Divergent edits to the same lines stop the merge until conflicts are manually resolved and committed.",
+    code: "# Current repo state:\n#   main:    A --- B --- D\n#                \\\n#   feature:       C\n\ngit checkout main\ngit merge feature\n# Both B and C modified line 10 of config.py",
+    codeLanguage: "bash",
+    tags: []
+  },
+  {
+    id: 269,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What change does this diff hunk show?",
+    options: ["A static route's next hop changed from 10.0.0.2 to 10.0.0.3", "Two routes were added", "The interface was shut down", "Nothing changed"],
+    correct: 0,
+    explanation: "The '-' line removes the old route (next hop 10.0.0.2) and the '+' line adds the new one (10.0.0.3). Context lines stay unchanged.",
+    code: "@@ -14,3 +14,3 @@\n   interface GigabitEthernet0/1\n-  no ip route 10.2.0.0 255.255.255.0 10.0.0.2\n+  ip route 10.2.0.0 255.255.255.0 10.0.0.3\n !",
+    codeLanguage: "diff",
+    tags: []
+  },
+  {
+    id: 270,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which vulnerability does this endpoint have, and what is the fix?",
+    options: ["SQL injection; use parameterized queries", "XSS; escape HTML", "Open redirect; validate URLs", "Clickjacking; add frame headers"],
+    correct: 0,
+    explanation: "String-concatenating user input into SQL allows injection. Parameterized queries bind input as data, never as SQL code.",
+    code: "# Flask endpoint\n@app.route('/device')\ndef get_device():\n    device_id = request.args.get('id')\n    query = \"SELECT * FROM devices WHERE id = \" + device_id\n    return db.execute(query).fetchall()",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 271,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does this Webex API call do?",
+    options: ["Posts a markdown message to the room with the given roomId", "Creates a new room", "Deletes a message", "Lists room members"],
+    correct: 0,
+    explanation: "POST /v1/messages with a roomId and either text or markdown sends a message to that room.",
+    code: "import requests\n\nresp = requests.post(\n    'https://webexapis.com/v1/messages',\n    headers={'Authorization': 'Bearer ' + TOKEN},\n    json={\n        'roomId': 'Y2lzY29zcGFyazovL3...',\n        'markdown': '**Alert**: interface Gig0/1 is down'\n    }\n)\nprint(resp.status_code)",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 272,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What does this Meraki call return?",
+    options: ["The list of clients seen on network N_123 in the given timespan", "All organizations", "A single device by serial", "The network's firewall rules"],
+    correct: 0,
+    explanation: "GET /networks/{id}/clients with t0/timespan query parameters returns clients observed in that window.",
+    code: "GET https://api.meraki.com/api/v1/networks/N_123/clients?t0=2026-08-01T00:00:00Z&timespan=86400\nAuthorization: Bearer <key>\nAccept: application/json",
+    codeLanguage: "http",
+    tags: []
+  },
+  {
+    id: 273,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which RESTCONF path reads the hostname from the IOS XE native model?",
+    options: ["/restconf/data/Cisco-IOS-XE-native:native/hostname", "/restconf/data/ietf-interfaces:interfaces/hostname", "/restconf/operations/hostname", "/restconf/data/openconfig-system:hostname"],
+    correct: 0,
+    explanation: "hostname lives under the Cisco-IOS-XE-native model's native container on IOS XE RESTCONF.",
+    code: "# IOS XE RESTCONF\nGET ___\nHost: 10.0.0.1\nAccept: application/yang-data+json\n\n# Expected response:\n# { \"Cisco-IOS-XE-native:hostname\": \"r1\" }",
+    codeLanguage: "http",
+    tags: []
+  },
+  {
+    id: 274,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which unit test properly asserts the 404 handling?",
+    options: ["self.assertEqual(get_status(mock_resp), 'not-found')", "print(get_status(mock_resp))", "get_status(mock_resp)", "assert get_status is not None"],
+    correct: 0,
+    explanation: "Unit tests must assert expected outcomes; printing or calling without assertion verifies nothing.",
+    code: "import unittest\nfrom client import get_status\n\nclass TestGetStatus(unittest.TestCase):\n    def test_not_found(self):\n        mock_resp = {'code': 404}\n        self.assertEqual(get_status(mock_resp), 'not-found')\n\nif __name__ == '__main__':\n    unittest.main()",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 275,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does this Terraform snippet declare?",
+    options: ["The Cisco Catalyst Center provider and the base URL it connects to", "An Ansible inventory", "A Docker registry", "A Kubernetes cluster"],
+    correct: 0,
+    explanation: "The terraform block pins provider versions; provider \"dnacenter\" configures the base URL for the Catalyst Center Terraform provider.",
+    code: "terraform {\n  required_providers {\n    dnacenter = {\n      source  = \"cisco-en-programmability/dnacenter\"\n      version = \"~> 1.0\"\n    }\n  }\n}\n\nprovider \"dnacenter\" {\n  base_url = \"https://catalyst-center.example.com\"\n}",
+    codeLanguage: "hcl",
+    tags: []
+  },
+  {
+    id: 276,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "hard",
+    question: "What does this code print?",
+    options: ["20", "10", "30", "16"],
+    correct: 0,
+    explanation: "range(1,5) yields 1-4; the filter keeps evens 2 and 4; their squares 4 and 16 sum to 20.",
+    code: "total = sum(x**2 for x in range(1, 5) if x % 2 == 0)\nprint(total)",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 277,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which code correctly implements retry with exponential backoff for this API call?",
+    options: ["Loop with sleep = 2**attempt on non-200 responses", "while True with no sleep", "Single try/except only", "Increase timeout to 3600 and never retry"],
+    correct: 0,
+    explanation: "Exponential backoff (1s, 2s, 4s, 8s) between retries avoids hammering a struggling API and gives transient failures time to recover.",
+    code: "import requests, time\n\ndef get_with_retry(url, headers, max_retries=4):\n    for attempt in range(max_retries):\n        resp = requests.get(url, headers=headers)\n        if resp.status_code == 200:\n            return resp.json()\n        time.sleep(2 ** attempt)  # 1s, 2s, 4s, 8s\n    raise RuntimeError('API unreachable after retries')",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 278,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which Bash snippet creates a directory, enters it, and sets an environment variable?",
+    options: ["mkdir -p app && cd app && export APP_ENV=prod", "cd app || mkdir app", "set APP_ENV prod; mkdir", "export cd app"],
+    correct: 0,
+    explanation: "mkdir -p creates (no error if exists), cd enters it, export makes APP_ENV available to child processes.",
+    code: "#!/bin/bash\n# Create project dir and set environment\n___\necho \"ENV=$APP_ENV in $(pwd)\"",
+    codeLanguage: "bash",
+    tags: []
+  },
+  {
+    id: 279,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does this pyATS test verify?",
+    options: ["That OSPF neighbors are present and in the FULL state", "That the device reloads", "That interfaces are shut down", "That BGP is configured"],
+    correct: 0,
+    explanation: "The assertions check that OSPF neighbors exist and each is in the 'full' state, parsed from 'show ip ospf neighbor'.",
+    code: "from pyats.topology import loader\n\ntestbed = loader.load('testbed.yaml')\n\ndef test_ospf_neighbors(device):\n    output = device.parse('show ip ospf neighbor')\n    assert output, 'No OSPF neighbors found'\n    for nbr in output['instances'].values():\n        for state in nbr.values():\n            assert state.get('state') == 'full'",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 280,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Which output does this Bash pipeline produce for the shown file?",
+    options: ["3", "1", "10", "GigabitEthernet0/1"],
+    correct: 0,
+    explanation: "grep filters lines containing 'GigabitEthernet' and wc -l counts them: 3 matching lines.",
+    code: "# interfaces.log contains:\n# GigabitEthernet0/1 - up\n# GigabitEthernet0/2 - down\n# Tunnel0 - up\n# GigabitEthernet0/3 - up\n\ngrep GigabitEthernet interfaces.log | wc -l",
+    codeLanguage: "bash",
+    tags: []
+  },
+  {
+    id: 281,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What does this Catalyst Center API sequence accomplish?",
+    options: ["Authenticates to get a token, then retrieves the device list", "Deletes all devices", "Restarts the controller", "Creates a new site"],
+    correct: 0,
+    explanation: "POST /dna/system/api/v1/auth/token issues a token; the GET /dna/intent/api/v1/network-device call uses it via X-Auth-Token to list devices.",
+    code: "import requests\nimport urllib3\nurllib3.disable_warnings()\n\nBASE = 'https://catalyst-center.example.com'\nauth = requests.post(BASE + '/dna/system/api/v1/auth/token',\n                     auth=('admin', 'password'), verify=False)\ntoken = auth.json()['Token']\n\ndevices = requests.get(BASE + '/dna/intent/api/v1/network-device',\n                       headers={'X-Auth-Token': token}, verify=False)\nfor d in devices.json()['response']:\n    print(d['hostname'], d['managementIpAddress'])",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 282,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which OWASP threat does this code demonstrate and how is it fixed?",
+    options: ["XSS; escape user input before rendering in HTML", "SQLi; parameterize", "CSRF; token", "IDOR; authorization check"],
+    correct: 0,
+    explanation: "The template interpolates raw user input into HTML, enabling script injection. Escaping/autoescaping output neutralizes injected markup.",
+    code: "# Flask\n@app.route('/greet')\ndef greet():\n    name = request.args.get('name', '')\n    return \"<h1>Hello \" + name + \"!</h1>\"\n\n# Attacker: /greet?name=<script>steal()</script>",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 283,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "What Git command produced this diff view?",
+    options: ["git diff", "git status", "git log", "git clone"],
+    correct: 0,
+    explanation: "git diff shows unified-format differences between the working tree and the index/HEAD, exactly as displayed.",
+    code: "$ git ___\ndiff --git a/config.yaml b/config.yaml\nindex 83db48f..9f2cab1 100644\n--- a/config.yaml\n+++ b/config.yaml\n@@ -1,4 +1,4 @@\n timeout: 30\n-region: us-east-1\n+region: eu-west-1\n retries: 3",
+    codeLanguage: "bash",
+    tags: []
+  },
+  {
+    id: 284,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does this RESTCONF response tell you?",
+    options: ["Interface GigabitEthernet1 is enabled and up with MTU 1500", "The interface is admin-down", "MTU failed to apply", "The device rebooted"],
+    correct: 0,
+    explanation: "enabled: true plus oper-status up and MTU 1500 confirm the interface state as queried.",
+    code: "{\n  \"ietf-interfaces:interface\": {\n    \"name\": \"GigabitEthernet1\",\n    \"description\": \"Uplink\",\n    \"enabled\": true,\n    \"ietf-ip:ipv4\": {\n      \"address\": [{\"ip\": \"10.0.0.1\", \"netmask\": \"255.255.255.0\"}]\n    },\n    \"mtu\": 1500,\n    \"oper-status\": \"up\"\n  }\n}",
+    codeLanguage: "json",
+    tags: []
+  },
+  {
+    id: 285,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "hard",
+    question: "Which pattern correctly implements pagination over this API?",
+    options: ["Loop incrementing the page parameter until a page returns fewer than page_size items", "Request page=999999 once", "Download everything and filter client-side each time", "Ignore pagination fields"],
+    correct: 0,
+    explanation: "Standard page/size pagination loops until a short page signals the final batch.",
+    code: "import requests\n\ndef get_all_devices(base_url, headers):\n    devices, page = [], 1\n    while True:\n        resp = requests.get(base_url,\n                            headers=headers,\n                            params={'page': page, 'page_size': 100}).json()\n        devices.extend(resp['results'])\n        if len(resp['results']) < 100:\n            return devices\n        page += 1",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 286,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which line leaks the secret in this script?",
+    options: ["print(f\"Connecting with {PASSWORD}\")", "os.environ.get('APP_PASSWORD')", "getpass.getpass()", "exit(0)"],
+    correct: 0,
+    explanation: "Printing secrets to stdout leaks them into logs. Secrets should stay in env vars or vaults and never be echoed.",
+    code: "import os, getpass\n\nPASSWORD = os.environ.get('APP_PASSWORD') or getpass.getpass()\n\ndef connect(host):\n    print(f\"Connecting with {PASSWORD}\")  # BUG\n    return open_connection(host, PASSWORD)",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 287,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Why does the host fail to reach 10.2.0.5 based on this routing table?",
+    options: ["There is no route covering 10.2.0.0/24 and no default gateway, so the destination is unreachable", "DNS is not configured", "The ARP cache is full", "The VLAN tag is wrong"],
+    correct: 0,
+    explanation: "Without a matching route (specific or default), the kernel has no forwarding decision and reports 'Network is unreachable'.",
+    code: "Host routing table:\nDestination     Gateway         Iface\n10.0.0.0/24     0.0.0.0         eth0\n127.0.0.0/8     0.0.0.0         lo\n\n$ ping 10.2.0.5\nping: connect: Network is unreachable",
+    codeLanguage: "bash",
+    tags: []
+  },
+  {
+    id: 288,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which troubleshooting step first isolates this connectivity failure?",
+    options: ["Ping the default gateway to verify local Layer 3 reachability", "Reboot the application server", "Change the DNS server", "Disable the host firewall permanently"],
+    correct: 0,
+    explanation: "If the gateway is unreachable, the problem is local (VLAN, cabling, IP config); if reachable, the fault is upstream — a clean binary split.",
+    code: "Symptoms:\n- Host 10.0.0.50 cannot reach app at 10.2.0.10:443\n- DNS resolution works (8.8.8.8 responds)\n- ARP table shows no entry for 10.0.0.1\n\nFirst step? ___",
+    codeLanguage: "bash",
+    tags: []
+  },
+  {
+    id: 289,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which Observer pattern benefit does this code demonstrate?",
+    options: ["Subscribers are notified automatically when the subject changes, without polling", "The class uses less memory", "Observers run in parallel threads guaranteed", "It removes all coupling"],
+    correct: 0,
+    explanation: "Registering observers that get update() called on state change decouples producers from consumers without polling loops.",
+    code: "class Subject:\n    def __init__(self):\n        self._observers = []\n    def attach(self, obs):\n        self._observers.append(obs)\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)\n\nclass AlertService:\n    def update(self, event):\n        print(f'ALERT: {event}')\n\ns = Subject()\ns.attach(AlertService())\ns.notify('Gig0/1 down')",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 290,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does the 'Accept: application/json' header control here?",
+    options: ["The response format the client can process", "The request body encoding", "The authentication scheme", "The API version exclusively"],
+    correct: 0,
+    explanation: "Accept is content negotiation: it tells the server which media types the client will accept for the response.",
+    code: "GET /v1/networks/N_123/devices HTTP/1.1\nHost: api.meraki.com\nAuthorization: Bearer <key>\nAccept: application/json\n\n# Server may respond 406 if it cannot satisfy this",
+    codeLanguage: "http",
+    tags: []
+  },
+  {
+    id: 291,
+    type: "drag-and-drop",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Drag each HTTP method to its REST semantic meaning.",
+    explanation: "GET reads, POST creates, PUT replaces, DELETE removes — the CRUD mapping every REST API follows.",
+    dragItems: ["Retrieve data without side effects", "Create a new resource", "Fully replace a resource", "Remove a resource"],
+    dropZones: ["GET", "POST", "PUT", "DELETE"],
+    solution: {"GET": [0], "POST": [1], "PUT": [2], "DELETE": [3]},
+    tags: []
+  },
+  {
+    id: 292,
+    type: "drag-and-drop",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Drag each HTTP status code to its meaning.",
+    explanation: "2xx success, 3xx redirect, 4xx client error (401 auth, 400 syntax, 404 missing), 5xx server error.",
+    dragItems: ["The request succeeded and a new resource was created", "The request requires authentication", "The server cannot process the request syntax", "The resource does not exist"],
+    dropZones: ["201", "401", "400", "404"],
+    solution: {"201": [0], "401": [1], "400": [2], "404": [3]},
+    tags: []
+  },
+  {
+    id: 293,
+    type: "drag-and-drop",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Order the stages of an API request lifecycle from first to last.",
+    explanation: "DNS must resolve before connecting; TCP/TLS precedes sending the request; the response comes last.",
+    dragItems: ["DNS resolves the hostname", "Client builds the HTTP request", "TCP/TLS connection established", "Server returns response with status code"],
+    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
+    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    tags: []
+  },
+  {
+    id: 294,
+    type: "drag-and-drop",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Drag each automation tool to its primary function.",
+    explanation: "Terraform provisions, Ansible configures, NSO orchestrates services, pyATS validates — complementary layers of the automation stack.",
+    dragItems: ["Declarative infrastructure provisioning with plan/apply", "Agentless configuration management with YAML playbooks", "Multi-vendor service orchestration built on YANG", "Python network test and validation framework"],
+    dropZones: ["Terraform", "Ansible", "Cisco NSO", "pyATS"],
+    solution: {"Terraform": [0], "Ansible": [1], "Cisco NSO": [2], "pyATS": [3]},
+    tags: []
+  },
+  {
+    id: 295,
+    type: "drag-and-drop",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Drag each protocol to its default port.",
+    explanation: "Memorize: SSH 22, Telnet 23, HTTPS 443, NETCONF over SSH 830, RESTCONF 443, SNMP 161/162.",
+    dragItems: ["SSH", "Telnet", "HTTPS", "NETCONF"],
+    dropZones: ["22", "23", "443", "830"],
+    solution: {"22": [0], "23": [1], "443": [2], "830": [3]},
+    tags: []
+  },
+  {
+    id: 296,
+    type: "drag-and-drop",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Order the encapsulation steps as data moves down the stack.",
+    explanation: "Encapsulation: payload, TCP segment, IP packet, Ethernet frame — each layer adding its header.",
+    dragItems: ["Application generates payload", "TCP adds port numbers (segment)", "IP adds source/destination addresses (packet)", "Ethernet adds MAC framing (frame)"],
+    dropZones: ["First", "Second", "Third", "Fourth"],
+    solution: {"First": [0], "Second": [1], "Third": [2], "Fourth": [3]},
+    tags: []
+  },
+  {
+    id: 297,
+    type: "drag-and-drop",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Drag each OWASP threat to its description.",
+    explanation: "Four classic OWASP risks: XSS targets browsers, SQLi targets data, CSRF exploits ambient auth, IDOR exploits missing authorization.",
+    dragItems: ["Injected scripts execute in the victim's browser", "Malicious input alters database queries", "Forged requests ride the victim's session cookie", "User accesses another user's resource by changing an ID"],
+    dropZones: ["XSS", "SQL Injection", "CSRF", "Insecure Direct Object Reference"],
+    solution: {"XSS": [0], "SQL Injection": [1], "CSRF": [2], "Insecure Direct Object Reference": [3]},
+    tags: []
+  },
+  {
+    id: 298,
+    type: "drag-and-drop",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Order the stages of a CI/CD pipeline from first to last.",
+    explanation: "Commit triggers CI checks; artifacts are built from green builds; CD deploys and verifies health.",
+    dragItems: ["Developer commits code", "Automated tests and linting run", "Artifact is built and stored", "Deployment to production with health checks"],
+    dropZones: ["Stage 1", "Stage 2", "Stage 3", "Stage 4"],
+    solution: {"Stage 1": [0], "Stage 2": [1], "Stage 3": [2], "Stage 4": [3]},
+    tags: []
+  },
+  {
+    id: 299,
+    type: "drag-and-drop",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Drag each Cisco platform to its domain.",
+    explanation: "Meraki = network mgmt, Intersight = compute, Webex = collaboration, Secure Endpoint = security.",
+    dragItems: ["Network dashboard API with organizations and networks", "Compute management via SaaS for UCS", "Collaboration messaging and rooms API", "Endpoint malware protection and threat response"],
+    dropZones: ["Meraki", "Intersight", "Webex", "Secure Endpoint"],
+    solution: {"Meraki": [0], "Intersight": [1], "Webex": [2], "Secure Endpoint": [3]},
+    tags: []
+  },
+  {
+    id: 300,
+    type: "drag-and-drop",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Drag each data format to its syntax feature.",
+    explanation: "JSON uses braces/brackets, YAML indentation/hyphens, XML angle-bracket tags; YANG is the schema language modeling NETCONF/RESTCONF data.",
+    dragItems: ["Key-value pairs with braces and colons, arrays in brackets", "Indentation-based, lists with hyphens", "Angle-bracket tags with opening/closing pairs", "Schema language defining data models for network devices"],
+    dropZones: ["JSON", "YAML", "XML", "YANG"],
+    solution: {"JSON": [0], "YAML": [1], "XML": [2], "YANG": [3]},
+    tags: []
+  },
+  {
+    id: 301,
+    type: "drag-and-drop",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Order the Git workflow steps for sharing a change with the team.",
+    explanation: "Branch, add (stage), commit, push/PR — the standard feature workflow enabling code review.",
+    dragItems: ["Create and switch to a branch", "Stage modified files", "Commit with a descriptive message", "Push the branch and open a pull request"],
+    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
+    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    tags: []
+  },
+  {
+    id: 302,
+    type: "drag-and-drop",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Drag each concept to its plane or function.",
+    explanation: "Control decides, data forwards, management operates. NAT is a data-plane function, not a plane.",
+    dragItems: ["Builds routing/link-state tables (OSPF, STP)", "Forwards user traffic through the device", "Manages the device via SSH/API/CLI", "Translates private to public addresses (data-plane function)"],
+    dropZones: ["Control plane", "Data plane", "Management plane", "NAT"],
+    solution: {"Control plane": [0], "Data plane": [1], "Management plane": [2], "NAT": [3]},
+    tags: []
+  },
+  {
+    id: 303,
+    type: "drag-and-drop",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Drag each deployment model to its attribute.",
+    explanation: "The four deployment models differ in tenancy, cost model, and proximity to data.",
+    dragItems: ["Dedicated infrastructure for one organization", "Shared, pay-as-you-go infrastructure operated by a provider", "Combination of on-premises and public cloud", "Computation near data sources to reduce latency"],
+    dropZones: ["Private cloud", "Public cloud", "Hybrid cloud", "Edge computing"],
+    solution: {"Private cloud": [0], "Public cloud": [1], "Hybrid cloud": [2], "Edge computing": [3]},
+    tags: []
+  },
+  {
+    id: 304,
+    type: "drag-and-drop",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Order the steps for consuming a documented REST API in Python.",
+    explanation: "Docs, credentials, request, parse/handle: the consumption workflow tested in section 2.",
+    dragItems: ["Read the API docs to find the endpoint and auth scheme", "Obtain credentials or a token", "Send the request with requests and correct headers", "Parse the response and handle errors by status code"],
+    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
+    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    tags: []
+  },
+  {
+    id: 305,
+    type: "drag-and-drop",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Drag each YANG/NETCONF concept to its description.",
+    explanation: "YANG models the data; NETCONF and RESTCONF transport it; containers structure it hierarchically.",
+    dragItems: ["Schema language defining the data model tree", "Transport protocol over SSH port 830 with XML RPCs", "HTTP-based protocol using YANG models", "YANG statement grouping related data nodes"],
+    dropZones: ["YANG", "NETCONF", "RESTCONF", "container"],
+    solution: {"YANG": [0], "NETCONF": [1], "RESTCONF": [2], "container": [3]},
+    tags: []
+  },
+  {
+    id: 306,
+    type: "drag-and-drop",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Order the DHCP DORA process from first to last.",
+    explanation: "DORA: Discover, Offer, Request, Acknowledge — the four-step DHCP lease process.",
+    dragItems: ["Client broadcasts Discover", "Server offers an address", "Client requests the offered address", "Server acknowledges and leases the address"],
+    dropZones: ["Message 1", "Message 2", "Message 3", "Message 4"],
+    solution: {"Message 1": [0], "Message 2": [1], "Message 3": [2], "Message 4": [3]},
+    tags: []
+  },
+  {
+    id: 307,
+    type: "drag-and-drop",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Drag each Docker concept to its definition.",
+    explanation: "Dockerfile builds images; images run as containers; registries (Docker Hub, etc.) distribute images.",
+    dragItems: ["Read-only template with application and dependencies", "Running instance of an image", "Text file with build instructions", "Registry where images are stored and shared"],
+    dropZones: ["Image", "Container", "Dockerfile", "Registry"],
+    solution: {"Image": [0], "Container": [1], "Dockerfile": [2], "Registry": [3]},
+    tags: []
+  },
+  {
+    id: 308,
+    type: "drag-and-drop",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Order the TDD red-green-refactor cycle steps.",
+    explanation: "Red (failing test), Green (minimal pass), Refactor (improve design, tests stay green) — then repeat.",
+    dragItems: ["Write a failing test", "Write the minimum code to pass", "Run all tests", "Refactor while keeping tests green"],
+    dropZones: ["Phase 1", "Phase 2", "Phase 3", "Phase 4"],
+    solution: {"Phase 1": [0], "Phase 2": [1], "Phase 3": [2], "Phase 4": [3]},
+    tags: []
+  },
+  {
+    id: 309,
+    type: "drag-and-drop",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Drag each IP service to its function.",
+    explanation: "Core IP services: DHCP addressing, DNS names, NAT translation, NTP time.",
+    dragItems: ["Assigns IP addresses automatically", "Resolves names to IP addresses", "Translates private to public addresses", "Synchronizes device clocks"],
+    dropZones: ["DHCP", "DNS", "NAT", "NTP"],
+    solution: {"DHCP": [0], "DNS": [1], "NAT": [2], "NTP": [3]},
+    tags: []
+  },
+  {
+    id: 310,
+    type: "drag-and-drop",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Order the steps of a network automation workflow from requirement to verification.",
+    explanation: "Analyze, build, lab-test, deploy/monitor: never push untested automation to production.",
+    dragItems: ["Identify the manual task and its trigger", "Choose the tool/API and develop the script", "Test in a lab (CML/sandbox)", "Deploy to production and monitor results"],
+    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
+    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    tags: []
+  },
+  {
+    id: 311,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "Which Python data structure stores unique, unordered values?",
+    options: ["set", "list", "dict", "tuple"],
+    correct: 0,
+    explanation: "Sets hold unique elements with no order; lists/tuples keep order and allow duplicates; dicts map keys to values.",
+    tags: []
+  },
+  {
+    id: 312,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "Which Python type does json.loads() return for a JSON object?",
+    options: ["dict", "list", "str", "tuple"],
+    correct: 0,
+    explanation: "JSON objects parse to Python dicts; JSON arrays become lists; strings/numbers map to str/int/float.",
+    tags: []
+  },
+  {
+    id: 313,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "What does YAML use to denote list items?",
+    options: ["A hyphen followed by a space (- item)", "Angle brackets", "Semicolons", "Parentheses"],
+    correct: 0,
+    explanation: "YAML lists use '- ' per item at consistent indentation; JSON uses brackets, XML uses tags.",
+    tags: []
+  },
+  {
+    id: 314,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which XML declaration is correct at the top of a document?",
+    options: ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "<xml version=\"1.0\">", "<?XML version=\"1.0\"?>", "<!DOCTYPE xml >"],
+    correct: 0,
+    explanation: "The XML declaration is case-sensitive with question marks: <?xml version=\"1.0\" encoding=\"UTF-8\"?>.",
+    tags: []
+  },
+  {
+    id: 315,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "In agile, what is a sprint?",
+    options: ["A fixed-length iteration (usually 1-4 weeks) delivering an increment", "A permanent team", "A bug classification", "A deployment script"],
+    correct: 0,
+    explanation: "Sprints are timeboxed iterations producing potentially shippable increments — the heartbeat of Scrum/Agile.",
+    tags: []
+  },
+  {
+    id: 316,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "easy",
+    question: "Which Git command stages a modified file for commit?",
+    options: ["git add", "git commit", "git push", "git clone"],
+    correct: 0,
+    explanation: "git add stages changes; commit records them locally; push shares them with the remote.",
+    tags: []
+  },
+  {
+    id: 317,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "What does git pull combine?",
+    options: ["git fetch followed by git merge", "git clone then checkout", "git commit then push", "git branch then rebase"],
+    correct: 0,
+    explanation: "pull = fetch (download remote changes) + merge (integrate them into your branch).",
+    tags: []
+  },
+  {
+    id: 318,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which command shows which lines each author last changed in a file?",
+    options: ["git blame", "git log", "git diff", "git show"],
+    correct: 0,
+    explanation: "git blame annotates every line with the commit and author that last touched it — ideal for finding who changed a config line.",
+    tags: []
+  },
+  {
+    id: 319,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "What is the advantage of the MVC design pattern?",
+    options: ["Separates data model, presentation, and input logic for maintainability", "Makes code run faster", "Removes the need for tests", "Guarantees thread safety"],
+    correct: 0,
+    explanation: "MVC isolates responsibilities so UI changes do not break data logic and vice versa — easier testing and maintenance.",
+    tags: []
+  },
+  {
+    id: 320,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "easy",
+    question: "What does REST stand for?",
+    options: ["Representational State Transfer", "Remote Execution Standard Transfer", "Rapid Encrypted Socket Transport", "Resource Encoding and State Typing"],
+    correct: 0,
+    explanation: "REST — an architectural style for stateless, resource-oriented HTTP APIs.",
+    tags: []
+  },
+  {
+    id: 321,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "easy",
+    question: "Which HTTP method is idempotent and safe (no state change)?",
+    options: ["GET", "POST", "PUT", "DELETE"],
+    correct: 0,
+    explanation: "GET is both safe and idempotent; PUT/DELETE are idempotent but not safe; POST is neither.",
+    tags: []
+  },
+  {
+    id: 322,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which status code family indicates a server-side error?",
+    options: ["5xx", "4xx", "3xx", "2xx"],
+    correct: 0,
+    explanation: "5xx = server errors (500, 502, 503); 4xx = client errors; 3xx = redirects; 2xx = success.",
+    tags: []
+  },
+  {
+    id: 323,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does a 202 Accepted response indicate?",
+    options: ["The request was accepted for processing but is not complete yet", "The resource was created", "Authentication failed", "The resource moved permanently"],
+    correct: 0,
+    explanation: "202 signals asynchronous processing: the job is queued; poll a status endpoint or await a callback.",
+    tags: []
+  },
+  {
+    id: 324,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which authentication method sends base64-encoded username:password in a header?",
+    options: ["HTTP Basic", "OAuth 2.0 client credentials", "API key in query string", "HMAC signing"],
+    correct: 0,
+    explanation: "Basic auth encodes 'user:pass' in base64 under Authorization; it requires HTTPS to be safe.",
+    tags: []
+  },
+  {
+    id: 325,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Why are API keys usually sent in a header rather than the URL query string?",
+    options: ["URLs are logged by servers, proxies, and browsers, leaking the key", "Headers are faster", "Query strings have size limits only", "Keys cannot be revoked"],
+    correct: 0,
+    explanation: "Query strings end up in access logs, history, and referrer headers; headers keep credentials out of URLs.",
+    tags: []
+  },
+  {
+    id: 326,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What is the purpose of the X-Auth-Token header in Catalyst Center APIs?",
+    options: ["Carries the session token obtained from the auth endpoint", "Sets the response language", "Chunks large payloads", "Enables CORS"],
+    correct: 0,
+    explanation: "Catalyst Center issues a token via POST /auth/token; subsequent calls carry it in X-Auth-Token.",
+    tags: []
+  },
+  {
+    id: 327,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does a webhook require from your application?",
+    options: ["A publicly reachable HTTPS endpoint that accepts POST requests", "A VPN tunnel to the provider", "A database cluster", "A client certificate from users"],
+    correct: 0,
+    explanation: "The provider POSTs events to your endpoint, so it must be reachable, handle POSTs, and verify signatures.",
+    tags: []
+  },
+  {
+    id: 328,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "hard",
+    question: "A synchronous API call blocks the client because...",
+    options: ["The client waits for the result before continuing execution", "The server queues the work", "The response is chunked", "DNS is slow"],
+    correct: 0,
+    explanation: "Synchronous calls block until the server responds; async APIs return immediately with a job reference.",
+    tags: []
+  },
+  {
+    id: 329,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What happens when an API rate limit is exceeded?",
+    options: ["The server responds 429 Too Many Requests until the window resets", "The API key is revoked permanently", "Rate limits only apply to GET", "Nothing; limits are informational"],
+    correct: 0,
+    explanation: "Providers throttle clients with 429 plus Retry-After; exponential backoff is mandatory behavior for well-behaved clients.",
+    tags: []
+  },
+  {
+    id: 330,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which Python library is the de facto standard for REST API calls?",
+    options: ["requests", "socket", "smtplib", "sqlite3"],
+    correct: 0,
+    explanation: "requests provides sessions, JSON helpers, retry hooks, and clean auth handling for HTTP APIs.",
+    tags: []
+  },
+  {
+    id: 331,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which Meraki API endpoint lists organizations accessible to the key?",
+    options: ["GET /organizations", "GET /networks", "GET /devices", "GET /clients"],
+    correct: 0,
+    explanation: "Organization enumeration is the top of the Meraki object hierarchy: /organizations, then networks, then devices/clients.",
+    tags: []
+  },
+  {
+    id: 332,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What is Cisco Catalyst Center's primary role?",
+    options: ["Intent-based network management controller for enterprise campus and WAN", "A firewall platform", "A collaboration suite", "A container registry"],
+    correct: 0,
+    explanation: "Catalyst Center (formerly DNA Center) provides assurance, provisioning, and software-defined access via northbound REST APIs.",
+    tags: []
+  },
+  {
+    id: 333,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which ACI construct groups endpoints with identical policy requirements?",
+    options: ["Endpoint Group (EPG)", "Bridge domain", "VRF", "SPAN session"],
+    correct: 0,
+    explanation: "EPGs group endpoints sharing policy; contracts define communication between EPGs — the ACI policy model.",
+    tags: []
+  },
+  {
+    id: 334,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What does Cisco vManage (Catalyst SD-WAN) provide APIs for?",
+    options: ["Centralized SD-WAN fabric management: templates, policies, tunnels", "Malware sandboxing", "Compute provisioning", "Room management"],
+    correct: 0,
+    explanation: "vManage is the SD-WAN management plane exposing REST APIs for device templates, centralized policy, and tunnel status.",
+    tags: []
+  },
+  {
+    id: 335,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What is the DevNet Sandbox used for?",
+    options: ["Free hands-on labs with live Cisco platforms and APIs", "Production deployments", "Buying licenses", "Storing secrets"],
+    correct: 0,
+    explanation: "Sandbox provides always-on and reserved lab instances of Meraki, Catalyst Center, Webex, NSO, and more for API practice.",
+    tags: []
+  },
+  {
+    id: 336,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Where would you find community-shared automation projects for Cisco platforms?",
+    options: ["DevNet Code Exchange", "Cisco.com downloads only", "The CLI 'help' command", "Cisco TAC case notes"],
+    correct: 0,
+    explanation: "Code Exchange curates community and Cisco repositories for automation samples across platforms.",
+    tags: []
+  },
+  {
+    id: 337,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which interfaces does IOS XE expose for model-driven programmability?",
+    options: ["NETCONF, RESTCONF, and gRPC interfaces driven by YANG models", "Only Telnet", "Only SNMPv2", "Proprietary binary protocol only"],
+    correct: 0,
+    explanation: "IOS XE's model-driven interfaces (NETCONF/RESTCONF/gNMI-gRPC) all operate on YANG models.",
+    tags: []
+  },
+  {
+    id: 338,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which Webex API call adds a person to a space?",
+    options: ["POST /memberships with roomId and personEmail", "PUT /rooms/{id}/people", "POST /people (only creates accounts)", "DELETE /messages"],
+    correct: 0,
+    explanation: "Memberships link people to rooms: POST /memberships with roomId + personEmail adds them.",
+    tags: []
+  },
+  {
+    id: 339,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "What does Intersight manage?",
+    options: ["UCS and compute infrastructure via SaaS", "Branch firewalls", "Contact center queues", "DNS zones"],
+    correct: 0,
+    explanation: "Intersight is Cisco's compute platform-as-a-service for UCS/HyperFlex servers, profiles, and policies.",
+    tags: []
+  },
+  {
+    id: 340,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "easy",
+    question: "Which is a benefit of containers over VMs?",
+    options: ["Faster startup and higher density on the same host", "Stronger isolation than VMs", "No shared kernel risk", "Cannot be orchestrated"],
+    correct: 0,
+    explanation: "Containers share the host kernel: they start in milliseconds and pack densely — at the cost of weaker isolation than VMs.",
+    tags: []
+  },
+  {
+    id: 341,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which Docker command runs an image interactively with a shell?",
+    options: ["docker run -it image /bin/bash", "docker exec (always creates new container)", "docker start -a", "docker ps -it"],
+    correct: 0,
+    explanation: "run -it allocates a TTY for a fresh container; docker exec attaches to an already-running one.",
+    tags: []
+  },
+  {
+    id: 342,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "What does Docker Compose automate?",
+    options: ["Multi-container application definition and lifecycle with one YAML file", "Image layer compression", "Container sandboxing at kernel level", "Port scanning"],
+    correct: 0,
+    explanation: "Compose declares services, networks, and volumes in one file; 'up'/'down' manage the whole stack.",
+    tags: []
+  },
+  {
+    id: 343,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which CI/CD component stores build outputs for deployment?",
+    options: ["Artifact repository (e.g., Nexus, Artifactory)", "Load balancer", "Reverse proxy", "DNS server"],
+    correct: 0,
+    explanation: "Artifacts (images, packages) are versioned in repositories so deployments are reproducible and traceable.",
+    tags: []
+  },
+  {
+    id: 344,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which practice protects secrets in a CI/CD pipeline?",
+    options: ["Inject secrets at runtime from a vault, never committing them to the repo", "Commit encrypted secrets in YAML", "Store secrets in pipeline YAML environment variables", "Email secrets to the team"],
+    correct: 0,
+    explanation: "Vaults (HashiCorp Vault, cloud secret managers) inject secrets at runtime; repo-stored secrets leak with git history.",
+    tags: []
+  },
+  {
+    id: 345,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "What does a firewall primarily do in an application deployment?",
+    options: ["Filters traffic between zones based on rules", "Balances load across servers", "Resolves domain names", "Terminates TLS only"],
+    correct: 0,
+    explanation: "Firewalls enforce policy between security zones; LBs distribute, DNS resolves, proxies forward.",
+    tags: []
+  },
+  {
+    id: 346,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "How does a load balancer improve application availability?",
+    options: ["Distributes requests across healthy backends and removes failed ones from rotation", "Encrypts all payloads", "Prevents SQL injection", "Increases DNS TTL"],
+    correct: 0,
+    explanation: "Health-checked distribution keeps the service up when instances fail and enables rolling updates.",
+    tags: []
+  },
+  {
+    id: 347,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which OWASP threat is mitigated by validating and allowing only expected file types in uploads?",
+    options: ["Unrestricted file upload leading to remote code execution", "CSRF", "DNS poisoning", "ARP spoofing"],
+    correct: 0,
+    explanation: "Unvalidated uploads can carry webshells; allow-lists, type/size checks, and storage outside the webroot mitigate it.",
+    tags: []
+  },
+  {
+    id: 348,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "easy",
+    question: "Which Bash command prints the current working directory?",
+    options: ["pwd", "cd", "ls", "env"],
+    correct: 0,
+    explanation: "pwd (print working directory); cd changes it; ls lists; env prints variables.",
+    tags: []
+  },
+  {
+    id: 349,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "easy",
+    question: "Which Bash command makes a variable available to child processes?",
+    options: ["export VAR=value", "VAR=value only", "set VAR=value only", "echo VAR=value"],
+    correct: 0,
+    explanation: "export adds the variable to the environment inherited by child processes.",
+    tags: []
+  },
+  {
+    id: 350,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "What does the DevOps principle 'you build it, you run it' mean?",
+    options: ["Development teams own their services in production, including operations", "Only ops deploy code", "QA owns production incidents", "Developers never access production"],
+    correct: 0,
+    explanation: "DevOps collapses the dev/ops split: the team that builds the service runs and supports it, closing feedback loops.",
+    tags: []
+  },
+  {
+    id: 351,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What is the value of model-driven programmability for infrastructure?",
+    options: ["Config and state derived from standardized YANG models enable vendor-neutral automation", "It replaces all CLI commands", "It removes the need for testing", "It only works on Catalyst switches"],
+    correct: 0,
+    explanation: "YANG-modeled interfaces (NETCONF/RESTCONF/gNMI) standardize data across vendors, making automation portable.",
+    tags: []
+  },
+  {
+    id: 352,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What is a key benefit of infrastructure as code?",
+    options: ["Environments are reproducible and drift is detectable through version control", "Faster device reboots", "Manual approvals are eliminated", "Configurations cannot be audited"],
+    correct: 0,
+    explanation: "IaC makes infrastructure declarative, versioned, and reviewable; any divergence (drift) shows in diffs.",
+    tags: []
+  },
+  {
+    id: 353,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "In Ansible, what is a playbook?",
+    options: ["A YAML file defining ordered plays with tasks against inventoried hosts", "A Python script for SSH", "A Docker compose file", "A Git branch name"],
+    correct: 0,
+    explanation: "Playbooks orchestrate plays; each play maps hosts/groups to roles and tasks executed in order.",
+    tags: []
+  },
+  {
+    id: 354,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does Terraform state (.tfstate) track?",
+    options: ["The mapping between declared resources and real infrastructure objects", "Git commit history", "Docker image layers", "YANG schema versions"],
+    correct: 0,
+    explanation: "State records resource IDs and attributes so plan can compute diffs between desired and actual infrastructure.",
+    tags: []
+  },
+  {
+    id: 355,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does 'terraform plan' do?",
+    options: ["Shows the execution diff without applying changes", "Applies changes immediately", "Destroys resources", "Formats HCL files"],
+    correct: 0,
+    explanation: "plan is a dry run: it computes creates/updates/destroys for review before 'apply'.",
+    tags: []
+  },
+  {
+    id: 356,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What is Cisco NSO primarily used for?",
+    options: ["Service orchestration across multi-vendor networks with YANG service models", "Endpoint security", "Video conferencing", "Cloud billing"],
+    correct: 0,
+    explanation: "NSO models services in YANG and drives device configuration transactionally across vendors.",
+    tags: []
+  },
+  {
+    id: 357,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Which RESTCONF method partially updates a resource?",
+    options: ["PATCH", "GET", "HEAD", "OPTIONS"],
+    correct: 0,
+    explanation: "PATCH applies a partial update; PUT replaces the whole resource; GET/HEAD read; OPTIONS lists capabilities.",
+    tags: []
+  },
+  {
+    id: 358,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does NETCONF <get-config> return?",
+    options: ["Only the configuration datastore (running/candidate), not operational state", "Only counters", "Only schemas", "Only notifications"],
+    correct: 0,
+    explanation: "<get-config> targets config datastores; <get> returns config plus operational state.",
+    tags: []
+  },
+  {
+    id: 359,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "In YANG, which statement defines a repeatable set of entries (like an interface list)?",
+    options: ["list", "container", "leaf", "choice"],
+    correct: 0,
+    explanation: "list holds repeating entries keyed by a leaf; container groups; leaf is a single value; choice is a mutually exclusive selection.",
+    tags: []
+  },
+  {
+    id: 360,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does pyATS' Genie library provide?",
+    options: ["Parsers that convert CLI output into structured Python data", "YANG compilation", "Container orchestration", "Load balancing"],
+    correct: 0,
+    explanation: "Genie parses 'show' command output into structured dictionaries for programmatic verification.",
+    tags: []
+  },
+  {
+    id: 361,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does Cisco Modeling Labs (CML) simulate?",
+    options: ["Network topologies running real Cisco images in a virtual environment", "Only wireless controllers", "Physical hardware failures", "Cloud billing"],
+    correct: 0,
+    explanation: "CML virtualizes IOS XE/NX-OS/ASA images to build test topologies before production changes.",
+    tags: []
+  },
+  {
+    id: 362,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "In an Ansible playbook, what does 'register' do?",
+    options: ["Saves a task's output into a variable for later tasks", "Re-registers the host in inventory", "Encrypts variables", "Restarts the play"],
+    correct: 0,
+    explanation: "register captures stdout/return codes so subsequent tasks can branch or save results.",
+    tags: []
+  },
+  {
+    id: 363,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does a unified diff line starting with '+' mean?",
+    options: ["The line was added in the new version", "The line is a comment", "The line was deleted", "The line is unchanged"],
+    correct: 0,
+    explanation: "'+ ' lines exist in the new file only; '- ' lines only in the old; ' ' context is unchanged.",
+    tags: []
+  },
+  {
+    id: 364,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Which code review practice improves automation reliability most?",
+    options: ["Require a second engineer to review network-changing scripts before merge", "Review only style", "Skip reviews for small scripts", "Let the author merge their own critical changes"],
+    correct: 0,
+    explanation: "Network automation mistakes are expensive: peer review of logic (especially device-touching code) catches them pre-merge.",
+    tags: []
+  },
+  {
+    id: 365,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "In a sequence diagram, what does a dashed arrow typically represent?",
+    options: ["A response/return message", "A blocking call", "A data store", "An error only"],
+    correct: 0,
+    explanation: "Solid arrows are calls/requests; dashed arrows carry the return/response back to the caller.",
+    tags: []
+  },
+  {
+    id: 366,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "What is the purpose of a MAC address?",
+    options: ["Identify a device at Layer 2 within a local network segment", "Route packets across the internet", "Encrypt traffic", "Assign DNS names"],
+    correct: 0,
+    explanation: "MACs are burned-in Layer 2 identifiers used for local frame delivery; IPs route across networks.",
+    tags: []
+  },
+  {
+    id: 367,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "What does a VLAN do?",
+    options: ["Segments a physical switch into multiple logical broadcast domains", "Encrypts wireless traffic", "Routes between subnets", "Assigns IP addresses"],
+    correct: 0,
+    explanation: "VLANs isolate broadcast domains on switches; inter-VLAN traffic requires a router or L3 switch.",
+    tags: []
+  },
+  {
+    id: 368,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "What does the subnet mask 255.255.255.0 indicate?",
+    options: ["The first 24 bits are the network portion", "The host has 24 addresses", "Only 8 hosts are allowed", "The network is class A"],
+    correct: 0,
+    explanation: "/24: 24 network bits, 8 host bits — 254 usable host addresses.",
+    tags: []
+  },
+  {
+    id: 369,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "What is the role of the default gateway?",
+    options: ["Forwards traffic destined for networks outside the local subnet", "Assigns MAC addresses", "Broadcasts DHCP offers only", "Blocks broadcast storms"],
+    correct: 0,
+    explanation: "When the destination is off-subnet, the host sends the frame to the gateway's MAC for routing.",
+    tags: []
+  },
+  {
+    id: 370,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which device primarily forwards traffic between different IP networks?",
+    options: ["Router", "Layer 2 switch", "Hub", "Access point"],
+    correct: 0,
+    explanation: "Routers operate at Layer 3 routing between subnets; L2 switches forward frames within one.",
+    tags: []
+  },
+  {
+    id: 371,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Which component filters traffic between network zones based on rules?",
+    options: ["Firewall", "Switch", "Access point", "DNS server"],
+    correct: 0,
+    explanation: "Firewalls enforce inter-zone policy (allow/deny by source, destination, port).",
+    tags: []
+  },
+  {
+    id: 372,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which plane builds the routing table using OSPF?",
+    options: ["Control plane", "Data plane", "Management plane", "Backup plane"],
+    correct: 0,
+    explanation: "Routing protocols run in the control plane; the data plane forwards packets using the table they build.",
+    tags: []
+  },
+  {
+    id: 373,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Which service resolves example.com to an IP address?",
+    options: ["DNS", "DHCP", "NAT", "SNMP"],
+    correct: 0,
+    explanation: "DNS translates names to addresses; DHCP assigns addresses; NAT translates; SNMP monitors.",
+    tags: []
+  },
+  {
+    id: 374,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "What does NAT allow?",
+    options: ["Multiple private hosts to share public IP addresses for internet access", "Faster DNS lookups", "Wireless encryption", "VLAN trunking"],
+    correct: 0,
+    explanation: "NAT (typically PAT) maps many inside addresses to one public IP via port multiplexing.",
+    tags: []
+  },
+  {
+    id: 375,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "easy",
+    question: "Which port does HTTPS use by default?",
+    options: ["443", "80", "22", "830"],
+    correct: 0,
+    explanation: "HTTPS = HTTP over TLS on TCP 443; HTTP uses 80.",
+    tags: []
+  },
+  {
+    id: 376,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "A user can ping 8.8.8.8 but not browse https://google.com. Which is the most likely cause?",
+    options: ["TCP port 443 blocked by a firewall or proxy", "Default gateway missing", "DNS is mandatory for ping", "NAT is disabled"],
+    correct: 0,
+    explanation: "ICMP works but TCP/443 fails: a firewall/proxy or TLS issue — DNS is not needed for pinging by IP.",
+    tags: []
+  },
+  {
+    id: 377,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "An app reaches internal servers but not the internet. Which diagnosis fits?",
+    options: ["NAT or default route misconfiguration on the edge", "Local switch VLAN mismatch", "Duplicate MAC on the LAN", "Wrong DNS on internal servers only"],
+    correct: 0,
+    explanation: "Internal reachability with external failure points to the edge: missing default route or broken NAT.",
+    tags: []
+  },
+  {
+    id: 378,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "How does high network latency impact applications?",
+    options: ["Interactive apps feel sluggish; TCP throughput degrades on lossy links", "Latency only affects DNS", "It has no user impact", "It improves throughput"],
+    correct: 0,
+    explanation: "Round-trip time slows handshakes and interactive flows; combined with loss it collapses TCP goodput.",
+    tags: []
+  },
+  {
+    id: 379,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which port pair is correct for SNMP?",
+    options: ["161 (queries) / 162 (traps)", "22 / 23", "53 / 67", "830 / 443"],
+    correct: 0,
+    explanation: "SNMP agents listen on 161; traps/notifications are sent to 162. DNS is 53, DHCP 67/68.",
+    tags: []
+  },
+  {
+    id: 380,
+    type: "multiple-choice",
+    domain: "Network Fundamentals",
+    domainKey: "network",
+    difficulty: "medium",
+    question: "Which troubleshooting step verifies DNS functionality?",
+    options: ["nslookup api.example.com", "ping 8.8.8.8", "traceroute 10.0.0.1", "arp -a"],
+    correct: 0,
+    explanation: "nslookup/dig directly test name resolution; pinging an IP bypasses DNS entirely.",
+    tags: []
+  },
+  {
+    id: 381,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "What does this Python dictionary comprehension produce?",
+    options: ["A dict mapping each number to its square", "A list", "An error", "None"],
+    correct: 0,
+    explanation: "The comprehension builds a dict mapping each n from 1 to 4 to n squared: keys 1-4, values 1, 4, 9, 16.",
+    code: "d = {n: n * n for n in range(1, 5)}\nprint(d)",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 382,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "medium",
+    question: "Which statement about Python lists and tuples is correct?",
+    options: ["Tuples are immutable; lists are mutable", "Both are immutable", "Lists are immutable; tuples are mutable", "Neither supports indexing"],
+    correct: 0,
+    explanation: "Tuples cannot be modified after creation (hashable, dict-key capable); lists can grow/shrink in place.",
+    tags: []
+  },
+  {
+    id: 383,
+    type: "multiple-choice",
+    domain: "Software Development and Design",
+    domainKey: "software",
+    difficulty: "hard",
+    question: "What does this code print?",
+    options: ["[2, 4]", "[1, 2, 3, 4]", "[]", "TypeError"],
+    correct: 0,
+    explanation: "filter with the lambda keeps even numbers 2 and 4; list() materializes the filter object.",
+    code: "nums = [1, 2, 3, 4]\nresult = list(filter(lambda x: x % 2 == 0, nums))\nprint(result)",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 384,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which Python block handles exceptions from an API call without crashing?",
+    options: ["try/except around requests.get", "if/else only", "for loop", "with statement only"],
+    correct: 0,
+    explanation: "try/except catches exceptions (timeouts, connection errors); always catch specific exceptions like requests.RequestException.",
+    code: "import requests\n\ntry:\n    resp = requests.get(url, timeout=5)\n    resp.raise_for_status()\n    data = resp.json()\nexcept requests.RequestException as e:\n    print(f'API error: {e}')",
+    codeLanguage: "python",
+    tags: []
+  },
+  {
+    id: 385,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does resp.raise_for_status() do?",
+    options: ["Raises an HTTPError exception for 4xx/5xx responses", "Retries the request", "Prints the status code", "Closes the connection"],
+    correct: 0,
+    explanation: "It converts error status codes into exceptions so failures are handled explicitly instead of parsing garbage bodies.",
+    tags: []
+  },
+  {
+    id: 386,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which header value requests a JSON body from an API?",
+    options: ["Accept: application/json", "Content-Type: text/html", "Authorization: Basic", "Cache-Control: no-cache"],
+    correct: 0,
+    explanation: "Accept negotiates the response format; Content-Type describes the request body you send.",
+    tags: []
+  },
+  {
+    id: 387,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "Which HTTP code indicates a successful DELETE?",
+    options: ["200 OK or 204 No Content", "201 Created", "302 Found", "501 Not Implemented"],
+    correct: 0,
+    explanation: "DELETE commonly returns 204 (no body) or 200 with a confirmation body — both success.",
+    tags: []
+  },
+  {
+    id: 388,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "medium",
+    question: "What does a Link header with rel=\"next\" indicate?",
+    options: ["The URL of the next page in a paginated response", "A stylesheet to load", "A webhook callback", "An OAuth redirect"],
+    correct: 0,
+    explanation: "Pagination via Link headers: rel=next points at the following page — follow it until absent.",
+    tags: []
+  },
+  {
+    id: 389,
+    type: "multiple-choice",
+    domain: "Understanding and Using APIs",
+    domainKey: "apis",
+    difficulty: "hard",
+    question: "Which pattern handles webhook deliveries reliably?",
+    options: ["Verify the signature, process asynchronously, and return 2xx immediately", "Process synchronously then reply 500 on failure", "Ignore the signature and trust the source IP only", "Reply 404 until verified manually"],
+    correct: 0,
+    explanation: "Ack fast (2xx), verify authenticity (HMAC), queue processing — then provider retries never lose events.",
+    tags: []
+  },
+  {
+    id: 390,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which SDK helps build Webex integrations in Python?",
+    options: ["webexteamssdk (Webex Python SDK)", "netmiko", "napalm", "scapy"],
+    correct: 0,
+    explanation: "webexteamssdk wraps the Webex REST APIs (messages, rooms, memberships) in Python objects.",
+    tags: []
+  },
+  {
+    id: 391,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which library automates SSH CLI access to network devices in Python?",
+    options: ["netmiko", "requests", "docker-py", "pytest"],
+    correct: 0,
+    explanation: "netmiko abstracts multi-vendor SSH CLI automation; requests is for REST APIs; netmiko targets CLI, not REST.",
+    tags: []
+  },
+  {
+    id: 392,
+    type: "multiple-choice",
+    domain: "Cisco Platforms and Development",
+    domainKey: "platforms",
+    difficulty: "medium",
+    question: "Which Meraki API versioning practice should clients follow?",
+    options: ["Pin to a stable API version and handle deprecation notices", "Always call the newest beta endpoints", "Use no version in the path", "Randomly pick endpoints"],
+    correct: 0,
+    explanation: "Production integrations pin stable versions and monitor deprecation headers/notices to avoid breakage.",
+    tags: []
+  },
+  {
+    id: 393,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which Docker command lists running containers?",
+    options: ["docker ps", "docker images", "docker inspect --all", "docker version"],
+    correct: 0,
+    explanation: "docker ps shows running containers; -a adds stopped ones; images lists images.",
+    tags: []
+  },
+  {
+    id: 394,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "What does EXPOSE in a Dockerfile do?",
+    options: ["Documents the port the container listens on (metadata; not published)", "Publishes the port to the host", "Opens a firewall", "Starts the listener"],
+    correct: 0,
+    explanation: "EXPOSE is documentation for humans/tools; -p on docker run actually publishes to the host.",
+    tags: []
+  },
+  {
+    id: 395,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which test type verifies a REST API endpoint end-to-end including auth and database?",
+    options: ["Integration test", "Unit test with mocks only", "Lint check", "Type check"],
+    correct: 0,
+    explanation: "Integration tests exercise the real stack (API, auth, DB); unit tests isolate functions with mocks.",
+    tags: []
+  },
+  {
+    id: 396,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Which OWASP defense prevents CSRF?",
+    options: ["Anti-CSRF tokens and SameSite cookie attributes", "HTTPS everywhere", "Strong password policy", "Rate limiting"],
+    correct: 0,
+    explanation: "Per-session tokens bound to forms and SameSite/Lax cookies stop cross-site forged requests.",
+    tags: []
+  },
+  {
+    id: 397,
+    type: "multiple-choice",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
+    difficulty: "medium",
+    question: "Why is encrypting data at rest AND in transit important?",
+    options: ["Protects confidentiality if any single layer (disk or network) is compromised", "It is only a compliance checkbox", "It speeds up queries", "It prevents all logic bugs"],
+    correct: 0,
+    explanation: "Defense in depth: TLS protects the pipe, at-rest encryption protects stolen media and backups.",
+    tags: []
+  },
+  {
+    id: 398,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What does 'golden config' mean in network automation?",
+    options: ["A version-controlled reference configuration from which per-device configs are rendered", "The config on the newest device", "Any running-config backup", "The factory default config"],
+    correct: 0,
+    explanation: "Golden configs are the approved source of truth; templates + variables render per-device configs from them.",
+    tags: []
+  },
+  {
+    id: 399,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "What is configuration drift?",
+    options: ["Divergence between the deployed device state and the intended source of truth", "A routing protocol feature", "A Docker layer issue", "An Ansible plugin"],
+    correct: 0,
+    explanation: "Manual changes or failed jobs cause drift; automated compliance checks (pyATS, backups diffing) detect it.",
+    tags: []
+  },
+  {
+    id: 400,
+    type: "multiple-choice",
+    domain: "Infrastructure and Automation",
+    domainKey: "infrastructure",
+    difficulty: "medium",
+    question: "Which workflow does this Python automate?",
+    options: ["Continuously monitors interface operational state via RESTCONF and alerts when an interface goes down", "Installs IOS images", "Backs up the whole disk", "Renders web pages"],
+    correct: 0,
+    explanation: "The loop queries interface oper-status via RESTCONF and triggers an alert function for any non-up interface — health monitoring automation.",
+    code: "import requests, time\n\ndef check_interfaces(host, token):\n    r = requests.get(\n        f'https://{host}/restconf/data/ietf-interfaces:interfaces-state',\n        headers={'Authorization': f'Bearer {token}',\n                 'Accept': 'application/yang-data+json'},\n        verify=False)\n    interfaces = r.json()['ietf-interfaces:interfaces-state']['interface']\n    return {i['name']: i['oper-status'] for i in interfaces}\n\nwhile True:\n    status = check_interfaces('10.0.0.1', TOKEN)\n    down = [n for n, s in status.items() if s != 'up']\n    if down:\n        alert(f'Interfaces down: {down}')\n    time.sleep(60)",
+    codeLanguage: "python",
     tags: []
   },
 ];

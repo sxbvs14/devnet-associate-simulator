@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevNet Associate DEVASC 200-901 | Exam Simulator</title>
+  <title>CCNA Automation 200-901 | Exam Simulator</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -49,7 +49,7 @@
             <h1 class="text-xl font-bold bg-gradient-to-r from-devnet-300 to-devnet-400 bg-clip-text text-transparent">
               CCNA Automation
             </h1>
-            <p class="text-xs text-gray-400">Network Programmability Simulator</p>
+            <p class="text-xs text-gray-400">200-901 CCNAAUTO Exam Simulator</p>
           </div>
         </div>
         <div class="flex items-center gap-4">
@@ -67,7 +67,7 @@
   </header>
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <!-- Home Screen -->
+    <!-- Home: Exam catalog -->
     <div id="homeScreen" class="space-y-8">
       <div class="text-center space-y-4">
         <h2 class="text-4xl sm:text-5xl font-bold">
@@ -76,62 +76,12 @@
           </span>
         </h2>
         <p class="text-lg text-gray-400 max-w-2xl mx-auto">
-          Prepare for your Cisco CCNA Automation certification with practice questions,
-          detailed feedback, and a performance dashboard by domain.
+          Choose an exam and mode. Every session is randomized — questions and domains weighted
+          to the official 200-901 CCNAAUTO v1.1 blueprint.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <!-- Exam Mode Card -->
-        <div class="group relative p-6 rounded-2xl border border-devnet-700/50 bg-devnet-800/50 backdrop-blur-sm hover:border-devnet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-devnet-500/10">
-          <div class="absolute inset-0 bg-gradient-to-br from-devnet-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="relative space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-devnet-600/30 flex items-center justify-center">
-              <svg class="w-6 h-6 text-devnet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-white">Exam Mode</h3>
-            <p class="text-gray-400">
-              Simulate the real exam with a timer, question navigation, and final review.
-              No feedback until you finish.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">60 min</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200" id="examQuestionCount">0 questions</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">No hints</span>
-            </div>
-            <button onclick="app.startExam()" class="w-full mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">
-              Start Exam
-            </button>
-          </div>
-        </div>
-
-        <!-- Study Mode Card -->
-        <div class="group relative p-6 rounded-2xl border border-devnet-700/50 bg-devnet-800/50 backdrop-blur-sm hover:border-devnet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-devnet-500/10">
-          <div class="absolute inset-0 bg-gradient-to-br from-devnet-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="relative space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-devnet-600/30 flex items-center justify-center">
-              <svg class="w-6 h-6 text-devnet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-              </svg>
-            </div>
-            <h3 class="text-2xl font-bold text-white">Study Mode</h3>
-            <p class="text-gray-400">
-              Learn at your own pace with instant feedback. Each answer includes detailed technical
-              explanations and references.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Unlimited</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Instant feedback</span>
-              <span class="px-3 py-1 text-xs rounded-full bg-devnet-700/50 text-devnet-200">Explanations</span>
-            </div>
-            <button onclick="app.startStudy()" class="w-full mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">
-              Start Study
-            </button>
-          </div>
-        </div>
-      </div>
+      <div id="examGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto"></div>
 
       <!-- Stats -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -140,12 +90,12 @@
           <p class="text-sm text-gray-400">Questions</p>
         </div>
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
-          <p class="text-3xl font-bold text-devnet-300" id="totalDomains">7</p>
+          <p class="text-3xl font-bold text-devnet-300">6</p>
           <p class="text-sm text-gray-400">Domains</p>
         </div>
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
-          <p class="text-3xl font-bold text-devnet-300">6</p>
-          <p class="text-sm text-gray-400">Code formats</p>
+          <p class="text-3xl font-bold text-devnet-300">2</p>
+          <p class="text-sm text-gray-400">Question types</p>
         </div>
         <div class="p-4 rounded-xl border border-devnet-700/30 bg-devnet-800/30 text-center">
           <p class="text-3xl font-bold text-devnet-300">CCNA</p>
@@ -154,13 +104,14 @@
       </div>
     </div>
 
-    <!-- Exam/Study Screen -->
+    <!-- Quiz Screen -->
     <div id="quizScreen" class="hidden space-y-6">
-      <!-- Progress Bar -->
       <div class="space-y-2">
-        <div class="flex items-center justify-between text-sm">
+        <div class="flex items-center justify-between text-sm flex-wrap gap-2">
           <span class="text-gray-400">Question <span id="currentQuestionNum">1</span> of <span id="totalQuestionsInQuiz">0</span></span>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3 flex-wrap">
+            <span id="examNameBadge" class="px-2 py-1 rounded-full text-xs bg-devnet-800/60 text-gray-400"></span>
+            <span id="typeBadge" class="px-2 py-1 rounded-full text-xs bg-devnet-700/40 text-devnet-200"></span>
             <span id="timerDisplay" class="font-mono text-devnet-300 hidden">60:00</span>
             <span id="domainBadge" class="px-3 py-1 rounded-full text-xs font-medium bg-devnet-600/30 text-devnet-200"></span>
           </div>
@@ -170,14 +121,13 @@
         </div>
       </div>
 
-      <!-- Question Card -->
       <div id="questionCard" class="p-6 sm:p-8 rounded-2xl border border-devnet-700/50 bg-devnet-800/50 backdrop-blur-sm">
         <div id="questionContent" class="space-y-6"></div>
         <div id="optionsContainer" class="mt-8 space-y-3"></div>
         <div id="feedbackContainer" class="hidden mt-6 p-4 rounded-xl border border-devnet-600/30 bg-devnet-900/50">
           <div id="feedbackContent" class="space-y-3"></div>
         </div>
-        <div class="flex items-center justify-between mt-8 pt-6 border-t border-devnet-700/30">
+        <div class="flex items-center justify-between mt-8 pt-6 border-t border-devnet-700/30 flex-wrap gap-2">
           <button id="prevBtn" onclick="app.prevQuestion()" class="px-4 py-2 rounded-lg border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">← Previous</button>
           <button id="nextBtn" onclick="app.nextQuestion()" class="px-4 py-2 rounded-lg bg-devnet-600 text-white hover:bg-devnet-500 transition-colors">Next →</button>
           <button id="finishBtn" onclick="app.finishExam()" class="hidden px-6 py-2 rounded-lg bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-400 hover:to-red-500 transition-all">Finish Exam</button>
@@ -188,13 +138,14 @@
     <!-- Results Screen -->
     <div id="resultsScreen" class="hidden space-y-8">
       <div class="text-center space-y-4">
-        <h2 class="text-4xl font-bold bg-gradient-to-r from-devnet-300 to-devnet-400 bg-clip-text text-transparent">Exam Results</h2>
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-devnet-700/30 border border-devnet-600/30">
-          <svg class="w-5 h-5 text-devnet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <h2 class="text-4xl font-bold bg-gradient-to-r from-devnet-300 to-devnet-400 bg-clip-text text-transparent">Results</h2>
+        <div id="passBadge" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-devnet-700/30 border border-devnet-600/30">
+          <svg id="passIcon" class="w-5 h-5 text-devnet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
           <span id="scoreText" class="text-lg font-semibold"></span>
         </div>
+        <p class="text-sm text-gray-500" id="scoreAttempted"></p>
       </div>
 
       <div class="flex justify-center">
@@ -217,10 +168,20 @@
         <div id="domainBreakdown" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <button onclick="app.restart()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">Try Again</button>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
+        <button id="reviewAnswersBtn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">Review Answers</button>
         <button onclick="app.goHome()" class="px-6 py-3 rounded-xl border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors">Back to Home</button>
       </div>
+    </div>
+
+    <!-- Review Screen -->
+    <div id="reviewScreen" class="hidden space-y-6">
+      <div class="flex items-center justify-between flex-wrap gap-2">
+        <h2 class="text-3xl font-bold bg-gradient-to-r from-devnet-300 to-devnet-400 bg-clip-text text-transparent">Answer Review</h2>
+        <button id="backHomeBtn" class="px-4 py-2 rounded-lg border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors">← Back</button>
+      </div>
+      <p class="text-sm text-gray-400">Click any question to jump back to it.</p>
+      <div id="reviewList" class="space-y-3 max-w-4xl mx-auto"></div>
     </div>
   </main>
 
@@ -244,6 +205,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-docker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-http.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-diff.min.js"></script>
   <script src="data/questions.js"></script>
   <script src="src/app.js"></script>
 </body>

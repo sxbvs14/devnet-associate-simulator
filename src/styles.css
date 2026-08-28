@@ -244,3 +244,49 @@ code[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
+
+/* ================= Drag & Drop ================= */
+.dnd-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  border: 2px solid #533483;
+  background: #16213e;
+  color: #e5e7eb;
+  font-size: 0.875rem;
+  cursor: grab;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.dnd-chip:hover { border-color: #7c3aed; transform: translateY(-1px); }
+.dnd-chip.dragging { opacity: 0.4; cursor: grabbing; }
+.dnd-chip.dnd-selected { border-color: #7c3aed; background: rgba(124, 58, 237, 0.25); }
+.dnd-chip.dnd-placed { background: #0f3460; }
+.dnd-remove {
+  margin-left: 0.25rem;
+  color: #f87171;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+.dnd-remove:hover { color: #ef4444; }
+
+.dnd-zone {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px dashed #533483;
+  background: rgba(22, 33, 62, 0.5);
+  min-height: 6rem;
+  transition: all 0.15s ease;
+}
+.dnd-zone.dnd-over { border-color: #7c3aed; background: rgba(124, 58, 237, 0.12); }
+.dnd-zone.dnd-await { border-color: #a78bfa; box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.3); }
+.dnd-zone .zone-items:empty::before {
+  content: 'Drop here';
+  color: #4b5563;
+  font-size: 0.8rem;
+  font-style: italic;
+}

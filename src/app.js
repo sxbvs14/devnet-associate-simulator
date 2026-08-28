@@ -44,8 +44,7 @@
             'Application Deployment and Security': { key: 'deployment', color: 'domain-deployment', questions: 0, correct: 0 },
             'Infrastructure and Automation': { key: 'infrastructure', color: 'domain-infrastructure', questions: 0, correct: 0 },
             'Network Fundamentals': { key: 'network', color: 'domain-network', questions: 0, correct: 0 },
-            'Network Automation and Programmability': { key: 'automation', color: 'domain-automation', questions: 0, correct: 0 }
-          };
+                      };
 
           this.init();
         }
@@ -441,7 +440,7 @@
           const snippets = {
             'python': {
               language: 'python',
-              code: `import requests\n\n# Example: DNA Center authentication\nurl = "https://dna-center.example.com/dna/system/api/v1/auth/token"\npayload = {"username": "admin", "password": "password"}\nresponse = requests.post(url, json=payload, verify=False)\ntoken = response.json()["Token"]\n\n# Use token for subsequent requests\nheaders = {"X-Auth-Token": token}\n`
+              code: `import requests\n\n# Example: Catalyst Center authentication\nurl = "https://dna-center.example.com/dna/system/api/v1/auth/token"\npayload = {"username": "admin", "password": "password"}\nresponse = requests.post(url, json=payload, verify=False)\ntoken = response.json()["Token"]\n\n# Use token for subsequent requests\nheaders = {"X-Auth-Token": token}\n`
             },
             'json': {
               language: 'json',

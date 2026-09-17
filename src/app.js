@@ -667,6 +667,11 @@
             review.appendChild(item);
           });
           this.showScreen('reviewScreen');
+          this._reviewReturn = 'resultsScreen';
+        }
+
+        backToResults() {
+          this.showScreen('resultsScreen');
         }
 
         goHome() {
@@ -711,7 +716,9 @@
       const app = new DevNetSimulator();
       window.app = app;
       document.getElementById('reviewAnswersBtn').addEventListener('click', () => app.showReview());
+      document.getElementById('backToResultsBtn').addEventListener('click', () => app.backToResults());
       document.getElementById('backHomeBtn').addEventListener('click', () => app.goHome());
+      document.getElementById('newExamBtn').addEventListener('click', () => app.goHome());
     } catch (e) {
       console.error('Init error:', e);
       const el = document.getElementById('errorBanner');

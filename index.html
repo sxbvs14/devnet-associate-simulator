@@ -170,6 +170,7 @@
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
         <button id="reviewAnswersBtn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-devnet-500 to-devnet-600 text-white font-semibold hover:from-devnet-400 hover:to-devnet-500 transition-all shadow-lg shadow-devnet-500/20">Review Answers</button>
+        <button id="newExamBtn" class="px-6 py-3 rounded-xl bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold hover:from-green-400 hover:to-green-500 transition-all shadow-lg shadow-green-500/20">New Exam</button>
         <button onclick="app.goHome()" class="px-6 py-3 rounded-xl border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors">Back to Home</button>
       </div>
     </div>
@@ -178,7 +179,10 @@
     <div id="reviewScreen" class="hidden space-y-6">
       <div class="flex items-center justify-between flex-wrap gap-2">
         <h2 class="text-3xl font-bold bg-gradient-to-r from-devnet-300 to-devnet-400 bg-clip-text text-transparent">Answer Review</h2>
-        <button id="backHomeBtn" class="px-4 py-2 rounded-lg border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors">← Back</button>
+        <div class="flex gap-2">
+          <button id="backToResultsBtn" class="px-4 py-2 rounded-lg bg-devnet-600 text-white hover:bg-devnet-500 transition-colors">← Back to Results</button>
+          <button id="backHomeBtn" class="px-4 py-2 rounded-lg border border-devnet-600/50 text-devnet-200 hover:bg-devnet-700/30 transition-colors">Home</button>
+        </div>
       </div>
       <p class="text-sm text-gray-400">Click any question to jump back to it.</p>
       <div id="reviewList" class="space-y-3 max-w-4xl mx-auto"></div>

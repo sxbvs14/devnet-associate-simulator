@@ -157,7 +157,29 @@
           let pool = exam.domains ? ALL.filter(q => exam.domains.includes(q.domain)) : ALL.slice();
           pool = this.shuffle(pool);
           if (exam.count !== 'all') pool = pool.slice(0, Math.min(exam.count, pool.length));
-          return pool;
+          // Randomize answer/option order per session (Boson-style: never memorize positions)
+          return pool.map(q => this.randomizeQuestion(q));
+        }
+
+        randomizeQuestion(q) {
+          const copy = Object.assign({}, q);
+          if (q.type === 'multiple-choice' && Array.isArray(q.options)) {
+            const indices = this.shuffle(q.options.map((_, i) => i));
+            copy.options = indices.map(i => q.options[i]);
+            copy.correct = indices.indexOf(q.correct);
+            copy.optionsOriginal = q.options;
+          } else if (q.type === 'drag-and-drop') {
+            // Shuffle both the draggable items and the zone order
+            const itemMap = this.shuffle(q.dragItems.map((_, i) => i));
+            copy.dragItems = itemMap.map(i => q.dragItems[i]);
+            const remap = oldIdx => itemMap.indexOf(oldIdx);
+            copy.solution = {};
+            Object.keys(q.solution).forEach(zone => {
+              copy.solution[zone] = q.solution[zone].map(remap);
+            });
+            copy.dropZones = this.shuffle(q.dropZones.slice());
+          }
+          return copy;
         }
 
         startExamSession(exam, isExamMode) {

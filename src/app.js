@@ -34,7 +34,7 @@
         { id: 'software',  name: 'Software Dev & Design',  desc: 'Section 1.0 — 15% of the exam',                  count: 25,  minutes: 30,  domains: ['Software Development and Design'], shuffle: true },
         { id: 'apis',      name: 'Understanding APIs',     desc: 'Section 2.0 — 20% of the exam',                  count: 30,  minutes: 40,  domains: ['Understanding and Using APIs'], shuffle: true },
         { id: 'platforms', name: 'Cisco Platforms',        desc: 'Section 3.0 — 15% of the exam',                  count: 25,  minutes: 30,  domains: ['Cisco Platforms and Development'], shuffle: true },
-        { id: 'deploy',    name: 'Deployment & Security',  desc: 'Section 4.0 — 15% of the exam',                  count: 28,  minutes: 35,  domains: ['Application Deployment and Security'], shuffle: true },
+        { id: 'deploy',    name: 'Deployment & Security',  desc: 'Section 4.0 — 15% of the exam',                  count: 'all', minutes: 50,  domains: ['Application Deployment and Security'], shuffle: true },
         { id: 'infra',     name: 'Infra & Automation',     desc: 'Section 5.0 — 20% of the exam',                  count: 35,  minutes: 45,  domains: ['Infrastructure and Automation'], shuffle: true },
         { id: 'network',   name: 'Network Fundamentals',   desc: 'Section 6.0 — 15% of the exam',                  count: 25,  minutes: 30,  domains: ['Network Fundamentals'], shuffle: true },
         { id: 'marathon',  name: 'Marathon Mode',          desc: 'Every question in the bank, no timer',           count: 'all', minutes: 0, domains: null, shuffle: true }

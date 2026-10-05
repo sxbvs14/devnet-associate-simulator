@@ -6,10 +6,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which design pattern is best suited for creating a single instance of a class that manages a connection pool to Cisco Catalyst Center?",
-    options: ["Factory Pattern", "Singleton Pattern", "Observer Pattern", "Strategy Pattern"],
+    options: ["Factory Pattern","Singleton Pattern","Observer Pattern","Strategy Pattern"],
     correct: 1,
     explanation: "The Singleton Pattern ensures a class has only one instance and provides a global point of access to it. For connection pool management, Singleton prevents multiple redundant connections and ensures resource efficiency.",
-    tags: ["design-patterns", "oop", "dna-center"]
+    tags: ["design-patterns","oop","dna-center"]
   },
   {
     id: 2,
@@ -18,10 +18,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "In Python, what is the output of the following code?\n```python\nclass NetworkDevice:\n    def __init__(self, ip):\n        self.__ip = ip\n\n    @property\n    def ip(self):\n        return self.__ip\n\ndevice = NetworkDevice('192.168.1.1')\nprint(device.ip)\nprint(device.__ip)\n```",
-    options: ["192.168.1.1 followed by AttributeError", "AttributeError followed by 192.168.1.1", "192.168.1.1 followed by 192.168.1.1", "AttributeError followed by AttributeError"],
+    options: ["192.168.1.1 followed by AttributeError","AttributeError followed by 192.168.1.1","192.168.1.1 followed by 192.168.1.1","AttributeError followed by AttributeError"],
     correct: 0,
     explanation: "The @property decorator creates a getter for the private attribute __ip. device.ip returns the value, but device.__ip raises AttributeError due to Python name mangling.",
-    tags: ["python", "oop", "encapsulation"]
+    tags: ["python","oop","encapsulation"]
   },
   {
     id: 3,
@@ -30,22 +30,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "A developer needs to handle multiple API responses from Cisco Meraki (JSON), Cisco IOS XE (XML via NETCONF), and YAML configuration files. Which Python library combination is MOST appropriate?",
-    options: ["json and xml.etree.ElementTree", "json, xml.etree.ElementTree, and PyYAML", "requests and BeautifulSoup", "pandas and numpy"],
+    options: ["json and xml.etree.ElementTree","json, xml.etree.ElementTree, and PyYAML","requests and BeautifulSoup","pandas and numpy"],
     correct: 1,
     explanation: "json handles Meraki JSON, xml.etree.ElementTree parses NETCONF XML, and PyYAML handles YAML configs. requests fetches APIs but doesn't parse formats. BeautifulSoup is for HTML/XML scraping, not programmatic API parsing.",
-    tags: ["python", "data-formats", "parsing"]
-  },
-  {
-    id: 4,
-    type: "multiple-choice",
-    domain: "Software Development and Design",
-    domainKey: "software",
-    difficulty: "easy",
-    question: "What does the 'S' in SOLID principles stand for, and what is its primary goal?",
-    options: ["Single Responsibility: A class should have only one reason to change", "Scalability: Systems should scale horizontally", "Synchronization: Thread-safe operations", "Simplicity: Code should be as simple as possible"],
-    correct: 0,
-    explanation: "Single Responsibility Principle (SRP) states that a class or module should have only one reason to change. In network automation, this means separating configuration parsing, API communication, and data storage into distinct modules.",
-    tags: ["solid", "design-principles", "architecture"]
+    tags: ["python","data-formats","parsing"]
   },
   {
     id: 5,
@@ -54,10 +42,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Python data structure is MOST efficient for checking if an IP address exists in a large list of 100,000 addresses when performing repeated lookups?",
-    options: ["List", "Tuple", "Set", "Dictionary"],
+    options: ["List","Tuple","Set","Dictionary"],
     correct: 2,
     explanation: "Sets use hash tables, providing O(1) average-case lookup time versus O(n) for lists/tuples. For 100,000 IPs with repeated membership checks, a set is dramatically faster.",
-    tags: ["python", "data-structures", "performance"]
+    tags: ["python","data-structures","performance"]
   },
   {
     id: 6,
@@ -66,10 +54,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which HTTP status code indicates that a request was successfully processed and the response contains the requested resource?",
-    options: ["200 OK", "201 Created", "204 No Content", "301 Moved Permanently"],
+    options: ["200 OK","201 Created","204 No Content","301 Moved Permanently"],
     correct: 0,
     explanation: "200 OK is the standard response for successful HTTP requests. 201 Created is for successful creation requests. 204 No Content is for successful requests with no response body. 301 is for redirection.",
-    tags: ["http", "status-codes", "rest"]
+    tags: ["http","status-codes","rest"]
   },
   {
     id: 7,
@@ -78,10 +66,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "In Python, which module is commonly used for making HTTP requests to interact with REST APIs?",
-    options: ["urllib", "requests", "http", "socket"],
+    options: ["urllib","requests","http","socket"],
     correct: 1,
     explanation: "The requests library is the de facto standard for making HTTP requests in Python. It provides a simple API for HTTP/1.1 and is widely used for REST API interactions, including Cisco platform APIs.",
-    tags: ["python", "http", "requests"]
+    tags: ["python","http","requests"]
   },
   {
     id: 8,
@@ -90,10 +78,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "In a RESTful API, which HTTP method is idempotent and SHOULD be used when updating a specific resource without changing the overall state beyond the update?",
-    options: ["POST", "PUT", "PATCH", "DELETE"],
+    options: ["POST","PUT","PATCH","DELETE"],
     correct: 1,
     explanation: "PUT is idempotent—making the same request multiple times produces the same result. It replaces the entire resource at a known URI. PATCH is also used for updates but is not strictly idempotent.",
-    tags: ["rest", "http", "api-design"]
+    tags: ["rest","http","api-design"]
   },
   {
     id: 9,
@@ -102,10 +90,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What is the primary difference between RESTCONF and NETCONF when configuring Cisco IOS XE devices?",
-    options: ["RESTCONF uses HTTP/HTTPS, NETCONF uses SSH", "RESTCONF is proprietary to Cisco, NETCONF is an IETF standard", "NETCONF cannot retrieve operational data, RESTCONF can", "RESTCONF uses XML exclusively, NETCONF uses JSON"],
+    options: ["RESTCONF uses HTTP/HTTPS, NETCONF uses SSH","RESTCONF is proprietary to Cisco, NETCONF is an IETF standard","NETCONF cannot retrieve operational data, RESTCONF can","RESTCONF uses XML exclusively, NETCONF uses JSON"],
     correct: 0,
     explanation: "RESTCONF is an IETF standard (RFC 8040) that uses HTTP/HTTPS with standard REST methods, making it firewall-friendly. NETCONF uses SSH or TLS as a transport layer with its own RPC model.",
-    tags: ["restconf", "netconf", "ios-xe", "ietf"]
+    tags: ["restconf","netconf","ios-xe","ietf"]
   },
   {
     id: 10,
@@ -114,10 +102,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "A Cisco Meraki API call returns HTTP 429 Too Many Requests. Which header indicates when the client can retry, and what is the recommended action?",
-    options: ["Retry-After header; wait the specified seconds before retrying", "X-RateLimit-Reset; immediately retry", "X-Request-ID; check the request log", "WWW-Authenticate; re-authenticate with API key"],
+    options: ["Retry-After header; wait the specified seconds before retrying","X-RateLimit-Reset; immediately retry","X-Request-ID; check the request log","WWW-Authenticate; re-authenticate with API key"],
     correct: 0,
     explanation: "HTTP 429 indicates rate limiting. The Retry-After header tells the client when to retry. Immediate retry worsens the problem. WWW-Authenticate is for 401/403 auth challenges.",
-    tags: ["meraki", "rate-limiting", "http", "error-handling"]
+    tags: ["meraki","rate-limiting","http","error-handling"]
   },
   {
     id: 11,
@@ -126,10 +114,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "When using the Cisco Catalyst Center APIs, what is the purpose of the 'X-Auth-Token' header?",
-    options: ["To specify the API version", "To authenticate the request using a bearer token", "To indicate the content type", "To enable CORS for browser-based requests"],
+    options: ["To specify the API version","To authenticate the request using a bearer token","To indicate the content type","To enable CORS for browser-based requests"],
     correct: 1,
     explanation: "X-Auth-Token carries the bearer token obtained from the Cisco Catalyst Center authentication endpoint. It's analogous to Authorization: Bearer <token>. The Content-Type header specifies the data format.",
-    tags: ["dna-center", "authentication", "headers"]
+    tags: ["dna-center","authentication","headers"]
   },
   {
     id: 12,
@@ -138,10 +126,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which HTTP status code range indicates client errors (e.g., malformed request, invalid authentication)?",
-    options: ["1xx", "2xx", "3xx", "4xx"],
+    options: ["1xx","2xx","3xx","4xx"],
     correct: 3,
     explanation: "4xx status codes (400-499) indicate client errors: 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests.",
-    tags: ["http", "status-codes", "rest"]
+    tags: ["http","status-codes","rest"]
   },
   {
     id: 13,
@@ -150,22 +138,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "In a Python script using the requests library, which method should be used to send JSON data in the request body with proper Content-Type header?",
-    options: ["requests.post(url, data=json.dumps(payload))", "requests.post(url, json=payload)", "requests.post(url, headers={'Content-Type': 'application/json'}, data=payload)", "requests.post(url, files=payload)"],
+    options: ["requests.post(url, data=json.dumps(payload))","requests.post(url, json=payload)","requests.post(url, headers={'Content-Type': 'application/json'}, data=payload)","requests.post(url, files=payload)"],
     correct: 1,
     explanation: "requests.post(url, json=payload) automatically serializes the payload to JSON and sets Content-Type: application/json. Option A requires manual JSON serialization and doesn't set the header automatically.",
-    tags: ["python", "requests", "http", "json"]
-  },
-  {
-    id: 14,
-    type: "multiple-choice",
-    domain: "Understanding and Using APIs",
-    domainKey: "apis",
-    difficulty: "medium",
-    question: "What is the primary advantage of using asynchronous programming (asyncio) when making multiple API calls to Cisco platforms?",
-    options: ["Simpler code syntax", "Better error handling", "Concurrent execution without blocking", "Stronger type checking"],
-    correct: 2,
-    explanation: "Asynchronous programming allows multiple API calls to run concurrently without blocking the main thread. This is especially useful when interacting with multiple Cisco devices or platforms simultaneously, reducing total execution time.",
-    tags: ["python", "asyncio", "async", "performance"]
+    tags: ["python","requests","http","json"]
   },
   {
     id: 15,
@@ -174,10 +150,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which Cisco platform provides a cloud-based dashboard for managing Meraki devices (MR, MS, MX, MV) via REST APIs?",
-    options: ["Cisco Catalyst Center", "Cisco Meraki Dashboard", "Cisco FMC", "Cisco Prime Infrastructure"],
+    options: ["Cisco Catalyst Center","Cisco Meraki Dashboard","Cisco FMC","Cisco Prime Infrastructure"],
     correct: 1,
     explanation: "The Meraki Dashboard (dashboard.meraki.com) is the cloud-based management platform for all Meraki products (MR access points, MS switches, MX security appliances, MV cameras).",
-    tags: ["meraki", "dashboard", "platforms"]
+    tags: ["meraki","dashboard","platforms"]
   },
   {
     id: 16,
@@ -186,10 +162,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "In Cisco Catalyst Center, what is the difference between 'intent-based networking' and traditional policy-based management?",
-    options: ["Intent-based uses business intent translated to network policies; traditional uses manual CLI/SNMP", "Intent-based is only for wireless; traditional covers all layers", "Intent-based requires more manual configuration than traditional", "There is no difference; they are the same approach"],
+    options: ["Intent-based uses business intent translated to network policies; traditional uses manual CLI/SNMP","Intent-based is only for wireless; traditional covers all layers","Intent-based requires more manual configuration than traditional","There is no difference; they are the same approach"],
     correct: 0,
     explanation: "Intent-based networking (IBN) in Cisco Catalyst Center allows administrators to define high-level business policies which the system translates into device configurations. Traditional management requires manual per-device CLI, SNMP, or static ACLs.",
-    tags: ["dna-center", "intent-based", "policy"]
+    tags: ["dna-center","intent-based","policy"]
   },
   {
     id: 17,
@@ -198,10 +174,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco Webex Teams (now Webex) API endpoint would you use to retrieve a list of all rooms a user is a member of?",
-    options: ["GET /v1/rooms", "GET /v1/memberships", "POST /v1/rooms", "GET /v1/people"],
+    options: ["GET /v1/rooms","GET /v1/memberships","POST /v1/rooms","GET /v1/people"],
     correct: 1,
     explanation: "GET /v1/memberships retrieves memberships, which link people to rooms. To find all rooms a user is in, you filter memberships by personId.",
-    tags: ["webex", "api", "rest"]
+    tags: ["webex","api","rest"]
   },
   {
     id: 18,
@@ -210,10 +186,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "hard",
     question: "When automating Cisco UCS Manager (UCSM) with Python, which library provides the XML API interface for managing service profiles and chassis configuration?",
-    options: ["ucsmsdk", "requests", "netmiko", "pyats"],
+    options: ["ucsmsdk","requests","netmiko","pyats"],
     correct: 0,
     explanation: "ucsmsdk is Cisco's official Python SDK for UCS Manager, wrapping the UCS XML API for managing service profiles, policies, chassis, and fabric interconnects.",
-    tags: ["ucs", "ucsm", "xml-api", "python"]
+    tags: ["ucs","ucsm","xml-api","python"]
   },
   {
     id: 19,
@@ -222,10 +198,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco platform uses the 'AppHosting' API to deploy containerized applications (Docker containers) directly on Catalyst 9000 switches?",
-    options: ["Cisco Catalyst Center", "Cisco Meraki", "Cisco IOS XE", "Cisco NX-OS"],
+    options: ["Cisco Catalyst Center","Cisco Meraki","Cisco IOS XE","Cisco NX-OS"],
     correct: 2,
     explanation: "Cisco IOS XE (Catalyst 9000 series) supports App Hosting, allowing Docker containers to run on the switch itself via the Application Hosting API or CLI.",
-    tags: ["ios-xe", "app-hosting", "docker", "containers"]
+    tags: ["ios-xe","app-hosting","docker","containers"]
   },
   {
     id: 20,
@@ -234,10 +210,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which Cisco platform provides APIs for managing wireless LAN controllers and access points in enterprise networks?",
-    options: ["Cisco Catalyst Center", "Cisco Meraki", "Cisco Wireless LAN Controllers (WLC)", "Cisco ISE"],
+    options: ["Cisco Catalyst Center","Cisco Meraki","Cisco Wireless LAN Controllers (WLC)","Cisco ISE"],
     correct: 2,
     explanation: "Cisco Wireless LAN Controllers (WLC) manage access points and wireless networks. They provide APIs for automation, though Cisco Catalyst Center and Meraki also offer wireless management capabilities.",
-    tags: ["wireless", "wlc", "platforms"]
+    tags: ["wireless","wlc","platforms"]
   },
   {
     id: 21,
@@ -246,10 +222,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What is the purpose of the Cisco Catalyst Center 'Assurance' feature in network management?",
-    options: ["To provide real-time network analytics and health monitoring", "To configure device firmware updates", "To manage user authentication and authorization", "To automate software image management"],
+    options: ["To provide real-time network analytics and health monitoring","To configure device firmware updates","To manage user authentication and authorization","To automate software image management"],
     correct: 0,
     explanation: "Cisco Catalyst Center Assurance provides real-time analytics, client health monitoring, and network health insights. It uses telemetry data to detect issues and provide actionable intelligence for network operations.",
-    tags: ["dna-center", "assurance", "monitoring"]
+    tags: ["dna-center","assurance","monitoring"]
   },
   {
     id: 22,
@@ -258,10 +234,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "In a Dockerfile for a Python-based network automation tool, which instruction is used to copy only requirements.txt first to leverage Docker layer caching?",
-    options: ["COPY requirements.txt .", "ADD requirements.txt .", "RUN pip install requirements.txt", "FROM python:3.9"],
+    options: ["COPY requirements.txt .","ADD requirements.txt .","RUN pip install requirements.txt","FROM python:3.9"],
     correct: 0,
     explanation: "COPY requirements.txt . followed by RUN pip install -r requirements.txt is the standard Docker layer caching optimization. ADD has additional features but COPY is preferred for simple file copying.",
-    tags: ["docker", "deployment", "optimization"]
+    tags: ["docker","deployment","optimization"]
   },
   {
     id: 23,
@@ -270,10 +246,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which OAuth 2.0 grant type is MOST appropriate for a server-to-server integration between a custom automation tool and Cisco Webex Teams API, where no user interaction is involved?",
-    options: ["Authorization Code", "Implicit", "Client Credentials", "Resource Owner Password"],
+    options: ["Authorization Code","Implicit","Client Credentials","Resource Owner Password"],
     correct: 2,
     explanation: "Client Credentials grant is designed for machine-to-machine authentication where the client authenticates directly with the authorization server using its client_id and client_secret.",
-    tags: ["oauth", "webex", "authentication", "security"]
+    tags: ["oauth","webex","authentication","security"]
   },
   {
     id: 24,
@@ -282,10 +258,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "What is the primary purpose of environment variables in a 12-factor application deployment?",
-    options: ["To store configuration that varies between deployments", "To increase application performance", "To replace all configuration files", "To enable logging"],
+    options: ["To store configuration that varies between deployments","To increase application performance","To replace all configuration files","To enable logging"],
     correct: 0,
     explanation: "Environment variables store configuration that changes between deployments (staging, production, development) without modifying code—API keys, database URLs, service endpoints.",
-    tags: ["12-factor", "configuration", "deployment"]
+    tags: ["12-factor","configuration","deployment"]
   },
   {
     id: 25,
@@ -294,10 +270,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "hard",
     question: "A developer is using a Cisco API key stored in the source code repository. Which security practice should be implemented IMMEDIATELY?",
-    options: ["Add the API key to .gitignore", "Rotate the exposed key and store it in environment variables or a secrets manager", "Commit the key to a private repository instead", "Encrypt the key with a password stored in the repo"],
+    options: ["Add the API key to .gitignore","Rotate the exposed key and store it in environment variables or a secrets manager","Commit the key to a private repository instead","Encrypt the key with a password stored in the repo"],
     correct: 1,
     explanation: "Any exposed API key must be treated as compromised. Immediate action: rotate the key, revoke the old one, and store the new key in environment variables, a secrets manager, or CI/CD secret store.",
-    tags: ["security", "secrets", "api-keys", "git"]
+    tags: ["security","secrets","api-keys","git"]
   },
   {
     id: 26,
@@ -306,22 +282,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "In a CI/CD pipeline, which GitHub Actions event triggers the workflow when code is pushed to the main branch?",
-    options: ["on: pull_request", "on: push", "on: release", "on: schedule"],
+    options: ["on: pull_request","on: push","on: release","on: schedule"],
     correct: 1,
     explanation: "on: push with branches: [main] triggers on pushes to main. pull_request triggers on PR creation/update. release triggers on GitHub release creation. schedule uses cron syntax.",
-    tags: ["github-actions", "cicd", "automation"]
-  },
-  {
-    id: 27,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "easy",
-    question: "What is the purpose of a firewall in network security?",
-    options: ["To encrypt all network traffic", "To monitor and control incoming and outgoing network traffic", "To assign IP addresses to devices", "To route packets between networks"],
-    correct: 1,
-    explanation: "Firewalls monitor and control network traffic based on predetermined security rules. They act as a barrier between trusted and untrusted networks, filtering traffic based on IP addresses, ports, and protocols.",
-    tags: ["security", "firewall", "networking"]
+    tags: ["github-actions","cicd","automation"]
   },
   {
     id: 28,
@@ -330,10 +294,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which protocol is used for secure remote administration of network devices?",
-    options: ["HTTP", "FTP", "SSH", "Telnet"],
+    options: ["HTTP","FTP","SSH","Telnet"],
     correct: 2,
     explanation: "SSH (Secure Shell) provides encrypted remote administration of network devices. Unlike Telnet, which transmits data in plaintext, SSH encrypts all communications, including passwords and commands.",
-    tags: ["ssh", "security", "remote-access"]
+    tags: ["ssh","security","remote-access"]
   },
   {
     id: 29,
@@ -342,22 +306,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Cisco technology enables centralized policy management and automates network-wide provisioning for wired, wireless, and SD-WAN networks?",
-    options: ["Cisco Catalyst Center", "Cisco ISE", "Cisco Prime Infrastructure", "Cisco FMC"],
+    options: ["Cisco Catalyst Center","Cisco ISE","Cisco Prime Infrastructure","Cisco FMC"],
     correct: 0,
     explanation: "Cisco Catalyst Center provides intent-based networking with centralized policy management across the entire network fabric (wired, wireless, SD-WAN). ISE is identity and access control. Prime is legacy device management. FMC manages Firepower threat defense.",
-    tags: ["dna-center", "sdn", "policy"]
-  },
-  {
-    id: 30,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "medium",
-    question: "What is the purpose of a YANG model in network automation?",
-    options: ["To define the structure and semantics of configuration and operational data", "To provide a CLI syntax for network devices", "To encrypt network traffic", "To replace SNMP for monitoring"],
-    correct: 0,
-    explanation: "YANG (RFC 7950) is a data modeling language used to model configuration and state data for network protocols like NETCONF and RESTCONF. It defines the structure, constraints, and semantics of data.",
-    tags: ["yang", "netconf", "data-modeling"]
+    tags: ["dna-center","sdn","policy"]
   },
   {
     id: 31,
@@ -366,10 +318,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "An Ansible playbook uses the 'ios_config' module to configure a Cisco IOS XE device. Which connection type is required?",
-    options: ["HTTP/HTTPS", "SSH (network_cli)", "SNMP", "NETCONF over SSH"],
+    options: ["HTTP/HTTPS","SSH (network_cli)","SNMP","NETCONF over SSH"],
     correct: 1,
     explanation: "ios_config requires network_cli (SSH) connection for IOS XE devices. Ansible's network_cli plugin establishes an SSH session and uses the device CLI. HTTP/HTTPS is for RESTCONF.",
-    tags: ["ansible", "ios-xe", "network-cli", "automation"]
+    tags: ["ansible","ios-xe","network-cli","automation"]
   },
   {
     id: 32,
@@ -378,10 +330,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "In Cisco Catalyst Center assurance, which API path retrieves client health metrics (success rate, RSSI, data rate) for a specific time window?",
-    options: ["/dna/intent/api/v1/client-health", "/dna/intent/api/v1/assurance/client-health", "/dna/intent/api/v1/network-health", "/dna/intent/api/v1/metrics/client"],
+    options: ["/dna/intent/api/v1/client-health","/dna/intent/api/v1/assurance/client-health","/dna/intent/api/v1/network-health","/dna/intent/api/v1/metrics/client"],
     correct: 0,
     explanation: "/dna/intent/api/v1/client-health is the Cisco Catalyst Center Assurance API for retrieving client health data (success rate, RSSI, data rate, roaming). It accepts timeWindow parameters.",
-    tags: ["dna-center", "assurance", "api", "client-health"]
+    tags: ["dna-center","assurance","api","client-health"]
   },
   {
     id: 33,
@@ -390,10 +342,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which configuration management tool uses declarative YAML playbooks and is agentless, making it ideal for automating Cisco IOS XE devices?",
-    options: ["Chef", "Puppet", "Ansible", "SaltStack"],
+    options: ["Chef","Puppet","Ansible","SaltStack"],
     correct: 2,
     explanation: "Ansible is agentless (uses SSH), declarative (YAML playbooks define desired state), and has extensive network modules (ios_config, iosxr_config, etc.).",
-    tags: ["ansible", "configuration-management", "network-automation"]
+    tags: ["ansible","configuration-management","network-automation"]
   },
   {
     id: 34,
@@ -402,10 +354,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "What does 'idempotent' mean in the context of infrastructure automation tools like Ansible?",
-    options: ["Running the same playbook multiple times produces the same result", "The tool can only run once per device", "The tool requires Python 3 only", "The tool uses YAML exclusively"],
+    options: ["Running the same playbook multiple times produces the same result","The tool can only run once per device","The tool requires Python 3 only","The tool uses YAML exclusively"],
     correct: 0,
     explanation: "Idempotency means applying the same configuration multiple times yields the same end state without unintended side effects. Ansible checks the current state before making changes.",
-    tags: ["ansible", "idempotency", "concepts"]
+    tags: ["ansible","idempotency","concepts"]
   },
   {
     id: 35,
@@ -414,10 +366,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In Cisco Catalyst Center, what is the primary function of a 'policy' in intent-based networking?",
-    options: ["To define desired network behavior and outcomes", "To configure individual device CLI commands", "To monitor network performance metrics", "To generate network device inventory reports"],
+    options: ["To define desired network behavior and outcomes","To configure individual device CLI commands","To monitor network performance metrics","To generate network device inventory reports"],
     correct: 0,
     explanation: "In intent-based networking, policies define the desired network behavior and outcomes (e.g., 'guest users get internet only'). Cisco Catalyst Center translates these high-level policies into device-specific configurations.",
-    tags: ["dna-center", "policy", "intent-based"]
+    tags: ["dna-center","policy","intent-based"]
   },
   {
     id: 36,
@@ -426,10 +378,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "Which Cisco Catalyst Center API would you use to provision a new network site with buildings and floors?",
-    options: ["/dna/intent/api/v1/site", "/dna/intent/api/v1/network", "/dna/intent/api/v1/topology/site", "/dna/intent/api/v1/device-provisioning"],
+    options: ["/dna/intent/api/v1/site","/dna/intent/api/v1/network","/dna/intent/api/v1/topology/site","/dna/intent/api/v1/device-provisioning"],
     correct: 0,
     explanation: "/dna/intent/api/v1/site is used for site management in Cisco Catalyst Center, including creating sites, buildings, floors, and assigning devices to locations.",
-    tags: ["dna-center", "api", "site-provisioning"]
+    tags: ["dna-center","api","site-provisioning"]
   },
   {
     id: 37,
@@ -438,10 +390,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which layer of the OSI model is responsible for routing packets between different networks?",
-    options: ["Layer 2 (Data Link)", "Layer 3 (Network)", "Layer 4 (Transport)", "Layer 7 (Application)"],
+    options: ["Layer 2 (Data Link)","Layer 3 (Network)","Layer 4 (Transport)","Layer 7 (Application)"],
     correct: 1,
     explanation: "Layer 3 (Network) handles logical addressing (IP) and routing between networks using routers. Layer 2 handles switching within a network (MAC addresses).",
-    tags: ["osi", "networking", "fundamentals"]
+    tags: ["osi","networking","fundamentals"]
   },
   {
     id: 38,
@@ -450,22 +402,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "In a Cisco IOS XE device, which RESTCONF media type is used to retrieve operational (running) configuration data?",
-    options: ["application/yang-data+json", "application/yang-data+xml", "application/octet-stream", "text/plain"],
+    options: ["application/yang-data+json","application/yang-data+xml","application/octet-stream","text/plain"],
     correct: 0,
     explanation: "RESTCONF uses 'application/yang-data+json' for JSON-encoded YANG data. XML uses 'application/yang-data+xml'. Both can retrieve operational data via the /restconf/data/ endpoint.",
-    tags: ["restconf", "yang", "ios-xe", "media-types"]
-  },
-  {
-    id: 39,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "medium",
-    question: "What is the primary function of a VLAN (Virtual LAN) in a switched network?",
-    options: ["To provide wireless connectivity", "To segment broadcast domains at Layer 2", "To encrypt traffic between switches", "To assign IP addresses dynamically"],
-    correct: 1,
-    explanation: "VLANs segment broadcast domains at Layer 2, improving security and reducing broadcast traffic. Devices in different VLANs cannot communicate without a router (Layer 3).",
-    tags: ["vlan", "switching", "layer-2"]
+    tags: ["restconf","yang","ios-xe","media-types"]
   },
   {
     id: 40,
@@ -474,10 +414,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which IPv4 address range is reserved for private use according to RFC 1918?",
-    options: ["10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16", "192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24", "127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4", "0.0.0.0/8, 100.64.0.0/10, 192.0.0.0/24"],
+    options: ["10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16","192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24","127.0.0.0/8, 169.254.0.0/16, 224.0.0.0/4","0.0.0.0/8, 100.64.0.0/10, 192.0.0.0/24"],
     correct: 0,
     explanation: "RFC 1918 private ranges: 10.0.0.0/8 (10.x.x.x), 172.16.0.0/12 (172.16.x.x - 172.31.x.x), 192.168.0.0/16 (192.168.x.x).",
-    tags: ["ipv4", "addressing", "rfc1918"]
+    tags: ["ipv4","addressing","rfc1918"]
   },
   {
     id: 41,
@@ -486,10 +426,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "In Cisco IOS XE, which command retrieves the current software version and system uptime?",
-    options: ["show version", "show running-config", "show ip interface brief", "show interfaces"],
+    options: ["show version","show running-config","show ip interface brief","show interfaces"],
     correct: 0,
     explanation: "show version displays IOS version, system uptime, device model, memory, configuration register, and boot image. show running-config shows active config.",
-    tags: ["ios-xe", "cli", "troubleshooting"]
+    tags: ["ios-xe","cli","troubleshooting"]
   },
   {
     id: 42,
@@ -498,22 +438,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which protocol operates at Layer 2 of the OSI model and is used for discovering the topology of a network?",
-    options: ["IP", "TCP", "CDP", "OSPF"],
+    options: ["IP","TCP","CDP","OSPF"],
     correct: 2,
     explanation: "CDP (Cisco Discovery Protocol) operates at Layer 2 and discovers Cisco device topology. IP is Layer 3, TCP is Layer 4, OSPF is Layer 3 routing protocol.",
-    tags: ["cdp", "layer-2", "discovery"]
-  },
-  {
-    id: 43,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the default subnet mask for a Class C IP address?",
-    options: ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"],
-    correct: 2,
-    explanation: "Class C addresses (192.0.0.0 to 223.255.255.255) use a default subnet mask of 255.255.255.0 (/24), providing 254 usable host addresses per network.",
-    tags: ["ipv4", "subnetting", "addressing"]
+    tags: ["cdp","layer-2","discovery"]
   },
   {
     id: 44,
@@ -522,10 +450,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "In a Cisco router, which command is used to display the routing table?",
-    options: ["show ip route", "show interfaces", "show running-config", "show ip interface brief"],
+    options: ["show ip route","show interfaces","show running-config","show ip interface brief"],
     correct: 0,
     explanation: "show ip route displays the routing table, including all known networks, next hops, and routing protocols. show interfaces shows interface status, show running-config shows the active configuration.",
-    tags: ["ios-xe", "cli", "routing"]
+    tags: ["ios-xe","cli","routing"]
   },
   {
     id: 45,
@@ -534,10 +462,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "hard",
     question: "Which Cisco technology enables network virtualization by creating logical network segments on a single physical infrastructure?",
-    options: ["VRF", "VLAN", "VPN", "VXLAN"],
+    options: ["VRF","VLAN","VPN","VXLAN"],
     correct: 3,
     explanation: "VXLAN (Virtual Extensible LAN) enables network virtualization by creating logical Layer 2 networks over Layer 3 infrastructure, overcoming VLAN's 4094 limit and enabling multi-tenancy.",
-    tags: ["vxlan", "virtualization", "overlay"]
+    tags: ["vxlan","virtualization","overlay"]
   },
   {
     id: 46,
@@ -546,22 +474,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Python decorator is commonly used to cache the results of expensive function calls when fetching data from Cisco APIs?",
-    options: ["@staticmethod", "@classmethod", "@lru_cache", "@property"],
+    options: ["@staticmethod","@classmethod","@lru_cache","@property"],
     correct: 2,
     explanation: "@lru_cache from functools caches function results, reducing redundant API calls. This is useful for frequently accessed Cisco API data that doesn't change often.",
-    tags: ["python", "decorators", "caching"]
-  },
-  {
-    id: 47,
-    type: "multiple-choice",
-    domain: "Software Development and Design",
-    domainKey: "software",
-    difficulty: "easy",
-    question: "What is the primary purpose of version control systems like Git in software development?",
-    options: ["To compile code faster", "To track changes and collaborate on code", "To debug applications", "To deploy applications"],
-    correct: 1,
-    explanation: "Git tracks changes to code over time, enables collaboration through branching/merging, and provides history and rollback capabilities. It's essential for managing automation scripts and infrastructure code.",
-    tags: ["git", "version-control", "collaboration"]
+    tags: ["python","decorators","caching"]
   },
   {
     id: 48,
@@ -570,10 +486,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "When designing a Python application that interacts with multiple Cisco APIs, which architectural pattern helps manage API credentials, endpoints, and request/response handling centrally?",
-    options: ["MVC (Model-View-Controller)", "Repository Pattern", "Client/Service Layer Pattern", "Singleton Pattern"],
+    options: ["MVC (Model-View-Controller)","Repository Pattern","Client/Service Layer Pattern","Singleton Pattern"],
     correct: 2,
     explanation: "The Client/Service Layer Pattern centralizes API interactions, credential management, and request/response handling. It provides a single point of configuration for endpoints, authentication, and error handling across multiple Cisco APIs.",
-    tags: ["architecture", "api-design", "python"]
+    tags: ["architecture","api-design","python"]
   },
   {
     id: 49,
@@ -582,10 +498,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "What is the main advantage of using virtual environments in Python development for network automation?",
-    options: ["Faster execution speed", "Isolation of project dependencies", "Automatic code completion", "Built-in debugging tools"],
+    options: ["Faster execution speed","Isolation of project dependencies","Automatic code completion","Built-in debugging tools"],
     correct: 1,
     explanation: "Virtual environments isolate project dependencies, preventing conflicts between different projects requiring different versions of libraries (e.g., requests, ncclient, urllib3).",
-    tags: ["python", "virtualenv", "dependencies"]
+    tags: ["python","virtualenv","dependencies"]
   },
   {
     id: 50,
@@ -594,10 +510,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Python library is specifically designed for parsing and generating YAML data, commonly used in Ansible playbooks and network configurations?",
-    options: ["json", "PyYAML", "xml.etree.ElementTree", "configparser"],
+    options: ["json","PyYAML","xml.etree.ElementTree","configparser"],
     correct: 1,
     explanation: "PyYAML is the standard Python library for YAML parsing and generation. It's essential for working with Ansible playbooks, Docker Compose files, and network configuration templates.",
-    tags: ["python", "yaml", "parsing"]
+    tags: ["python","yaml","parsing"]
   },
   {
     id: 51,
@@ -606,22 +522,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "In REST API design, what does HATEOAS stand for and what is its purpose?",
-    options: ["Hypermedia as the Engine of Application State - enables discoverability of API actions", "HTTP Advanced Transport for Enhanced API Security - improves API security", "Hybrid API Technology for Enterprise Operations - supports enterprise integrations", "High Availability API Endpoint System - provides load balancing"],
+    options: ["Hypermedia as the Engine of Application State - enables discoverability of API actions","HTTP Advanced Transport for Enhanced API Security - improves API security","Hybrid API Technology for Enterprise Operations - supports enterprise integrations","High Availability API Endpoint System - provides load balancing"],
     correct: 0,
     explanation: "HATEOAS is a REST constraint where the server provides links to related actions in the response, enabling clients to discover available actions dynamically. This makes APIs self-documenting.",
-    tags: ["rest", "hateoas", "api-design"]
-  },
-  {
-    id: 52,
-    type: "multiple-choice",
-    domain: "Understanding and Using APIs",
-    domainKey: "apis",
-    difficulty: "easy",
-    question: "What is the purpose of the 'Authorization' header in HTTP requests?",
-    options: ["To specify the content type of the request body", "To provide authentication credentials", "To indicate the preferred response format", "To enable CORS for cross-origin requests"],
-    correct: 1,
-    explanation: "The Authorization header provides authentication credentials for the request. Common formats include 'Bearer <token>', 'Basic <base64-credentials>', and API key schemes.",
-    tags: ["http", "headers", "authentication"]
+    tags: ["rest","hateoas","api-design"]
   },
   {
     id: 53,
@@ -630,22 +534,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "When using Cisco Catalyst Center APIs, which authentication method should be used for long-running automation scripts?",
-    options: ["Basic authentication with username/password in every request", "OAuth 2.0 with refresh tokens", "Obtain a token once and reuse it until expiration", "API key in the query string"],
+    options: ["Basic authentication with username/password in every request","OAuth 2.0 with refresh tokens","Obtain a token once and reuse it until expiration","API key in the query string"],
     correct: 2,
     explanation: "Cisco Catalyst Center uses token-based authentication. The recommended approach is to obtain a token via /dna/system/api/v1/auth/token and reuse it for subsequent requests. Tokens expire and should be refreshed periodically.",
-    tags: ["dna-center", "authentication", "tokens"]
-  },
-  {
-    id: 54,
-    type: "multiple-choice",
-    domain: "Understanding and Using APIs",
-    domainKey: "apis",
-    difficulty: "medium",
-    question: "What is the purpose of the 'Accept' header in an HTTP request?",
-    options: ["To specify the content type of the request body", "To indicate the media types acceptable for the response", "To provide authentication credentials", "To enable CORS"],
-    correct: 1,
-    explanation: "The Accept header tells the server what media types the client can process in the response. For Cisco APIs, this often includes 'application/json' or 'application/yang-data+json' for RESTCONF.",
-    tags: ["http", "headers", "rest"]
+    tags: ["dna-center","authentication","tokens"]
   },
   {
     id: 55,
@@ -654,10 +546,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which HTTP method is typically used to create a new resource on a server?",
-    options: ["GET", "POST", "PUT", "DELETE"],
+    options: ["GET","POST","PUT","DELETE"],
     correct: 1,
     explanation: "POST is used to create new resources. GET retrieves resources, PUT updates/replaces resources, DELETE removes resources.",
-    tags: ["rest", "http", "api-design"]
+    tags: ["rest","http","api-design"]
   },
   {
     id: 56,
@@ -666,22 +558,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which Cisco collaboration platform provides APIs for messaging, meetings, and team collaboration?",
-    options: ["Cisco Catalyst Center", "Cisco Webex", "Cisco Meraki", "Cisco ISE"],
+    options: ["Cisco Catalyst Center","Cisco Webex","Cisco Meraki","Cisco ISE"],
     correct: 1,
     explanation: "Cisco Webex provides a comprehensive suite of collaboration APIs for messaging, video meetings, calling, and team collaboration.",
-    tags: ["webex", "collaboration", "platforms"]
-  },
-  {
-    id: 57,
-    type: "multiple-choice",
-    domain: "Cisco Platforms and Development",
-    domainKey: "platforms",
-    difficulty: "medium",
-    question: "What is the primary function of Cisco ISE (Identity Services Engine) in network security?",
-    options: ["To manage wireless access points", "To provide identity and access control policy enforcement", "To monitor network performance", "To configure firewall rules"],
-    correct: 1,
-    explanation: "Cisco ISE provides identity-based access control, authenticating users and devices before allowing network access. It enforces policies based on identity, not just IP addresses.",
-    tags: ["ise", "identity", "security"]
+    tags: ["webex","collaboration","platforms"]
   },
   {
     id: 58,
@@ -690,10 +570,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "hard",
     question: "When using Cisco Meraki Dashboard API, which endpoint would you use to retrieve the list of networks in an organization?",
-    options: ["GET /api/v1/organizations/{orgId}/networks", "GET /api/v1/networks", "GET /api/v1/organizations/{orgId}", "POST /api/v1/networks"],
+    options: ["GET /api/v1/organizations/{orgId}/networks","GET /api/v1/networks","GET /api/v1/organizations/{orgId}","POST /api/v1/networks"],
     correct: 0,
     explanation: "GET /api/v1/organizations/{orgId}/networks retrieves all networks in a specific Meraki organization. The organization ID is required in the path.",
-    tags: ["meraki", "api", "rest"]
+    tags: ["meraki","api","rest"]
   },
   {
     id: 59,
@@ -702,10 +582,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco platform is designed for managing security policies and threat detection across the network?",
-    options: ["Cisco Catalyst Center", "Cisco FMC (Firepower Management Center)", "Cisco Prime Infrastructure", "Cisco ISE"],
+    options: ["Cisco Catalyst Center","Cisco FMC (Firepower Management Center)","Cisco Prime Infrastructure","Cisco ISE"],
     correct: 1,
     explanation: "Cisco FMC manages Firepower threat defense, providing centralized security policy management, intrusion prevention, and malware protection across the network.",
-    tags: ["fmc", "security", "firepower"]
+    tags: ["fmc","security","firepower"]
   },
   {
     id: 60,
@@ -714,10 +594,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which Cisco product family provides software-defined access (SD-Access) for enterprise networks?",
-    options: ["Cisco Meraki", "Cisco Catalyst Center", "Cisco ISE", "Cisco ACI"],
+    options: ["Cisco Meraki","Cisco Catalyst Center","Cisco ISE","Cisco ACI"],
     correct: 1,
     explanation: "Cisco Catalyst Center is the centralized management platform for SD-Access, providing policy-based automation, assurance, and network analytics for software-defined enterprise networks.",
-    tags: ["dna-center", "sd-access", "sdn"]
+    tags: ["dna-center","sd-access","sdn"]
   },
   {
     id: 61,
@@ -726,22 +606,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which Docker command is used to build an image from a Dockerfile?",
-    options: ["docker run", "docker build", "docker create", "docker compose"],
+    options: ["docker run","docker build","docker create","docker compose"],
     correct: 1,
     explanation: "docker build constructs a Docker image from a Dockerfile. docker run creates and starts a container from an image. docker create creates a container without starting it.",
-    tags: ["docker", "commands", "containers"]
-  },
-  {
-    id: 62,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "easy",
-    question: "What is the primary security benefit of using HTTPS over HTTP?",
-    options: ["Faster data transfer", "Encrypted communication", "Larger payload capacity", "Better caching"],
-    correct: 1,
-    explanation: "HTTPS encrypts data in transit using TLS/SSL, protecting sensitive information like API keys, credentials, and configuration data from interception and tampering.",
-    tags: ["https", "security", "encryption"]
+    tags: ["docker","commands","containers"]
   },
   {
     id: 63,
@@ -750,10 +618,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "In a CI/CD pipeline, what is the purpose of a 'build stage'?",
-    options: ["To deploy code to production", "To compile code, run tests, and create artifacts", "To monitor application performance", "To manage database migrations"],
+    options: ["To deploy code to production","To compile code, run tests, and create artifacts","To monitor application performance","To manage database migrations"],
     correct: 1,
     explanation: "The build stage compiles source code, runs tests, lints code, and creates deployable artifacts (binaries, containers, packages). It catches issues before deployment.",
-    tags: ["cicd", "build", "devops"]
+    tags: ["cicd","build","devops"]
   },
   {
     id: 64,
@@ -762,34 +630,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "hard",
     question: "Which security practice involves testing an application's security by simulating attacks from malicious actors?",
-    options: ["Code review", "Static analysis", "Penetration testing", "Dependency scanning"],
+    options: ["Code review","Static analysis","Penetration testing","Dependency scanning"],
     correct: 2,
     explanation: "Penetration testing (ethical hacking) simulates real-world attacks to identify security vulnerabilities. It's a critical practice for network automation tools that interact with production network devices.",
-    tags: ["security", "penetration-testing", "devsecops"]
-  },
-  {
-    id: 65,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "easy",
-    question: "What is the purpose of a README.md file in a software repository?",
-    options: ["To store environment variables", "To document the project and provide setup instructions", "To define deployment pipelines", "To manage dependencies"],
-    correct: 1,
-    explanation: "README.md provides project documentation, setup instructions, usage examples, and contribution guidelines. It's the first file users see when visiting a repository.",
-    tags: ["documentation", "repository", "best-practices"]
-  },
-  {
-    id: 66,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the primary purpose of DNS (Domain Name System) in networking?",
-    options: ["To assign IP addresses dynamically", "To translate domain names to IP addresses", "To route packets between networks", "To encrypt network traffic"],
-    correct: 1,
-    explanation: "DNS translates human-readable domain names (e.g., cisco.com) to IP addresses (e.g., 23.1.75.84). It's essential for network services, including Cisco API endpoints.",
-    tags: ["dns", "networking", "fundamentals"]
+    tags: ["security","penetration-testing","devsecops"]
   },
   {
     id: 67,
@@ -798,10 +642,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which network automation tool uses a push model and agentless architecture, making it popular for network device configuration?",
-    options: ["Chef", "Puppet", "Ansible", "SaltStack"],
+    options: ["Chef","Puppet","Ansible","SaltStack"],
     correct: 2,
     explanation: "Ansible uses a push model and is agentless, using SSH to connect to network devices. This makes it lightweight and easy to deploy for network automation.",
-    tags: ["ansible", "automation", "network"]
+    tags: ["ansible","automation","network"]
   },
   {
     id: 68,
@@ -810,22 +654,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "In a Cisco SD-WAN deployment, which component is responsible for centralized control and policy distribution?",
-    options: ["vSmart Controller", "vEdge Router", "vManage", "vAnalytics"],
+    options: ["vSmart Controller","vEdge Router","vManage","vAnalytics"],
     correct: 0,
     explanation: "The vSmart Controller provides centralized control plane functions in Cisco SD-WAN, distributing routing policies, encryption keys, and control information to vEdge routers.",
-    tags: ["sd-wan", "vsmart", "control-plane"]
-  },
-  {
-    id: 69,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "medium",
-    question: "What is the primary benefit of using infrastructure as code (IaC) in network automation?",
-    options: ["Faster hardware deployment", "Version-controlled, repeatable infrastructure provisioning", "Automatic network device discovery", "Improved network security"],
-    correct: 1,
-    explanation: "IaC treats infrastructure configuration as code, enabling version control, repeatability, automated provisioning, and reduced configuration drift across network devices.",
-    tags: ["iac", "automation", "devops"]
+    tags: ["sd-wan","vsmart","control-plane"]
   },
   {
     id: 70,
@@ -834,22 +666,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which protocol is used for secure file transfers between network devices and servers?",
-    options: ["FTP", "TFTP", "SFTP", "HTTP"],
+    options: ["FTP","TFTP","SFTP","HTTP"],
     correct: 2,
     explanation: "SFTP (SSH File Transfer Protocol) provides secure file transfers over SSH. Unlike FTP and TFTP, which transmit data in plaintext, SFTP encrypts all communications.",
-    tags: ["sftp", "file-transfer", "security"]
-  },
-  {
-    id: 71,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the primary function of a router in a computer network?",
-    options: ["To connect devices within the same network", "To forward packets between different networks", "To assign IP addresses to devices", "To encrypt network traffic"],
-    correct: 1,
-    explanation: "Routers forward packets between different networks based on IP addresses and routing tables. They operate at Layer 3 of the OSI model.",
-    tags: ["routers", "networking", "layer-3"]
+    tags: ["sftp","file-transfer","security"]
   },
   {
     id: 72,
@@ -858,22 +678,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which TCP/IP model layer corresponds to the OSI model's Application, Presentation, and Session layers?",
-    options: ["Network Access Layer", "Internet Layer", "Transport Layer", "Application Layer"],
+    options: ["Network Access Layer","Internet Layer","Transport Layer","Application Layer"],
     correct: 3,
     explanation: "The TCP/IP Application Layer combines the OSI's Application, Presentation, and Session layers. It's responsible for network applications and data formatting.",
-    tags: ["tcp-ip", "osi", "models"]
-  },
-  {
-    id: 73,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "hard",
-    question: "What is the maximum transmission unit (MTU) size for standard Ethernet frames?",
-    options: ["512 bytes", "1024 bytes", "1500 bytes", "9000 bytes"],
-    correct: 2,
-    explanation: "Standard Ethernet MTU is 1500 bytes. 9000 bytes is for jumbo frames. MTU affects packet fragmentation and network performance.",
-    tags: ["ethernet", "mtu", "networking"]
+    tags: ["tcp-ip","osi","models"]
   },
   {
     id: 74,
@@ -882,22 +690,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which protocol operates at Layer 4 of the OSI model and provides reliable, connection-oriented data transfer?",
-    options: ["IP", "UDP", "TCP", "ICMP"],
+    options: ["IP","UDP","TCP","ICMP"],
     correct: 2,
     explanation: "TCP (Transmission Control Protocol) operates at Layer 4 and provides reliable, connection-oriented data transfer with error checking and retransmission. UDP is connectionless.",
-    tags: ["tcp", "osi", "layer-4"]
-  },
-  {
-    id: 75,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the purpose of the ARP (Address Resolution Protocol) in a network?",
-    options: ["To assign IP addresses to devices", "To map IP addresses to MAC addresses", "To route packets between networks", "To encrypt network traffic"],
-    correct: 1,
-    explanation: "ARP maps IP addresses to MAC addresses, allowing devices on the same network to communicate. When a device knows an IP but needs the corresponding MAC address, it sends an ARP request.",
-    tags: ["arp", "mac", "layer-2"]
+    tags: ["tcp","osi","layer-4"]
   },
   {
     id: 76,
@@ -906,10 +702,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which routing protocol is a link-state protocol commonly used in large enterprise networks?",
-    options: ["RIP", "EIGRP", "OSPF", "BGP"],
+    options: ["RIP","EIGRP","OSPF","BGP"],
     correct: 2,
     explanation: "OSPF (Open Shortest Path First) is a link-state routing protocol that uses Dijkstra's algorithm to calculate the shortest path. It's suitable for large, complex networks.",
-    tags: ["ospf", "routing", "protocols"]
+    tags: ["ospf","routing","protocols"]
   },
   {
     id: 77,
@@ -918,10 +714,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which device operates at Layer 2 of the OSI model and forwards frames based on MAC addresses?",
-    options: ["Router", "Switch", "Hub", "Firewall"],
+    options: ["Router","Switch","Hub","Firewall"],
     correct: 1,
     explanation: "A switch operates at Layer 2 and forwards frames based on MAC addresses using a MAC address table. Hubs operate at Layer 1 and broadcast all traffic.",
-    tags: ["switches", "layer-2", "networking"]
+    tags: ["switches","layer-2","networking"]
   },
   {
     id: 78,
@@ -930,10 +726,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "hard",
     question: "What is the primary purpose of a DMZ (Demilitarized Zone) in network security architecture?",
-    options: ["To encrypt all internal network traffic", "To provide a buffer zone between internal and external networks for public-facing services", "To assign IP addresses to internal devices", "To route traffic between VLANs"],
+    options: ["To encrypt all internal network traffic","To provide a buffer zone between internal and external networks for public-facing services","To assign IP addresses to internal devices","To route traffic between VLANs"],
     correct: 1,
     explanation: "A DMZ is a physical or logical subnetwork that exposes external-facing services to untrusted networks (usually the internet) while keeping internal networks secure.",
-    tags: ["dmz", "security", "architecture"]
+    tags: ["dmz","security","architecture"]
   },
   {
     id: 79,
@@ -942,22 +738,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which IP address is the loopback address used for local network testing?",
-    options: ["192.168.1.1", "10.0.0.1", "127.0.0.1", "172.16.0.1"],
+    options: ["192.168.1.1","10.0.0.1","127.0.0.1","172.16.0.1"],
     correct: 2,
     explanation: "127.0.0.1 is the loopback address used for local network testing and self-referencing. Data sent to this address never leaves the host.",
-    tags: ["ip", "loopback", "testing"]
-  },
-  {
-    id: 80,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the primary function of DHCP (Dynamic Host Configuration Protocol)?",
-    options: ["To route packets between networks", "To dynamically assign IP addresses and network configuration to devices", "To encrypt network traffic", "To translate domain names to IP addresses"],
-    correct: 1,
-    explanation: "DHCP dynamically assigns IP addresses, subnet masks, default gateways, and DNS servers to devices on a network, eliminating manual IP configuration.",
-    tags: ["dhcp", "ip", "networking"]
+    tags: ["ip","loopback","testing"]
   },
   {
     id: 81,
@@ -966,10 +750,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Cisco IOS XE feature enables model-driven telemetry by streaming structured operational data to a collector without polling?",
-    options: ["CDP", "EEM applet", "Telemetry subscription", "SNMP traps"],
+    options: ["CDP","EEM applet","Telemetry subscription","SNMP traps"],
     correct: 2,
     explanation: "Telemetry subscriptions in IOS XE push model-driven telemetry data to a collector, replacing polling models like SNMP. CDP discovers neighbors, EEM reacts to events, and SNMP traps are event-driven but not model-driven streaming.",
-    tags: ["telemetry", "ios-xe", "model-driven", "automation"]
+    tags: ["telemetry","ios-xe","model-driven","automation"]
   },
   {
     id: 82,
@@ -978,10 +762,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which automation tool uses agentless push-based execution over SSH to configure network devices?",
-    options: ["Puppet", "Chef", "Ansible", "SaltStack"],
+    options: ["Puppet","Chef","Ansible","SaltStack"],
     correct: 2,
     explanation: "Ansible is agentless and push-based, typically using SSH to execute playbooks on network devices. Puppet and Chef use agent-pull models, and SaltStack can use both but is more commonly agent-based.",
-    tags: ["ansible", "automation", "configuration-management", "ssh"]
+    tags: ["ansible","automation","configuration-management","ssh"]
   },
   {
     id: 83,
@@ -990,10 +774,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In IOS XE, which command enables the NETCONF-YANG agent for standardized model-driven management?",
-    options: ["netconf-yang", "restconf", "yang-module", "netconf enable"],
+    options: ["netconf-yang","restconf","yang-module","netconf enable"],
     correct: 0,
     explanation: "netconf-yang enables the NETCONF-YANG subsystem on IOS XE, allowing model-driven configuration and operational data access. restconf enables RESTCONF over HTTP. The other options are not valid IOS XE configuration commands for NETCONF.",
-    tags: ["netconf", "yang", "ios-xe", "automation"]
+    tags: ["netconf","yang","ios-xe","automation"]
   },
   {
     id: 84,
@@ -1002,10 +786,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Cisco Embedded Event Manager (EEM) action is used to execute an IOS-XE CLI command and save the output to a variable for further automation logic?",
-    options: ["action 1.0 cli", "action 1.0 syslog", "action 1.0 netconf", "action 1.0 snmp"],
+    options: ["action 1.0 cli","action 1.0 syslog","action 1.0 netconf","action 1.0 snmp"],
     correct: 0,
     explanation: "action 1.0 cli executes CLI commands within an EEM applet and can capture output into a variable using the 'output' keyword, enabling reactive automation without external controllers.",
-    tags: ["eem", "ios-xe", "automation", "event-driven"]
+    tags: ["eem","ios-xe","automation","event-driven"]
   },
   {
     id: 85,
@@ -1014,22 +798,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Python library is most commonly used to connect to network devices over SSH and execute CLI commands?",
-    options: ["requests", "paramiko", "netmiko", "beautifulsoup4"],
+    options: ["requests","paramiko","netmiko","beautifulsoup4"],
     correct: 2,
     explanation: "Netmiko is built on Paramiko but provides network-specific abstractions for SSH connections to routers, switches, and firewalls, handling prompt parsing and command execution.",
-    tags: ["python", "netmiko", "ssh", "networking"]
-  },
-  {
-    id: 86,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the primary benefit of using YANG data models for network device configuration?",
-    options: ["They compress CLI output", "They provide a standardized, machine-readable schema for configuration and operational data", "They replace DNS with IP addresses", "They encrypt configuration backups"],
-    correct: 1,
-    explanation: "YANG models define the structure, constraints, and semantics of network configuration and operational data, enabling model-driven programmability via NETCONF/RESTCONF.",
-    tags: ["yang", "model-driven", "netconf", "restconf"]
+    tags: ["python","netmiko","ssh","networking"]
   },
   {
     id: 87,
@@ -1038,10 +810,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which IOS XE API provides a REST interface to retrieve interface status and counters in JSON format?",
-    options: ["SNMP OID", "RESTCONF /restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces", "CDP neighbor table", "Syslog stream"],
+    options: ["SNMP OID","RESTCONF /restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces","CDP neighbor table","Syslog stream"],
     correct: 1,
     explanation: "RESTCONF in IOS XE exposes YANG-modeled operational data such as interfaces. SNMP uses OIDs, CDP discovers neighbors, and syslog is text-based logging—not a structured REST API.",
-    tags: ["restconf", "ios-xe", "interfaces", "json"]
+    tags: ["restconf","ios-xe","interfaces","json"]
   },
   {
     id: 88,
@@ -1050,10 +822,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In a Git workflow for network automation, which file should be encrypted or excluded from version control to prevent credential exposure?",
-    options: ["README.md", "inventory.yaml", "requirements.txt", "playbook.yml"],
+    options: ["README.md","inventory.yaml","requirements.txt","playbook.yml"],
     correct: 1,
     explanation: "An inventory file typically contains device IPs, usernames, passwords, and API keys. It must be encrypted with ansible-vault or excluded with .gitignore. README, requirements, and playbooks usually contain no secrets.",
-    tags: ["git", "security", "ansible", "secrets"]
+    tags: ["git","security","ansible","secrets"]
   },
   {
     id: 89,
@@ -1062,10 +834,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "Which Cisco platform natively supports model-driven telemetry for Cisco Catalyst Center Assurance and uses Kafka as a transport mechanism?",
-    options: ["Cisco Meraki", "Cisco Catalyst Center", "Cisco Prime Infrastructure", "Cisco FMC"],
+    options: ["Cisco Meraki","Cisco Catalyst Center","Cisco Prime Infrastructure","Cisco FMC"],
     correct: 1,
     explanation: "Cisco Catalyst Center uses model-driven telemetry with Kafka as the message bus between Assurance collectors and analytics engines. Meraki uses its own dashboard polling/streaming, and Prime/FMC are legacy monitoring platforms.",
-    tags: ["dna-center", "telemetry", "kafka", "assurance"]
+    tags: ["dna-center","telemetry","kafka","assurance"]
   },
   {
     id: 90,
@@ -1074,10 +846,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which configuration management approach treats infrastructure state as code, enabling version control and repeatable deployments?",
-    options: ["Manual CLI scripting", "Infrastructure as Code", "Direct database updates", "Paper-based change management"],
+    options: ["Manual CLI scripting","Infrastructure as Code","Direct database updates","Paper-based change management"],
     correct: 1,
     explanation: "Infrastructure as Code (IaC) stores network and infrastructure configuration in version control, applying it consistently through automation tools like Ansible, Terraform, or Nornir.",
-    tags: ["iac", "automation", "devops"]
+    tags: ["iac","automation","devops"]
   },
   {
     id: 91,
@@ -1086,10 +858,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "When automating Cisco switches with Python, which library provides higher-level network automation primitives like tasks, results, and parsers built on top of Netmiko/Paramiko?",
-    options: ["pandas", "nornir", "flask", "pyyaml"],
+    options: ["pandas","nornir","flask","pyyaml"],
     correct: 1,
     explanation: "Nornir is a Python automation framework designed for network automation, providing inventory management, task execution, result handling, and integration with Netmiko/Napalm for parsing and configuration.",
-    tags: ["python", "nornir", "netmiko", "automation"]
+    tags: ["python","nornir","netmiko","automation"]
   },
   {
     id: 92,
@@ -1098,10 +870,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which RESTCONF operation retrieves a specific YANG-defined resource by its identifier?",
-    options: ["GET", "POST", "PUT", "DELETE"],
+    options: ["GET","POST","PUT","DELETE"],
     correct: 0,
     explanation: "GET retrieves the resource identified by the request URI in RESTCONF. POST creates resources, PUT replaces resources, and DELETE removes resources.",
-    tags: ["restconf", "yang", "http", "automation"]
+    tags: ["restconf","yang","http","automation"]
   },
   {
     id: 93,
@@ -1110,10 +882,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "What does the 'idempotent' property mean in the context of network automation tools?",
-    options: ["The operation changes the system state every time it runs", "The operation can be applied multiple times without changing the result beyond the initial application", "The operation requires interactive user input", "The operation only runs during business hours"],
+    options: ["The operation changes the system state every time it runs","The operation can be applied multiple times without changing the result beyond the initial application","The operation requires interactive user input","The operation only runs during business hours"],
     correct: 1,
     explanation: "Idempotency means running the same automation task repeatedly produces the same end state without unintended side effects. Ansible, for example, is designed to be idempotent.",
-    tags: ["ansible", "automation", "concepts", "idempotent"]
+    tags: ["ansible","automation","concepts","idempotent"]
   },
   {
     id: 94,
@@ -1122,10 +894,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In Jinja2 network templating, which control structure iterates over a list of VLANs to generate interface configuration snippets?",
-    options: ["{% if %}/{% endif %}", "{% for %}/{% endfor %}", "{{ variable }}", "{% include %}"],
+    options: ["{% if %}/{% endif %}","{% for %}/{% endfor %}","{{ variable }}","{% include %}"],
     correct: 1,
     explanation: "{% for %} loops iterate over lists or dictionaries in Jinja2 templates, making them ideal for generating repetitive network configurations like multiple VLAN interfaces or ACL entries.",
-    tags: ["jinja2", "templating", "automation"]
+    tags: ["jinja2","templating","automation"]
   },
   {
     id: 95,
@@ -1134,10 +906,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco Catalyst Center API capability allows an engineer to provision site profiles, network settings, and device configurations declaratively?",
-    options: ["Assurance only", "Intent-based networking / Templates API", "SNMP community strings", "CLI scripting via console"],
+    options: ["Assurance only","Intent-based networking / Templates API","SNMP community strings","CLI scripting via console"],
     correct: 1,
     explanation: "Cisco Catalyst Center's intent-based APIs translate business intent into network policies, while Templates API enables reusable, version-controlled configuration templates for devices and sites.",
-    tags: ["dna-center", "intent", "templates", "api"]
+    tags: ["dna-center","intent","templates","api"]
   },
   {
     id: 96,
@@ -1146,10 +918,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which data serialization format is commonly used for structured network telemetry and REST API payloads due to its readability and strict typing?",
-    options: ["CSV", "XML", "JSON", "Binary blob"],
+    options: ["CSV","XML","JSON","Binary blob"],
     correct: 2,
     explanation: "JSON is widely used in network APIs and telemetry because it is human-readable, maps directly to YANG JSON encoding, and is natively supported by Python dictionaries and REST frameworks.",
-    tags: ["json", "data-formats", "rest", "telemetry"]
+    tags: ["json","data-formats","rest","telemetry"]
   },
   {
     id: 97,
@@ -1158,10 +930,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "A network engineer needs to audit the running configuration of 500 switches nightly and alert on unauthorized changes. Which workflow is MOST appropriate?",
-    options: ["Manually log into each switch daily", "Use an automation tool to fetch running-config via RESTCONF/NETCONF, diff against Git-tracked baseline, and trigger an alert on change", "Enable CDP and watch for new neighbors", "Increase SNMP polling frequency"],
+    options: ["Manually log into each switch daily","Use an automation tool to fetch running-config via RESTCONF/NETCONF, diff against Git-tracked baseline, and trigger an alert on change","Enable CDP and watch for new neighbors","Increase SNMP polling frequency"],
     correct: 1,
     explanation: "Automated nightly config collection with model-driven APIs, Git diff, and alerting provides scalable, auditable change detection. Manual CLI does not scale. CDP and SNMP do not provide full config change history.",
-    tags: ["automation", "config-management", "git", "restconf"]
+    tags: ["automation","config-management","git","restconf"]
   },
   {
     id: 98,
@@ -1170,10 +942,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which protocol or API is used by Cisco IOS XE devices to expose YANG-modeled operational data for telemetry and troubleshooting over HTTP?",
-    options: ["NETCONF", "RESTCONF", "SNMP", "SSH"],
+    options: ["NETCONF","RESTCONF","SNMP","SSH"],
     correct: 1,
     explanation: "RESTCONF exposes YANG-modeled data over HTTP/HTTPS. NETCONF uses SSH/TLS and XML. SNMP uses MIBs/OIDs. SSH is remote CLI access, not a structured data API.",
-    tags: ["restconf", "yang", "ios-xe", "telemetry"]
+    tags: ["restconf","yang","ios-xe","telemetry"]
   },
   {
     id: 99,
@@ -1182,10 +954,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In Ansible for network automation, which inventory plugin allows dynamic population of device hosts from a CSV or external source?",
-    options: ["static inventory", "host_vars", "constructed inventory / inventory plugins", "ansible.cfg"],
+    options: ["static inventory","host_vars","constructed inventory / inventory plugins","ansible.cfg"],
     correct: 2,
     explanation: "Ansible inventory plugins, including constructed and yaml/ini/csv-based sources, enable dynamic host population. Static inventory is hardcoded. host_vars stores per-host variables. ansible.cfg configures behavior.",
-    tags: ["ansible", "inventory", "automation"]
+    tags: ["ansible","inventory","automation"]
   },
   {
     id: 100,
@@ -1194,10 +966,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "What is the standard port for NETCONF over SSH?",
-    options: ["22", "830", "443", "161"],
+    options: ["22","830","443","161"],
     correct: 1,
     explanation: "NETCONF over SSH uses TCP port 830 by default. 22 is SSH, 443 is HTTPS/RESTCONF, and 161 is SNMP.",
-    tags: ["netconf", "ports", "automation"]
+    tags: ["netconf","ports","automation"]
   },
   {
     id: 101,
@@ -1206,10 +978,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Cisco feature on Catalyst 9000 switches enables on-box Python scripting and REST API endpoints for automation without external servers?",
-    options: ["App Hosting", "EEM", "SNMP", "LLDP"],
+    options: ["App Hosting","EEM","SNMP","LLDP"],
     correct: 0,
     explanation: "App Hosting on IOS XE allows running Python scripts and applications directly on the switch, exposing local REST endpoints. EEM is event-driven CLI actions. SNMP and LLDP are management/discovery protocols.",
-    tags: ["ios-xe", "app-hosting", "python", "automation"]
+    tags: ["ios-xe","app-hosting","python","automation"]
   },
   {
     id: 102,
@@ -1218,10 +990,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "In REST API design, which HTTP method is typically used to create a new resource?",
-    options: ["GET", "POST", "PUT", "DELETE"],
+    options: ["GET","POST","PUT","DELETE"],
     correct: 1,
     explanation: "POST creates new resources. GET retrieves, PUT replaces, and DELETE removes.",
-    tags: ["rest", "http", "api-design"]
+    tags: ["rest","http","api-design"]
   },
   {
     id: 103,
@@ -1230,10 +1002,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "A network automation engineer must standardize VLAN configurations across 200 switches. Which approach best ensures consistent, repeatable results?",
-    options: ["Manual CLI on each switch", "Use a Jinja2 template rendered with device inventory data and deployed via Ansible", "Send email instructions to local staff", "Use SNMP set with hardcoded values"],
+    options: ["Manual CLI on each switch","Use a Jinja2 template rendered with device inventory data and deployed via Ansible","Send email instructions to local staff","Use SNMP set with hardcoded values"],
     correct: 1,
     explanation: "Templated configuration with inventory data and Ansible deployment ensures consistency, auditability, and repeatability. Manual CLI does not scale. Email instructions are error-prone. SNMP set lacks validation and template abstraction.",
-    tags: ["jinja2", "ansible", "templating", "automation"]
+    tags: ["jinja2","ansible","templating","automation"]
   },
   {
     id: 104,
@@ -1242,10 +1014,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco Meraki Dashboard API endpoint retrieves the organizations accessible to the API key?",
-    options: ["GET /api/v1/organizations", "GET /api/v1/networks", "POST /api/v1/devices", "GET /api/v1/ssids"],
+    options: ["GET /api/v1/organizations","GET /api/v1/networks","POST /api/v1/devices","GET /api/v1/ssids"],
     correct: 0,
     explanation: "/api/v1/organizations lists organizations. /networks lists networks within an organization. /devices lists hardware, and /ssids lists wireless networks.",
-    tags: ["meraki", "api", "rest", "dashboard"]
+    tags: ["meraki","api","rest","dashboard"]
   },
   {
     id: 105,
@@ -1254,10 +1026,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which standard data modeling language is used by NETCONF and RESTCONF to represent configuration and operational state?",
-    options: ["XML only", "JSON only", "YANG", "YAML"],
+    options: ["XML only","JSON only","YANG","YAML"],
     correct: 2,
     explanation: "YANG is the standard data modeling language for NETCONF and RESTCONF. XML and JSON are encoding formats carried by those protocols. YAML is used for automation tool configuration, not device modeling.",
-    tags: ["yang", "netconf", "restconf", "model-driven"]
+    tags: ["yang","netconf","restconf","model-driven"]
   },
   {
     id: 106,
@@ -1266,10 +1038,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "When troubleshooting a network automation failure, which diagnostic step should come FIRST?",
-    options: ["Blame the vendor", "Reproduce the failure and gather structured logs, API responses, and device state", "Redeploy the entire automation framework", "Disable version control"],
+    options: ["Blame the vendor","Reproduce the failure and gather structured logs, API responses, and device state","Redeploy the entire automation framework","Disable version control"],
     correct: 1,
     explanation: "Root-cause troubleshooting starts with reproducing the failure and collecting evidence: API responses, configs, and device state. Automation problems are usually data, auth, or model-related before vendor fault.",
-    tags: ["troubleshooting", "automation", "debugging"]
+    tags: ["troubleshooting","automation","debugging"]
   },
   {
     id: 107,
@@ -1278,10 +1050,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which protocol is used by network devices to advertise their capabilities and discover directly connected Cisco neighbors?",
-    options: ["LLDP", "CDP", "STP", "OSPF"],
+    options: ["LLDP","CDP","STP","OSPF"],
     correct: 1,
     explanation: "CDP is Cisco-proprietary and advertises device ID, capabilities, and interface details to directly connected Cisco neighbors. LLDP is standards-based and vendor-neutral. STP prevents loops. OSPF is a routing protocol.",
-    tags: ["cdp", "lldp", "discovery", "networking"]
+    tags: ["cdp","lldp","discovery","networking"]
   },
   {
     id: 108,
@@ -1290,10 +1062,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In model-driven programmability, what is the primary role of a YANG 'container'?",
-    options: ["To run Docker containers on switches", "To group related configuration and state nodes into a hierarchy without implying presence", "To store backup configurations", "To encrypt telemetry streams"],
+    options: ["To run Docker containers on switches","To group related configuration and state nodes into a hierarchy without implying presence","To store backup configurations","To encrypt telemetry streams"],
     correct: 1,
     explanation: "A YANG container organizes related data nodes hierarchically but does not represent a top-level managed object with independent existence, unlike a 'list'.",
-    tags: ["yang", "model-driven", "data-model"]
+    tags: ["yang","model-driven","data-model"]
   },
   {
     id: 109,
@@ -1302,10 +1074,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which git command creates a new branch for developing a network automation feature isolated from main?",
-    options: ["git checkout main", "git switch -c feature-x", "git merge feature-x", "git push --force"],
+    options: ["git checkout main","git switch -c feature-x","git merge feature-x","git push --force"],
     correct: 1,
     explanation: "git switch -c feature-x creates and switches to a new branch. git checkout main switches branches. git merge integrates branches. git push --force overwrites remote history.",
-    tags: ["git", "workflow", "automation"]
+    tags: ["git","workflow","automation"]
   },
   {
     id: 110,
@@ -1314,10 +1086,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "What is the main advantage of using APIs for network management over manual CLI access?",
-    options: ["CLI access is slower", "APIs enable scalable, repeatable automation and integration with external systems", "APIs require less initial setup", "APIs work only on wireless networks"],
+    options: ["CLI access is slower","APIs enable scalable, repeatable automation and integration with external systems","APIs require less initial setup","APIs work only on wireless networks"],
     correct: 1,
     explanation: "APIs provide structured, programmatic access that scales across many devices and integrates with automation pipelines, CI/CD, and monitoring systems.",
-    tags: ["api", "automation", "networking"]
+    tags: ["api","automation","networking"]
   },
   {
     id: 111,
@@ -1326,10 +1098,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Python exception handling construct ensures an API session or SSH connection is closed even when an error occurs?",
-    options: ["try/except/else", "try/finally", "if/else", "raise/catch"],
+    options: ["try/except/else","try/finally","if/else","raise/catch"],
     correct: 1,
     explanation: "try/finally guarantees cleanup code runs regardless of exceptions, making it essential for closing API sessions, SSH connections, or file handles in network automation scripts.",
-    tags: ["python", "error-handling", "automation"]
+    tags: ["python","error-handling","automation"]
   },
   {
     id: 112,
@@ -1338,10 +1110,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "Which Cisco Catalyst Center Assurance capability correlates client health, network performance, and application experience across wired, wireless, and SD-WAN?",
-    options: ["Software Image Management", "Path Trace", "Multidimensional analytics", "Plug and Play"],
+    options: ["Software Image Management","Path Trace","Multidimensional analytics","Plug and Play"],
     correct: 2,
     explanation: "Multidimensional analytics in Cisco Catalyst Center Assurance correlates client, network, and application telemetry across domains for proactive issue detection and root-cause analysis.",
-    tags: ["dna-center", "assurance", "analytics", "automation"]
+    tags: ["dna-center","assurance","analytics","automation"]
   },
   {
     id: 113,
@@ -1350,10 +1122,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which protocol is commonly used to secure REST API traffic between automation tools and Cisco controllers?",
-    options: ["HTTP", "HTTPS/TLS", "FTP", "Telnet"],
+    options: ["HTTP","HTTPS/TLS","FTP","Telnet"],
     correct: 1,
     explanation: "HTTPS/TLS encrypts REST API traffic in transit. HTTP sends data in plaintext. FTP is file transfer. Telnet is unencrypted remote access.",
-    tags: ["security", "rest", "tls", "automation"]
+    tags: ["security","rest","tls","automation"]
   },
   {
     id: 114,
@@ -1362,10 +1134,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "When using Ansible to configure Cisco IOS XE devices, which connection plugin enables persistent CLI sessions via SSH?",
-    options: ["local", "network_cli", "docker", "winrm"],
+    options: ["local","network_cli","docker","winrm"],
     correct: 1,
     explanation: "network_cli uses persistent SSH CLI sessions to network devices. local runs tasks on the control node. docker and winrm are for container and Windows targets.",
-    tags: ["ansible", "ios-xe", "connection", "ssh"]
+    tags: ["ansible","ios-xe","connection","ssh"]
   },
   {
     id: 115,
@@ -1374,10 +1146,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Python type annotation best represents a list of VLAN IDs in a network automation script?",
-    options: ["Dict[str, int]", "List[int]", "Tuple[str, str]", "Set[bool]"],
+    options: ["Dict[str, int]","List[int]","Tuple[str, str]","Set[bool]"],
     correct: 1,
     explanation: "List[int] correctly represents a list of integers. Dict maps keys to values. Tuple is fixed-size and typically heterogeneous. Set is unordered and unique, less common for ordered VLAN lists.",
-    tags: ["python", "typing", "automation"]
+    tags: ["python","typing","automation"]
   },
   {
     id: 116,
@@ -1386,10 +1158,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Git workflow pattern uses a long-lived main branch and short-lived feature branches merged via pull requests?",
-    options: ["Trunk-based development", "GitFlow", "GitHub Flow", "Forking workflow"],
+    options: ["Trunk-based development","GitFlow","GitHub Flow","Forking workflow"],
     correct: 2,
     explanation: "GitHub Flow uses a single main branch with feature branches merged via pull requests, suitable for continuous delivery. GitFlow has multiple long-lived branches. Trunk-based uses short-lived branches directly off main.",
-    tags: ["git", "workflow", "automation"]
+    tags: ["git","workflow","automation"]
   },
   {
     id: 117,
@@ -1398,10 +1170,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "Which JSON encoding of a YANG operational state node indicates that an interface is administratively up but operationally down?",
-    options: ["\"admin-status\": \"up\", \"oper-status\": \"down\"", "\"admin-status\": \"down\", \"oper-status\": \"up\"", "\"enabled\": true, \"link-up\": true", "\"state\": \"error\""],
+    options: ["\"admin-status\": \"up\", \"oper-status\": \"down\"","\"admin-status\": \"down\", \"oper-status\": \"up\"","\"enabled\": true, \"link-up\": true","\"state\": \"error\""],
     correct: 0,
     explanation: "In Cisco IOS XE YANG models, admin-status reflects the configured 'no shutdown' state, while oper-status reflects the current line protocol/interface status. A mismatch means administratively up but operationally down.",
-    tags: ["yang", "json", "ios-xe", "interfaces"]
+    tags: ["yang","json","ios-xe","interfaces"]
   },
   {
     id: 118,
@@ -1410,10 +1182,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which file format is most appropriate for storing device inventory variables like IP addresses, credentials placeholders, and vendor types in Ansible?",
-    options: ["inventory.yaml", "Dockerfile", "README.md", ".gitignore"],
+    options: ["inventory.yaml","Dockerfile","README.md",".gitignore"],
     correct: 0,
     explanation: "inventory.yaml stores host variables and groups for Ansible. Dockerfile defines container images. README documents projects. .gitignore excludes files from Git.",
-    tags: ["ansible", "inventory", "yaml"]
+    tags: ["ansible","inventory","yaml"]
   },
   {
     id: 119,
@@ -1422,22 +1194,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which of the following is a PRIMARY benefit of using version control for network automation code?",
-    options: ["It automatically fixes syntax errors", "It enables rollback, collaboration, and change history", "It compresses configuration files", "It replaces the need for testing"],
+    options: ["It automatically fixes syntax errors","It enables rollback, collaboration, and change history","It compresses configuration files","It replaces the need for testing"],
     correct: 1,
     explanation: "Version control tracks changes, enables collaboration via branching, allows rollback to known-good states, and supports code review—all critical for production network automation.",
-    tags: ["git", "version-control", "automation"]
-  },
-  {
-    id: 120,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the function of an API key in REST API authentication?",
-    options: ["To encrypt all HTTP traffic", "To identify and authorize the calling application or user", "To compress API responses", "To configure DNS resolution"],
-    correct: 1,
-    explanation: "An API key identifies and authorizes the client application making the request. It is typically passed in a header like X-Auth-Token or Authorization.",
-    tags: ["api", "authentication", "rest", "security"]
+    tags: ["git","version-control","automation"]
   },
   {
     id: 121,
@@ -1446,10 +1206,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco Meraki API call retrieves the SSID configuration for a specific wireless network?",
-    options: ["GET /api/v1/organizations/{organizationId}/wireless/ssids", "GET /api/v1/networks/{networkId}/wireless/ssids/{number}", "POST /api/v1/devices/{serial}/wireless", "GET /api/v1/ssids"],
+    options: ["GET /api/v1/organizations/{organizationId}/wireless/ssids","GET /api/v1/networks/{networkId}/wireless/ssids/{number}","POST /api/v1/devices/{serial}/wireless","GET /api/v1/ssids"],
     correct: 1,
     explanation: "GET /api/v1/networks/{networkId}/wireless/ssids/{number} retrieves a specific SSID. Organizations own networks, and SSIDs are nested under networks.",
-    tags: ["meraki", "wireless", "api", "rest"]
+    tags: ["meraki","wireless","api","rest"]
   },
   {
     id: 122,
@@ -1458,10 +1218,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "When troubleshooting a NETCONF session failure between an automation controller and IOS XE, which log or command is MOST useful to identify YANG schema or capability mismatches?",
-    options: ["show version", "show netconf-yang sessions", "show ip route", "show running-config"],
+    options: ["show version","show netconf-yang sessions","show ip route","show running-config"],
     correct: 1,
     explanation: "show netconf-yang sessions displays active NETCONF sessions, capabilities, and errors. It is the primary diagnostic for YANG/RPC issues. show version shows software. show ip route shows routing. show running-config shows CLI config.",
-    tags: ["netconf", "yang", "ios-xe", "troubleshooting"]
+    tags: ["netconf","yang","ios-xe","troubleshooting"]
   },
   {
     id: 123,
@@ -1470,10 +1230,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "In a CI/CD pipeline for network automation, which step validates that a Jinja2-rendered configuration passes syntax checks before deployment?",
-    options: ["Commit stage", "Lint/test stage", "Production rollout", "Documentation generation"],
+    options: ["Commit stage","Lint/test stage","Production rollout","Documentation generation"],
     correct: 1,
     explanation: "A lint/test stage validates rendered configuration syntax, runs unit tests, and checks YANG/model compliance before any device deployment.",
-    tags: ["cicd", "jinja2", "testing", "automation"]
+    tags: ["cicd","jinja2","testing","automation"]
   },
   {
     id: 124,
@@ -1482,22 +1242,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Cisco NX-OS feature allows programmatic access to switch configuration using a REST API with JSON payloads?",
-    options: ["NX-API", "CDP", "LLDP", "STP"],
+    options: ["NX-API","CDP","LLDP","STP"],
     correct: 0,
     explanation: "NX-API exposes a REST interface on NX-OS switches, accepting JSON or XML payloads for configuration and operational data. CDP and LLDP are discovery protocols. STP is loop prevention.",
-    tags: ["nx-os", "nx-api", "rest", "automation"]
-  },
-  {
-    id: 125,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the primary purpose of using source control for network automation scripts?",
-    options: ["To hide code from other teams", "To track changes, collaborate, and revert mistakes", "To run scripts directly on network devices", "To compress scripts for faster deployment"],
-    correct: 1,
-    explanation: "Source control tracks every change, enables team collaboration, supports branching/merging, and allows reverting to stable versions—critical for operational network automation.",
-    tags: ["git", "version-control", "collaboration"]
+    tags: ["nx-os","nx-api","rest","automation"]
   },
   {
     id: 126,
@@ -1506,10 +1254,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which RESTCONF operation is used to create a new resource under a collection?",
-    options: ["GET", "POST", "PUT", "DELETE"],
+    options: ["GET","POST","PUT","DELETE"],
     correct: 1,
     explanation: "POST creates a new subordinate resource under a collection in RESTCONF. PUT can also create but requires the client to specify the target URI. GET retrieves and DELETE removes.",
-    tags: ["restconf", "http", "yang"]
+    tags: ["restconf","http","yang"]
   },
   {
     id: 127,
@@ -1518,22 +1266,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco Catalyst Center REST API call retrieves device compliance information across the fabric?",
-    options: ["GET /dna/intent/api/v1/compliance", "GET /dna/intent/api/v1/network-device", "POST /dna/intent/api/v1/configuration", "GET /dna/intent/api/v1/clients"],
+    options: ["GET /dna/intent/api/v1/compliance","GET /dna/intent/api/v1/network-device","POST /dna/intent/api/v1/configuration","GET /dna/intent/api/v1/clients"],
     correct: 0,
     explanation: "The /dna/intent/api/v1/compliance endpoint returns compliance details. /network-device returns inventory. /configuration manages config templates. /clients returns client data.",
-    tags: ["dna-center", "api", "compliance", "rest"]
-  },
-  {
-    id: 128,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What does YAML stand for?",
-    options: ["Yet Another Markup Language", "YAML Ain't Markup Language", "Yet Another Module Language", "YAML Automation Markup Language"],
-    correct: 1,
-    explanation: "YAML stands for 'YAML Ain't Markup Language'—a recursive acronym. It is a human-readable data serialization language commonly used for configuration and automation tooling.",
-    tags: ["yaml", "data-formats", "basics"]
+    tags: ["dna-center","api","compliance","rest"]
   },
   {
     id: 129,
@@ -1542,10 +1278,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Python module provides a context manager for safely opening files during log collection from network devices?",
-    options: ["os", "json", "with open()", "sys"],
+    options: ["os","json","with open()","sys"],
     correct: 2,
     explanation: "'with open()' is a context manager that safely opens and closes files, even if exceptions occur during writing. os, json, and sys are unrelated to safe file handling.",
-    tags: ["python", "file-handling", "automation"]
+    tags: ["python","file-handling","automation"]
   },
   {
     id: 130,
@@ -1554,10 +1290,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "An Ansible playbook against 100 routers intermittently fails with 'connection timed out'. Which change MOST likely improves reliability?",
-    options: ["Remove become from tasks", "Increase persistent connection timeout and enable pipelining", "Switch from network_cli to local", "Disable host key checking"],
+    options: ["Remove become from tasks","Increase persistent connection timeout and enable pipelining","Switch from network_cli to local","Disable host key checking"],
     correct: 1,
     explanation: "Increasing persistent_connection_timeout and enabling pipelining reduces SSH overhead and improves performance over unreliable links. become changes privilege, local bypasses SSH, and disabling host key checking only affects auth prompts.",
-    tags: ["ansible", "ssh", "troubleshooting", "automation"]
+    tags: ["ansible","ssh","troubleshooting","automation"]
   },
   {
     id: 131,
@@ -1566,10 +1302,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Cisco IOS XE command enables the RESTCONF agent on a device?",
-    options: ["restconf", "netconf-yang", "ip http secure-server", "aaa new-model"],
+    options: ["restconf","netconf-yang","ip http secure-server","aaa new-model"],
     correct: 0,
     explanation: "The 'restconf' global configuration command enables the RESTCONF agent in IOS XE. 'netconf-yang' enables NETCONF. 'ip http secure-server' enables HTTPS. 'aaa new-model' enables AAA.",
-    tags: ["restconf", "ios-xe", "automation"]
+    tags: ["restconf","ios-xe","automation"]
   },
   {
     id: 132,
@@ -1578,10 +1314,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Nornir plugin integrates with Netmiko to send CLI commands to network devices?",
-    options: ["nornir-netmiko", "nornir-napalm", "nornir-jinja2", "nornir-utils"],
+    options: ["nornir-netmiko","nornir-napalm","nornir-jinja2","nornir-utils"],
     correct: 0,
     explanation: "nornir-netmiko provides Netmiko-based task execution within Nornir. nornir-napalm uses NAPALM. nornir-jinja2 handles templating. nornir-utils is a generic utilities package.",
-    tags: ["nornir", "netmiko", "python", "automation"]
+    tags: ["nornir","netmiko","python","automation"]
   },
   {
     id: 133,
@@ -1590,10 +1326,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In Cisco Catalyst Center, which template type allows reusable configuration across device families with variable substitution?",
-    options: ["CLI Template", "Sensor Template", "SD-AVC Template", "Software Image Management Template"],
+    options: ["CLI Template","Sensor Template","SD-AVC Template","Software Image Management Template"],
     correct: 0,
     explanation: "CLI Templates in Cisco Catalyst Center allow reusable device configuration with variables and conditional logic. Sensor templates collect telemetry. SD-AVC manages application visibility. Software Image Management handles firmware.",
-    tags: ["dna-center", "templates", "automation"]
+    tags: ["dna-center","templates","automation"]
   },
   {
     id: 134,
@@ -1602,10 +1338,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Python data structure is ideal for representing a dictionary of device names to IP addresses?",
-    options: ["list", "tuple", "dict", "set"],
+    options: ["list","tuple","dict","set"],
     correct: 2,
     explanation: "dict maps keys to values, making it ideal for device-name-to-IP mappings. list and tuple are ordered sequences. set is unordered and unique.",
-    tags: ["python", "data-structures", "automation"]
+    tags: ["python","data-structures","automation"]
   },
   {
     id: 135,
@@ -1614,10 +1350,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "When deploying network automation, which practice reduces risk of outage during configuration push?",
-    options: ["Push directly to production with no validation", "Use a rollback plan, schedule changes, and validate with dry-run / diff before applying", "Disable logging during changes", "Use Telnet instead of SSH"],
+    options: ["Push directly to production with no validation","Use a rollback plan, schedule changes, and validate with dry-run / diff before applying","Disable logging during changes","Use Telnet instead of SSH"],
     correct: 1,
     explanation: "Rollback plans, scheduling, and pre-deployment validation minimize outage impact. Direct push risks breaking production. Disabling logging removes auditability. Telnet is insecure.",
-    tags: ["automation", "change-management", "risk"]
+    tags: ["automation","change-management","risk"]
   },
   {
     id: 136,
@@ -1626,10 +1362,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "In Python, which data type is used to store an ordered, mutable collection of items?",
-    options: ["tuple", "list", "dict", "set"],
+    options: ["tuple","list","dict","set"],
     correct: 1,
     explanation: "A list is an ordered, mutable collection. Tuples are immutable. Dicts are key-value mappings. Sets are unordered and unique.",
-    tags: ["python", "data-structures", "basics"]
+    tags: ["python","data-structures","basics"]
   },
   {
     id: 137,
@@ -1638,10 +1374,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Python construct is best for ensuring a file handle or API session is closed even if an exception occurs?",
-    options: ["try/except", "try/finally", "if/else", "raise/catch"],
+    options: ["try/except","try/finally","if/else","raise/catch"],
     correct: 1,
     explanation: "try/finally guarantees cleanup code runs regardless of whether an exception occurred, making it ideal for closing files, SSH sessions, or API connections.",
-    tags: ["python", "exception-handling", "resource-management"]
+    tags: ["python","exception-handling","resource-management"]
   },
   {
     id: 138,
@@ -1650,10 +1386,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "A script managing Cisco Catalyst Center connections uses Singleton pattern incorrectly, creating multiple instances. What is the PRIMARY risk?",
-    options: ["Memory leak from unreleased objects", "Exhaustion of API connection pool and rate-limit violations", "Garbage collection failure", "Thread deadlock"],
+    options: ["Memory leak from unreleased objects","Exhaustion of API connection pool and rate-limit violations","Garbage collection failure","Thread deadlock"],
     correct: 1,
     explanation: "Multiple Singleton instances can open redundant API connections, exhausting connection pools and triggering rate limits or account lockouts in Cisco Catalyst Center.",
-    tags: ["python", "design-patterns", "dna-center", "api"]
+    tags: ["python","design-patterns","dna-center","api"]
   },
   {
     id: 139,
@@ -1662,10 +1398,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "Which HTTP method is typically used to UPDATE an existing resource via a REST API?",
-    options: ["GET", "POST", "PUT", "DELETE"],
+    options: ["GET","POST","PUT","DELETE"],
     correct: 2,
     explanation: "PUT is used to update/replace an existing resource. POST creates new resources. GET retrieves. DELETE removes.",
-    tags: ["http", "rest", "api-methods"]
+    tags: ["http","rest","api-methods"]
   },
   {
     id: 140,
@@ -1674,10 +1410,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "In Python, what does the 'with' statement provide when working with files or network connections?",
-    options: ["Faster execution speed", "Automatic resource cleanup via context manager", "Thread safety", "Encryption"],
+    options: ["Faster execution speed","Automatic resource cleanup via context manager","Thread safety","Encryption"],
     correct: 1,
     explanation: "The 'with' statement creates a context manager that automatically closes resources (files, sockets, sessions) when the block exits, even on exceptions.",
-    tags: ["python", "context-managers", "best-practices"]
+    tags: ["python","context-managers","best-practices"]
   },
   {
     id: 141,
@@ -1686,10 +1422,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "What is the time complexity of checking membership in a Python set containing 100,000 IP addresses?",
-    options: ["O(n)", "O(log n)", "O(1) average", "O(n^2)"],
+    options: ["O(n)","O(log n)","O(1) average","O(n^2)"],
     correct: 2,
     explanation: "Sets use hash tables, providing O(1) average-case lookup for membership checks, versus O(n) for lists.",
-    tags: ["python", "performance", "data-structures"]
+    tags: ["python","performance","data-structures"]
   },
   {
     id: 142,
@@ -1698,22 +1434,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Python library is most commonly used for parsing YAML configuration files in network automation?",
-    options: ["json", "xml.etree.ElementTree", "PyYAML", "csv"],
+    options: ["json","xml.etree.ElementTree","PyYAML","csv"],
     correct: 2,
     explanation: "PyYAML is the standard library for YAML parsing in Python, widely used in Ansible playbooks and network device configuration templates.",
-    tags: ["python", "yaml", "configuration"]
-  },
-  {
-    id: 143,
-    type: "multiple-choice",
-    domain: "Understanding and Using APIs",
-    domainKey: "apis",
-    difficulty: "easy",
-    question: "What does the 'A' in API stand for?",
-    options: ["Application", "Automation", "Architecture", "Authentication"],
-    correct: 0,
-    explanation: "API stands for Application Programming Interface. It defines how software components should interact.",
-    tags: ["api", "basics", "terminology"]
+    tags: ["python","yaml","configuration"]
   },
   {
     id: 144,
@@ -1722,10 +1446,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "When a REST API returns HTTP 429, what should the client do?",
-    options: ["Retry immediately with the same request", "Implement exponential backoff and respect Retry-After header", "Abort the entire automation workflow", "Switch to SOAP API"],
+    options: ["Retry immediately with the same request","Implement exponential backoff and respect Retry-After header","Abort the entire automation workflow","Switch to SOAP API"],
     correct: 1,
     explanation: "HTTP 429 means Too Many Requests. Clients should implement backoff and respect the Retry-After header to avoid being blocked.",
-    tags: ["http", "rate-limiting", "rest", "best-practices"]
+    tags: ["http","rate-limiting","rest","best-practices"]
   },
   {
     id: 145,
@@ -1734,10 +1458,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "A Meraki automation script needs to make 10,000 API calls in 5 minutes. Which approach BEST handles rate limits?",
-    options: ["Use synchronous requests with no delay", "Implement async requests with per-organization rate limit tracking and retry queues", "Use SOAP instead of REST", "Cache all responses locally without API calls"],
+    options: ["Use synchronous requests with no delay","Implement async requests with per-organization rate limit tracking and retry queues","Use SOAP instead of REST","Cache all responses locally without API calls"],
     correct: 1,
     explanation: "Async requests with rate limit tracking maximize throughput while respecting Meraki's limits. Synchronous requests are too slow. SOAP is not supported by Meraki.",
-    tags: ["meraki", "rate-limiting", "async", "automation"]
+    tags: ["meraki","rate-limiting","async","automation"]
   },
   {
     id: 146,
@@ -1746,10 +1470,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which HTTP status code indicates a successful resource creation?",
-    options: ["200 OK", "201 Created", "204 No Content", "301 Moved Permanently"],
+    options: ["200 OK","201 Created","204 No Content","301 Moved Permanently"],
     correct: 1,
     explanation: "201 Created is returned when a new resource is successfully created via POST. 200 OK is for successful retrieval or update.",
-    tags: ["http", "status-codes", "rest"]
+    tags: ["http","status-codes","rest"]
   },
   {
     id: 147,
@@ -1758,10 +1482,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "In a REST API, what is the purpose of idempotency?",
-    options: ["To encrypt the request body", "To ensure multiple identical requests have the same effect as a single request", "To cache responses", "To authenticate users"],
+    options: ["To encrypt the request body","To ensure multiple identical requests have the same effect as a single request","To cache responses","To authenticate users"],
     correct: 1,
     explanation: "Idempotency means making the same request multiple times produces the same result. GET, PUT, and DELETE are idempotent. POST is not.",
-    tags: ["rest", "idempotency", "http-methods"]
+    tags: ["rest","idempotency","http-methods"]
   },
   {
     id: 148,
@@ -1770,10 +1494,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which data format is most commonly used for modern REST API request/response bodies?",
-    options: ["XML", "JSON", "YAML", "CSV"],
+    options: ["XML","JSON","YAML","CSV"],
     correct: 1,
     explanation: "JSON is the de facto standard for REST APIs due to its lightweight nature, easy parsing, and broad language support.",
-    tags: ["json", "rest", "data-formats"]
+    tags: ["json","rest","data-formats"]
   },
   {
     id: 149,
@@ -1782,10 +1506,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "When using Cisco Catalyst Center APIs, which authentication method is recommended for automation scripts?",
-    options: ["Hardcoded username/password in every request", "OAuth 2.0 with refresh tokens", "Basic auth without HTTPS", "API key in URL query parameter"],
+    options: ["Hardcoded username/password in every request","OAuth 2.0 with refresh tokens","Basic auth without HTTPS","API key in URL query parameter"],
     correct: 1,
     explanation: "OAuth 2.0 with refresh tokens provides secure, scalable authentication without exposing credentials in code or URLs.",
-    tags: ["dna-center", "authentication", "oauth", "api"]
+    tags: ["dna-center","authentication","oauth","api"]
   },
   {
     id: 150,
@@ -1794,22 +1518,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which Cisco platform provides cloud-managed network device management with a web dashboard and API?",
-    options: ["Cisco Catalyst Center", "Cisco Meraki", "Cisco ACI", "Cisco ISE"],
+    options: ["Cisco Catalyst Center","Cisco Meraki","Cisco ACI","Cisco ISE"],
     correct: 1,
     explanation: "Cisco Meraki is a cloud-managed platform with a dashboard and REST API for managing switches, routers, and security appliances.",
-    tags: ["meraki", "platforms", "cloud-management"]
-  },
-  {
-    id: 151,
-    type: "multiple-choice",
-    domain: "Cisco Platforms and Development",
-    domainKey: "platforms",
-    difficulty: "medium",
-    question: "What is the primary benefit of using Cisco Catalyst Center's assurance features?",
-    options: ["Reduces license costs", "Provides real-time visibility into network behavior and issues", "Replaces all CLI configuration", "Encrypts all traffic"],
-    correct: 1,
-    explanation: "Cisco Catalyst Center Assurance provides telemetry, analytics, and insights into network performance, client experience, and issues.",
-    tags: ["dna-center", "assurance", "telemetry", "monitoring"]
+    tags: ["meraki","platforms","cloud-management"]
   },
   {
     id: 152,
@@ -1818,10 +1530,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "hard",
     question: "A network engineer needs to automate configuration of 500 Cisco Catalyst 9000 switches. Which combination is MOST scalable?",
-    options: ["SSH to each switch individually and configure manually", "Use Cisco Catalyst Center with templates and PnP", "Use Telnet scripts with hardcoded IPs", "Configure each switch locally via console"],
+    options: ["SSH to each switch individually and configure manually","Use Cisco Catalyst Center with templates and PnP","Use Telnet scripts with hardcoded IPs","Configure each switch locally via console"],
     correct: 1,
     explanation: "Cisco Catalyst Center with templates and Plug and Play (PnP) automates mass provisioning, ensuring consistent configuration across hundreds of devices.",
-    tags: ["dna-center", "automation", "catalyst", "pnp"]
+    tags: ["dna-center","automation","catalyst","pnp"]
   },
   {
     id: 153,
@@ -1830,22 +1542,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which Cisco SD-WAN component is responsible for centralized policy management and orchestration?",
-    options: ["vEdge", "vManage", "vSmart", "vBond"],
+    options: ["vEdge","vManage","vSmart","vBond"],
     correct: 1,
     explanation: "vManage is the SD-WAN orchestrator for policy, configuration, and monitoring. vSmart handles control plane. vBond does authentication. vEdge is the data plane.",
-    tags: ["sd-wan", "vmanage", "orchestration", "components"]
-  },
-  {
-    id: 154,
-    type: "multiple-choice",
-    domain: "Cisco Platforms and Development",
-    domainKey: "platforms",
-    difficulty: "medium",
-    question: "What is the purpose of Cisco Webex APIs in a collaboration automation workflow?",
-    options: ["Routing network traffic", "Managing meetings, messages, and devices programmatically", "Configuring switch VLANs", "Scanning network vulnerabilities"],
-    correct: 1,
-    explanation: "Webex APIs enable automation of collaboration tasks: creating meetings, sending messages, managing devices, and integrating with workflows.",
-    tags: ["webex", "api", "collaboration", "automation"]
+    tags: ["sd-wan","vmanage","orchestration","components"]
   },
   {
     id: 155,
@@ -1854,10 +1554,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "Which protocol is used by Cisco ACI to communicate between APIC controllers and fabric nodes?",
-    options: ["HTTP", "OpFlex", "SNMP", "Telnet"],
+    options: ["HTTP","OpFlex","SNMP","Telnet"],
     correct: 1,
     explanation: "OpFlex is the policy protocol used in ACI between APIC and fabric nodes for distributed policy enforcement.",
-    tags: ["aci", "apic", "opflex", "protocols"]
+    tags: ["aci","apic","opflex","protocols"]
   },
   {
     id: 156,
@@ -1866,22 +1566,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "In Cisco Catalyst Center, what is the purpose of a template project?",
-    options: ["To store user credentials", "To group configuration templates for deployment to devices", "To monitor network traffic", "To generate billing reports"],
+    options: ["To store user credentials","To group configuration templates for deployment to devices","To monitor network traffic","To generate billing reports"],
     correct: 1,
     explanation: "Template projects in Cisco Catalyst Center organize configuration templates and allow deployment to device profiles and sites.",
-    tags: ["dna-center", "templates", "configuration"]
-  },
-  {
-    id: 157,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "easy",
-    question: "What is the purpose of a .gitignore file in a repository?",
-    options: ["To specify Git credentials", "To exclude files from being tracked by Git", "To enforce commit message format", "To configure Git hooks"],
-    correct: 1,
-    explanation: ".gitignore tells Git which files or directories to ignore, preventing sensitive files, build artifacts, and dependencies from being committed.",
-    tags: ["git", "version-control", "best-practices"]
+    tags: ["dna-center","templates","configuration"]
   },
   {
     id: 158,
@@ -1890,10 +1578,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "In a CI/CD pipeline, which stage runs automated tests before code is merged?",
-    options: ["Deploy", "Build", "Test", "Monitor"],
+    options: ["Deploy","Build","Test","Monitor"],
     correct: 2,
     explanation: "The Test stage runs unit tests, integration tests, and linting to verify code quality before merging or deployment.",
-    tags: ["cicd", "testing", "pipeline", "devops"]
+    tags: ["cicd","testing","pipeline","devops"]
   },
   {
     id: 159,
@@ -1902,22 +1590,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "hard",
     question: "An automation script stores Cisco device credentials in plain text in the repository. Which is the MOST secure remediation?",
-    options: ["Commit to a private repo instead of public", "Use environment variables or a secrets manager with RBAC", "Rename the file to .env", "Add the file to .gitignore without rotating credentials"],
+    options: ["Commit to a private repo instead of public","Use environment variables or a secrets manager with RBAC","Rename the file to .env","Add the file to .gitignore without rotating credentials"],
     correct: 1,
     explanation: "Environment variables or a secrets manager with RBAC keeps credentials out of code entirely. Private repos or .gitignore alone don't fix existing exposed secrets.",
-    tags: ["security", "secrets", "devops", "best-practices"]
-  },
-  {
-    id: 160,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "easy",
-    question: "What is the primary purpose of Docker in a network automation workflow?",
-    options: ["To replace virtual machines entirely", "To package applications and dependencies into portable containers", "To encrypt network traffic", "To manage Git repositories"],
-    correct: 1,
-    explanation: "Docker containers package applications with their dependencies, ensuring consistent execution across development, testing, and production environments.",
-    tags: ["docker", "containers", "devops", "automation"]
+    tags: ["security","secrets","devops","best-practices"]
   },
   {
     id: 161,
@@ -1926,22 +1602,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which Git command is used to create a new branch for feature development?",
-    options: ["git branch feature-x", "git checkout -b feature-x", "git merge feature-x", "git pull feature-x"],
+    options: ["git branch feature-x","git checkout -b feature-x","git merge feature-x","git pull feature-x"],
     correct: 1,
     explanation: "git checkout -b feature-x creates and switches to a new branch. git branch alone only creates it without switching.",
-    tags: ["git", "version-control", "branching"]
-  },
-  {
-    id: 162,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "easy",
-    question: "What is the purpose of unit testing in a CI/CD pipeline?",
-    options: ["To test the production environment", "To verify individual code components function correctly", "To measure network latency", "To encrypt database connections"],
-    correct: 1,
-    explanation: "Unit tests verify that individual functions or components work as expected, catching bugs early in the development cycle.",
-    tags: ["testing", "cicd", "unit-testing", "best-practices"]
+    tags: ["git","version-control","branching"]
   },
   {
     id: 163,
@@ -1950,10 +1614,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which configuration management tool uses agentless push-based execution over SSH?",
-    options: ["Puppet", "Chef", "Ansible", "SaltStack"],
+    options: ["Puppet","Chef","Ansible","SaltStack"],
     correct: 2,
     explanation: "Ansible is agentless, using SSH to push configurations. Puppet and Chef use agents. SaltStack can use both but defaults to agent-based.",
-    tags: ["ansible", "configuration-management", "automation"]
+    tags: ["ansible","configuration-management","automation"]
   },
   {
     id: 164,
@@ -1962,10 +1626,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In Ansible, what is the purpose of an inventory file?",
-    options: ["To store task definitions", "To define the target hosts and groups for playbook execution", "To encrypt sensitive variables", "To install Python on managed nodes"],
+    options: ["To store task definitions","To define the target hosts and groups for playbook execution","To encrypt sensitive variables","To install Python on managed nodes"],
     correct: 1,
     explanation: "The inventory file lists managed hosts and groups, allowing playbooks to target specific devices or environments.",
-    tags: ["ansible", "inventory", "configuration-management"]
+    tags: ["ansible","inventory","configuration-management"]
   },
   {
     id: 165,
@@ -1974,10 +1638,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "An Ansible playbook configures 200 network devices. Which task property ensures idempotent behavior when a configuration is already present?",
-    options: ["always_run", "idempotent: true", "The module itself enforces idempotency (e.g., ios_config)", "run_once"],
+    options: ["always_run","idempotent: true","The module itself enforces idempotency (e.g., ios_config)","run_once"],
     correct: 2,
     explanation: "Most Ansible modules, including ios_config, are idempotent by design—they only apply changes when the desired state differs from the current state.",
-    tags: ["ansible", "idempotency", "network-automation"]
+    tags: ["ansible","idempotency","network-automation"]
   },
   {
     id: 166,
@@ -1986,22 +1650,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Linux command is used to view real-time system processes?",
-    options: ["ls", "ps", "top", "cd"],
+    options: ["ls","ps","top","cd"],
     correct: 2,
     explanation: "top displays real-time system processes, CPU, and memory usage. ps shows a snapshot. ls lists files. cd changes directories.",
-    tags: ["linux", "commands", "monitoring"]
-  },
-  {
-    id: 167,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "medium",
-    question: "What is the purpose of Infrastructure as Code (IaC)?",
-    options: ["To manually configure servers", "To manage infrastructure using version-controlled, declarative configuration files", "To increase manual deployment speed", "To replace all network devices with software"],
-    correct: 1,
-    explanation: "IaC uses declarative configuration files (Terraform, Ansible) to provision and manage infrastructure consistently and reproducibly.",
-    tags: ["iac", "terraform", "devops", "automation"]
+    tags: ["linux","commands","monitoring"]
   },
   {
     id: 168,
@@ -2010,10 +1662,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Linux command searches for a pattern inside files?",
-    options: ["find", "grep", "ls", "cat"],
+    options: ["find","grep","ls","cat"],
     correct: 1,
     explanation: "grep searches for patterns within files. find locates files by name/attributes. ls lists files. cat displays file contents.",
-    tags: ["linux", "commands", "grep"]
+    tags: ["linux","commands","grep"]
   },
   {
     id: 169,
@@ -2022,10 +1674,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which OSI layer is responsible for logical addressing and routing?",
-    options: ["Data Link", "Network", "Transport", "Application"],
+    options: ["Data Link","Network","Transport","Application"],
     correct: 1,
     explanation: "The Network layer (Layer 3) handles logical addressing (IP) and routing. Data Link is Layer 2 (MAC). Transport is Layer 4.",
-    tags: ["osi-model", "layer3", "routing", "fundamentals"]
+    tags: ["osi-model","layer3","routing","fundamentals"]
   },
   {
     id: 170,
@@ -2034,10 +1686,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "What is the usable host range in the subnet 192.168.10.0/26?",
-    options: ["192.168.10.1 - 192.168.10.62", "192.168.10.1 - 192.168.10.126", "192.168.10.0 - 192.168.10.255", "192.168.10.1 - 192.168.10.30"],
+    options: ["192.168.10.1 - 192.168.10.62","192.168.10.1 - 192.168.10.126","192.168.10.0 - 192.168.10.255","192.168.10.1 - 192.168.10.30"],
     correct: 1,
     explanation: "/26 gives 64 IPs (2^6). Usable hosts: 62 (64-2). Range: .1 to .126. Network: .0, Broadcast: .127.",
-    tags: ["subnetting", "ip-addressing", "cidr"]
+    tags: ["subnetting","ip-addressing","cidr"]
   },
   {
     id: 171,
@@ -2046,10 +1698,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which protocol is used by SSH for secure remote access?",
-    options: ["TCP", "UDP", "ICMP", "ARP"],
+    options: ["TCP","UDP","ICMP","ARP"],
     correct: 0,
     explanation: "SSH uses TCP port 22 for reliable, connection-oriented secure remote access. UDP is for DNS/DHCP. ICMP is for ping/traceroute.",
-    tags: ["ssh", "protocols", "tcp", "security"]
+    tags: ["ssh","protocols","tcp","security"]
   },
   {
     id: 172,
@@ -2058,10 +1710,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "What is the difference between TCP and UDP?",
-    options: ["TCP is faster than UDP", "TCP is connection-oriented and reliable; UDP is connectionless and faster", "UDP guarantees delivery; TCP does not", "TCP uses ports; UDP does not"],
+    options: ["TCP is faster than UDP","TCP is connection-oriented and reliable; UDP is connectionless and faster","UDP guarantees delivery; TCP does not","TCP uses ports; UDP does not"],
     correct: 1,
     explanation: "TCP establishes connections (3-way handshake), guarantees delivery via acknowledgments, and retransmits lost packets. UDP is faster but unreliable.",
-    tags: ["tcp", "udp", "transport-layer", "protocols"]
+    tags: ["tcp","udp","transport-layer","protocols"]
   },
   {
     id: 173,
@@ -2070,22 +1722,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "hard",
     question: "Given the IP address 172.16.50.25 with wildcard mask 0.0.0.255, what subnet does this represent in Cisco OSPF/ACL notation?",
-    options: ["/24", "/16", "/32", "/25"],
+    options: ["/24","/16","/32","/25"],
     correct: 0,
     explanation: "Wildcard 0.0.0.255 corresponds to mask 255.255.255.0, which is /24. In OSPF network statements and ACLs, wildcard masks are inverted subnet masks.",
-    tags: ["wildcard-mask", "subnetting", "ospf", "acl"]
-  },
-  {
-    id: 174,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What does the acronym VLAN stand for?",
-    options: ["Virtual Local Area Network", "Very Large Area Network", "Virtual LAN Access", "Variable LAN"],
-    correct: 0,
-    explanation: "VLAN stands for Virtual Local Area Network. It is a logical segmentation of a physical network at Layer 2.",
-    tags: ["vlan", "layer2", "fundamentals", "terminology"]
+    tags: ["wildcard-mask","subnetting","ospf","acl"]
   },
   {
     id: 175,
@@ -2094,22 +1734,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which IPv6 address type is used for one-to-many communication and replaces broadcast?",
-    options: ["Unicast", "Multicast", "Anycast", "Broadcast"],
+    options: ["Unicast","Multicast","Anycast","Broadcast"],
     correct: 1,
     explanation: "IPv6 multicast replaces broadcast. FF02::1 is the all-nodes multicast address. IPv6 has no broadcast address.",
-    tags: ["ipv6", "multicast", "addressing"]
-  },
-  {
-    id: 176,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the default administrative distance of OSPF in Cisco routers?",
-    options: ["90", "110", "120", "170"],
-    correct: 1,
-    explanation: "OSPF has an AD of 110. Connected: 0, Static: 1, EIGRP internal: 90, RIP: 120, EIGRP external: 170.",
-    tags: ["ospf", "administrative-distance", "routing"]
+    tags: ["ipv6","multicast","addressing"]
   },
   {
     id: 177,
@@ -2118,10 +1746,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which command verifies the IP address and status of all Cisco router interfaces in a concise table?",
-    options: ["show interfaces", "show ip interface brief", "show running-config", "show ip route"],
+    options: ["show interfaces","show ip interface brief","show running-config","show ip route"],
     correct: 1,
     explanation: "show ip interface brief displays IP addresses, status, and protocol state for all interfaces in a concise table format.",
-    tags: ["cisco-ios", "cli", "troubleshooting", "interfaces"]
+    tags: ["cisco-ios","cli","troubleshooting","interfaces"]
   },
   {
     id: 178,
@@ -2130,10 +1758,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which protocol is commonly used for CLI-based automation of Cisco IOS devices?",
-    options: ["NETCONF", "RESTCONF", "SSH", "SNMP"],
+    options: ["NETCONF","RESTCONF","SSH","SNMP"],
     correct: 2,
     explanation: "SSH provides secure CLI access for automation scripts. NETCONF and RESTCONF are model-driven protocols. SNMP is for monitoring.",
-    tags: ["ssh", "cli", "automation", "cisco-ios"]
+    tags: ["ssh","cli","automation","cisco-ios"]
   },
   {
     id: 179,
@@ -2142,10 +1770,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What is the PRIMARY benefit of model-driven programmability (YANG + NETCONF/RESTCONF) over CLI scraping?",
-    options: ["Faster CLI output", "Structured, vendor-agnostic data with transactional guarantees", "Requires no network connectivity", "Encrypts all traffic"],
+    options: ["Faster CLI output","Structured, vendor-agnostic data with transactional guarantees","Requires no network connectivity","Encrypts all traffic"],
     correct: 1,
     explanation: "Model-driven programmability provides structured data, reduces parsing errors, and offers transactional configuration via NETCONF.",
-    tags: ["yang", "netconf", "restconf", "model-driven"]
+    tags: ["yang","netconf","restconf","model-driven"]
   },
   {
     id: 180,
@@ -2154,22 +1782,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "A network automation pipeline needs to validate configuration changes before pushing to production. Which approach is MOST aligned with DevOps practices?",
-    options: ["Push directly and monitor for failures", "Use GitOps: review PR, run tests in staging, promote to production", "Disable change windows", "Use manual CLI on production"],
+    options: ["Push directly and monitor for failures","Use GitOps: review PR, run tests in staging, promote to production","Disable change windows","Use manual CLI on production"],
     correct: 1,
     explanation: "GitOps uses pull requests, automated testing, and staged promotion, ensuring changes are validated before reaching production.",
-    tags: ["gitops", "devops", "change-management", "ci-cd"]
-  },
-  {
-    id: 181,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the purpose of a YANG model in network automation?",
-    options: ["To replace all network devices", "To define the structure and semantics of configuration and state data", "To encrypt API traffic", "To compress configuration files"],
-    correct: 1,
-    explanation: "YANG models define the schema for configuration and operational state data, enabling model-driven management via NETCONF/RESTCONF.",
-    tags: ["yang", "model-driven", "netconf", "schemas"]
+    tags: ["gitops","devops","change-management","ci-cd"]
   },
   {
     id: 182,
@@ -2178,34 +1794,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Python library is commonly used to automate Cisco IOS XE devices via RESTCONF?",
-    options: ["netmiko", "requests", "scapy", "nmap"],
+    options: ["netmiko","requests","scapy","nmap"],
     correct: 1,
     explanation: "requests is commonly used for RESTCONF calls. netmiko uses SSH/CLI. scapy is for packet crafting. nmap is for scanning.",
-    tags: ["python", "restconf", "ios-xe", "automation"]
-  },
-  {
-    id: 183,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the default port for NETCONF over SSH?",
-    options: ["22", "830", "443", "161"],
-    correct: 1,
-    explanation: "NETCONF over SSH uses port 830 by default. SSH is 22. HTTPS/RESTCONF is 443. SNMP is 161.",
-    tags: ["netconf", "ports", "protocols", "automation"]
-  },
-  {
-    id: 184,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "medium",
-    question: "What is the purpose of JSONPath in network automation?",
-    options: ["To define YANG models", "To query and extract specific data from JSON responses", "To encrypt REST API traffic", "To replace XML in NETCONF"],
-    correct: 1,
-    explanation: "JSONPath provides a query language for extracting specific elements from JSON, similar to XPath for XML. Useful for parsing API responses.",
-    tags: ["json", "jsonpath", "data-parsing", "rest-api"]
+    tags: ["python","restconf","ios-xe","automation"]
   },
   {
     id: 185,
@@ -2214,10 +1806,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "A network automation script uses git push directly to the production branch. Which practice BEST mitigates risk?",
-    options: ["Use force-push for faster deployments", "Implement pull requests with CI validation and branch protection", "Commit directly to main with no review", "Disable Git entirely"],
+    options: ["Use force-push for faster deployments","Implement pull requests with CI validation and branch protection","Commit directly to main with no review","Disable Git entirely"],
     correct: 1,
     explanation: "Pull requests with CI validation and branch protection ensure code review, automated testing, and controlled deployments to production.",
-    tags: ["git", "cicd", "devops", "best-practices"]
+    tags: ["git","cicd","devops","best-practices"]
   },
   {
     id: 186,
@@ -2226,10 +1818,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "In Python, what is the output of [x*2 for x in [1,2,3,4] if x%2==0]?",
-    options: ["[2, 4, 6, 8]", "[4, 8]", "[2, 4]", "[1, 4, 9, 16]"],
+    options: ["[2, 4, 6, 8]","[4, 8]","[2, 4]","[1, 4, 9, 16]"],
     correct: 1,
     explanation: "The list comprehension filters even numbers (2,4) then doubles them: [4, 8]. The if clause filters, then the expression x*2 is applied.",
-    tags: ["python", "list-comprehension", "data-structures"]
+    tags: ["python","list-comprehension","data-structures"]
   },
   {
     id: 187,
@@ -2238,10 +1830,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "Which Git command records staged changes into the repository history?",
-    options: ["git push", "git commit", "git add", "git pull"],
+    options: ["git push","git commit","git add","git pull"],
     correct: 1,
     explanation: "git commit creates a snapshot of staged changes in the local repository. git add stages files. git push uploads commits to a remote.",
-    tags: ["git", "version-control", "basics"]
+    tags: ["git","version-control","basics"]
   },
   {
     id: 188,
@@ -2250,10 +1842,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "A REST API client receives 503 Service Unavailable with Retry-After: 120. What is the CORRECT client behavior?",
-    options: ["Retry immediately", "Wait 120 seconds then retry with exponential backoff", "Abort the workflow permanently", "Switch to GET requests"],
+    options: ["Retry immediately","Wait 120 seconds then retry with exponential backoff","Abort the workflow permanently","Switch to GET requests"],
     correct: 1,
     explanation: "503 indicates server overload or maintenance. Respect Retry-After, then implement exponential backoff for subsequent retries to avoid overwhelming the server.",
-    tags: ["http", "rest-api", "error-handling", "best-practices"]
+    tags: ["http","rest-api","error-handling","best-practices"]
   },
   {
     id: 189,
@@ -2262,22 +1854,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "In Python, which function converts a JSON string into a Python dictionary?",
-    options: ["json.dumps()", "json.loads()", "json.stringify()", "json.parse()"],
+    options: ["json.dumps()","json.loads()","json.stringify()","json.parse()"],
     correct: 1,
     explanation: "json.loads() parses a JSON string into Python objects. json.dumps() serializes Python objects to JSON. stringify/parse are JavaScript methods.",
-    tags: ["python", "json", "api"]
-  },
-  {
-    id: 190,
-    type: "multiple-choice",
-    domain: "Understanding and Using APIs",
-    domainKey: "apis",
-    difficulty: "medium",
-    question: "What is the PRIMARY purpose of an API gateway in a microservices architecture?",
-    options: ["To replace all backend services", "To provide a single entry point for routing, auth, and rate limiting", "To encrypt database traffic", "To store API keys"],
-    correct: 1,
-    explanation: "API gateways centralize cross-cutting concerns: routing, authentication, rate limiting, and monitoring. They simplify client interaction with multiple services.",
-    tags: ["api-gateway", "microservices", "architecture"]
+    tags: ["python","json","api"]
   },
   {
     id: 191,
@@ -2286,10 +1866,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which HTTP method is idempotent and typically used to retrieve data from a server?",
-    options: ["POST", "PUT", "GET", "DELETE"],
+    options: ["POST","PUT","GET","DELETE"],
     correct: 2,
     explanation: "GET is idempotent and used for retrieving data. Multiple identical GET requests return the same resource representation without side effects.",
-    tags: ["http", "rest", "idempotency", "api-methods"]
+    tags: ["http","rest","idempotency","api-methods"]
   },
   {
     id: 192,
@@ -2298,10 +1878,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "A distributed system has 5 services calling an external API with a rate limit of 100 req/min. Which strategy BEST prevents 429 errors?",
-    options: ["Each service calls independently with no coordination", "Implement a centralized rate limiter with token bucket algorithm", "Use synchronous calls only", "Cache all responses indefinitely"],
+    options: ["Each service calls independently with no coordination","Implement a centralized rate limiter with token bucket algorithm","Use synchronous calls only","Cache all responses indefinitely"],
     correct: 1,
     explanation: "A centralized token bucket rate limiter ensures the aggregate rate across all services stays within limits. Independent calling will exceed the limit.",
-    tags: ["rate-limiting", "distributed-systems", "api", "algorithms"]
+    tags: ["rate-limiting","distributed-systems","api","algorithms"]
   },
   {
     id: 193,
@@ -2310,10 +1890,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "In Cisco Catalyst Center, what is the purpose of a sensor template?",
-    options: ["To configure VLANs on switches", "To collect telemetry data from network devices", "To manage user credentials", "To generate billing reports"],
+    options: ["To configure VLANs on switches","To collect telemetry data from network devices","To manage user credentials","To generate billing reports"],
     correct: 1,
     explanation: "Sensor templates in Cisco Catalyst Center define what telemetry data to collect from devices and how to stream it to assurance/analytics systems.",
-    tags: ["dna-center", "sensors", "telemetry", "templates"]
+    tags: ["dna-center","sensors","telemetry","templates"]
   },
   {
     id: 194,
@@ -2322,22 +1902,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "How do you access the Cisco Meraki dashboard API?",
-    options: ["SSH with username/password", "REST API with an API key in the header", "Telnet with enable password", "SNMP with community string"],
+    options: ["SSH with username/password","REST API with an API key in the header","Telnet with enable password","SNMP with community string"],
     correct: 1,
     explanation: "Meraki uses REST APIs authenticated via API keys passed in X-Cisco-Meraki-API-Key headers over HTTPS.",
-    tags: ["meraki", "api", "rest", "authentication"]
-  },
-  {
-    id: 195,
-    type: "multiple-choice",
-    domain: "Application Deployment and Security",
-    domainKey: "deployment",
-    difficulty: "medium",
-    question: "What is the purpose of a Dockerfile in a CI/CD pipeline for network automation tools?",
-    options: ["To configure Git hooks", "To define the image build steps and runtime environment", "To encrypt container traffic", "To replace Kubernetes"],
-    correct: 1,
-    explanation: "Dockerfiles define base images, dependencies, and runtime configuration, ensuring automation tools run consistently across environments.",
-    tags: ["docker", "cicd", "containers", "automation"]
+    tags: ["meraki","api","rest","authentication"]
   },
   {
     id: 196,
@@ -2346,10 +1914,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "In a CI/CD pipeline, which component automatically builds and tests code when changes are pushed?",
-    options: ["Manual trigger", "Webhook/CI runner", "Git commit hook only", "SSH tunnel"],
+    options: ["Manual trigger","Webhook/CI runner","Git commit hook only","SSH tunnel"],
     correct: 1,
     explanation: "CI runners (GitHub Actions, Jenkins, GitLab CI) are triggered by webhooks on push/PR events to run automated builds and tests.",
-    tags: ["cicd", "webhooks", "automation", "devops"]
+    tags: ["cicd","webhooks","automation","devops"]
   },
   {
     id: 197,
@@ -2358,10 +1926,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "An Ansible playbook applies a configuration that is already present on the device. What should happen?",
-    options: ["The task runs again and reports changed", "The task reports 'ok' with no changes applied", "The task fails with an error", "The task is skipped entirely"],
+    options: ["The task runs again and reports changed","The task reports 'ok' with no changes applied","The task fails with an error","The task is skipped entirely"],
     correct: 1,
     explanation: "Idempotent Ansible modules compare desired state to current state. If already configured, they report 'ok' and make no changes.",
-    tags: ["ansible", "idempotency", "network-automation", "cicd"]
+    tags: ["ansible","idempotency","network-automation","cicd"]
   },
   {
     id: 198,
@@ -2370,10 +1938,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Git workflow uses a main branch plus short-lived feature branches merged via pull requests?",
-    options: ["GitFlow", "Trunk-based development", "Forking workflow", "Centralized workflow"],
+    options: ["GitFlow","Trunk-based development","Forking workflow","Centralized workflow"],
     correct: 1,
     explanation: "Trunk-based development uses a main/trunk branch with short-lived feature branches merged via PRs, enabling continuous integration.",
-    tags: ["git", "workflow", "cicd", "branching"]
+    tags: ["git","workflow","cicd","branching"]
   },
   {
     id: 199,
@@ -2382,22 +1950,10 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which layer of the OSI model is responsible for framing, MAC addressing, and error detection?",
-    options: ["Network", "Data Link", "Physical", "Transport"],
+    options: ["Network","Data Link","Physical","Transport"],
     correct: 1,
     explanation: "Data Link layer (Layer 2) handles framing, MAC addresses, and error detection (CRC). Physical is Layer 1 (bits). Network is Layer 3 (IP).",
-    tags: ["osi-model", "layer2", "ethernet", "fundamentals"]
-  },
-  {
-    id: 200,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is the primary purpose of RESTCONF in network automation?",
-    options: ["To replace SSH entirely", "To provide a RESTful API for managing device configuration and state data", "To encrypt SNMP traffic", "To compress CLI output"],
-    correct: 1,
-    explanation: "RESTCONF provides a RESTful interface over HTTP/HTTPS for managing network device configuration and operational state data using YANG models.",
-    tags: ["restconf", "api", "model-driven", "network-automation"]
+    tags: ["osi-model","layer2","ethernet","fundamentals"]
   },
   {
     id: 201,
@@ -2406,21 +1962,9 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "In test-driven development (TDD), what is the correct order of steps in the red-green-refactor cycle?",
-    options: ["Write the test first, then write minimal code to pass it, then refactor", "Write the code first, then write tests, then deploy", "Refactor, write code, then write tests", "Write documentation, write code, then write tests"],
+    options: ["Write the test first, then write minimal code to pass it, then refactor","Write the code first, then write tests, then deploy","Refactor, write code, then write tests","Write documentation, write code, then write tests"],
     correct: 0,
     explanation: "TDD requires writing a failing test (red) before writing the minimal implementation (green), followed by refactoring while keeping tests green.",
-    tags: []
-  },
-  {
-    id: 202,
-    type: "multiple-choice",
-    domain: "Software Development and Design",
-    domainKey: "software",
-    difficulty: "medium",
-    question: "What is the primary benefit of test-driven development when applied to network automation scripts?",
-    options: ["Tests written first act as executable specifications and catch regressions early", "It eliminates the need for code reviews", "It guarantees zero bugs in production", "It removes the need for version control"],
-    correct: 0,
-    explanation: "TDD produces executable specifications: every requirement has a test, and regressions are caught before code reaches network devices.",
     tags: []
   },
   {
@@ -2430,7 +1974,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "A unified diff shows which line was removed from a file?",
-    options: ["Lines starting with a single minus (-)", "Lines starting with a plus (+)", "Lines starting with @@", "Lines starting with ---"],
+    options: ["Lines starting with a single minus (-)","Lines starting with a plus (+)","Lines starting with @@","Lines starting with ---"],
     correct: 0,
     explanation: "In unified diff format, lines prefixed with a single '-' (and no second '-') were removed; '+' lines were added; @@ marks hunk headers.",
     tags: []
@@ -2442,21 +1986,9 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In a unified diff, what does the line `@@ -12,7 +12,8 @@` indicate?",
-    options: ["The hunk starts at line 12 in the old file (7 lines) and line 12 in the new file (8 lines)", "The diff was generated at 12:08", "12 lines were added and 8 removed", "The file has 12 lines total"],
+    options: ["The hunk starts at line 12 in the old file (7 lines) and line 12 in the new file (8 lines)","The diff was generated at 12:08","12 lines were added and 8 removed","The file has 12 lines total"],
     correct: 0,
     explanation: "The @@ hunk header shows old-file start line and line count before the comma, then new-file start line and count. Here the new file has one more line than the old in this hunk.",
-    tags: []
-  },
-  {
-    id: 205,
-    type: "multiple-choice",
-    domain: "Infrastructure and Automation",
-    domainKey: "infrastructure",
-    difficulty: "easy",
-    question: "What is a primary benefit of a code review process in a network automation team?",
-    options: ["Defects are caught before merge and knowledge is shared across the team", "It replaces the need for automated tests", "It guarantees deployment speed increases", "It eliminates merge conflicts"],
-    correct: 0,
-    explanation: "Code reviews catch bugs, enforce style/standards, and spread domain knowledge — they complement, not replace, tests.",
     tags: []
   },
   {
@@ -2466,7 +1998,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "In a typical pull-request based code review process, when should a reviewer approve a change?",
-    options: ["When the change meets requirements, tests pass, and feedback has been addressed", "As soon as the author opens the PR", "Only after the code is deployed to production", "Only when the author is a senior engineer"],
+    options: ["When the change meets requirements, tests pass, and feedback has been addressed","As soon as the author opens the PR","Only after the code is deployed to production","Only when the author is a senior engineer"],
     correct: 0,
     explanation: "Approval should come after review of the diff, verification that CI checks (tests/linters) pass, and resolution of review comments.",
     tags: []
@@ -2478,7 +2010,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In a sequence diagram for an API workflow, what does a horizontal arrow between two lifelines represent?",
-    options: ["A message or API call passed from one participant to another", "A time delay", "A database table", "A network cable"],
+    options: ["A message or API call passed from one participant to another","A time delay","A database table","A network cable"],
     correct: 0,
     explanation: "Sequence diagrams show interactions over time: horizontal arrows are messages (requests/responses) between participant lifelines, ordered top-to-bottom in time.",
     tags: []
@@ -2490,7 +2022,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "A sequence diagram shows: Client -> API: POST /users; API --> Client: 201 Created. What workflow does this represent?",
-    options: ["A client successfully creating a resource through an API", "A failed authentication attempt", "A device reboot", "A DNS resolution"],
+    options: ["A client successfully creating a resource through an API","A failed authentication attempt","A device reboot","A DNS resolution"],
     correct: 0,
     explanation: "POST /users creates a resource; the 201 Created response confirms successful creation. The dashed return arrow carries the response.",
     tags: []
@@ -2502,7 +2034,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which OWASP threat involves injecting malicious scripts that execute in another user's browser via a web application?",
-    options: ["Cross-Site Scripting (XSS)", "SQL Injection", "CSRF", "Port scanning"],
+    options: ["Cross-Site Scripting (XSS)","SQL Injection","CSRF","Port scanning"],
     correct: 0,
     explanation: "XSS injects client-side scripts into pages viewed by other users; SQLi targets databases; CSRF tricks authenticated browsers into unwanted requests.",
     tags: []
@@ -2514,7 +2046,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "An attacker enters `'; DROP TABLE users; --` into a login form. Which OWASP threat is this and what is the primary defense?",
-    options: ["SQL Injection; use parameterized queries / prepared statements", "XSS; escape HTML output", "CSRF; use anti-forgery tokens", "DDoS; rate limiting"],
+    options: ["SQL Injection; use parameterized queries / prepared statements","XSS; escape HTML output","CSRF; use anti-forgery tokens","DDoS; rate limiting"],
     correct: 0,
     explanation: "This classic SQL injection payload manipulates the query. Parameterized queries separate code from data, preventing the input from altering query structure.",
     tags: []
@@ -2526,7 +2058,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What does a CSRF attack exploit?",
-    options: ["The browser's automatic inclusion of authentication cookies with requests to a trusted site", "Unencrypted database connections", "Weak SSH passwords", "Open SNMP communities"],
+    options: ["The browser's automatic inclusion of authentication cookies with requests to a trusted site","Unencrypted database connections","Weak SSH passwords","Open SNMP communities"],
     correct: 0,
     explanation: "CSRF abuses ambient authority: the victim's browser silently attaches session cookies to forged cross-site requests, so defenses include CSRF tokens and SameSite cookies.",
     tags: []
@@ -2538,7 +2070,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "Which practice most directly protects secrets such as API keys in an application codebase?",
-    options: ["Store them in environment variables or a secrets manager, never in the repository", "Commit them in a config file with a misleading name", "Base64-encode them in the source code", "Store them in client-side JavaScript"],
+    options: ["Store them in environment variables or a secrets manager, never in the repository","Commit them in a config file with a misleading name","Base64-encode them in the source code","Store them in client-side JavaScript"],
     correct: 0,
     explanation: "Secrets belong in environment variables or dedicated vaults/secrets managers. Encoding (base64) is not encryption, and client-side code is public by definition.",
     tags: []
@@ -2550,7 +2082,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "What is the primary benefit of edge computing?",
-    options: ["Reduced latency by processing data close to its source", "Lower hardware cost than any cloud", "Elimination of the need for internet connectivity", "Unlimited compute capacity"],
+    options: ["Reduced latency by processing data close to its source","Lower hardware cost than any cloud","Elimination of the need for internet connectivity","Unlimited compute capacity"],
     correct: 0,
     explanation: "Edge computing moves computation near data sources (IoT devices, branch sites), cutting round-trip latency and backhaul bandwidth versus centralized clouds.",
     tags: []
@@ -2562,7 +2094,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "A company runs latency-sensitive analytics on-premises but bursts training workloads to a public cloud. Which deployment model is this?",
-    options: ["Hybrid cloud", "Private cloud only", "Public cloud only", "Bare metal only"],
+    options: ["Hybrid cloud","Private cloud only","Public cloud only","Bare metal only"],
     correct: 0,
     explanation: "Combining on-premises/private infrastructure with public cloud resources is the definition of hybrid cloud.",
     tags: []
@@ -2574,7 +2106,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What distinguishes a container from a virtual machine?",
-    options: ["Containers share the host OS kernel; VMs each run a full guest OS on a hypervisor", "Containers are always slower than VMs", "VMs cannot run Linux", "Containers provide stronger isolation than VMs"],
+    options: ["Containers share the host OS kernel; VMs each run a full guest OS on a hypervisor","Containers are always slower than VMs","VMs cannot run Linux","Containers provide stronger isolation than VMs"],
     correct: 0,
     explanation: "Containers virtualize at the OS level sharing the host kernel (fast, lightweight); VMs virtualize hardware and run complete guest operating systems (stronger isolation, heavier).",
     tags: []
@@ -2586,7 +2118,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "Which deployment type runs an operating system directly on physical hardware with no virtualization layer?",
-    options: ["Bare metal", "Container", "Virtual machine", "Serverless"],
+    options: ["Bare metal","Container","Virtual machine","Serverless"],
     correct: 0,
     explanation: "Bare metal means the OS runs directly on physical hardware — maximum performance, no hypervisor overhead.",
     tags: []
@@ -2598,7 +2130,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "In an application deployment, what is the role of a reverse proxy?",
-    options: ["It accepts client requests and forwards them to backend servers, often providing TLS termination and load distribution", "It blocks all outbound traffic", "It assigns IP addresses to clients", "It resolves domain names for internal servers"],
+    options: ["It accepts client requests and forwards them to backend servers, often providing TLS termination and load distribution","It blocks all outbound traffic","It assigns IP addresses to clients","It resolves domain names for internal servers"],
     correct: 0,
     explanation: "A reverse proxy sits in front of backend servers: clients hit the proxy, which forwards requests — enabling TLS termination, caching, and load balancing.",
     tags: []
@@ -2610,7 +2142,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "Which component translates human-readable hostnames into IP addresses for application clients?",
-    options: ["DNS server", "Firewall", "Load balancer", "Reverse proxy"],
+    options: ["DNS server","Firewall","Load balancer","Reverse proxy"],
     correct: 0,
     explanation: "DNS resolves names to IP addresses; firewalls filter traffic; load balancers and reverse proxies distribute or forward requests.",
     tags: []
@@ -2622,7 +2154,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which statement best describes the DevOps principle of 'shift left'?",
-    options: ["Move testing, security, and quality checks earlier in the development lifecycle", "Deploy only on Fridays", "Move all workloads to the left side of a network diagram", "Delay testing until after release"],
+    options: ["Move testing, security, and quality checks earlier in the development lifecycle","Deploy only on Fridays","Move all workloads to the left side of a network diagram","Delay testing until after release"],
     correct: 0,
     explanation: "'Shift left' means integrating testing, security scanning, and feedback as early as possible in the pipeline, reducing the cost of fixing defects.",
     tags: []
@@ -2634,7 +2166,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco platform provides centralized management and API access for UCS compute infrastructure through a SaaS-based model?",
-    options: ["Cisco Intersight", "Cisco Webex", "Cisco Meraki", "Cisco NSO"],
+    options: ["Cisco Intersight","Cisco Webex","Cisco Meraki","Cisco NSO"],
     correct: 0,
     explanation: "Intersight is Cisco's SaaS platform-as-a-service for managing UCS and HyperFlex compute infrastructure, exposing REST APIs for automation.",
     tags: []
@@ -2646,7 +2178,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which interface does Cisco UCS Manager expose for programmatic management of UCS domains?",
-    options: ["A REST API and XML API on the fabric interconnects", "Only SNMPv1", "Only Telnet", "gRPC exclusively"],
+    options: ["A REST API and XML API on the fabric interconnects","Only SNMPv1","Only Telnet","gRPC exclusively"],
     correct: 0,
     explanation: "UCS Manager provides both an XML API and a REST API served from the fabric interconnects for UCS domain management.",
     tags: []
@@ -2658,7 +2190,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco platform provides extended detection and response (XDR) capabilities correlating telemetry across email, endpoints, network, and cloud?",
-    options: ["Cisco XDR", "Cisco Intersight", "Cisco Catalyst Center", "Cisco NSO"],
+    options: ["Cisco XDR","Cisco Intersight","Cisco Catalyst Center","Cisco NSO"],
     correct: 0,
     explanation: "Cisco XDR correlates signals across email, endpoint, network, identity, and cloud to detect and respond to threats, exposing APIs for integration.",
     tags: []
@@ -2670,7 +2202,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco platform (formerly Threat Grid) provides malware analysis with APIs for submitting and retrieving file analysis reports?",
-    options: ["Cisco Secure Malware Analytics", "Cisco Umbrella", "Cisco Intersight", "Cisco SD-WAN"],
+    options: ["Cisco Secure Malware Analytics","Cisco Umbrella","Cisco Intersight","Cisco SD-WAN"],
     correct: 0,
     explanation: "Secure Malware Analytics (formerly Threat Grid) sandbox-analyzes suspicious files and exposes REST APIs for submissions and reports; Secure Endpoint integrates with it.",
     tags: []
@@ -2682,7 +2214,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco security platform uses the ePO-style management and REST API for endpoint protection and malware defense?",
-    options: ["Cisco Secure Endpoint", "Cisco Meraki MX", "Cisco Intersight", "Cisco Webex"],
+    options: ["Cisco Secure Endpoint","Cisco Meraki MX","Cisco Intersight","Cisco Webex"],
     correct: 0,
     explanation: "Secure Endpoint (formerly AMP for Endpoints) protects endpoints with malware detection and exposes a REST API for policy, computer, and event management.",
     tags: []
@@ -2694,7 +2226,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Cisco Unified Communications Manager interface is a SOAP-based API used for bulk provisioning of users and devices?",
-    options: ["AXL (Administrative XML Web Service)", "UDS", "RESTCONF", "SNMP"],
+    options: ["AXL (Administrative XML Web Service)","UDS","RESTCONF","SNMP"],
     correct: 0,
     explanation: "AXL is CUCM's SOAP/XML provisioning API for administrative objects (users, phones, gateways). UDS is a REST directory service for user lookup.",
     tags: []
@@ -2706,7 +2238,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "easy",
     question: "What is the purpose of the User Data Services (UDS) interface in Cisco Unified Communications Manager?",
-    options: ["Provide a REST API for directory user data lookup, used by clients like Jabber for contact resolution", "Provision phone firmware", "Replace the entire CUCM configuration", "Stream telemetry from phones"],
+    options: ["Provide a REST API for directory user data lookup, used by clients like Jabber for contact resolution","Provision phone firmware","Replace the entire CUCM configuration","Stream telemetry from phones"],
     correct: 0,
     explanation: "UDS exposes REST endpoints for corporate directory data — Jabber and clients use it to resolve users and contacts.",
     tags: []
@@ -2718,7 +2250,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Using the Meraki Dashboard API, which request lists the clients seen on a specific network?",
-    options: ["GET /networks/{networkId}/clients", "GET /organizations", "DELETE /devices/{serial}", "PUT /networks/{networkId}/clients"],
+    options: ["GET /networks/{networkId}/clients","GET /organizations","DELETE /devices/{serial}","PUT /networks/{networkId}/clients"],
     correct: 0,
     explanation: "The Meraki Dashboard API exposes GET /networks/{networkId}/clients to retrieve clients seen on a network within a timespan; organizations and device endpoints serve other purposes.",
     tags: []
@@ -2730,7 +2262,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which of the following is a common constraint when consuming third-party APIs?",
-    options: ["Rate limits that cap how many requests you can make per time window", "APIs never change their responses", "All APIs are free of authentication", "Responses are always under 1 KB"],
+    options: ["Rate limits that cap how many requests you can make per time window","APIs never change their responses","All APIs are free of authentication","Responses are always under 1 KB"],
     correct: 0,
     explanation: "Rate limiting, pagination, authentication, and payload size limits are typical API consumption constraints that scripts must handle (retries/backoff, paging loops).",
     tags: []
@@ -2742,7 +2274,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Your script receives HTTP 429 from an API. What is the appropriate handling?",
-    options: ["Retry after the delay indicated in the Retry-After header, with exponential backoff", "Immediately retry in a tight loop", "Delete your API key", "Switch to HTTP/1.0"],
+    options: ["Retry after the delay indicated in the Retry-After header, with exponential backoff","Immediately retry in a tight loop","Delete your API key","Switch to HTTP/1.0"],
     correct: 0,
     explanation: "429 means too many requests. Honor the Retry-After header and use exponential backoff with jitter; tight loops worsen throttling.",
     tags: []
@@ -2754,7 +2286,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which HTTP status code indicates the request succeeded and a new resource was created?",
-    options: ["201", "200", "204", "301"],
+    options: ["201","200","204","301"],
     correct: 0,
     explanation: "201 Created confirms a POST resulted in a new resource; 200 is generic success, 204 has no body, 301 is a redirect.",
     tags: []
@@ -2766,7 +2298,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does the WWW-Authenticate response header indicate?",
-    options: ["The authentication method the server expects after a 401 response", "The size of the response body", "The API rate limit remaining", "The server software version"],
+    options: ["The authentication method the server expects after a 401 response","The size of the response body","The API rate limit remaining","The server software version"],
     correct: 0,
     explanation: "After a 401 Unauthorized, WWW-Authenticate tells the client which scheme (Basic, Bearer, etc.) the server requires.",
     tags: []
@@ -2778,7 +2310,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which Python code correctly calls an API with a bearer token using the requests library?",
-    options: ["requests.get(url, headers={'Authorization': 'Bearer ' + token})", "requests.get(url, token=token)", "requests.get(url, auth=bearer)", "requests.post(url, bearer=token)"],
+    options: ["requests.get(url, headers={'Authorization': 'Bearer ' + token})","requests.get(url, token=token)","requests.get(url, auth=bearer)","requests.post(url, bearer=token)"],
     correct: 0,
     explanation: "Bearer tokens are passed in the Authorization header; requests has no built-in bearer= parameter.",
     code: "import requests\n\ntoken = 'abc123'\nresp = requests.get(\n    'https://api.example.com/v1/devices',\n    headers={'Authorization': f'Bearer {token}'}\n)\nresp.raise_for_status()\nprint(resp.json())",
@@ -2792,7 +2324,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What is a webhook?",
-    options: ["An HTTP callback where the API provider pushes events to your registered URL when they occur", "A fishing tool for network cables", "A VPN technology", "A scheduled polling script"],
+    options: ["An HTTP callback where the API provider pushes events to your registered URL when they occur","A fishing tool for network cables","A VPN technology","A scheduled polling script"],
     correct: 0,
     explanation: "Webhooks invert polling: you register a URL and the provider POSTs event payloads to it, enabling real-time, event-driven integrations.",
     tags: []
@@ -2804,7 +2336,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What is a best practice for verifying that an incoming webhook request genuinely came from the provider?",
-    options: ["Validate an HMAC signature or shared secret included in the request headers", "Trust any request to that URL", "Require client certificates from end users", "Accept only requests over Telnet"],
+    options: ["Validate an HMAC signature or shared secret included in the request headers","Trust any request to that URL","Require client certificates from end users","Accept only requests over Telnet"],
     correct: 0,
     explanation: "Providers sign payloads (HMAC with a shared secret); validating the signature prevents attackers from forging events to your endpoint.",
     tags: []
@@ -2816,7 +2348,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which API style returns a job ID immediately and requires polling or a callback to obtain the result?",
-    options: ["Asynchronous API", "Synchronous REST", "Local function call", "GraphQL subscription only"],
+    options: ["Asynchronous API","Synchronous REST","Local function call","GraphQL subscription only"],
     correct: 0,
     explanation: "Asynchronous APIs accept a request, return 202 with a job/task identifier, and the client polls a status endpoint or receives a callback when processing completes.",
     tags: []
@@ -2828,7 +2360,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What is a core principle of infrastructure as code?",
-    options: ["Infrastructure is defined and managed through version-controlled, declarative or executable definitions", "Infrastructure must be configured manually for auditability", "Configurations should never be shared between environments", "Code cannot be used for networking devices"],
+    options: ["Infrastructure is defined and managed through version-controlled, declarative or executable definitions","Infrastructure must be configured manually for auditability","Configurations should never be shared between environments","Code cannot be used for networking devices"],
     correct: 0,
     explanation: "IaC treats infrastructure configuration as code: versioned, reviewed, testable, and idempotently applied — enabling reproducibility and drift detection.",
     tags: []
@@ -2840,7 +2372,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which tool uses declarative HCL to provision infrastructure resources across cloud providers?",
-    options: ["Terraform", "Ansible", "Bash", "Postman"],
+    options: ["Terraform","Ansible","Bash","Postman"],
     correct: 0,
     explanation: "Terraform uses declarative HashiCorp Configuration Language (HCL) and a plan/apply model to provision infrastructure; Ansible manages configuration via YAML playbooks.",
     tags: []
@@ -2852,7 +2384,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does it mean for an Ansible playbook to be idempotent?",
-    options: ["Running it multiple times produces the same end state without unwanted side effects", "It can only run once", "It always installs new packages", "It requires root on the control node"],
+    options: ["Running it multiple times produces the same end state without unwanted side effects","It can only run once","It always installs new packages","It requires root on the control node"],
     correct: 0,
     explanation: "Idempotence: applying the playbook repeatedly converges to the same desired state — modules only change the device when the actual state differs from the declared state.",
     tags: []
@@ -2864,7 +2396,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In an Ansible inventory, what is the role of a group?",
-    options: ["It organizes hosts so plays can target sets of devices with shared variables", "It encrypts passwords", "It stores vaulted secrets", "It defines the SSH port only"],
+    options: ["It organizes hosts so plays can target sets of devices with shared variables","It encrypts passwords","It stores vaulted secrets","It defines the SSH port only"],
     correct: 0,
     explanation: "Groups in the inventory aggregate hosts (e.g., [routers], [switches]) letting plays target collections and assign group-level variables.",
     tags: []
@@ -2876,7 +2408,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "Which Cisco tool provides service orchestration for multi-vendor networks using YANG models?",
-    options: ["Cisco NSO (Network Services Orchestrator)", "Cisco Meraki", "Cisco Webex", "Cisco Umbrella"],
+    options: ["Cisco NSO (Network Services Orchestrator)","Cisco Meraki","Cisco Webex","Cisco Umbrella"],
     correct: 0,
     explanation: "NSO builds service models on YANG and orchestrates configuration across multi-vendor device fleets with a transactional database.",
     tags: []
@@ -2888,7 +2420,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which Cisco tool is a Python-based testing framework used for automated network validation and regression testing?",
-    options: ["pyATS with Genie", "Cisco Modeling Labs", "Cisco NSO", "Terraform"],
+    options: ["pyATS with Genie","Cisco Modeling Labs","Cisco NSO","Terraform"],
     correct: 0,
     explanation: "pyATS (with Genie parsers) is Cisco's Python test/automation framework for building structured network test cases and validations; CML is a network simulation platform.",
     tags: []
@@ -2900,7 +2432,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "easy",
     question: "What is the primary purpose of Cisco Modeling Labs (CML) in a development workflow?",
-    options: ["Simulate network topologies of real Cisco images for testing before production", "Replace physical firewalls in production", "Provide endpoint malware analysis", "Store API keys"],
+    options: ["Simulate network topologies of real Cisco images for testing before production","Replace physical firewalls in production","Provide endpoint malware analysis","Store API keys"],
     correct: 0,
     explanation: "CML runs virtual network topologies (IOS XE, NX-OS, ASA images) so automation and changes can be validated safely before touching production.",
     tags: []
@@ -2912,7 +2444,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which is an advantage of controller-level management over device-by-device management?",
-    options: ["A single API abstracts many devices, enabling intent-based, scalable operations", "It requires logging into each device individually", "It only supports Telnet", "It eliminates the need for IP addressing"],
+    options: ["A single API abstracts many devices, enabling intent-based, scalable operations","It requires logging into each device individually","It only supports Telnet","It eliminates the need for IP addressing"],
     correct: 0,
     explanation: "Controllers (Meraki, Catalyst Center, SD-WAN) expose northbound APIs over whole fleets — one call affects many devices, versus per-device CLI/SSH sessions.",
     tags: []
@@ -2924,7 +2456,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In a YANG model, what does a 'container' statement define?",
-    options: ["A hierarchical grouping of related data nodes", "A Docker image", "A transport protocol", "An error message"],
+    options: ["A hierarchical grouping of related data nodes","A Docker image","A transport protocol","An error message"],
     correct: 0,
     explanation: "YANG containers group related nodes in the schema tree (like an object); lists define repeating entries, leaves hold values.",
     tags: []
@@ -2936,7 +2468,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which HTTP method and content type would you use with RESTCONF to modify an existing interface configuration?",
-    options: ["PUT or PATCH with application/yang-data+json", "GET with text/html", "POST with application/xml only", "DELETE with application/octet-stream"],
+    options: ["PUT or PATCH with application/yang-data+json","GET with text/html","POST with application/xml only","DELETE with application/octet-stream"],
     correct: 0,
     explanation: "RESTCONF uses PUT/PATCH on data resources with YANG-modeled payloads — application/yang-data+json or application/yang-data+xml.",
     tags: []
@@ -2948,7 +2480,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which transport and port does NETCONF use by default?",
-    options: ["SSH on port 830", "HTTPS on port 443", "Telnet on port 23", "TLS on port 6513"],
+    options: ["SSH on port 830","HTTPS on port 443","Telnet on port 23","TLS on port 6513"],
     correct: 0,
     explanation: "NETCONF runs over SSH, historically on TCP port 830. RESTCONF uses HTTPS (443).",
     tags: []
@@ -2960,7 +2492,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In a CI/CD pipeline for infrastructure automation, what does the 'continuous integration' stage typically include?",
-    options: ["Linting, unit tests, and validation of infrastructure code on every commit", "Manually configuring devices via CLI", "Only nightly backups", "Deleting old configurations"],
+    options: ["Linting, unit tests, and validation of infrastructure code on every commit","Manually configuring devices via CLI","Only nightly backups","Deleting old configurations"],
     correct: 0,
     explanation: "CI runs automated checks (lint, unit/integration tests, plan validation) on every commit so broken changes fail fast before merging or deploying.",
     tags: []
@@ -2972,21 +2504,9 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "Which software development method delivers work in short iterations with continuous customer feedback?",
-    options: ["Agile", "Waterfall", "Lean six sigma define-measure only", "Big bang"],
+    options: ["Agile","Waterfall","Lean six sigma define-measure only","Big bang"],
     correct: 0,
     explanation: "Agile organizes work into short sprints/iterations with frequent delivery and feedback; waterfall is sequential with single late delivery.",
-    tags: []
-  },
-  {
-    id: 249,
-    type: "multiple-choice",
-    domain: "Software Development and Design",
-    domainKey: "software",
-    difficulty: "medium",
-    question: "What is the primary advantage of organizing code into modules and functions?",
-    options: ["Reusability, testability, and separation of concerns that make maintenance easier", "It makes scripts run faster in all cases", "It removes the need for documentation", "It prevents all runtime errors"],
-    correct: 0,
-    explanation: "Modular code isolates responsibilities, enabling reuse across scripts, targeted unit tests, and easier maintenance/debugging.",
     tags: []
   },
   {
@@ -2996,7 +2516,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Git command integrates changes from one branch into another and is also used to resolve conflicts interactively?",
-    options: ["git merge", "git clone", "git fetch --all --prune", "git stash"],
+    options: ["git merge","git clone","git fetch --all --prune","git stash"],
     correct: 0,
     explanation: "git merge integrates branch histories; when conflicts arise, they are resolved in the working tree and the merge is committed.",
     tags: []
@@ -3008,7 +2528,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does this script print?",
-    options: ["Device A, Device B", "[]", "None", "Raises an exception"],
+    options: ["Device A, Device B","[]","None","Raises an exception"],
     correct: 0,
     explanation: "The list of device names is extracted with a list comprehension over the response JSON, so it prints the two device names joined by a comma.",
     code: "import requests\n\nresp = requests.get('https://api.example.com/v1/devices',\n                    headers={'Accept': 'application/json'})\ndevices = resp.json()['items']\nnames = [d['name'] for d in devices]\nprint(', '.join(names))\n\n# resp.json() returns:\n# {\"items\": [{\"name\": \"Device A\"}, {\"name\": \"Device B\"}]}",
@@ -3022,7 +2542,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which line correctly extracts the token from this JSON response?",
-    options: ["data['token']", "data->token", "data.token", "data{token}"],
+    options: ["data['token']","data->token","data.token","data{token}"],
     correct: 0,
     explanation: "JSON parsed with json.loads() or resp.json() becomes a Python dict; keys are accessed with square brackets.",
     code: "import requests\n\nresp = requests.post('https://api.example.com/auth',\n                     json={'username': 'admin', 'password': 'cisco'})\ndata = resp.json()\n# Response body: {\"token\": \"eyJhb...\", \"expires\": 3600}\ntoken = ___",
@@ -3036,7 +2556,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "What does this Python function return when called with f(4)?",
-    options: ["24", "10", "16", "64"],
+    options: ["24","10","16","64"],
     correct: 0,
     explanation: "This is a recursive factorial: 4 * 3 * 2 * 1 = 24. The base case returns 1 when n <= 1.",
     code: "def f(n):\n    if n <= 1:\n        return 1\n    return n * f(n - 1)\n\nprint(f(4))",
@@ -3050,7 +2570,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which output does this list comprehension produce?",
-    options: ["[0, 2, 4, 6, 8]", "[0, 1, 2, 3, 4]", "[2, 4, 6, 8, 10]", "[1, 3, 5, 7, 9]"],
+    options: ["[0, 2, 4, 6, 8]","[0, 1, 2, 3, 4]","[2, 4, 6, 8, 10]","[1, 3, 5, 7, 9]"],
     correct: 0,
     explanation: "range(5) yields 0-4; each value is multiplied by 2, giving [0, 2, 4, 6, 8].",
     code: "result = [x * 2 for x in range(5)]\nprint(result)",
@@ -3064,7 +2584,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Why does this class raise an error when get_ip() is called?",
-    options: ["The constructor assigns to the local parameter instead of self.ip, so the attribute never exists on the instance", "Nothing, it works as intended", "Classes cannot have methods", "__init__ cannot take parameters"],
+    options: ["The constructor assigns to the local parameter instead of self.ip, so the attribute never exists on the instance","Nothing, it works as intended","Classes cannot have methods","__init__ cannot take parameters"],
     correct: 0,
     explanation: "'name = name' only rebinds the local parameter. Attributes must be assigned to the instance: self.ip = ip.",
     code: "class Device:\n    def __init__(self, name, ip):\n        name = name\n        # BUG: ip never stored on self\n\n    def get_ip(self):\n        return self.ip  # raises AttributeError\n\nd = Device('r1', '10.0.0.1')\nprint(d.get_ip())",
@@ -3078,7 +2598,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which requests call correctly sends this JSON body?",
-    options: ["requests.post(url, json={'name': 'vlan10'})", "requests.post(url, body='vlan10')", "requests.post(url, data='vlan10')", "requests.send(url, json={'name': 'vlan10'})"],
+    options: ["requests.post(url, json={'name': 'vlan10'})","requests.post(url, body='vlan10')","requests.post(url, data='vlan10')","requests.send(url, json={'name': 'vlan10'})"],
     correct: 0,
     explanation: "The json= parameter serializes a Python dict to a JSON body and sets Content-Type: application/json automatically.",
     code: "import requests\n\nurl = 'https://api.example.com/v1/vlans'\n# Goal: POST {\"name\": \"vlan10\"} as JSON\nresp = ___",
@@ -3092,7 +2612,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What HTTP status code does this server response represent?",
-    options: ["404 Not Found", "200 OK", "500 Server Error", "301 Redirect"],
+    options: ["404 Not Found","200 OK","500 Server Error","301 Redirect"],
     correct: 0,
     explanation: "404 means the requested resource (the device with that ID) does not exist on the server.",
     code: "HTTP/1.1 404 NOT FOUND\nContent-Type: application/json\n\n{\n  \"error\": \"device id-99 not found\",\n  \"code\": \"RESOURCE_MISSING\"\n}",
@@ -3106,7 +2626,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "A script gets HTTP 401 on every call. Which header fix is most likely correct?",
-    options: ["Replace the malformed Authorization header with 'Authorization: Bearer <valid-token>'", "Add Content-Length: 0", "Change Accept to text/plain", "Switch the URL to HTTP port 80"],
+    options: ["Replace the malformed Authorization header with 'Authorization: Bearer <valid-token>'","Add Content-Length: 0","Change Accept to text/plain","Switch the URL to HTTP port 80"],
     correct: 0,
     explanation: "401 Unauthorized indicates missing or invalid credentials. A correctly formed Authorization header with a valid bearer token resolves it.",
     code: "import requests\n\n# Current (broken) request:\nresp = requests.get('https://api.example.com/v1/interfaces',\n                    headers={'Authorization': 'token'})\nprint(resp.status_code)  # 401\n\n# Fix the headers:",
@@ -3120,7 +2640,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does this NETCONF RPC retrieve?",
-    options: ["All interface configuration and state data", "Only interface counters", "The running-config as plain text", "The list of YANG models"],
+    options: ["All interface configuration and state data","Only interface counters","The running-config as plain text","The list of YANG models"],
     correct: 0,
     explanation: "The <get> operation with an empty interfaces filter returns both configuration and operational state for all interfaces.",
     code: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rpc message-id=\"101\"\n     xmlns=\"urn:ietf:params:xml:ns:netconf:base:1.0\">\n  <get>\n    <filter>\n      <interfaces xmlns=\"urn:ietf:params:xml:ns:yang:ietf-interfaces\"/>\n    </filter>\n  </get>\n</rpc>",
@@ -3134,7 +2654,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which curl command matches this RESTCONF query?",
-    options: ["curl -u admin:cisco -H 'Accept: application/yang-data+json' https://10.0.0.1/restconf/data/ietf-interfaces:interfaces", "curl -X POST https://10.0.0.1/restconf/data", "curl https://10.0.0.1/restconf (no headers)", "curl -d '{\"interfaces\":{}}' https://10.0.0.1/restconf"],
+    options: ["curl -u admin:cisco -H 'Accept: application/yang-data+json' https://10.0.0.1/restconf/data/ietf-interfaces:interfaces","curl -X POST https://10.0.0.1/restconf/data","curl https://10.0.0.1/restconf (no headers)","curl -d '{\"interfaces\":{}}' https://10.0.0.1/restconf"],
     correct: 0,
     explanation: "A GET on the data resource with YANG+JSON Accept header and basic auth replicates the shown request exactly.",
     code: "GET /restconf/data/ietf-interfaces:interfaces HTTP/1.1\nHost: 10.0.0.1\nAuthorization: Basic YWRtaW46Y2lzY28=\nAccept: application/yang-data+json",
@@ -3148,7 +2668,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which line in this Dockerfile copies only the dependency manifest first to leverage layer caching?",
-    options: ["COPY requirements.txt .", "COPY . .", "WORKDIR /app", "CMD [\"python\", \"app.py\"]"],
+    options: ["COPY requirements.txt .","COPY . .","WORKDIR /app","CMD [\"python\", \"app.py\"]"],
     correct: 0,
     explanation: "Copying requirements.txt before the rest of the code means dependency installs are cached unless the manifest changes — a core Docker best practice.",
     code: "FROM python:3.9-slim\n\nWORKDIR /app\n\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\nCOPY . .\n\nEXPOSE 8000\nCMD [\"python\", \"app.py\"]",
@@ -3162,7 +2682,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What does the CMD instruction in this Dockerfile do?",
-    options: ["Defines the default command executed when a container starts from the image", "Runs during image build", "Copies files into the image", "Opens port 8000 on the host"],
+    options: ["Defines the default command executed when a container starts from the image","Runs during image build","Copies files into the image","Opens port 8000 on the host"],
     correct: 0,
     explanation: "CMD sets the default runtime command; RUN executes at build time. EXPOSE documents the port but does not publish it to the host.",
     code: "FROM python:3.9-slim\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nEXPOSE 8000\nCMD [\"python\", \"app.py\"]",
@@ -3176,7 +2696,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does this Ansible task do?",
-    options: ["Ensures GigabitEthernet0/1 has the given description and IP, and is enabled, only changing what differs", "Restarts the router", "Creates a new user on routers", "Deletes interface configuration"],
+    options: ["Ensures GigabitEthernet0/1 has the given description and IP, and is enabled, only changing what differs","Restarts the router","Creates a new user on routers","Deletes interface configuration"],
     correct: 0,
     explanation: "ios_config with parents converges the interface to the declared lines; Ansible modules are idempotent — no change if the config already matches.",
     code: "---\n- name: Configure uplink\n  hosts: routers\n  gather_facts: no\n  tasks:\n    - name: Configure GigabitEthernet0/1\n      cisco.ios.ios_config:\n        lines:\n          - description Uplink to Core\n          - ip address 10.0.0.1 255.255.255.0\n          - no shutdown\n        parents: interface GigabitEthernet0/1",
@@ -3190,7 +2710,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In this playbook, what does 'hosts: routers' reference?",
-    options: ["A group defined in the Ansible inventory", "A YAML list of tasks", "The Ansible control node", "A Docker network"],
+    options: ["A group defined in the Ansible inventory","A YAML list of tasks","The Ansible control node","A Docker network"],
     correct: 0,
     explanation: "The play targets the 'routers' group from the inventory file, running the tasks on every host in that group.",
     code: "---\n- name: Gather version\n  hosts: routers\n  gather_facts: no\n  tasks:\n    - name: Show version\n      cisco.ios.ios_command:\n        commands:\n          - show version\n      register: output\n\n    - name: Save output\n      copy:\n        content: \"{{ output.stdout[0] }}\"\n        dest: \"./backups/{{ inventory_hostname }}.txt\"",
@@ -3204,7 +2724,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which value does this JSON parse to?",
-    options: ["core-sw01", "[\"core-sw01\"]", "sw01", "KeyError"],
+    options: ["core-sw01","[\"core-sw01\"]","sw01","KeyError"],
     correct: 0,
     explanation: "devices is a list with one object; devices[0] gets that object, ['hostname'] its hostname value — a plain string.",
     code: "import json\n\npayload = '''\n{\n  \"devices\": [\n    {\"hostname\": \"core-sw01\", \"ip\": \"10.0.0.2\", \"role\": \"core\"}\n  ]\n}\n'''\ndata = json.loads(payload)\nprint(data['devices'][0]['hostname'])",
@@ -3218,7 +2738,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which YAML snippet is equivalent to this JSON?",
-    options: ["devices:\\n  - name: r1\\n    ip: 10.0.0.1\\n  - name: r2\\n    ip: 10.0.0.2", "devices: [r1, r2] only", "devices: r1 r2", "name: r1; ip: 10.0.0.1;"],
+    options: ["devices:\\n  - name: r1\\n    ip: 10.0.0.1\\n  - name: r2\\n    ip: 10.0.0.2","devices: [r1, r2] only","devices: r1 r2","name: r1; ip: 10.0.0.1;"],
     correct: 0,
     explanation: "A JSON array of objects maps to a YAML list of mappings: '- ' entries with indented fields.",
     code: "{\n  \"devices\": [\n    {\"name\": \"r1\", \"ip\": \"10.0.0.1\"},\n    {\"name\": \"r2\", \"ip\": \"10.0.0.2\"}\n  ]\n}",
@@ -3232,7 +2752,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "What does this Python script output?",
-    options: ["[('r1', 22), ('r2', 22)]", "['r1', 'r2']", "22", "TypeError"],
+    options: ["[('r1', 22), ('r2', 22)]","['r1', 'r2']","22","TypeError"],
     correct: 0,
     explanation: "zip pairs iterables element-wise: (r1, 22) and (r2, 22). list() materializes the pairs as tuples.",
     code: "hosts = ['r1', 'r2']\nports = [22, 22]\nprint(list(zip(hosts, ports)))",
@@ -3246,7 +2766,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "What is the result of running this Git sequence?",
-    options: ["The feature branch is merged into main; if the same lines changed on both, merge conflicts must be resolved first", "main is deleted", "feature is rebased onto origin automatically", "Nothing happens without a remote"],
+    options: ["The feature branch is merged into main; if the same lines changed on both, merge conflicts must be resolved first","main is deleted","feature is rebased onto origin automatically","Nothing happens without a remote"],
     correct: 0,
     explanation: "git merge feature integrates the branch into main. Divergent edits to the same lines stop the merge until conflicts are manually resolved and committed.",
     code: "# Current repo state:\n#   main:    A --- B --- D\n#                \\\n#   feature:       C\n\ngit checkout main\ngit merge feature\n# Both B and C modified line 10 of config.py",
@@ -3260,7 +2780,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What change does this diff hunk show?",
-    options: ["A static route's next hop changed from 10.0.0.2 to 10.0.0.3", "Two routes were added", "The interface was shut down", "Nothing changed"],
+    options: ["A static route's next hop changed from 10.0.0.2 to 10.0.0.3","Two routes were added","The interface was shut down","Nothing changed"],
     correct: 0,
     explanation: "The '-' line removes the old route (next hop 10.0.0.2) and the '+' line adds the new one (10.0.0.3). Context lines stay unchanged.",
     code: "@@ -14,3 +14,3 @@\n   interface GigabitEthernet0/1\n-  no ip route 10.2.0.0 255.255.255.0 10.0.0.2\n+  ip route 10.2.0.0 255.255.255.0 10.0.0.3\n !",
@@ -3274,7 +2794,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which vulnerability does this endpoint have, and what is the fix?",
-    options: ["SQL injection; use parameterized queries", "XSS; escape HTML", "Open redirect; validate URLs", "Clickjacking; add frame headers"],
+    options: ["SQL injection; use parameterized queries","XSS; escape HTML","Open redirect; validate URLs","Clickjacking; add frame headers"],
     correct: 0,
     explanation: "String-concatenating user input into SQL allows injection. Parameterized queries bind input as data, never as SQL code.",
     code: "# Flask endpoint\n@app.route('/device')\ndef get_device():\n    device_id = request.args.get('id')\n    query = \"SELECT * FROM devices WHERE id = \" + device_id\n    return db.execute(query).fetchall()",
@@ -3288,7 +2808,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does this Webex API call do?",
-    options: ["Posts a markdown message to the room with the given roomId", "Creates a new room", "Deletes a message", "Lists room members"],
+    options: ["Posts a markdown message to the room with the given roomId","Creates a new room","Deletes a message","Lists room members"],
     correct: 0,
     explanation: "POST /v1/messages with a roomId and either text or markdown sends a message to that room.",
     code: "import requests\n\nresp = requests.post(\n    'https://webexapis.com/v1/messages',\n    headers={'Authorization': 'Bearer ' + TOKEN},\n    json={\n        'roomId': 'Y2lzY29zcGFyazovL3...',\n        'markdown': '**Alert**: interface Gig0/1 is down'\n    }\n)\nprint(resp.status_code)",
@@ -3302,7 +2822,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What does this Meraki call return?",
-    options: ["The list of clients seen on network N_123 in the given timespan", "All organizations", "A single device by serial", "The network's firewall rules"],
+    options: ["The list of clients seen on network N_123 in the given timespan","All organizations","A single device by serial","The network's firewall rules"],
     correct: 0,
     explanation: "GET /networks/{id}/clients with t0/timespan query parameters returns clients observed in that window.",
     code: "GET https://api.meraki.com/api/v1/networks/N_123/clients?t0=2026-08-01T00:00:00Z&timespan=86400\nAuthorization: Bearer <key>\nAccept: application/json",
@@ -3316,7 +2836,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which RESTCONF path reads the hostname from the IOS XE native model?",
-    options: ["/restconf/data/Cisco-IOS-XE-native:native/hostname", "/restconf/data/ietf-interfaces:interfaces/hostname", "/restconf/operations/hostname", "/restconf/data/openconfig-system:hostname"],
+    options: ["/restconf/data/Cisco-IOS-XE-native:native/hostname","/restconf/data/ietf-interfaces:interfaces/hostname","/restconf/operations/hostname","/restconf/data/openconfig-system:hostname"],
     correct: 0,
     explanation: "hostname lives under the Cisco-IOS-XE-native model's native container on IOS XE RESTCONF.",
     code: "# IOS XE RESTCONF\nGET ___\nHost: 10.0.0.1\nAccept: application/yang-data+json\n\n# Expected response:\n# { \"Cisco-IOS-XE-native:hostname\": \"r1\" }",
@@ -3330,7 +2850,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which unit test properly asserts the 404 handling?",
-    options: ["self.assertEqual(get_status(mock_resp), 'not-found')", "print(get_status(mock_resp))", "get_status(mock_resp)", "assert get_status is not None"],
+    options: ["self.assertEqual(get_status(mock_resp), 'not-found')","print(get_status(mock_resp))","get_status(mock_resp)","assert get_status is not None"],
     correct: 0,
     explanation: "Unit tests must assert expected outcomes; printing or calling without assertion verifies nothing.",
     code: "import unittest\nfrom client import get_status\n\nclass TestGetStatus(unittest.TestCase):\n    def test_not_found(self):\n        mock_resp = {'code': 404}\n        self.assertEqual(get_status(mock_resp), 'not-found')\n\nif __name__ == '__main__':\n    unittest.main()",
@@ -3344,7 +2864,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does this Terraform snippet declare?",
-    options: ["The Cisco Catalyst Center provider and the base URL it connects to", "An Ansible inventory", "A Docker registry", "A Kubernetes cluster"],
+    options: ["The Cisco Catalyst Center provider and the base URL it connects to","An Ansible inventory","A Docker registry","A Kubernetes cluster"],
     correct: 0,
     explanation: "The terraform block pins provider versions; provider \"dnacenter\" configures the base URL for the Catalyst Center Terraform provider.",
     code: "terraform {\n  required_providers {\n    dnacenter = {\n      source  = \"cisco-en-programmability/dnacenter\"\n      version = \"~> 1.0\"\n    }\n  }\n}\n\nprovider \"dnacenter\" {\n  base_url = \"https://catalyst-center.example.com\"\n}",
@@ -3358,7 +2878,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "What does this code print?",
-    options: ["20", "10", "30", "16"],
+    options: ["20","10","30","16"],
     correct: 0,
     explanation: "range(1,5) yields 1-4; the filter keeps evens 2 and 4; their squares 4 and 16 sum to 20.",
     code: "total = sum(x**2 for x in range(1, 5) if x % 2 == 0)\nprint(total)",
@@ -3372,7 +2892,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which code correctly implements retry with exponential backoff for this API call?",
-    options: ["Loop with sleep = 2**attempt on non-200 responses", "while True with no sleep", "Single try/except only", "Increase timeout to 3600 and never retry"],
+    options: ["Loop with sleep = 2**attempt on non-200 responses","while True with no sleep","Single try/except only","Increase timeout to 3600 and never retry"],
     correct: 0,
     explanation: "Exponential backoff (1s, 2s, 4s, 8s) between retries avoids hammering a struggling API and gives transient failures time to recover.",
     code: "import requests, time\n\ndef get_with_retry(url, headers, max_retries=4):\n    for attempt in range(max_retries):\n        resp = requests.get(url, headers=headers)\n        if resp.status_code == 200:\n            return resp.json()\n        time.sleep(2 ** attempt)  # 1s, 2s, 4s, 8s\n    raise RuntimeError('API unreachable after retries')",
@@ -3386,7 +2906,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which Bash snippet creates a directory, enters it, and sets an environment variable?",
-    options: ["mkdir -p app && cd app && export APP_ENV=prod", "cd app || mkdir app", "set APP_ENV prod; mkdir", "export cd app"],
+    options: ["mkdir -p app && cd app && export APP_ENV=prod","cd app || mkdir app","set APP_ENV prod; mkdir","export cd app"],
     correct: 0,
     explanation: "mkdir -p creates (no error if exists), cd enters it, export makes APP_ENV available to child processes.",
     code: "#!/bin/bash\n# Create project dir and set environment\n___\necho \"ENV=$APP_ENV in $(pwd)\"",
@@ -3400,7 +2920,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does this pyATS test verify?",
-    options: ["That OSPF neighbors are present and in the FULL state", "That the device reloads", "That interfaces are shut down", "That BGP is configured"],
+    options: ["That OSPF neighbors are present and in the FULL state","That the device reloads","That interfaces are shut down","That BGP is configured"],
     correct: 0,
     explanation: "The assertions check that OSPF neighbors exist and each is in the 'full' state, parsed from 'show ip ospf neighbor'.",
     code: "from pyats.topology import loader\n\ntestbed = loader.load('testbed.yaml')\n\ndef test_ospf_neighbors(device):\n    output = device.parse('show ip ospf neighbor')\n    assert output, 'No OSPF neighbors found'\n    for nbr in output['instances'].values():\n        for state in nbr.values():\n            assert state.get('state') == 'full'",
@@ -3414,7 +2934,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which output does this Bash pipeline produce for the shown file?",
-    options: ["3", "1", "10", "GigabitEthernet0/1"],
+    options: ["3","1","10","GigabitEthernet0/1"],
     correct: 0,
     explanation: "grep filters lines containing 'GigabitEthernet' and wc -l counts them: 3 matching lines.",
     code: "# interfaces.log contains:\n# GigabitEthernet0/1 - up\n# GigabitEthernet0/2 - down\n# Tunnel0 - up\n# GigabitEthernet0/3 - up\n\ngrep GigabitEthernet interfaces.log | wc -l",
@@ -3428,7 +2948,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What does this Catalyst Center API sequence accomplish?",
-    options: ["Authenticates to get a token, then retrieves the device list", "Deletes all devices", "Restarts the controller", "Creates a new site"],
+    options: ["Authenticates to get a token, then retrieves the device list","Deletes all devices","Restarts the controller","Creates a new site"],
     correct: 0,
     explanation: "POST /dna/system/api/v1/auth/token issues a token; the GET /dna/intent/api/v1/network-device call uses it via X-Auth-Token to list devices.",
     code: "import requests\nimport urllib3\nurllib3.disable_warnings()\n\nBASE = 'https://catalyst-center.example.com'\nauth = requests.post(BASE + '/dna/system/api/v1/auth/token',\n                     auth=('admin', 'password'), verify=False)\ntoken = auth.json()['Token']\n\ndevices = requests.get(BASE + '/dna/intent/api/v1/network-device',\n                       headers={'X-Auth-Token': token}, verify=False)\nfor d in devices.json()['response']:\n    print(d['hostname'], d['managementIpAddress'])",
@@ -3442,7 +2962,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which OWASP threat does this code demonstrate and how is it fixed?",
-    options: ["XSS; escape user input before rendering in HTML", "SQLi; parameterize", "CSRF; token", "IDOR; authorization check"],
+    options: ["XSS; escape user input before rendering in HTML","SQLi; parameterize","CSRF; token","IDOR; authorization check"],
     correct: 0,
     explanation: "The template interpolates raw user input into HTML, enabling script injection. Escaping/autoescaping output neutralizes injected markup.",
     code: "# Flask\n@app.route('/greet')\ndef greet():\n    name = request.args.get('name', '')\n    return \"<h1>Hello \" + name + \"!</h1>\"\n\n# Attacker: /greet?name=<script>steal()</script>",
@@ -3456,7 +2976,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "What Git command produced this diff view?",
-    options: ["git diff", "git status", "git log", "git clone"],
+    options: ["git diff","git status","git log","git clone"],
     correct: 0,
     explanation: "git diff shows unified-format differences between the working tree and the index/HEAD, exactly as displayed.",
     code: "$ git ___\ndiff --git a/config.yaml b/config.yaml\nindex 83db48f..9f2cab1 100644\n--- a/config.yaml\n+++ b/config.yaml\n@@ -1,4 +1,4 @@\n timeout: 30\n-region: us-east-1\n+region: eu-west-1\n retries: 3",
@@ -3470,7 +2990,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does this RESTCONF response tell you?",
-    options: ["Interface GigabitEthernet1 is enabled and up with MTU 1500", "The interface is admin-down", "MTU failed to apply", "The device rebooted"],
+    options: ["Interface GigabitEthernet1 is enabled and up with MTU 1500","The interface is admin-down","MTU failed to apply","The device rebooted"],
     correct: 0,
     explanation: "enabled: true plus oper-status up and MTU 1500 confirm the interface state as queried.",
     code: "{\n  \"ietf-interfaces:interface\": {\n    \"name\": \"GigabitEthernet1\",\n    \"description\": \"Uplink\",\n    \"enabled\": true,\n    \"ietf-ip:ipv4\": {\n      \"address\": [{\"ip\": \"10.0.0.1\", \"netmask\": \"255.255.255.0\"}]\n    },\n    \"mtu\": 1500,\n    \"oper-status\": \"up\"\n  }\n}",
@@ -3484,7 +3004,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "Which pattern correctly implements pagination over this API?",
-    options: ["Loop incrementing the page parameter until a page returns fewer than page_size items", "Request page=999999 once", "Download everything and filter client-side each time", "Ignore pagination fields"],
+    options: ["Loop incrementing the page parameter until a page returns fewer than page_size items","Request page=999999 once","Download everything and filter client-side each time","Ignore pagination fields"],
     correct: 0,
     explanation: "Standard page/size pagination loops until a short page signals the final batch.",
     code: "import requests\n\ndef get_all_devices(base_url, headers):\n    devices, page = [], 1\n    while True:\n        resp = requests.get(base_url,\n                            headers=headers,\n                            params={'page': page, 'page_size': 100}).json()\n        devices.extend(resp['results'])\n        if len(resp['results']) < 100:\n            return devices\n        page += 1",
@@ -3498,7 +3018,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which line leaks the secret in this script?",
-    options: ["print(f\"Connecting with {PASSWORD}\")", "os.environ.get('APP_PASSWORD')", "getpass.getpass()", "exit(0)"],
+    options: ["print(f\"Connecting with {PASSWORD}\")","os.environ.get('APP_PASSWORD')","getpass.getpass()","exit(0)"],
     correct: 0,
     explanation: "Printing secrets to stdout leaks them into logs. Secrets should stay in env vars or vaults and never be echoed.",
     code: "import os, getpass\n\nPASSWORD = os.environ.get('APP_PASSWORD') or getpass.getpass()\n\ndef connect(host):\n    print(f\"Connecting with {PASSWORD}\")  # BUG\n    return open_connection(host, PASSWORD)",
@@ -3512,7 +3032,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Why does the host fail to reach 10.2.0.5 based on this routing table?",
-    options: ["There is no route covering 10.2.0.0/24 and no default gateway, so the destination is unreachable", "DNS is not configured", "The ARP cache is full", "The VLAN tag is wrong"],
+    options: ["There is no route covering 10.2.0.0/24 and no default gateway, so the destination is unreachable","DNS is not configured","The ARP cache is full","The VLAN tag is wrong"],
     correct: 0,
     explanation: "Without a matching route (specific or default), the kernel has no forwarding decision and reports 'Network is unreachable'.",
     code: "Host routing table:\nDestination     Gateway         Iface\n10.0.0.0/24     0.0.0.0         eth0\n127.0.0.0/8     0.0.0.0         lo\n\n$ ping 10.2.0.5\nping: connect: Network is unreachable",
@@ -3526,7 +3046,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which troubleshooting step first isolates this connectivity failure?",
-    options: ["Ping the default gateway to verify local Layer 3 reachability", "Reboot the application server", "Change the DNS server", "Disable the host firewall permanently"],
+    options: ["Ping the default gateway to verify local Layer 3 reachability","Reboot the application server","Change the DNS server","Disable the host firewall permanently"],
     correct: 0,
     explanation: "If the gateway is unreachable, the problem is local (VLAN, cabling, IP config); if reachable, the fault is upstream — a clean binary split.",
     code: "Symptoms:\n- Host 10.0.0.50 cannot reach app at 10.2.0.10:443\n- DNS resolution works (8.8.8.8 responds)\n- ARP table shows no entry for 10.0.0.1\n\nFirst step? ___",
@@ -3540,7 +3060,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which Observer pattern benefit does this code demonstrate?",
-    options: ["Subscribers are notified automatically when the subject changes, without polling", "The class uses less memory", "Observers run in parallel threads guaranteed", "It removes all coupling"],
+    options: ["Subscribers are notified automatically when the subject changes, without polling","The class uses less memory","Observers run in parallel threads guaranteed","It removes all coupling"],
     correct: 0,
     explanation: "Registering observers that get update() called on state change decouples producers from consumers without polling loops.",
     code: "class Subject:\n    def __init__(self):\n        self._observers = []\n    def attach(self, obs):\n        self._observers.append(obs)\n    def notify(self, event):\n        for obs in self._observers:\n            obs.update(event)\n\nclass AlertService:\n    def update(self, event):\n        print(f'ALERT: {event}')\n\ns = Subject()\ns.attach(AlertService())\ns.notify('Gig0/1 down')",
@@ -3554,7 +3074,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does the 'Accept: application/json' header control here?",
-    options: ["The response format the client can process", "The request body encoding", "The authentication scheme", "The API version exclusively"],
+    options: ["The response format the client can process","The request body encoding","The authentication scheme","The API version exclusively"],
     correct: 0,
     explanation: "Accept is content negotiation: it tells the server which media types the client will accept for the response.",
     code: "GET /v1/networks/N_123/devices HTTP/1.1\nHost: api.meraki.com\nAuthorization: Bearer <key>\nAccept: application/json\n\n# Server may respond 406 if it cannot satisfy this",
@@ -3568,10 +3088,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Drag each HTTP method to its REST semantic meaning.",
+    options: undefined,
+    correct: undefined,
     explanation: "GET reads, POST creates, PUT replaces, DELETE removes — the CRUD mapping every REST API follows.",
-    dragItems: ["Retrieve data without side effects", "Create a new resource", "Fully replace a resource", "Remove a resource"],
-    dropZones: ["GET", "POST", "PUT", "DELETE"],
-    solution: {"GET": [0], "POST": [1], "PUT": [2], "DELETE": [3]},
+    dragItems: ["Retrieve data without side effects","Create a new resource","Fully replace a resource","Remove a resource"],
+    dropZones: ["GET","POST","PUT","DELETE"],
+    solution: {"GET":[0],"POST":[1],"PUT":[2],"DELETE":[3]},
     tags: []
   },
   {
@@ -3581,10 +3103,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Drag each HTTP status code to its meaning.",
+    options: undefined,
+    correct: undefined,
     explanation: "2xx success, 3xx redirect, 4xx client error (401 auth, 400 syntax, 404 missing), 5xx server error.",
-    dragItems: ["The request succeeded and a new resource was created", "The request requires authentication", "The server cannot process the request syntax", "The resource does not exist"],
-    dropZones: ["201", "401", "400", "404"],
-    solution: {"201": [0], "401": [1], "400": [2], "404": [3]},
+    dragItems: ["The request succeeded and a new resource was created","The request requires authentication","The server cannot process the request syntax","The resource does not exist"],
+    dropZones: ["201","401","400","404"],
+    solution: {"201":[0],"400":[2],"401":[1],"404":[3]},
     tags: []
   },
   {
@@ -3594,10 +3118,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Order the stages of an API request lifecycle from first to last.",
+    options: undefined,
+    correct: undefined,
     explanation: "DNS must resolve before connecting; TCP/TLS precedes sending the request; the response comes last.",
-    dragItems: ["DNS resolves the hostname", "Client builds the HTTP request", "TCP/TLS connection established", "Server returns response with status code"],
-    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
-    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    dragItems: ["DNS resolves the hostname","Client builds the HTTP request","TCP/TLS connection established","Server returns response with status code"],
+    dropZones: ["Step 1","Step 2","Step 3","Step 4"],
+    solution: {"Step 1":[0],"Step 2":[1],"Step 3":[2],"Step 4":[3]},
     tags: []
   },
   {
@@ -3607,10 +3133,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Drag each automation tool to its primary function.",
+    options: undefined,
+    correct: undefined,
     explanation: "Terraform provisions, Ansible configures, NSO orchestrates services, pyATS validates — complementary layers of the automation stack.",
-    dragItems: ["Declarative infrastructure provisioning with plan/apply", "Agentless configuration management with YAML playbooks", "Multi-vendor service orchestration built on YANG", "Python network test and validation framework"],
-    dropZones: ["Terraform", "Ansible", "Cisco NSO", "pyATS"],
-    solution: {"Terraform": [0], "Ansible": [1], "Cisco NSO": [2], "pyATS": [3]},
+    dragItems: ["Declarative infrastructure provisioning with plan/apply","Agentless configuration management with YAML playbooks","Multi-vendor service orchestration built on YANG","Python network test and validation framework"],
+    dropZones: ["Terraform","Ansible","Cisco NSO","pyATS"],
+    solution: {"Terraform":[0],"Ansible":[1],"Cisco NSO":[2],"pyATS":[3]},
     tags: []
   },
   {
@@ -3620,10 +3148,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Drag each protocol to its default port.",
+    options: undefined,
+    correct: undefined,
     explanation: "Memorize: SSH 22, Telnet 23, HTTPS 443, NETCONF over SSH 830, RESTCONF 443, SNMP 161/162.",
-    dragItems: ["SSH", "Telnet", "HTTPS", "NETCONF"],
-    dropZones: ["22", "23", "443", "830"],
-    solution: {"22": [0], "23": [1], "443": [2], "830": [3]},
+    dragItems: ["SSH","Telnet","HTTPS","NETCONF"],
+    dropZones: ["22","23","443","830"],
+    solution: {"22":[0],"23":[1],"443":[2],"830":[3]},
     tags: []
   },
   {
@@ -3633,10 +3163,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Order the encapsulation steps as data moves down the stack.",
+    options: undefined,
+    correct: undefined,
     explanation: "Encapsulation: payload, TCP segment, IP packet, Ethernet frame — each layer adding its header.",
-    dragItems: ["Application generates payload", "TCP adds port numbers (segment)", "IP adds source/destination addresses (packet)", "Ethernet adds MAC framing (frame)"],
-    dropZones: ["First", "Second", "Third", "Fourth"],
-    solution: {"First": [0], "Second": [1], "Third": [2], "Fourth": [3]},
+    dragItems: ["Application generates payload","TCP adds port numbers (segment)","IP adds source/destination addresses (packet)","Ethernet adds MAC framing (frame)"],
+    dropZones: ["First","Second","Third","Fourth"],
+    solution: {"First":[0],"Second":[1],"Third":[2],"Fourth":[3]},
     tags: []
   },
   {
@@ -3646,10 +3178,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Drag each OWASP threat to its description.",
+    options: undefined,
+    correct: undefined,
     explanation: "Four classic OWASP risks: XSS targets browsers, SQLi targets data, CSRF exploits ambient auth, IDOR exploits missing authorization.",
-    dragItems: ["Injected scripts execute in the victim's browser", "Malicious input alters database queries", "Forged requests ride the victim's session cookie", "User accesses another user's resource by changing an ID"],
-    dropZones: ["XSS", "SQL Injection", "CSRF", "Insecure Direct Object Reference"],
-    solution: {"XSS": [0], "SQL Injection": [1], "CSRF": [2], "Insecure Direct Object Reference": [3]},
+    dragItems: ["Injected scripts execute in the victim's browser","Malicious input alters database queries","Forged requests ride the victim's session cookie","User accesses another user's resource by changing an ID"],
+    dropZones: ["XSS","SQL Injection","CSRF","Insecure Direct Object Reference"],
+    solution: {"XSS":[0],"SQL Injection":[1],"CSRF":[2],"Insecure Direct Object Reference":[3]},
     tags: []
   },
   {
@@ -3659,10 +3193,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Order the stages of a CI/CD pipeline from first to last.",
+    options: undefined,
+    correct: undefined,
     explanation: "Commit triggers CI checks; artifacts are built from green builds; CD deploys and verifies health.",
-    dragItems: ["Developer commits code", "Automated tests and linting run", "Artifact is built and stored", "Deployment to production with health checks"],
-    dropZones: ["Stage 1", "Stage 2", "Stage 3", "Stage 4"],
-    solution: {"Stage 1": [0], "Stage 2": [1], "Stage 3": [2], "Stage 4": [3]},
+    dragItems: ["Developer commits code","Automated tests and linting run","Artifact is built and stored","Deployment to production with health checks"],
+    dropZones: ["Stage 1","Stage 2","Stage 3","Stage 4"],
+    solution: {"Stage 1":[0],"Stage 2":[1],"Stage 3":[2],"Stage 4":[3]},
     tags: []
   },
   {
@@ -3672,10 +3208,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Drag each Cisco platform to its domain.",
+    options: undefined,
+    correct: undefined,
     explanation: "Meraki = network mgmt, Intersight = compute, Webex = collaboration, Secure Endpoint = security.",
-    dragItems: ["Network dashboard API with organizations and networks", "Compute management via SaaS for UCS", "Collaboration messaging and rooms API", "Endpoint malware protection and threat response"],
-    dropZones: ["Meraki", "Intersight", "Webex", "Secure Endpoint"],
-    solution: {"Meraki": [0], "Intersight": [1], "Webex": [2], "Secure Endpoint": [3]},
+    dragItems: ["Network dashboard API with organizations and networks","Compute management via SaaS for UCS","Collaboration messaging and rooms API","Endpoint malware protection and threat response"],
+    dropZones: ["Meraki","Intersight","Webex","Secure Endpoint"],
+    solution: {"Meraki":[0],"Intersight":[1],"Webex":[2],"Secure Endpoint":[3]},
     tags: []
   },
   {
@@ -3685,10 +3223,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Drag each data format to its syntax feature.",
+    options: undefined,
+    correct: undefined,
     explanation: "JSON uses braces/brackets, YAML indentation/hyphens, XML angle-bracket tags; YANG is the schema language modeling NETCONF/RESTCONF data.",
-    dragItems: ["Key-value pairs with braces and colons, arrays in brackets", "Indentation-based, lists with hyphens", "Angle-bracket tags with opening/closing pairs", "Schema language defining data models for network devices"],
-    dropZones: ["JSON", "YAML", "XML", "YANG"],
-    solution: {"JSON": [0], "YAML": [1], "XML": [2], "YANG": [3]},
+    dragItems: ["Key-value pairs with braces and colons, arrays in brackets","Indentation-based, lists with hyphens","Angle-bracket tags with opening/closing pairs","Schema language defining data models for network devices"],
+    dropZones: ["JSON","YAML","XML","YANG"],
+    solution: {"JSON":[0],"YAML":[1],"XML":[2],"YANG":[3]},
     tags: []
   },
   {
@@ -3698,10 +3238,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Order the Git workflow steps for sharing a change with the team.",
+    options: undefined,
+    correct: undefined,
     explanation: "Branch, add (stage), commit, push/PR — the standard feature workflow enabling code review.",
-    dragItems: ["Create and switch to a branch", "Stage modified files", "Commit with a descriptive message", "Push the branch and open a pull request"],
-    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
-    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    dragItems: ["Create and switch to a branch","Stage modified files","Commit with a descriptive message","Push the branch and open a pull request"],
+    dropZones: ["Step 1","Step 2","Step 3","Step 4"],
+    solution: {"Step 1":[0],"Step 2":[1],"Step 3":[2],"Step 4":[3]},
     tags: []
   },
   {
@@ -3711,10 +3253,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Drag each concept to its plane or function.",
+    options: undefined,
+    correct: undefined,
     explanation: "Control decides, data forwards, management operates. NAT is a data-plane function, not a plane.",
-    dragItems: ["Builds routing/link-state tables (OSPF, STP)", "Forwards user traffic through the device", "Manages the device via SSH/API/CLI", "Translates private to public addresses (data-plane function)"],
-    dropZones: ["Control plane", "Data plane", "Management plane", "NAT"],
-    solution: {"Control plane": [0], "Data plane": [1], "Management plane": [2], "NAT": [3]},
+    dragItems: ["Builds routing/link-state tables (OSPF, STP)","Forwards user traffic through the device","Manages the device via SSH/API/CLI","Translates private to public addresses (data-plane function)"],
+    dropZones: ["Control plane","Data plane","Management plane","NAT"],
+    solution: {"Control plane":[0],"Data plane":[1],"Management plane":[2],"NAT":[3]},
     tags: []
   },
   {
@@ -3724,10 +3268,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Drag each deployment model to its attribute.",
+    options: undefined,
+    correct: undefined,
     explanation: "The four deployment models differ in tenancy, cost model, and proximity to data.",
-    dragItems: ["Dedicated infrastructure for one organization", "Shared, pay-as-you-go infrastructure operated by a provider", "Combination of on-premises and public cloud", "Computation near data sources to reduce latency"],
-    dropZones: ["Private cloud", "Public cloud", "Hybrid cloud", "Edge computing"],
-    solution: {"Private cloud": [0], "Public cloud": [1], "Hybrid cloud": [2], "Edge computing": [3]},
+    dragItems: ["Dedicated infrastructure for one organization","Shared, pay-as-you-go infrastructure operated by a provider","Combination of on-premises and public cloud","Computation near data sources to reduce latency"],
+    dropZones: ["Private cloud","Public cloud","Hybrid cloud","Edge computing"],
+    solution: {"Private cloud":[0],"Public cloud":[1],"Hybrid cloud":[2],"Edge computing":[3]},
     tags: []
   },
   {
@@ -3737,10 +3283,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Order the steps for consuming a documented REST API in Python.",
+    options: undefined,
+    correct: undefined,
     explanation: "Docs, credentials, request, parse/handle: the consumption workflow tested in section 2.",
-    dragItems: ["Read the API docs to find the endpoint and auth scheme", "Obtain credentials or a token", "Send the request with requests and correct headers", "Parse the response and handle errors by status code"],
-    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
-    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    dragItems: ["Read the API docs to find the endpoint and auth scheme","Obtain credentials or a token","Send the request with requests and correct headers","Parse the response and handle errors by status code"],
+    dropZones: ["Step 1","Step 2","Step 3","Step 4"],
+    solution: {"Step 1":[0],"Step 2":[1],"Step 3":[2],"Step 4":[3]},
     tags: []
   },
   {
@@ -3750,10 +3298,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Drag each YANG/NETCONF concept to its description.",
+    options: undefined,
+    correct: undefined,
     explanation: "YANG models the data; NETCONF and RESTCONF transport it; containers structure it hierarchically.",
-    dragItems: ["Schema language defining the data model tree", "Transport protocol over SSH port 830 with XML RPCs", "HTTP-based protocol using YANG models", "YANG statement grouping related data nodes"],
-    dropZones: ["YANG", "NETCONF", "RESTCONF", "container"],
-    solution: {"YANG": [0], "NETCONF": [1], "RESTCONF": [2], "container": [3]},
+    dragItems: ["Schema language defining the data model tree","Transport protocol over SSH port 830 with XML RPCs","HTTP-based protocol using YANG models","YANG statement grouping related data nodes"],
+    dropZones: ["YANG","NETCONF","RESTCONF","container"],
+    solution: {"YANG":[0],"NETCONF":[1],"RESTCONF":[2],"container":[3]},
     tags: []
   },
   {
@@ -3763,10 +3313,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Order the DHCP DORA process from first to last.",
+    options: undefined,
+    correct: undefined,
     explanation: "DORA: Discover, Offer, Request, Acknowledge — the four-step DHCP lease process.",
-    dragItems: ["Client broadcasts Discover", "Server offers an address", "Client requests the offered address", "Server acknowledges and leases the address"],
-    dropZones: ["Message 1", "Message 2", "Message 3", "Message 4"],
-    solution: {"Message 1": [0], "Message 2": [1], "Message 3": [2], "Message 4": [3]},
+    dragItems: ["Client broadcasts Discover","Server offers an address","Client requests the offered address","Server acknowledges and leases the address"],
+    dropZones: ["Message 1","Message 2","Message 3","Message 4"],
+    solution: {"Message 1":[0],"Message 2":[1],"Message 3":[2],"Message 4":[3]},
     tags: []
   },
   {
@@ -3776,10 +3328,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Drag each Docker concept to its definition.",
+    options: undefined,
+    correct: undefined,
     explanation: "Dockerfile builds images; images run as containers; registries (Docker Hub, etc.) distribute images.",
-    dragItems: ["Read-only template with application and dependencies", "Running instance of an image", "Text file with build instructions", "Registry where images are stored and shared"],
-    dropZones: ["Image", "Container", "Dockerfile", "Registry"],
-    solution: {"Image": [0], "Container": [1], "Dockerfile": [2], "Registry": [3]},
+    dragItems: ["Read-only template with application and dependencies","Running instance of an image","Text file with build instructions","Registry where images are stored and shared"],
+    dropZones: ["Image","Container","Dockerfile","Registry"],
+    solution: {"Image":[0],"Container":[1],"Dockerfile":[2],"Registry":[3]},
     tags: []
   },
   {
@@ -3789,10 +3343,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Order the TDD red-green-refactor cycle steps.",
+    options: undefined,
+    correct: undefined,
     explanation: "Red (failing test), Green (minimal pass), Refactor (improve design, tests stay green) — then repeat.",
-    dragItems: ["Write a failing test", "Write the minimum code to pass", "Run all tests", "Refactor while keeping tests green"],
-    dropZones: ["Phase 1", "Phase 2", "Phase 3", "Phase 4"],
-    solution: {"Phase 1": [0], "Phase 2": [1], "Phase 3": [2], "Phase 4": [3]},
+    dragItems: ["Write a failing test","Write the minimum code to pass","Run all tests","Refactor while keeping tests green"],
+    dropZones: ["Phase 1","Phase 2","Phase 3","Phase 4"],
+    solution: {"Phase 1":[0],"Phase 2":[1],"Phase 3":[2],"Phase 4":[3]},
     tags: []
   },
   {
@@ -3802,10 +3358,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Drag each IP service to its function.",
+    options: undefined,
+    correct: undefined,
     explanation: "Core IP services: DHCP addressing, DNS names, NAT translation, NTP time.",
-    dragItems: ["Assigns IP addresses automatically", "Resolves names to IP addresses", "Translates private to public addresses", "Synchronizes device clocks"],
-    dropZones: ["DHCP", "DNS", "NAT", "NTP"],
-    solution: {"DHCP": [0], "DNS": [1], "NAT": [2], "NTP": [3]},
+    dragItems: ["Assigns IP addresses automatically","Resolves names to IP addresses","Translates private to public addresses","Synchronizes device clocks"],
+    dropZones: ["DHCP","DNS","NAT","NTP"],
+    solution: {"DHCP":[0],"DNS":[1],"NAT":[2],"NTP":[3]},
     tags: []
   },
   {
@@ -3815,10 +3373,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Order the steps of a network automation workflow from requirement to verification.",
+    options: undefined,
+    correct: undefined,
     explanation: "Analyze, build, lab-test, deploy/monitor: never push untested automation to production.",
-    dragItems: ["Identify the manual task and its trigger", "Choose the tool/API and develop the script", "Test in a lab (CML/sandbox)", "Deploy to production and monitor results"],
-    dropZones: ["Step 1", "Step 2", "Step 3", "Step 4"],
-    solution: {"Step 1": [0], "Step 2": [1], "Step 3": [2], "Step 4": [3]},
+    dragItems: ["Identify the manual task and its trigger","Choose the tool/API and develop the script","Test in a lab (CML/sandbox)","Deploy to production and monitor results"],
+    dropZones: ["Step 1","Step 2","Step 3","Step 4"],
+    solution: {"Step 1":[0],"Step 2":[1],"Step 3":[2],"Step 4":[3]},
     tags: []
   },
   {
@@ -3828,7 +3388,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "Which Python data structure stores unique, unordered values?",
-    options: ["set", "list", "dict", "tuple"],
+    options: ["set","list","dict","tuple"],
     correct: 0,
     explanation: "Sets hold unique elements with no order; lists/tuples keep order and allow duplicates; dicts map keys to values.",
     tags: []
@@ -3840,7 +3400,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "Which Python type does json.loads() return for a JSON object?",
-    options: ["dict", "list", "str", "tuple"],
+    options: ["dict","list","str","tuple"],
     correct: 0,
     explanation: "JSON objects parse to Python dicts; JSON arrays become lists; strings/numbers map to str/int/float.",
     tags: []
@@ -3852,7 +3412,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "What does YAML use to denote list items?",
-    options: ["A hyphen followed by a space (- item)", "Angle brackets", "Semicolons", "Parentheses"],
+    options: ["A hyphen followed by a space (- item)","Angle brackets","Semicolons","Parentheses"],
     correct: 0,
     explanation: "YAML lists use '- ' per item at consistent indentation; JSON uses brackets, XML uses tags.",
     tags: []
@@ -3864,7 +3424,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which XML declaration is correct at the top of a document?",
-    options: ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "<xml version=\"1.0\">", "<?XML version=\"1.0\"?>", "<!DOCTYPE xml >"],
+    options: ["<?xml version=\"1.0\" encoding=\"UTF-8\"?>","<xml version=\"1.0\">","<?XML version=\"1.0\"?>","<!DOCTYPE xml >"],
     correct: 0,
     explanation: "The XML declaration is case-sensitive with question marks: <?xml version=\"1.0\" encoding=\"UTF-8\"?>.",
     tags: []
@@ -3876,7 +3436,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "In agile, what is a sprint?",
-    options: ["A fixed-length iteration (usually 1-4 weeks) delivering an increment", "A permanent team", "A bug classification", "A deployment script"],
+    options: ["A fixed-length iteration (usually 1-4 weeks) delivering an increment","A permanent team","A bug classification","A deployment script"],
     correct: 0,
     explanation: "Sprints are timeboxed iterations producing potentially shippable increments — the heartbeat of Scrum/Agile.",
     tags: []
@@ -3888,7 +3448,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "easy",
     question: "Which Git command stages a modified file for commit?",
-    options: ["git add", "git commit", "git push", "git clone"],
+    options: ["git add","git commit","git push","git clone"],
     correct: 0,
     explanation: "git add stages changes; commit records them locally; push shares them with the remote.",
     tags: []
@@ -3900,7 +3460,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "What does git pull combine?",
-    options: ["git fetch followed by git merge", "git clone then checkout", "git commit then push", "git branch then rebase"],
+    options: ["git fetch followed by git merge","git clone then checkout","git commit then push","git branch then rebase"],
     correct: 0,
     explanation: "pull = fetch (download remote changes) + merge (integrate them into your branch).",
     tags: []
@@ -3912,21 +3472,9 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which command shows which lines each author last changed in a file?",
-    options: ["git blame", "git log", "git diff", "git show"],
+    options: ["git blame","git log","git diff","git show"],
     correct: 0,
     explanation: "git blame annotates every line with the commit and author that last touched it — ideal for finding who changed a config line.",
-    tags: []
-  },
-  {
-    id: 319,
-    type: "multiple-choice",
-    domain: "Software Development and Design",
-    domainKey: "software",
-    difficulty: "medium",
-    question: "What is the advantage of the MVC design pattern?",
-    options: ["Separates data model, presentation, and input logic for maintainability", "Makes code run faster", "Removes the need for tests", "Guarantees thread safety"],
-    correct: 0,
-    explanation: "MVC isolates responsibilities so UI changes do not break data logic and vice versa — easier testing and maintenance.",
     tags: []
   },
   {
@@ -3936,7 +3484,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "What does REST stand for?",
-    options: ["Representational State Transfer", "Remote Execution Standard Transfer", "Rapid Encrypted Socket Transport", "Resource Encoding and State Typing"],
+    options: ["Representational State Transfer","Remote Execution Standard Transfer","Rapid Encrypted Socket Transport","Resource Encoding and State Typing"],
     correct: 0,
     explanation: "REST — an architectural style for stateless, resource-oriented HTTP APIs.",
     tags: []
@@ -3948,7 +3496,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "easy",
     question: "Which HTTP method is idempotent and safe (no state change)?",
-    options: ["GET", "POST", "PUT", "DELETE"],
+    options: ["GET","POST","PUT","DELETE"],
     correct: 0,
     explanation: "GET is both safe and idempotent; PUT/DELETE are idempotent but not safe; POST is neither.",
     tags: []
@@ -3960,7 +3508,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which status code family indicates a server-side error?",
-    options: ["5xx", "4xx", "3xx", "2xx"],
+    options: ["5xx","4xx","3xx","2xx"],
     correct: 0,
     explanation: "5xx = server errors (500, 502, 503); 4xx = client errors; 3xx = redirects; 2xx = success.",
     tags: []
@@ -3972,7 +3520,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does a 202 Accepted response indicate?",
-    options: ["The request was accepted for processing but is not complete yet", "The resource was created", "Authentication failed", "The resource moved permanently"],
+    options: ["The request was accepted for processing but is not complete yet","The resource was created","Authentication failed","The resource moved permanently"],
     correct: 0,
     explanation: "202 signals asynchronous processing: the job is queued; poll a status endpoint or await a callback.",
     tags: []
@@ -3984,7 +3532,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which authentication method sends base64-encoded username:password in a header?",
-    options: ["HTTP Basic", "OAuth 2.0 client credentials", "API key in query string", "HMAC signing"],
+    options: ["HTTP Basic","OAuth 2.0 client credentials","API key in query string","HMAC signing"],
     correct: 0,
     explanation: "Basic auth encodes 'user:pass' in base64 under Authorization; it requires HTTPS to be safe.",
     tags: []
@@ -3996,7 +3544,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Why are API keys usually sent in a header rather than the URL query string?",
-    options: ["URLs are logged by servers, proxies, and browsers, leaking the key", "Headers are faster", "Query strings have size limits only", "Keys cannot be revoked"],
+    options: ["URLs are logged by servers, proxies, and browsers, leaking the key","Headers are faster","Query strings have size limits only","Keys cannot be revoked"],
     correct: 0,
     explanation: "Query strings end up in access logs, history, and referrer headers; headers keep credentials out of URLs.",
     tags: []
@@ -4008,7 +3556,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What is the purpose of the X-Auth-Token header in Catalyst Center APIs?",
-    options: ["Carries the session token obtained from the auth endpoint", "Sets the response language", "Chunks large payloads", "Enables CORS"],
+    options: ["Carries the session token obtained from the auth endpoint","Sets the response language","Chunks large payloads","Enables CORS"],
     correct: 0,
     explanation: "Catalyst Center issues a token via POST /auth/token; subsequent calls carry it in X-Auth-Token.",
     tags: []
@@ -4020,7 +3568,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does a webhook require from your application?",
-    options: ["A publicly reachable HTTPS endpoint that accepts POST requests", "A VPN tunnel to the provider", "A database cluster", "A client certificate from users"],
+    options: ["A publicly reachable HTTPS endpoint that accepts POST requests","A VPN tunnel to the provider","A database cluster","A client certificate from users"],
     correct: 0,
     explanation: "The provider POSTs events to your endpoint, so it must be reachable, handle POSTs, and verify signatures.",
     tags: []
@@ -4032,7 +3580,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "A synchronous API call blocks the client because...",
-    options: ["The client waits for the result before continuing execution", "The server queues the work", "The response is chunked", "DNS is slow"],
+    options: ["The client waits for the result before continuing execution","The server queues the work","The response is chunked","DNS is slow"],
     correct: 0,
     explanation: "Synchronous calls block until the server responds; async APIs return immediately with a job reference.",
     tags: []
@@ -4044,7 +3592,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What happens when an API rate limit is exceeded?",
-    options: ["The server responds 429 Too Many Requests until the window resets", "The API key is revoked permanently", "Rate limits only apply to GET", "Nothing; limits are informational"],
+    options: ["The server responds 429 Too Many Requests until the window resets","The API key is revoked permanently","Rate limits only apply to GET","Nothing; limits are informational"],
     correct: 0,
     explanation: "Providers throttle clients with 429 plus Retry-After; exponential backoff is mandatory behavior for well-behaved clients.",
     tags: []
@@ -4056,7 +3604,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which Python library is the de facto standard for REST API calls?",
-    options: ["requests", "socket", "smtplib", "sqlite3"],
+    options: ["requests","socket","smtplib","sqlite3"],
     correct: 0,
     explanation: "requests provides sessions, JSON helpers, retry hooks, and clean auth handling for HTTP APIs.",
     tags: []
@@ -4068,7 +3616,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Meraki API endpoint lists organizations accessible to the key?",
-    options: ["GET /organizations", "GET /networks", "GET /devices", "GET /clients"],
+    options: ["GET /organizations","GET /networks","GET /devices","GET /clients"],
     correct: 0,
     explanation: "Organization enumeration is the top of the Meraki object hierarchy: /organizations, then networks, then devices/clients.",
     tags: []
@@ -4080,7 +3628,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What is Cisco Catalyst Center's primary role?",
-    options: ["Intent-based network management controller for enterprise campus and WAN", "A firewall platform", "A collaboration suite", "A container registry"],
+    options: ["Intent-based network management controller for enterprise campus and WAN","A firewall platform","A collaboration suite","A container registry"],
     correct: 0,
     explanation: "Catalyst Center (formerly DNA Center) provides assurance, provisioning, and software-defined access via northbound REST APIs.",
     tags: []
@@ -4092,7 +3640,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which ACI construct groups endpoints with identical policy requirements?",
-    options: ["Endpoint Group (EPG)", "Bridge domain", "VRF", "SPAN session"],
+    options: ["Endpoint Group (EPG)","Bridge domain","VRF","SPAN session"],
     correct: 0,
     explanation: "EPGs group endpoints sharing policy; contracts define communication between EPGs — the ACI policy model.",
     tags: []
@@ -4104,7 +3652,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What does Cisco vManage (Catalyst SD-WAN) provide APIs for?",
-    options: ["Centralized SD-WAN fabric management: templates, policies, tunnels", "Malware sandboxing", "Compute provisioning", "Room management"],
+    options: ["Centralized SD-WAN fabric management: templates, policies, tunnels","Malware sandboxing","Compute provisioning","Room management"],
     correct: 0,
     explanation: "vManage is the SD-WAN management plane exposing REST APIs for device templates, centralized policy, and tunnel status.",
     tags: []
@@ -4116,7 +3664,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What is the DevNet Sandbox used for?",
-    options: ["Free hands-on labs with live Cisco platforms and APIs", "Production deployments", "Buying licenses", "Storing secrets"],
+    options: ["Free hands-on labs with live Cisco platforms and APIs","Production deployments","Buying licenses","Storing secrets"],
     correct: 0,
     explanation: "Sandbox provides always-on and reserved lab instances of Meraki, Catalyst Center, Webex, NSO, and more for API practice.",
     tags: []
@@ -4128,7 +3676,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Where would you find community-shared automation projects for Cisco platforms?",
-    options: ["DevNet Code Exchange", "Cisco.com downloads only", "The CLI 'help' command", "Cisco TAC case notes"],
+    options: ["DevNet Code Exchange","Cisco.com downloads only","The CLI 'help' command","Cisco TAC case notes"],
     correct: 0,
     explanation: "Code Exchange curates community and Cisco repositories for automation samples across platforms.",
     tags: []
@@ -4140,7 +3688,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which interfaces does IOS XE expose for model-driven programmability?",
-    options: ["NETCONF, RESTCONF, and gRPC interfaces driven by YANG models", "Only Telnet", "Only SNMPv2", "Proprietary binary protocol only"],
+    options: ["NETCONF, RESTCONF, and gRPC interfaces driven by YANG models","Only Telnet","Only SNMPv2","Proprietary binary protocol only"],
     correct: 0,
     explanation: "IOS XE's model-driven interfaces (NETCONF/RESTCONF/gNMI-gRPC) all operate on YANG models.",
     tags: []
@@ -4152,7 +3700,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Webex API call adds a person to a space?",
-    options: ["POST /memberships with roomId and personEmail", "PUT /rooms/{id}/people", "POST /people (only creates accounts)", "DELETE /messages"],
+    options: ["POST /memberships with roomId and personEmail","PUT /rooms/{id}/people","POST /people (only creates accounts)","DELETE /messages"],
     correct: 0,
     explanation: "Memberships link people to rooms: POST /memberships with roomId + personEmail adds them.",
     tags: []
@@ -4164,7 +3712,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "What does Intersight manage?",
-    options: ["UCS and compute infrastructure via SaaS", "Branch firewalls", "Contact center queues", "DNS zones"],
+    options: ["UCS and compute infrastructure via SaaS","Branch firewalls","Contact center queues","DNS zones"],
     correct: 0,
     explanation: "Intersight is Cisco's compute platform-as-a-service for UCS/HyperFlex servers, profiles, and policies.",
     tags: []
@@ -4176,7 +3724,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "Which is a benefit of containers over VMs?",
-    options: ["Faster startup and higher density on the same host", "Stronger isolation than VMs", "No shared kernel risk", "Cannot be orchestrated"],
+    options: ["Faster startup and higher density on the same host","Stronger isolation than VMs","No shared kernel risk","Cannot be orchestrated"],
     correct: 0,
     explanation: "Containers share the host kernel: they start in milliseconds and pack densely — at the cost of weaker isolation than VMs.",
     tags: []
@@ -4188,7 +3736,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which Docker command runs an image interactively with a shell?",
-    options: ["docker run -it image /bin/bash", "docker exec (always creates new container)", "docker start -a", "docker ps -it"],
+    options: ["docker run -it image /bin/bash","docker exec (always creates new container)","docker start -a","docker ps -it"],
     correct: 0,
     explanation: "run -it allocates a TTY for a fresh container; docker exec attaches to an already-running one.",
     tags: []
@@ -4200,7 +3748,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What does Docker Compose automate?",
-    options: ["Multi-container application definition and lifecycle with one YAML file", "Image layer compression", "Container sandboxing at kernel level", "Port scanning"],
+    options: ["Multi-container application definition and lifecycle with one YAML file","Image layer compression","Container sandboxing at kernel level","Port scanning"],
     correct: 0,
     explanation: "Compose declares services, networks, and volumes in one file; 'up'/'down' manage the whole stack.",
     tags: []
@@ -4212,7 +3760,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which CI/CD component stores build outputs for deployment?",
-    options: ["Artifact repository (e.g., Nexus, Artifactory)", "Load balancer", "Reverse proxy", "DNS server"],
+    options: ["Artifact repository (e.g., Nexus, Artifactory)","Load balancer","Reverse proxy","DNS server"],
     correct: 0,
     explanation: "Artifacts (images, packages) are versioned in repositories so deployments are reproducible and traceable.",
     tags: []
@@ -4224,7 +3772,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which practice protects secrets in a CI/CD pipeline?",
-    options: ["Inject secrets at runtime from a vault, never committing them to the repo", "Commit encrypted secrets in YAML", "Store secrets in pipeline YAML environment variables", "Email secrets to the team"],
+    options: ["Inject secrets at runtime from a vault, never committing them to the repo","Commit encrypted secrets in YAML","Store secrets in pipeline YAML environment variables","Email secrets to the team"],
     correct: 0,
     explanation: "Vaults (HashiCorp Vault, cloud secret managers) inject secrets at runtime; repo-stored secrets leak with git history.",
     tags: []
@@ -4236,7 +3784,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What does a firewall primarily do in an application deployment?",
-    options: ["Filters traffic between zones based on rules", "Balances load across servers", "Resolves domain names", "Terminates TLS only"],
+    options: ["Filters traffic between zones based on rules","Balances load across servers","Resolves domain names","Terminates TLS only"],
     correct: 0,
     explanation: "Firewalls enforce policy between security zones; LBs distribute, DNS resolves, proxies forward.",
     tags: []
@@ -4248,7 +3796,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "How does a load balancer improve application availability?",
-    options: ["Distributes requests across healthy backends and removes failed ones from rotation", "Encrypts all payloads", "Prevents SQL injection", "Increases DNS TTL"],
+    options: ["Distributes requests across healthy backends and removes failed ones from rotation","Encrypts all payloads","Prevents SQL injection","Increases DNS TTL"],
     correct: 0,
     explanation: "Health-checked distribution keeps the service up when instances fail and enables rolling updates.",
     tags: []
@@ -4260,7 +3808,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which OWASP threat is mitigated by validating and allowing only expected file types in uploads?",
-    options: ["Unrestricted file upload leading to remote code execution", "CSRF", "DNS poisoning", "ARP spoofing"],
+    options: ["Unrestricted file upload leading to remote code execution","CSRF","DNS poisoning","ARP spoofing"],
     correct: 0,
     explanation: "Unvalidated uploads can carry webshells; allow-lists, type/size checks, and storage outside the webroot mitigate it.",
     tags: []
@@ -4272,7 +3820,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "Which Bash command prints the current working directory?",
-    options: ["pwd", "cd", "ls", "env"],
+    options: ["pwd","cd","ls","env"],
     correct: 0,
     explanation: "pwd (print working directory); cd changes it; ls lists; env prints variables.",
     tags: []
@@ -4284,7 +3832,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "easy",
     question: "Which Bash command makes a variable available to child processes?",
-    options: ["export VAR=value", "VAR=value only", "set VAR=value only", "echo VAR=value"],
+    options: ["export VAR=value","VAR=value only","set VAR=value only","echo VAR=value"],
     correct: 0,
     explanation: "export adds the variable to the environment inherited by child processes.",
     tags: []
@@ -4296,7 +3844,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What does the DevOps principle 'you build it, you run it' mean?",
-    options: ["Development teams own their services in production, including operations", "Only ops deploy code", "QA owns production incidents", "Developers never access production"],
+    options: ["Development teams own their services in production, including operations","Only ops deploy code","QA owns production incidents","Developers never access production"],
     correct: 0,
     explanation: "DevOps collapses the dev/ops split: the team that builds the service runs and supports it, closing feedback loops.",
     tags: []
@@ -4308,7 +3856,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What is the value of model-driven programmability for infrastructure?",
-    options: ["Config and state derived from standardized YANG models enable vendor-neutral automation", "It replaces all CLI commands", "It removes the need for testing", "It only works on Catalyst switches"],
+    options: ["Config and state derived from standardized YANG models enable vendor-neutral automation","It replaces all CLI commands","It removes the need for testing","It only works on Catalyst switches"],
     correct: 0,
     explanation: "YANG-modeled interfaces (NETCONF/RESTCONF/gNMI) standardize data across vendors, making automation portable.",
     tags: []
@@ -4320,7 +3868,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What is a key benefit of infrastructure as code?",
-    options: ["Environments are reproducible and drift is detectable through version control", "Faster device reboots", "Manual approvals are eliminated", "Configurations cannot be audited"],
+    options: ["Environments are reproducible and drift is detectable through version control","Faster device reboots","Manual approvals are eliminated","Configurations cannot be audited"],
     correct: 0,
     explanation: "IaC makes infrastructure declarative, versioned, and reviewable; any divergence (drift) shows in diffs.",
     tags: []
@@ -4332,7 +3880,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In Ansible, what is a playbook?",
-    options: ["A YAML file defining ordered plays with tasks against inventoried hosts", "A Python script for SSH", "A Docker compose file", "A Git branch name"],
+    options: ["A YAML file defining ordered plays with tasks against inventoried hosts","A Python script for SSH","A Docker compose file","A Git branch name"],
     correct: 0,
     explanation: "Playbooks orchestrate plays; each play maps hosts/groups to roles and tasks executed in order.",
     tags: []
@@ -4344,7 +3892,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does Terraform state (.tfstate) track?",
-    options: ["The mapping between declared resources and real infrastructure objects", "Git commit history", "Docker image layers", "YANG schema versions"],
+    options: ["The mapping between declared resources and real infrastructure objects","Git commit history","Docker image layers","YANG schema versions"],
     correct: 0,
     explanation: "State records resource IDs and attributes so plan can compute diffs between desired and actual infrastructure.",
     tags: []
@@ -4356,7 +3904,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does 'terraform plan' do?",
-    options: ["Shows the execution diff without applying changes", "Applies changes immediately", "Destroys resources", "Formats HCL files"],
+    options: ["Shows the execution diff without applying changes","Applies changes immediately","Destroys resources","Formats HCL files"],
     correct: 0,
     explanation: "plan is a dry run: it computes creates/updates/destroys for review before 'apply'.",
     tags: []
@@ -4368,7 +3916,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What is Cisco NSO primarily used for?",
-    options: ["Service orchestration across multi-vendor networks with YANG service models", "Endpoint security", "Video conferencing", "Cloud billing"],
+    options: ["Service orchestration across multi-vendor networks with YANG service models","Endpoint security","Video conferencing","Cloud billing"],
     correct: 0,
     explanation: "NSO models services in YANG and drives device configuration transactionally across vendors.",
     tags: []
@@ -4380,7 +3928,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which RESTCONF method partially updates a resource?",
-    options: ["PATCH", "GET", "HEAD", "OPTIONS"],
+    options: ["PATCH","GET","HEAD","OPTIONS"],
     correct: 0,
     explanation: "PATCH applies a partial update; PUT replaces the whole resource; GET/HEAD read; OPTIONS lists capabilities.",
     tags: []
@@ -4392,7 +3940,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does NETCONF <get-config> return?",
-    options: ["Only the configuration datastore (running/candidate), not operational state", "Only counters", "Only schemas", "Only notifications"],
+    options: ["Only the configuration datastore (running/candidate), not operational state","Only counters","Only schemas","Only notifications"],
     correct: 0,
     explanation: "<get-config> targets config datastores; <get> returns config plus operational state.",
     tags: []
@@ -4404,7 +3952,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In YANG, which statement defines a repeatable set of entries (like an interface list)?",
-    options: ["list", "container", "leaf", "choice"],
+    options: ["list","container","leaf","choice"],
     correct: 0,
     explanation: "list holds repeating entries keyed by a leaf; container groups; leaf is a single value; choice is a mutually exclusive selection.",
     tags: []
@@ -4416,7 +3964,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does pyATS' Genie library provide?",
-    options: ["Parsers that convert CLI output into structured Python data", "YANG compilation", "Container orchestration", "Load balancing"],
+    options: ["Parsers that convert CLI output into structured Python data","YANG compilation","Container orchestration","Load balancing"],
     correct: 0,
     explanation: "Genie parses 'show' command output into structured dictionaries for programmatic verification.",
     tags: []
@@ -4428,7 +3976,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does Cisco Modeling Labs (CML) simulate?",
-    options: ["Network topologies running real Cisco images in a virtual environment", "Only wireless controllers", "Physical hardware failures", "Cloud billing"],
+    options: ["Network topologies running real Cisco images in a virtual environment","Only wireless controllers","Physical hardware failures","Cloud billing"],
     correct: 0,
     explanation: "CML virtualizes IOS XE/NX-OS/ASA images to build test topologies before production changes.",
     tags: []
@@ -4440,7 +3988,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In an Ansible playbook, what does 'register' do?",
-    options: ["Saves a task's output into a variable for later tasks", "Re-registers the host in inventory", "Encrypts variables", "Restarts the play"],
+    options: ["Saves a task's output into a variable for later tasks","Re-registers the host in inventory","Encrypts variables","Restarts the play"],
     correct: 0,
     explanation: "register captures stdout/return codes so subsequent tasks can branch or save results.",
     tags: []
@@ -4452,7 +4000,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does a unified diff line starting with '+' mean?",
-    options: ["The line was added in the new version", "The line is a comment", "The line was deleted", "The line is unchanged"],
+    options: ["The line was added in the new version","The line is a comment","The line was deleted","The line is unchanged"],
     correct: 0,
     explanation: "'+ ' lines exist in the new file only; '- ' lines only in the old; ' ' context is unchanged.",
     tags: []
@@ -4464,7 +4012,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which code review practice improves automation reliability most?",
-    options: ["Require a second engineer to review network-changing scripts before merge", "Review only style", "Skip reviews for small scripts", "Let the author merge their own critical changes"],
+    options: ["Require a second engineer to review network-changing scripts before merge","Review only style","Skip reviews for small scripts","Let the author merge their own critical changes"],
     correct: 0,
     explanation: "Network automation mistakes are expensive: peer review of logic (especially device-touching code) catches them pre-merge.",
     tags: []
@@ -4476,21 +4024,9 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "In a sequence diagram, what does a dashed arrow typically represent?",
-    options: ["A response/return message", "A blocking call", "A data store", "An error only"],
+    options: ["A response/return message","A blocking call","A data store","An error only"],
     correct: 0,
     explanation: "Solid arrows are calls/requests; dashed arrows carry the return/response back to the caller.",
-    tags: []
-  },
-  {
-    id: 366,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the purpose of a MAC address?",
-    options: ["Identify a device at Layer 2 within a local network segment", "Route packets across the internet", "Encrypt traffic", "Assign DNS names"],
-    correct: 0,
-    explanation: "MACs are burned-in Layer 2 identifiers used for local frame delivery; IPs route across networks.",
     tags: []
   },
   {
@@ -4500,7 +4036,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "What does a VLAN do?",
-    options: ["Segments a physical switch into multiple logical broadcast domains", "Encrypts wireless traffic", "Routes between subnets", "Assigns IP addresses"],
+    options: ["Segments a physical switch into multiple logical broadcast domains","Encrypts wireless traffic","Routes between subnets","Assigns IP addresses"],
     correct: 0,
     explanation: "VLANs isolate broadcast domains on switches; inter-VLAN traffic requires a router or L3 switch.",
     tags: []
@@ -4512,21 +4048,9 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "What does the subnet mask 255.255.255.0 indicate?",
-    options: ["The first 24 bits are the network portion", "The host has 24 addresses", "Only 8 hosts are allowed", "The network is class A"],
+    options: ["The first 24 bits are the network portion","The host has 24 addresses","Only 8 hosts are allowed","The network is class A"],
     correct: 0,
     explanation: "/24: 24 network bits, 8 host bits — 254 usable host addresses.",
-    tags: []
-  },
-  {
-    id: 369,
-    type: "multiple-choice",
-    domain: "Network Fundamentals",
-    domainKey: "network",
-    difficulty: "easy",
-    question: "What is the role of the default gateway?",
-    options: ["Forwards traffic destined for networks outside the local subnet", "Assigns MAC addresses", "Broadcasts DHCP offers only", "Blocks broadcast storms"],
-    correct: 0,
-    explanation: "When the destination is off-subnet, the host sends the frame to the gateway's MAC for routing.",
     tags: []
   },
   {
@@ -4536,7 +4060,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which device primarily forwards traffic between different IP networks?",
-    options: ["Router", "Layer 2 switch", "Hub", "Access point"],
+    options: ["Router","Layer 2 switch","Hub","Access point"],
     correct: 0,
     explanation: "Routers operate at Layer 3 routing between subnets; L2 switches forward frames within one.",
     tags: []
@@ -4548,7 +4072,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which component filters traffic between network zones based on rules?",
-    options: ["Firewall", "Switch", "Access point", "DNS server"],
+    options: ["Firewall","Switch","Access point","DNS server"],
     correct: 0,
     explanation: "Firewalls enforce inter-zone policy (allow/deny by source, destination, port).",
     tags: []
@@ -4560,7 +4084,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which plane builds the routing table using OSPF?",
-    options: ["Control plane", "Data plane", "Management plane", "Backup plane"],
+    options: ["Control plane","Data plane","Management plane","Backup plane"],
     correct: 0,
     explanation: "Routing protocols run in the control plane; the data plane forwards packets using the table they build.",
     tags: []
@@ -4572,7 +4096,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which service resolves example.com to an IP address?",
-    options: ["DNS", "DHCP", "NAT", "SNMP"],
+    options: ["DNS","DHCP","NAT","SNMP"],
     correct: 0,
     explanation: "DNS translates names to addresses; DHCP assigns addresses; NAT translates; SNMP monitors.",
     tags: []
@@ -4584,7 +4108,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "What does NAT allow?",
-    options: ["Multiple private hosts to share public IP addresses for internet access", "Faster DNS lookups", "Wireless encryption", "VLAN trunking"],
+    options: ["Multiple private hosts to share public IP addresses for internet access","Faster DNS lookups","Wireless encryption","VLAN trunking"],
     correct: 0,
     explanation: "NAT (typically PAT) maps many inside addresses to one public IP via port multiplexing.",
     tags: []
@@ -4596,7 +4120,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "easy",
     question: "Which port does HTTPS use by default?",
-    options: ["443", "80", "22", "830"],
+    options: ["443","80","22","830"],
     correct: 0,
     explanation: "HTTPS = HTTP over TLS on TCP 443; HTTP uses 80.",
     tags: []
@@ -4608,7 +4132,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "A user can ping 8.8.8.8 but not browse https://google.com. Which is the most likely cause?",
-    options: ["TCP port 443 blocked by a firewall or proxy", "Default gateway missing", "DNS is mandatory for ping", "NAT is disabled"],
+    options: ["TCP port 443 blocked by a firewall or proxy","Default gateway missing","DNS is mandatory for ping","NAT is disabled"],
     correct: 0,
     explanation: "ICMP works but TCP/443 fails: a firewall/proxy or TLS issue — DNS is not needed for pinging by IP.",
     tags: []
@@ -4620,7 +4144,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "An app reaches internal servers but not the internet. Which diagnosis fits?",
-    options: ["NAT or default route misconfiguration on the edge", "Local switch VLAN mismatch", "Duplicate MAC on the LAN", "Wrong DNS on internal servers only"],
+    options: ["NAT or default route misconfiguration on the edge","Local switch VLAN mismatch","Duplicate MAC on the LAN","Wrong DNS on internal servers only"],
     correct: 0,
     explanation: "Internal reachability with external failure points to the edge: missing default route or broken NAT.",
     tags: []
@@ -4632,7 +4156,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "How does high network latency impact applications?",
-    options: ["Interactive apps feel sluggish; TCP throughput degrades on lossy links", "Latency only affects DNS", "It has no user impact", "It improves throughput"],
+    options: ["Interactive apps feel sluggish; TCP throughput degrades on lossy links","Latency only affects DNS","It has no user impact","It improves throughput"],
     correct: 0,
     explanation: "Round-trip time slows handshakes and interactive flows; combined with loss it collapses TCP goodput.",
     tags: []
@@ -4644,7 +4168,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which port pair is correct for SNMP?",
-    options: ["161 (queries) / 162 (traps)", "22 / 23", "53 / 67", "830 / 443"],
+    options: ["161 (queries) / 162 (traps)","22 / 23","53 / 67","830 / 443"],
     correct: 0,
     explanation: "SNMP agents listen on 161; traps/notifications are sent to 162. DNS is 53, DHCP 67/68.",
     tags: []
@@ -4656,7 +4180,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "medium",
     question: "Which troubleshooting step verifies DNS functionality?",
-    options: ["nslookup api.example.com", "ping 8.8.8.8", "traceroute 10.0.0.1", "arp -a"],
+    options: ["nslookup api.example.com","ping 8.8.8.8","traceroute 10.0.0.1","arp -a"],
     correct: 0,
     explanation: "nslookup/dig directly test name resolution; pinging an IP bypasses DNS entirely.",
     tags: []
@@ -4668,7 +4192,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "What does this Python dictionary comprehension produce?",
-    options: ["A dict mapping each number to its square", "A list", "An error", "None"],
+    options: ["A dict mapping each number to its square","A list","An error","None"],
     correct: 0,
     explanation: "The comprehension builds a dict mapping each n from 1 to 4 to n squared: keys 1-4, values 1, 4, 9, 16.",
     code: "d = {n: n * n for n in range(1, 5)}\nprint(d)",
@@ -4682,7 +4206,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Which statement about Python lists and tuples is correct?",
-    options: ["Tuples are immutable; lists are mutable", "Both are immutable", "Lists are immutable; tuples are mutable", "Neither supports indexing"],
+    options: ["Tuples are immutable; lists are mutable","Both are immutable","Lists are immutable; tuples are mutable","Neither supports indexing"],
     correct: 0,
     explanation: "Tuples cannot be modified after creation (hashable, dict-key capable); lists can grow/shrink in place.",
     tags: []
@@ -4694,7 +4218,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "What does this code print?",
-    options: ["[2, 4]", "[1, 2, 3, 4]", "[]", "TypeError"],
+    options: ["[2, 4]","[1, 2, 3, 4]","[]","TypeError"],
     correct: 0,
     explanation: "filter with the lambda keeps even numbers 2 and 4; list() materializes the filter object.",
     code: "nums = [1, 2, 3, 4]\nresult = list(filter(lambda x: x % 2 == 0, nums))\nprint(result)",
@@ -4708,7 +4232,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which Python block handles exceptions from an API call without crashing?",
-    options: ["try/except around requests.get", "if/else only", "for loop", "with statement only"],
+    options: ["try/except around requests.get","if/else only","for loop","with statement only"],
     correct: 0,
     explanation: "try/except catches exceptions (timeouts, connection errors); always catch specific exceptions like requests.RequestException.",
     code: "import requests\n\ntry:\n    resp = requests.get(url, timeout=5)\n    resp.raise_for_status()\n    data = resp.json()\nexcept requests.RequestException as e:\n    print(f'API error: {e}')",
@@ -4722,7 +4246,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does resp.raise_for_status() do?",
-    options: ["Raises an HTTPError exception for 4xx/5xx responses", "Retries the request", "Prints the status code", "Closes the connection"],
+    options: ["Raises an HTTPError exception for 4xx/5xx responses","Retries the request","Prints the status code","Closes the connection"],
     correct: 0,
     explanation: "It converts error status codes into exceptions so failures are handled explicitly instead of parsing garbage bodies.",
     tags: []
@@ -4734,7 +4258,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which header value requests a JSON body from an API?",
-    options: ["Accept: application/json", "Content-Type: text/html", "Authorization: Basic", "Cache-Control: no-cache"],
+    options: ["Accept: application/json","Content-Type: text/html","Authorization: Basic","Cache-Control: no-cache"],
     correct: 0,
     explanation: "Accept negotiates the response format; Content-Type describes the request body you send.",
     tags: []
@@ -4746,7 +4270,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Which HTTP code indicates a successful DELETE?",
-    options: ["200 OK or 204 No Content", "201 Created", "302 Found", "501 Not Implemented"],
+    options: ["200 OK or 204 No Content","201 Created","302 Found","501 Not Implemented"],
     correct: 0,
     explanation: "DELETE commonly returns 204 (no body) or 200 with a confirmation body — both success.",
     tags: []
@@ -4758,7 +4282,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "What does a Link header with rel=\"next\" indicate?",
-    options: ["The URL of the next page in a paginated response", "A stylesheet to load", "A webhook callback", "An OAuth redirect"],
+    options: ["The URL of the next page in a paginated response","A stylesheet to load","A webhook callback","An OAuth redirect"],
     correct: 0,
     explanation: "Pagination via Link headers: rel=next points at the following page — follow it until absent.",
     tags: []
@@ -4770,7 +4294,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "Which pattern handles webhook deliveries reliably?",
-    options: ["Verify the signature, process asynchronously, and return 2xx immediately", "Process synchronously then reply 500 on failure", "Ignore the signature and trust the source IP only", "Reply 404 until verified manually"],
+    options: ["Verify the signature, process asynchronously, and return 2xx immediately","Process synchronously then reply 500 on failure","Ignore the signature and trust the source IP only","Reply 404 until verified manually"],
     correct: 0,
     explanation: "Ack fast (2xx), verify authenticity (HMAC), queue processing — then provider retries never lose events.",
     tags: []
@@ -4782,7 +4306,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which SDK helps build Webex integrations in Python?",
-    options: ["webexteamssdk (Webex Python SDK)", "netmiko", "napalm", "scapy"],
+    options: ["webexteamssdk (Webex Python SDK)","netmiko","napalm","scapy"],
     correct: 0,
     explanation: "webexteamssdk wraps the Webex REST APIs (messages, rooms, memberships) in Python objects.",
     tags: []
@@ -4794,7 +4318,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which library automates SSH CLI access to network devices in Python?",
-    options: ["netmiko", "requests", "docker-py", "pytest"],
+    options: ["netmiko","requests","docker-py","pytest"],
     correct: 0,
     explanation: "netmiko abstracts multi-vendor SSH CLI automation; requests is for REST APIs; netmiko targets CLI, not REST.",
     tags: []
@@ -4806,7 +4330,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "Which Meraki API versioning practice should clients follow?",
-    options: ["Pin to a stable API version and handle deprecation notices", "Always call the newest beta endpoints", "Use no version in the path", "Randomly pick endpoints"],
+    options: ["Pin to a stable API version and handle deprecation notices","Always call the newest beta endpoints","Use no version in the path","Randomly pick endpoints"],
     correct: 0,
     explanation: "Production integrations pin stable versions and monitor deprecation headers/notices to avoid breakage.",
     tags: []
@@ -4818,7 +4342,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which Docker command lists running containers?",
-    options: ["docker ps", "docker images", "docker inspect --all", "docker version"],
+    options: ["docker ps","docker images","docker inspect --all","docker version"],
     correct: 0,
     explanation: "docker ps shows running containers; -a adds stopped ones; images lists images.",
     tags: []
@@ -4830,7 +4354,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "What does EXPOSE in a Dockerfile do?",
-    options: ["Documents the port the container listens on (metadata; not published)", "Publishes the port to the host", "Opens a firewall", "Starts the listener"],
+    options: ["Documents the port the container listens on (metadata; not published)","Publishes the port to the host","Opens a firewall","Starts the listener"],
     correct: 0,
     explanation: "EXPOSE is documentation for humans/tools; -p on docker run actually publishes to the host.",
     tags: []
@@ -4842,7 +4366,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which test type verifies a REST API endpoint end-to-end including auth and database?",
-    options: ["Integration test", "Unit test with mocks only", "Lint check", "Type check"],
+    options: ["Integration test","Unit test with mocks only","Lint check","Type check"],
     correct: 0,
     explanation: "Integration tests exercise the real stack (API, auth, DB); unit tests isolate functions with mocks.",
     tags: []
@@ -4854,7 +4378,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Which OWASP defense prevents CSRF?",
-    options: ["Anti-CSRF tokens and SameSite cookie attributes", "HTTPS everywhere", "Strong password policy", "Rate limiting"],
+    options: ["Anti-CSRF tokens and SameSite cookie attributes","HTTPS everywhere","Strong password policy","Rate limiting"],
     correct: 0,
     explanation: "Per-session tokens bound to forms and SameSite/Lax cookies stop cross-site forged requests.",
     tags: []
@@ -4866,7 +4390,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "Why is encrypting data at rest AND in transit important?",
-    options: ["Protects confidentiality if any single layer (disk or network) is compromised", "It is only a compliance checkbox", "It speeds up queries", "It prevents all logic bugs"],
+    options: ["Protects confidentiality if any single layer (disk or network) is compromised","It is only a compliance checkbox","It speeds up queries","It prevents all logic bugs"],
     correct: 0,
     explanation: "Defense in depth: TLS protects the pipe, at-rest encryption protects stolen media and backups.",
     tags: []
@@ -4878,7 +4402,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What does 'golden config' mean in network automation?",
-    options: ["A version-controlled reference configuration from which per-device configs are rendered", "The config on the newest device", "Any running-config backup", "The factory default config"],
+    options: ["A version-controlled reference configuration from which per-device configs are rendered","The config on the newest device","Any running-config backup","The factory default config"],
     correct: 0,
     explanation: "Golden configs are the approved source of truth; templates + variables render per-device configs from them.",
     tags: []
@@ -4890,7 +4414,7 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "What is configuration drift?",
-    options: ["Divergence between the deployed device state and the intended source of truth", "A routing protocol feature", "A Docker layer issue", "An Ansible plugin"],
+    options: ["Divergence between the deployed device state and the intended source of truth","A routing protocol feature","A Docker layer issue","An Ansible plugin"],
     correct: 0,
     explanation: "Manual changes or failed jobs cause drift; automated compliance checks (pyATS, backups diffing) detect it.",
     tags: []
@@ -4902,26 +4426,26 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "Which workflow does this Python automate?",
-    options: ["Continuously monitors interface operational state via RESTCONF and alerts when an interface goes down", "Installs IOS images", "Backs up the whole disk", "Renders web pages"],
+    options: ["Continuously monitors interface operational state via RESTCONF and alerts when an interface goes down","Installs IOS images","Backs up the whole disk","Renders web pages"],
     correct: 0,
     explanation: "The loop queries interface oper-status via RESTCONF and triggers an alert function for any non-up interface — health monitoring automation.",
     code: "import requests, time\n\ndef check_interfaces(host, token):\n    r = requests.get(\n        f'https://{host}/restconf/data/ietf-interfaces:interfaces-state',\n        headers={'Authorization': f'Bearer {token}',\n                 'Accept': 'application/yang-data+json'},\n        verify=False)\n    interfaces = r.json()['ietf-interfaces:interfaces-state']['interface']\n    return {i['name']: i['oper-status'] for i in interfaces}\n\nwhile True:\n    status = check_interfaces('10.0.0.1', TOKEN)\n    down = [n for n, s in status.items() if s != 'up']\n    if down:\n        alert(f'Interfaces down: {down}')\n    time.sleep(60)",
     codeLanguage: "python",
     tags: []
   },
-{
+  {
     id: 401,
     type: "multiple-choice",
     domain: "Software Development and Design",
     domainKey: "software",
     difficulty: "hard",
     question: "A CI pipeline builds device configurations with this function. After deploying the pipeline, every switch in the inventory ends up with all VLANs from ALL devices in its config. What is the root cause?",
-    options: ["The default argument configs is evaluated once at function definition time, so every call appends to the same shared list", "The devices list is mutated inside the loop", "extend() should be used instead of append()", "The f-string interpolates the wrong variable"],
+    options: ["The default argument configs is evaluated once at function definition time, so every call appends to the same shared list","The devices list is mutated inside the loop","extend() should be used instead of append()","The f-string interpolates the wrong variable"],
     correct: 0,
     explanation: "This is the classic mutable default argument pitfall. Python evaluates default arguments once at def time, so configs persists across calls and accumulates VLANs from every device. Fix: default to None and initialize inside the function. The devices list is not mutated, extend vs append would not change cross-call state, and the f-string is correct. Reference: Python docs on default argument values (docs.python.org — 'Default values are evaluated from left to right once... shared value').",
     code: "def build_config(device, configs=[]):\n    for vlan in device['vlans']:\n        configs.append(f\"vlan {vlan['id']}\")\n    return configs\n\nfor dev in devices:\n    cfg = build_config(dev)\n    push(dev, cfg)",
     codeLanguage: "python",
-    tags: ["python", "pitfalls", "pipelines"]
+    tags: ["python","pitfalls","pipelines"]
   },
   {
     id: 402,
@@ -4930,12 +4454,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "hard",
     question: "A log-processing script must scan 40 GB of syslog from a monitoring server inside a memory-capped container (512 MB). The current implementation is killed with OOM. Which change resolves it while preserving behavior?",
-    options: ["Convert parse_log to a generator (yield per record) so records are streamed one at a time instead of materializing the full list", "Use a for loop instead of a while loop", "Call readlines() once instead of repeated readline() calls", "Parse the file with json.loads in chunks"],
+    options: ["Convert parse_log to a generator (yield per record) so records are streamed one at a time instead of materializing the full list","Use a for loop instead of a while loop","Call readlines() once instead of repeated readline() calls","Parse the file with json.loads in chunks"],
     correct: 0,
     explanation: "readlines() (and building a list with append) loads the entire file into memory before aggregation starts. Replacing the list-building function with a generator that yields per-record tuples makes the pipeline lazy: only one record is resident at a time, so peak memory is O(record) regardless of file size. A different loop construct does not change memory behavior, readline() per line is already memory-safe but the aggregation list is not, and json.loads is irrelevant for syslog. Reference: PEP 234 (iterators) and Python 'Data Model' on generator protocols.",
     code: "def parse_log(fh):\n    records = []\n    for line in fh:\n        if 'LINK-3-UPDOWN' in line:\n            records.append((line.split()[0], line))\n    return records\n\ncounts = {}\nwith open('/var/log/syslog') as fh:\n    for dev, line in parse_log(fh):\n        counts[dev] = counts.get(dev, 0) + 1",
     codeLanguage: "python",
-    tags: ["python", "generators", "memory"]
+    tags: ["python","generators","memory"]
   },
   {
     id: 403,
@@ -4944,12 +4468,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "software",
     difficulty: "medium",
     question: "Two engineers pushed to feature/config-batch. The CI job on the branch runs tests against the version WITHOUT the latest commit and reports false failures. The team wants the feature branch to always build on the state that includes any commits made to main since the branch diverged, with a linear history. Which sequence achieves this?",
-    options: ["git fetch origin, then git rebase origin/main on the feature branch, then force-push with --force-with-lease", "git merge --no-ff origin/main, then git push", "git reset --hard origin/main, then re-apply the branch's changes manually", "git cherry-pick each main commit onto the branch, then git push"],
+    options: ["git fetch origin, then git rebase origin/main on the feature branch, then force-push with --force-with-lease","git merge --no-ff origin/main, then git push","git reset --hard origin/main, then re-apply the branch's changes manually","git cherry-pick each main commit onto the branch, then git push"],
     correct: 0,
     explanation: "Rebasing the feature branch onto origin/main replays the branch commits on top of latest main, producing a linear history that includes main's changes, so CI tests the true combined state. --force-with-lease safely updates the remote branch after the history rewrite. A no-ff merge preserves history but is not linear and the question requires linear history. reset --hard discards the branch's own work, and cherry-picking commits one by one duplicates them and is error-prone. Reference: git-rebase(1) and Pro Git, 'Rebasing'.",
     code: "git switch feature/config-batch\ngit fetch origin\ngit rebase origin/main\n# resolve conflicts, then:\ngit push --force-with-lease origin feature/config-batch",
     codeLanguage: "bash",
-    tags: ["git", "ci", "workflow"]
+    tags: ["git","ci","workflow"]
   },
   {
     id: 404,
@@ -4958,12 +4482,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "This GitHub Actions workflow never starts the deploy job; the run shows the deploy job stuck in a gray 'Waiting' state forever. What is wrong?",
-    options: ["The build job's step has no explicit success output, and the if expression references an undefined output — the dependency can never evaluate to true, so deploy waits indefinitely", "needs cannot reference another job; it must reference workflow names", "steps.build does not exist because jobs.steps cannot be named", "The workflow is missing checkout, which all downstream jobs require"],
+    options: ["The build job's step has no explicit success output, and the if expression references an undefined output — the dependency can never evaluate to true, so deploy waits indefinitely","needs cannot reference another job; it must reference workflow names","steps.build does not exist because jobs.steps cannot be named","The workflow is missing checkout, which all downstream jobs require"],
     correct: 0,
     explanation: "The deploy job's condition reads steps.build.outputs.status, but no step in the build job declares outputs (no echo \"status=...\" >> $GITHUB_OUTPUT). The expression evaluates against a missing value and the guard can never be satisfied as written, leaving deploy waiting on a dependency that never passes. needs legitimately references jobs, named steps are allowed, and checkout is not a hard requirement for the deploy job. Fix: declare a job output on build (jobs.build.outputs) or drop the condition. Reference: GitHub Docs — 'Workflow syntax: jobs.<job_id>.outputs' and 'jobs.<job_id>.needs'.",
     code: "name: Deploy\nci:\n  jobs:\n    build:\n      runs-on: ubuntu-latest\n      steps:\n        - id: build\n          run: docker build -t app .\n    deploy:\n      needs: build\n      if: ${{ steps.build.outputs.status == 'success' }}\n      runs-on: ubuntu-latest\n      steps:\n        - run: ./scripts/deploy.sh",
     codeLanguage: "yaml",
-    tags: ["github-actions", "cicd", "debugging"]
+    tags: ["github-actions","cicd","debugging"]
   },
   {
     id: 405,
@@ -4972,12 +4496,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "An automation script must change only the description of GigabitEthernet1 without affecting any other leaf of the interface entry, and must NOT create the interface if it does not exist. The device already has the interface. Which request satisfies both constraints per RFC 8040?",
-    options: ["PATCH with a payload containing only ietf-interfaces:interfaces/interface[name='GigabitEthernet1']/description", "PUT with a payload containing only description", "POST to /restconf/data/ietf-interfaces:interfaces with a payload containing only description", "DELETE of the interface followed by POST with the full interface entry plus new description"],
+    options: ["PATCH with a payload containing only ietf-interfaces:interfaces/interface[name='GigabitEthernet1']/description","PUT with a payload containing only description","POST to /restconf/data/ietf-interfaces:interfaces with a payload containing only description","DELETE of the interface followed by POST with the full interface entry plus new description"],
     correct: 0,
     explanation: "Per RFC 8040 section 4.6.1, PATCH edits a resource without affecting other data nodes — a partial payload with only the description leaf modifies just that leaf. PUT is 'replace': per RFC 8040 section 3.4, PUT on an existing data node with a partial representation can remove or reset leaves not present in the payload, violating the 'no other leaf affected' constraint. POST creates resources, so it fails the 'must not create' constraint, and DELETE+POST is disruptive and also creates. Reference: RFC 8040 (RESTCONF) sections 3.4 and 4.6.",
     code: "PATCH /restconf/data/ietf-interfaces:interfaces\nContent-Type: application/yang-data+json\nAccept: application/yang-data+json\n\n{\n  \"ietf-interfaces:interfaces\": {\n    \"interface\": [\n      {\n        \"name\": \"GigabitEthernet1\",\n        \"description\": \"uplink-to-core\"\n      }\n    ]\n  }\n}",
     codeLanguage: "http",
-    tags: ["restconf", "http", "rfc8040"]
+    tags: ["restconf","http","rfc8040"]
   },
   {
     id: 406,
@@ -4986,12 +4510,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "A script calls the URI below against an IOS XE device and receives HTTP 404. The interface exists and the credentials are valid. What is the most likely cause?",
-    options: ["The datastore is missing: RESTCONF resource paths must start with /restconf/data/ (or /restconf/operations) — '/restconf/ietf-interfaces:...' is not a valid root, so no resource matches", "The module name must be lowercase, ietf-interfaces is wrong", "404 means authentication failed; the credentials were rejected", "The Accept header is required for GET requests to succeed"],
+    options: ["The datastore is missing: RESTCONF resource paths must start with /restconf/data/ (or /restconf/operations) — '/restconf/ietf-interfaces:...' is not a valid root, so no resource matches","The module name must be lowercase, ietf-interfaces is wrong","404 means authentication failed; the credentials were rejected","The Accept header is required for GET requests to succeed"],
     correct: 0,
     explanation: "RFC 8040 defines the RESTCONF API root with fixed top-level resources: {+restconf}/data for configuration and state data and {+restconf}/operations for RPCs. A URI without the /data/ root does not address any resource and returns 404. Module names in YANG keep their declared case (ietf-interfaces is correct), 401/403 — not 404 — indicate auth problems, and Accept affects content negotiation, not path resolution. Reference: RFC 8040 sections 3.4 and D.1.1 (API root discovery via /.well-known/host-meta).",
     code: "GET /restconf/ietf-interfaces:interfaces/interface=GigabitEthernet1\nHost: 10.0.0.1\nAccept: application/yang-data+json\nAuthorization: Basic YWRtaW46YWRtaW4=",
     codeLanguage: "http",
-    tags: ["restconf", "uri", "troubleshooting"]
+    tags: ["restconf","uri","troubleshooting"]
   },
   {
     id: 407,
@@ -5000,12 +4524,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "The script below creates a VLAN via RESTCONF. The VLAN is NOT created even though the script prints 'OK'. The device's access log shows a request that returned 201. What is the bug?",
-    options: ["The check compares against 200 only, but successful creation returns 201 Created — the script mislabels success and, because it never calls r.json(), an error path earlier would also be masked", "r.ok is unreliable and should not be used", "The URI must use PUT for creation", "The payload must be a JSON array at the top level"],
+    options: ["The check compares against 200 only, but successful creation returns 201 Created — the script mislabels success and, because it never calls r.json(), an error path earlier would also be masked","r.ok is unreliable and should not be used","The URI must use PUT for creation","The payload must be a JSON array at the top level"],
     correct: 0,
     explanation: "POST that creates a resource returns 201 Created (RFC 8040 section 4.4.1), not 200. The condition r.status_code == 200 fails on a 201 response, so 'OK' is never printed and any caller keying off that string misbehaves. The actual creation did succeed (the 201 in the access log proves it) — the script's success handling is wrong. r.ok is precisely the reliable boolean for 2xx classes, POST is the correct creation verb, and RESTCONF payloads are YANG-shaped objects, not bare arrays. Fix: use `if r.ok:` or `r.status_code in (200, 201)`. Reference: RFC 8040 section 4.4.",
     code: "import requests\n\nr = requests.post(\n    'https://10.0.0.1/restconf/data/Cisco-IOS-XE-vlan:vlans',\n    headers={'Content-Type': 'application/yang-data+json'},\n    auth=('admin', 'admin'),\n    verify=False,\n    json={'vlans': {'vlan': [{'id': 42, 'name': 'AUTOMATION'}]}}\n)\nif r.status_code == 200:\n    print('OK')",
     codeLanguage: "python",
-    tags: ["restconf", "python", "http-status"]
+    tags: ["restconf","python","http-status"]
   },
   {
     id: 408,
@@ -5014,12 +4538,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "hard",
     question: "An ncclient edit-config call against an IOS XE device fails. The device log reports that the element 'interface' is not in any namespace recognized by the running datastore. What is the correct fix?",
-    options: ["Wrap the config elements in the YANG module namespace with xmlns attributes — in NETCONF, every config element must be namespace-qualified by its defining YANG module", "Replace <config> with <filter> inside edit-config", "Change the operation attribute from merge to create", "Set the :base capability in the hello exchange"],
+    options: ["Wrap the config elements in the YANG module namespace with xmlns attributes — in NETCONF, every config element must be namespace-qualified by its defining YANG module","Replace <config> with <filter> inside edit-config","Change the operation attribute from merge to create","Set the :base capability in the hello exchange"],
     correct: 0,
     explanation: "NETCONF (RFC 6241) requires configuration elements to be XML namespace-qualified with the YANG module's namespace (RFC 7950 section 7.1.5). The working snippet binds the interface elements to Cisco's YANG module namespace via xmlns. Using <filter> inside edit-config is invalid — filters belong to <get>/<get-config> — and operation=merge/create does not fix an unnamespaced element because the server still cannot identify the schema node. :base is a mandatory capability negotiated automatically and unrelated. Reference: RFC 6241 section 7.2 and RFC 7950 section 6.3.",
     code: "from ncclient import manager\n\nBROKEN = '''<config>\n  <native>\n    <interface>\n      <Loopback><name>99</name></Loopback>\n    </interface>\n  </native>\n</config>'''\n\nFIXED = '''<config>\n  <native xmlns=\"urn:cisco:params:xml:ns:yang:cisco-ios-xe:native\">\n    <interface>\n      <Loopback><name>99</name></Loopback>\n    </interface>\n  </native>\n</config>'''\n\nwith manager.connect(host='10.0.0.1', username='admin',\n                    password='pw', hostkey_verify=False) as m:\n    m.edit_config(target='running', config=FIXED)",
     codeLanguage: "python",
-    tags: ["netconf", "ncclient", "yang", "namespaces"]
+    tags: ["netconf","ncclient","yang","namespaces"]
   },
   {
     id: 409,
@@ -5028,12 +4552,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "Given the RESTCONF response below and the parser code, what does the script print?",
-    options: ["['GigabitEthernet1'] — the code reads the wrong container name, so intf_names ends up empty and the fallback list is returned", "['GigabitEthernet1', 'Loopback0']", "It raises KeyError: 'interface'", "['Loopback0']"],
+    options: ["['GigabitEthernet1'] — the code reads the wrong container name, so intf_names ends up empty and the fallback list is returned","['GigabitEthernet1', 'Loopback0']","It raises KeyError: 'interface'","['Loopback0']"],
     correct: 0,
     explanation: "The response nests interfaces inside ietf-interfaces:interfaces, but the code indexes data['ietf-interfaces:interface'], a key that does not exist in the payload. With .get(..., {'interface': ['GigabitEthernet1']}) the KeyError is suppressed by the fallback, so the hardcoded fallback list ['GigabitEthernet1'] is returned silently — the most dangerous failure mode because no exception surfaces. The correct key is data['ietf-interfaces:interfaces']['interface']. This question tests both YANG module-qualified key tracing and the failure-masking behavior of dict.get defaults.",
     code: "RESPONSE = {\n  \"ietf-interfaces:interfaces\": {\n    \"interface\": [\n      {\"name\": \"GigabitEthernet1\", \"type\": \"iana-if-type:ethernetCsmacd\"},\n      {\"name\": \"Loopback0\", \"type\": \"iana-if-type:softwareLoopback\"}\n    ]\n  }\n}\n\ndata = RESPONSE\nintf_names = [\n    i['name'] for i in data.get('ietf-interfaces:interface', {'interface': ['GigabitEthernet1']})['interface']\n]\nprint(intf_names)",
     codeLanguage: "python",
-    tags: ["json", "restconf", "code-analysis"]
+    tags: ["json","restconf","code-analysis"]
   },
   {
     id: 410,
@@ -5042,12 +4566,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "medium",
     question: "A curl request to a RESTCONF endpoint returns HTTP 415 Unsupported Media Type. The payload is valid JSON and the URI is correct. What is the cause?",
-    options: ["The Content-Type header is missing — the server cannot determine the payload's media type and rejects it", "The Authorization header is missing", "The URI should use /restconf/operations/ instead of /restconf/data/", "415 indicates the device does not support HTTPS"],
+    options: ["The Content-Type header is missing — the server cannot determine the payload's media type and rejects it","The Authorization header is missing","The URI should use /restconf/operations/ instead of /restconf/data/","415 indicates the device does not support HTTPS"],
     correct: 0,
     explanation: "HTTP 415 is returned when the Content-Type of the request body is missing or unsupported (RFC 9110 section 15.5.16). RESTCONF expects application/yang-data+json (or +xml) for payloads (RFC 8040 section 3.1); without the header the server has no way to bind the body to a representation. Missing auth yields 401, /operations/ is for RPCs not data resources, and HTTPS support issues are transport-level failures, not a 415 status.",
     code: "curl -k -u admin:admin \\\n  -X PATCH \\\n  https://10.0.0.1/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1 \\\n  -d '{\"ietf-interfaces:interface\": {\"description\": \"core-uplink\"}}'",
     codeLanguage: "bash",
-    tags: ["restconf", "http", "headers", "troubleshooting"]
+    tags: ["restconf","http","headers","troubleshooting"]
   },
   {
     id: 411,
@@ -5056,12 +4580,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "apis",
     difficulty: "hard",
     question: "A monitoring script polling the Meraki Dashboard API gets HTTP 429 with a Retry-After: 8 header after bursts of 12 rapid requests. The current code immediately retries and gets banned again. Which change correctly implements exponential backoff honoring the server's directive?",
-    options: ["Sleep for max(Retry-After, current_delay) seconds, where current_delay doubles from 1s on each consecutive 429, and reset current_delay after any 2xx response", "Retry immediately up to 5 times, then give up", "Sleep exactly 1 second between every request to avoid 429 forever", "Increase the page size so fewer requests are made and 429 disappears"],
+    options: ["Sleep for max(Retry-After, current_delay) seconds, where current_delay doubles from 1s on each consecutive 429, and reset current_delay after any 2xx response","Retry immediately up to 5 times, then give up","Sleep exactly 1 second between every request to avoid 429 forever","Increase the page size so fewer requests are made and 429 disappears"],
     correct: 0,
     explanation: "Correct rate-limit handling must respect the server-provided Retry-After (RFC 9110 section 10.2.3) while applying exponential backoff for consecutive 429s — hence max(Retry-After, current_delay) with doubling and reset on success. Immediate retries are exactly what triggers a longer ban, a fixed 1-second sleep neither honors Retry-After nor backs off under sustained bursts, and larger pages reduce request count but do not make the client honor 429 when it still occurs. Reference: RFC 9110 and Meraki Dashboard API rate-limit documentation (Meraki DevNet docs).",
     code: "import time, requests\n\ndef get_orgs(token, session):\n    delay = 1\n    while True:\n        r = session.get('https://api.meraki.com/api/v1/organizations',\n                        headers={'X-Cisco-Meraki-API-Key': token})\n        if r.status_code == 429:\n            wait = max(int(r.headers.get('Retry-After', 1)), delay)\n            time.sleep(wait)\n            delay = min(delay * 2, 60)\n            continue\n        if r.ok:\n            return r.json()",
     codeLanguage: "python",
-    tags: ["meraki", "rate-limit", "backoff", "http"]
+    tags: ["meraki","rate-limit","backoff","http"]
   },
   {
     id: 412,
@@ -5070,12 +4594,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "hard",
     question: "A script must enumerate every Meraki network in a large org (thousands of networks). The current pagination loop returns only the first page every time and never advances. What is the bug?",
-    options: ["startingAfter must be the id of the LAST network returned in the previous page, but the code passes the first network's id each iteration, so the same window repeats forever", "perPage must be omitted for pagination to work", "The total_pages header must be requested via ?includeTotals=1", "Pagination requires the v0 API"],
+    options: ["startingAfter must be the id of the LAST network returned in the previous page, but the code passes the first network's id each iteration, so the same window repeats forever","perPage must be omitted for pagination to work","The total_pages header must be requested via ?includeTotals=1","Pagination requires the v0 API"],
     correct: 0,
     explanation: "Meraki Dashboard API pagination is cursor-based: the client passes startingAfter set to the id of the last item of the previous response to fetch the next window. The code passes the first network's id (data[0]['id']) each iteration — and even in the first iteration that id is from the current page, so subsequent pages overlap or repeat and the loop sees the same page forever. Fix: track data[-1]['id'] as the cursor and loop until the returned page is shorter than perPage. perPage is required to control the window size, total counts are optional, and pagination is a v1 feature. Reference: Meraki Dashboard API 'Pagination' documentation (developer.cisco.com/meraki).",
     code: "import requests\n\nBASE = 'https://api.meraki.com/api/v1'\nHDRS = {'X-Cisco-Meraki-API-Key': TOKEN}\n\nnets = []\ncursor = None\nwhile True:\n    params = {'perPage': 1000}\n    if cursor:\n        params['startingAfter'] = data[0]['id']  # BUG: should be cursor of last item\n    r = requests.get(f'{BASE}/organizations/{ORG}/networks', headers=HDRS, params=params)\n    data = r.json()\n    nets.extend(data)\n    if len(data) < 1000:\n        break\n    cursor = data[-1]['id']",
     codeLanguage: "python",
-    tags: ["meraki", "pagination", "python"]
+    tags: ["meraki","pagination","python"]
   },
   {
     id: 413,
@@ -5084,12 +4608,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "hard",
     question: "A Catalyst Center (DNA Center) script calls POST /dna/intent/api/v1/network-device to provision a device and then immediately calls GET /dna/intent/api/v1/network-device/{id} to read the provisioning result. The GET returns 404 even though the POST returned 202. What is the correct fix?",
-    options: ["Provisioning is asynchronous: poll the task returned in the 202 response via GET /dna/intent/api/v1/task/{taskId} until it reports SUCCESS, then query the resource", "Retry the GET until the resource appears — eventually it will", "Add the X-Auth-Token to the GET — it was missing", "Use the legacy v1 API instead of intent API"],
+    options: ["Provisioning is asynchronous: poll the task returned in the 202 response via GET /dna/intent/api/v1/task/{taskId} until it reports SUCCESS, then query the resource","Retry the GET until the resource appears — eventually it will","Add the X-Auth-Token to the GET — it was missing","Use the legacy v1 API instead of intent API"],
     correct: 0,
     explanation: "Catalyst Center intent APIs are asynchronous for long-running operations: the POST returns 202 Accepted with a taskId, and the actual result becomes queryable only after the task completes. The correct workflow is to poll GET /dna/intent/api/v1/task/{taskId} and inspect progress/data (isError, endTime) before fetching the resource. Blind retry does not model the state machine and can loop forever, the X-Auth-Token is already required on the POST (and the 202 proves auth worked), and there is no separate 'legacy v1' path that changes async semantics. Reference: Cisco Catalyst Center Platform API docs — 'Task API' and async workflow (developer.cisco.com/docs/dna-center).",
     code: "import time, requests\n\ntask = requests.post(\n    f'{BASE}/dna/intent/api/v1/network-device',\n    headers={'X-Auth-Token': TOKEN, 'Content-Type': 'application/json'},\n    json=PROVISION_BODY\n)\nprint(task.status_code)   # 202\n# BUG: skips the task; GET /network-device/{id} 404s until task completes\n\n# correct:\ntask_id = task.json()['response']['taskId']\nwhile True:\n    t = requests.get(f'{BASE}/dna/intent/api/v1/task/{task_id}',\n                     headers={'X-Auth-Token': TOKEN}).json()['response']\n    if t['endTime']:\n        break\n    time.sleep(5)",
     codeLanguage: "python",
-    tags: ["dna-center", "catalyst-center", "async", "task-api"]
+    tags: ["dna-center","catalyst-center","async","task-api"]
   },
   {
     id: 414,
@@ -5098,12 +4622,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "hard",
     question: "A script authenticates to Cisco SD-WAN vManage via POST /j_security_check and then calls GET /dataservice/device directly. It receives HTTP 403. The credentials are correct. What is missing?",
-    options: ["The X-XSRF-TOKEN header — after j_security_check the client must fetch/keep the JSESSIONID and send X-XSRF-TOKEN on subsequent /dataservice calls", "A Basic Authorization header alongside the JSESSIONID", "The endpoint must be /device instead of /dataservice/device", "A Bearer token in the Authorization header obtained from /token"],
+    options: ["The X-XSRF-TOKEN header — after j_security_check the client must fetch/keep the JSESSIONID and send X-XSRF-TOKEN on subsequent /dataservice calls","A Basic Authorization header alongside the JSESSIONID","The endpoint must be /device instead of /dataservice/device","A Bearer token in the Authorization header obtained from /token"],
     correct: 0,
     explanation: "vManage uses cookie-based (JSESSIONID) authentication plus CSRF protection: after POST /j_security_check, subsequent /dataservice API calls must carry the JSESSIONID cookie AND the X-XSRF-TOKEN header (obtained from a GET /dataservice/client/token call). Without the XSRF token, vManage returns 403 even with valid credentials and a valid session. /dataservice/device is the correct REST path (dataservice is the API root), Basic auth is not how vManage session auth works post-login, and Bearer tokens are not part of the vManage auth model (that is Catalyst Center/Webex). Reference: Cisco SD-WAN vManage API documentation (developer.cisco.com/docs/sd-wan — 'Authentication').",
     code: "import requests\n\ns = requests.Session()\nr = s.post(f'{BASE}/j_security_check',\n           data={'j_username': USER, 'j_password': PW}, verify=False)\n\n# missing step:\ntoken = s.get(f'{BASE}/dataservice/client/token', verify=False).text\n\ns.headers.update({'X-XSRF-TOKEN': token})\ndevices = s.get(f'{BASE}/dataservice/device', verify=False).json()",
     codeLanguage: "python",
-    tags: ["sd-wan", "vmanage", "authentication", "csrf"]
+    tags: ["sd-wan","vmanage","authentication","csrf"]
   },
   {
     id: 415,
@@ -5112,12 +4636,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "platforms",
     difficulty: "medium",
     question: "An ACI script must list all faultInst objects with severity 'major'. The current query returns all faults regardless of severity. Which query is correct per the ACI object model?",
-    options: ["GET /api/mo/uni/tn-Prod.json?rsp-subtree-class=faultInst&rsp-subtree-filter=eq(faultInst.severity,\"major\")", "GET /api/class/faultInst.json?severity=major", "GET /api/mo/topology.json?query-target=subtree&class=faultInst", "GET /api/node/mo/uni.json?rsp-subtree-class=faultInst with a POST body containing the filter"],
+    options: ["GET /api/mo/uni/tn-Prod.json?rsp-subtree-class=faultInst&rsp-subtree-filter=eq(faultInst.severity,\"major\")","GET /api/class/faultInst.json?severity=major","GET /api/mo/topology.json?query-target=subtree&class=faultInst","GET /api/node/mo/uni.json?rsp-subtree-class=faultInst with a POST body containing the filter"],
     correct: 0,
     explanation: "ACI's Model-Driven Query API (DME) supports subtree queries with a class filter (rsp-subtree-class) combined with an rsp-subtree-filter using the eq() filter language on the object property. Querying under a managed object path (uni/tn-Prod) scopes the result, and the filter narrows to severity major. /api/class/faultInst.json does exist as a class-based query endpoint, but severity=major as a plain query parameter is not valid DME filter syntax — it is ignored, returning all faults. The other two options either omit any filter mechanism or use a POST body for a GET-scoped query, which the DME GET interface does not support. Reference: Cisco ACI REST API Quickstart / DME query documentation (developer.cisco.com/docs/aci).",
     code: "GET https://apic/api/mo/uni/tn-Prod.json?rsp-subtree-class=faultInst&rsp-subtree-filter=eq(faultInst.severity,\"major\")\n\n# response (trimmed):\n# {\"imdata\": [{\"faultInst\": {\"attributes\": {\"severity\": \"major\", \"descr\": \"...\"}}}]}",
     codeLanguage: "http",
-    tags: ["aci", "dme", "filtering"]
+    tags: ["aci","dme","filtering"]
   },
   {
     id: 416,
@@ -5126,12 +4650,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "hard",
     question: "A Dockerfile builds a Python automation image. Builds are slow because requirements.txt changes force a full reinstall on every source edit. The image also runs as root, which the security team rejects. Which single combined change fixes both issues?",
-    options: ["Move the pip install -r requirements.txt step BEFORE the COPY of the source code (so the dependency layer is cached) and add a non-root USER directive before CMD", "Add --no-cache-dir to pip install and a HEALTHCHECK", "Use a slimmer base image and remove the EXPOSE line", "Run pip install at container startup instead of build time"],
+    options: ["Move the pip install -r requirements.txt step BEFORE the COPY of the source code (so the dependency layer is cached) and add a non-root USER directive before CMD","Add --no-cache-dir to pip install and a HEALTHCHECK","Use a slimmer base image and remove the EXPOSE line","Run pip install at container startup instead of build time"],
     correct: 0,
     explanation: "Docker layer caching invalidates a layer and every subsequent layer when its inputs change. Because COPY app.py . precedes the pip install, any source edit changes the copy layer and forces a full dependency reinstall — reordering so requirements.txt is copied and installed first isolates dependency changes from source changes. Adding USER app before CMD satisfies the non-root requirement. --no-cache-dir only shrinks the image, HEALTHCHECK does not address caching or privilege, a slimmer base does not fix layer ordering, and installing at startup breaks reproducibility and adds boot latency. Reference: Docker docs — 'Best practices for writing Dockerfiles' (leverage build cache, USER).",
     code: "FROM python:3.11-slim\nWORKDIR /app\nCOPY app.py .\nCOPY requirements.txt .\nRUN pip install -r requirements.txt\nEXPOSE 5000\nCMD [\"python\", \"app.py\"]",
     codeLanguage: "dockerfile",
-    tags: ["docker", "cicd", "security"]
+    tags: ["docker","cicd","security"]
   },
   {
     id: 417,
@@ -5140,12 +4664,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "medium",
     question: "After running the docker commands below, curl http://localhost:8080/health from the host fails with connection refused. The app inside the container listens on port 5000 and curl from inside the container to localhost:5000 works. What is the cause?",
-    options: ["The port mapping is reversed: -p CONTAINER_PORT:HOST_PORT — the command published container port 8080 to host 5000, so the host side must be 5000 or the mapping must be -p 8080:5000", "The container must be started with --network=host", "curl is blocked by the default Docker bridge firewall", "The image lacks an EXPOSE 8080 directive"],
+    options: ["The port mapping is reversed: -p CONTAINER_PORT:HOST_PORT — the command published container port 8080 to host 5000, so the host side must be 5000 or the mapping must be -p 8080:5000","The container must be started with --network=host","curl is blocked by the default Docker bridge firewall","The image lacks an EXPOSE 8080 directive"],
     correct: 0,
     explanation: "docker -p maps HOST_PORT:CONTAINER_PORT. The command `-p 8080:5000` publishes host port 8080 → container port 5000, which is the correct direction for this app — but the run command shown actually publishes the wrong side... wait: reading it again, `-p 8080:5000` means host 8080 forwards to container 5000, which IS correct. The failing run uses `-p 5000:8080`, mapping host 5000 → container 8080, and nothing listens on container 8080, so host-side curl to 8080 (or 5000) finds no listener. --network=host is a workaround not a diagnosis, the bridge firewall does not block published ports, and EXPOSE is documentation-only — it does not create mappings. Fix: `docker run -d -p 8080:5000 netmon`. Reference: Docker docs — 'docker run' port publishing.",
     code: "docker build -t netmon .\ndocker run -d --name netmon -p 5000:8080 netmon\n# app listens on 0.0.0.0:5000 inside the container",
     codeLanguage: "bash",
-    tags: ["docker", "networking", "troubleshooting"]
+    tags: ["docker","networking","troubleshooting"]
   },
   {
     id: 418,
@@ -5154,12 +4678,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "deployment",
     difficulty: "hard",
     question: "A secret-scanning CI job flags the API credentials baked into a Docker image built with the Dockerfile below. The .env file is in .dockerignore. How were the credentials still included, and what is the fix?",
-    options: ["The base image inherits layers containing the secret from a previous build stage — but more concretely here: docker build with ARG values provided on the CLI persists them into image history; the fix is to pass secrets via BuildKit's --mount=type=secret, which never lands in a layer", "dockerignore is broken and must be renamed .dockerignore.txt", "ENV is the only way to leak; ARG is always safe", "The credentials must be base64-encoded before building"],
+    options: ["The base image inherits layers containing the secret from a previous build stage — but more concretely here: docker build with ARG values provided on the CLI persists them into image history; the fix is to pass secrets via BuildKit's --mount=type=secret, which never lands in a layer","dockerignore is broken and must be renamed .dockerignore.txt","ENV is the only way to leak; ARG is always safe","The credentials must be base64-encoded before building"],
     correct: 0,
     explanation: "dockerignore prevents .env from being COPYed — it works — but the build still bakes secrets via ARG/ENV: ARG values supplied with docker build --build-arg are recorded in image metadata (docker history shows them) and ENV persists in every container created from the image. The secure pattern is BuildKit secret mounts: RUN --mount=type=secret exposes the file only during that RUN, in no layer and no metadata. Renaming the ignore file is not a thing (the filename is already correct), ARG is precisely NOT always safe, and base64 is encoding not encryption. Reference: Docker docs — 'Build secrets' (docs.docker.com/build/building/secrets).",
     code: "FROM python:3.11-slim\nWORKDIR /app\nCOPY requirements.txt .\nRUN pip install -r requirements.txt\nCOPY app.py .\nARG API_TOKEN\nENV API_TOKEN=$API_TOKEN\nCMD [\"python\", \"app.py\"]\n\n# built with:\n# docker build --build-arg API_TOKEN=sk-live-9f3a . -t app",
     codeLanguage: "dockerfile",
-    tags: ["docker", "secrets", "security"]
+    tags: ["docker","secrets","security"]
   },
   {
     id: 419,
@@ -5168,54 +4692,54 @@ const DEVNET_QUESTIONS = [
     domainKey: "infrastructure",
     difficulty: "medium",
     question: "This Ansible playbook must push VLAN config to an IOS XE device. The run fails with 'unable to open shell' / connection refused on port 22 even though SSH to the device works manually. The inventory group has no ansible_connection defined. What is the correct inventory/playbook fix?",
-    options: ["Set ansible_connection=ansible.netcommon.network_cli for the Cisco group (network devices require the network_cli connection plugin, not the default local/ssh behaviour assumed for servers)", "Add become: true to the play", "Replace ios_config with the raw command module", "Set ansible_network_os to nothing and rely on auto-detection"],
+    options: ["Set ansible_connection=ansible.netcommon.network_cli for the Cisco group (network devices require the network_cli connection plugin, not the default local/ssh behaviour assumed for servers)","Add become: true to the play","Replace ios_config with the raw command module","Set ansible_network_os to nothing and rely on auto-detection"],
     correct: 0,
     explanation: "Cisco network modules (cisco.ios.*) require the network_cli connection plugin, which handles the device CLI transport and network_os context. Without ansible_connection=network_cli in the inventory group vars, Ansible attempts the default SSH strategy inappropriate for network modules and fails to open the management session. become escalates privilege AFTER connecting, so it does not fix a transport failure, and the command module cannot run vendor config modules correctly. ansible_network_os must be set (to cisco.ios.ios), not cleared. Reference: Ansible docs — 'Network connection plugins' and cisco.ios.ios_config module docs.",
     code: "# inventory/hosts.ini\n# [cisco]\n# sw1 ansible_host=10.0.0.1\n# [cisco:vars]\n# ansible_user=admin\n# ansible_password=cisco\n# ansible_network_os=cisco.ios.ios\n\n- name: push vlans\n  hosts: cisco\n  gather_facts: false\n  tasks:\n    - name: vlan config\n      cisco.ios.ios_config:\n        lines:\n          - vlan 42\n          - name AUTOMATION",
     codeLanguage: "yaml",
-    tags: ["ansible", "ios", "connection"]
+    tags: ["ansible","ios","connection"]
   },
   {
     id: 420,
     type: "multiple-choice",
-    domain: "Security and Fundamentals",
-    domainKey: "security",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
     difficulty: "hard",
     question: "A script uses OAuth 2.0 client credentials grant against a Cisco platform API. The developer stores the refresh_token returned by the endpoint and writes code to use it to get new access tokens. Why is this design wrong for this flow?",
-    options: ["The client credentials grant (RFC 6749 section 4.4) issues no refresh token — if the auth server returns one it MUST NOT be used for this grant type; the client re-authenticates with its credentials when the access token expires", "Refresh tokens expire after 24 hours in all OAuth flows", "The access token must be sent in the request body, not a header", "Client credentials require PKCE"],
+    options: ["The client credentials grant (RFC 6749 section 4.4) issues no refresh token — if the auth server returns one it MUST NOT be used for this grant type; the client re-authenticates with its credentials when the access token expires","Refresh tokens expire after 24 hours in all OAuth flows","The access token must be sent in the request body, not a header","Client credentials require PKCE"],
     correct: 0,
     explanation: "RFC 6749 section 4.4.3 explicitly states that a refresh token SHOULD NOT be included (and MUST NOT be relied upon) for the client credentials grant, because the client already possesses its own long-lived credential. The correct pattern for machine-to-machine Cisco API access is to re-request an access token with the client_id/client_secret when it expires (or proactively before expiry). Token placement is the Authorization: Bearer header, PKCE is an extension for authorization code flows with public clients, and refresh token lifetime is server policy, not a universal 24-hour rule. Reference: RFC 6749 sections 4.4.1-4.4.3 and Cisco OAuth2 platform docs.",
     code: "import requests\n\ndef get_token(client_id, client_secret):\n    r = requests.post('https://cloudsso.cisco.com/token/v2.0/token',\n        data={'grant_type': 'client_credentials',\n              'client_id': client_id,\n              'client_secret': client_secret})\n    tok = r.json()\n    # BUG: code stores and later uses tok['refresh_token'] — not valid for this grant\n    return tok['access_token']",
     codeLanguage: "python",
-    tags: ["oauth2", "security", "rfc6749"]
+    tags: ["oauth2","security","rfc6749"]
   },
   {
     id: 421,
     type: "multiple-choice",
-    domain: "Security and Fundamentals",
-    domainKey: "security",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
     difficulty: "medium",
     question: "A script against a lab device with a self-signed certificate sets verify=False to make requests work. The security review rejects this. Which change keeps TLS verification enabled and makes the call succeed?",
-    options: ["Export the device's CA certificate (or self-signed cert) and pass its path via the verify parameter or the REQUESTS_CA_BUNDLE environment variable", "Set verify='/etc/ssl/certs' to point at the system store directory", "Disable TLS and use plain HTTP on port 80", "Set ssl_verify=False only for this session object"],
+    options: ["Export the device's CA certificate (or self-signed cert) and pass its path via the verify parameter or the REQUESTS_CA_BUNDLE environment variable","Set verify='/etc/ssl/certs' to point at the system store directory","Disable TLS and use plain HTTP on port 80","Set ssl_verify=False only for this session object"],
     correct: 0,
     explanation: "verify=False disables certificate validation entirely (the exact finding the review flagged). The correct fix is trust-on-first-use style pinning: export the device's certificate/CA and provide it via verify='/path/to/device-ca.pem' or the REQUESTS_CA_BUNDLE environment variable, so Python validates the chain against that trust anchor. Pointing verify at a directory works only if it is a OpenSSL CAhash directory prepared with c_rehash — passing the raw system path as a string usually fails, and it still would not contain the lab device's self-signed cert. Plain HTTP removes encryption entirely, and verify=False under any variable name is the same defect. Reference: requests docs — 'SSL Certificate Verification' (docs.python-requests.org).",
     code: "import requests\n\n# insecure (rejected):\n# r = requests.get(url, verify=False)\n\n# accepted:\nimport os\nos.environ['REQUESTS_CA_BUNDLE'] = '/opt/automation/certs/device-ca.pem'\nr = requests.get('https://10.0.0.1/restconf/data',\n                 headers={'Accept': 'application/yang-data+json'})",
     codeLanguage: "python",
-    tags: ["tls", "requests", "security"]
+    tags: ["tls","requests","security"]
   },
   {
     id: 422,
     type: "multiple-choice",
-    domain: "Security and Fundamentals",
-    domainKey: "security",
+    domain: "Application Deployment and Security",
+    domainKey: "deployment",
     difficulty: "hard",
     question: "A Webex Teams integration authenticates users and calls the API. The current implementation puts the integration's client_secret in the browser query string when redirecting users. Which assessment is correct?",
-    options: ["This is an implicit-grant-style leak: client secrets must never be sent in URLs (they appear in browser history, server logs, and Referer headers); an integration acting on behalf of a user should use the OAuth 2.0 Authorization Code flow with the secret exchanged server-side via POST to the token endpoint", "Query strings are fine for secrets as long as HTTPS is used", "The secret should be base64-encoded and then placed in the query string", "Webex does not support the authorization code flow"],
+    options: ["This is an implicit-grant-style leak: client secrets must never be sent in URLs (they appear in browser history, server logs, and Referer headers); an integration acting on behalf of a user should use the OAuth 2.0 Authorization Code flow with the secret exchanged server-side via POST to the token endpoint","Query strings are fine for secrets as long as HTTPS is used","The secret should be base64-encoded and then placed in the query string","Webex does not support the authorization code flow"],
     correct: 0,
     explanation: "Client secrets in URLs leak via browser history, proxy/server access logs, and the Referer header on outbound links. RFC 6749 section 4.1.3 requires the client secret to be transmitted only in the token exchange POST body (over TLS), server-to-server. The correct Webex integration flow is: redirect the user to /authorize (no secret in that URL), receive the code at the redirect URI, then POST code + client_id + client_secret + redirect_uri to /access_token from the backend. HTTPS protects the payload in transit but not the URL's persistence in logs/history, base64 is reversible encoding not protection, and Webex explicitly supports the authorization code flow. Reference: RFC 6749 section 4.1 and Webex OAuth integration docs (developer.webex.com).",
     code: "# INSECURE (current):\n# GET https://webexapis.com/v1/authorize?client_secret=SECR3T&response_type=code&...\n\n# CORRECT (server-side):\n# 1) Browser redirect (no secret):\n#    GET https://webexapis.com/v1/authorize?client_id=CID&response_type=code&redirect_uri=...&scope=...\n# 2) Backend token exchange:\n#    POST https://webexapis.com/v1/access_token\n#    grant_type=authorization_code&code=...&client_id=CID&client_secret=SECR3T&redirect_uri=...",
     codeLanguage: "http",
-    tags: ["webex", "oauth2", "security"]
+    tags: ["webex","oauth2","security"]
   },
   {
     id: 423,
@@ -5224,12 +4748,12 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "hard",
     question: "An IPAM automation script generates reservation summaries from the data below. The printed network address for VLAN 300 is wrong. What does the code actually compute, and what is the fix?",
-    options: ["10.50.8.47/28 with the network computed by truncating to the /28 boundary — the printed value 10.50.8.47/28 is the LAST host of the subnet, not the network; the fix is to call ip_interface.network instead of using the raw address string", "The gateway IP is wrong; the script should use the first usable address", "Python 3 ipaddress cannot represent /28 networks", "The script must convert the address to binary manually before printing"],
+    options: ["10.50.8.47/28 with the network computed by truncating to the /28 boundary — the printed value 10.50.8.47/28 is the LAST host of the subnet, not the network; the fix is to call ip_interface.network instead of using the raw address string","The gateway IP is wrong; the script should use the first usable address","Python 3 ipaddress cannot represent /28 networks","The script must convert the address to binary manually before printing"],
     correct: 0,
     explanation: "With a /28 mask on 10.50.8.47, the block containing that address is 10.50.8.32/28 (32 is a multiple of 16), spanning .32-.47, where .47 is the broadcast address. Printing the raw address string as if it were the network labels the broadcast address as the subnet — the code never consults the mask. ipaddress.ip_interface(...).network yields IPv4Network('10.50.8.32/28') directly; no manual binary conversion or gateway logic is involved, and ipaddress fully supports /28. This tests both subnet math (block boundary at multiples of the mask size) and the ipaddress module API.",
     code: "import ipaddress\n\nRESERVATIONS = {\n    'VLAN300': {'addr': '10.50.8.47', 'mask': '255.255.255.240'},\n}\n\nfor vlan, r in RESERVATIONS.items():\n    iface = ipaddress.ip_interface(f\"{r['addr']}/{r['mask']}\")\n    print(f\"{vlan}: {r['addr']}/{iface.network.prefixlen}\")   # BUG: prints 10.50.8.47/28",
     codeLanguage: "python",
-    tags: ["subnetting", "ipaddress", "python"]
+    tags: ["subnetting","ipaddress","python"]
   },
   {
     id: 424,
@@ -5238,13 +4762,14 @@ const DEVNET_QUESTIONS = [
     domainKey: "network",
     difficulty: "hard",
     question: "A new access switch was added to the Prod VLAN trunk. Users on the new switch intermittently lose connectivity and the existing switches log '%CDP-4-NATIVE_VLAN_MISMATCH'. The new switch's trunk shows native VLAN 1, the core's trunk shows native VLAN 99 (unused). What is the functional consequence of this mismatch, and why do users see intermittent issues?",
-    options: ["Traffic from VLAN 1 on the new switch is sent untagged over the trunk and lands in VLAN 99 on the core (and vice versa) — CDP/STP BPDUs and untagged control traffic traverse the wrong VLAN, causing spanning-tree inconsistencies and effectively bridging two broadcast domains; data VLAN traffic is tagged so it flows, but control-plane behavior is inconsistent, producing the intermittent symptoms", "All VLAN traffic is dropped because the trunks cannot negotiate", "The mismatch only breaks CDP; no data traffic is affected", "802.1Q auto-negotiation will fix the native VLAN within 60 seconds"],
+    options: ["Traffic from VLAN 1 on the new switch is sent untagged over the trunk and lands in VLAN 99 on the core (and vice versa) — CDP/STP BPDUs and untagged control traffic traverse the wrong VLAN, causing spanning-tree inconsistencies and effectively bridging two broadcast domains; data VLAN traffic is tagged so it flows, but control-plane behavior is inconsistent, producing the intermittent symptoms","All VLAN traffic is dropped because the trunks cannot negotiate","The mismatch only breaks CDP; no data traffic is affected","802.1Q auto-negotiation will fix the native VLAN within 60 seconds"],
     correct: 0,
     explanation: "On an 802.1Q trunk, frames belonging to the native VLAN are sent untagged. With VLAN 1 native on one side and VLAN 99 on the other, untagged frames from each side are received INTO the peer's native VLAN — merging two broadcast domains and carrying STP BPDUs across VLAN boundaries, which can cause spanning-tree topology confusion and even loops when DTP/CDP disagree. Tagged data VLAN frames still pass correctly, which is why the failure is intermittent and control-plane-flavored rather than a total outage. Trunk negotiation (DTP) does not synchronize native VLAN IDs, and the mismatch affects far more than CDP. Reference: IEEE 802.1Q native VLAN behavior; Cisco trunk configuration guide.",
     code: "new-switch# show interfaces gigabitEthernet1/0/1 trunk\nPort        Native VLAN\nGi1/0/1     1        <-- mismatch\n\ncore# show interfaces tenGigabitEthernet1/1/1 trunk\nPort          Native VLAN\nTe1/1/1       99       <-- mismatch\n\n# fix on the new switch:\n# interface gi1/0/1\n#  switchport trunk native vlan 99",
     codeLanguage: "bash",
-    tags: ["vlan", "trunking", "troubleshooting"]
-  },
+    tags: ["vlan","trunking","troubleshooting"]
+  }
 ];
 
 if (typeof window !== 'undefined') { window.DEVNET_QUESTIONS = DEVNET_QUESTIONS; }
+
